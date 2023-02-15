@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #edf2f5;
+    --secondary-color: #87ceeb;
+    --white-color: #fcfcfc;
+    --light-gray-color: #c8c8c8;
+    --gray-color: #969696;
+    --true-gray-color: #808080;
+    --black-color: #202020;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
