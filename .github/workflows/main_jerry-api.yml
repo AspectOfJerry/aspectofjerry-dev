@@ -60,4 +60,4 @@ jobs:
           app-name: 'jerry-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F713AE6B891249248EEBB6A83D75C729 }}
-          package: .
+          package: payload.zip
