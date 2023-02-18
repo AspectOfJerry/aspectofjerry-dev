@@ -1,6 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
-import aspectOfJerry_head from "../assets/aspectOfJerry_head.png";
+import AspectOfJerry_head from "../assets/AspectOfJerry_head.png";
+import snowsgiving from "../assets/snowsgiving_banner.png";
 
 export default {
-    aspectOfJerry_head
+    AspectOfJerry_head,
+    snowsgiving
 };
