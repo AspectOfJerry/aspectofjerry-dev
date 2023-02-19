@@ -3,6 +3,7 @@ import React from 'react';
 import {About, Contact, Footer, Header, Projects, Skills} from './container/index.js';
 import {Navbar} from './components/index.js';
 
+import "./App.scss";
 
 const App = () => {
     return (
@@ -14,8 +15,6 @@ const App = () => {
             <Contact />
             <Projects />
             <Footer />
-            <br />
-            Hello
         </div>
     );
 };
