@@ -1,14 +1,14 @@
 ---
-name: Feature request
-about: Propose an idea for this project
+name: Enhancement
+about: Improve a feature
 title: ''
-labels: feature
+labels: enhancement
 assignees: ''
 
 ---
 
 **Describe your idea**
-A clear and concise description of your feature.
+A clear and concise description of your idea
 
 **Describe the solution you'd like**
 A clear and concise description on how this would be implemented or ideas.
