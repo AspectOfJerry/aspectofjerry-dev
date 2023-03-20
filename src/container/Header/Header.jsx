@@ -8,8 +8,8 @@ import {images} from "../../constants";
 
 const scaleVariants = {
     whileInView: {
-        scale: [0.25, 1],
-        opacity: [0.1, 1],
+        scale: [0, 1],
+        opacity: [0, 1],
         transition: {
             duration: 1,
             ease: "easeInOut"
@@ -21,7 +21,10 @@ const Header = () => {
     return (
         <div id="home" className="app__header app__flex">
             <motion.div
-                whileInView={{x: [-100, 0], opacity: [0, 1]}}
+                whileInView={{
+                    x: [-100, 0],
+                    opacity: [0.1, 1]
+                }}
                 transition={{duration: 0.75}}
                 className="app__header-info"
             >
@@ -47,13 +50,13 @@ const Header = () => {
                 className="app__header-img"
             >
                 <img src={images.AspectOfJerry_head} alt="profile_bg" />
-                <motion.img
-                    className="overlay_glass-effect"
+                {/* <motion.img
+                    className="background-img"
                     whileInView={{scale: [0.5, 1], opacity: [1, 0.2]}}
                     transition={{duration: 1, ease: "easeInOut"}}
                     src={images.glassEffect}
                     alt="Hovering glass effect"
-                />
+                /> */}
             </motion.div>
 
             <motion.div
