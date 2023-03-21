@@ -3,7 +3,7 @@
 :root {
     --font-base: 'Nunito', 'Roboto', sans-serif;
 
-    --primary-color: #edf2f5;
+    --primary-color: rgb(238, 240, 242);
     --secondary-color: #87ceeb;
     --white-color: #fcfcfc;
     --light-gray-color: #c8c8c8;
