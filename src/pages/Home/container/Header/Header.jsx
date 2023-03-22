@@ -1,5 +1,4 @@
 import React from "react";
-import {Helmet} from "react-helmet";
 import {motion} from "framer-motion";
 
 import "./Header.scss";
@@ -21,9 +20,6 @@ const scaleVariants = {
 const Header = () => {
     return (
         <div id="home" className="app__header app__flex">
-            <Helmet>
-                <title>AspectOfJerry</title>
-            </Helmet>
             <motion.div
                 whileInView={{
                     x: [-100, 0],

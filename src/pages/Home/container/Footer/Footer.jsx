@@ -1,7 +1,6 @@
 import React from "react";
-import {Helmet} from "react-helmet";
 
-import './Footer.scss';
+import "./Footer.scss";
 
 const Footer = () => {
     return (

@@ -3,6 +3,32 @@
 [aspectofjerry.dev](https://aspectofjerry.dev) is my personal/portfolio website.
 
 <br>
+
+## Notes
+
+To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
+
+```xml
+<configuration>
+    <system.webServer>
+        <rewrite>
+            <rules>
+                <rule name="React Routes" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions logicalGrouping="MatchAll">
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+                        <add input="{REQUEST_URI}" pattern="^/(api)" negate="true" />
+                    </conditions>
+                    <action type="Rewrite" url="/" />
+                </rule>
+            </rules>
+        </rewrite>
+    </system.webServer>
+</configuration>
+```
+
+<br>
 <br>
 
 ## Getting Started with Create React App
