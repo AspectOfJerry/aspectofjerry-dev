@@ -1,8 +1,12 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-import {About, Contact, Footer, Header, Projects, Skills} from "./container/index.js";
-import {Navbar, NotFound} from "./components/index.js";
+// pages/Home
+import {About, Contact, Footer, Header, Projects, Skills} from "./pages/Home/container/index.js";
+import {Navbar} from "./pages/Home/components/index.js";
+
+// pages/NotFound
+import {NotFound} from "./pages/NotFound/index.js";
 
 import "./App.scss";
 
@@ -21,10 +25,15 @@ const App = () => {
                         <Footer />
                     </div>
                 } />
+
                 <Route path="*" element={
                     <div className="app">
                         <NotFound />
                     </div>
+                } />
+
+                <Route path="/ping" element={
+                    <p>pong</p>
                 } />
             </Routes>
         </BrowserRouter>

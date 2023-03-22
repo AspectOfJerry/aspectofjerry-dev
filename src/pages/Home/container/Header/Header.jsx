@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 
 import "./Header.scss";
 
-import {images} from "../../constants";
+import {images} from "../../../../constants";
 
 
 const scaleVariants = {

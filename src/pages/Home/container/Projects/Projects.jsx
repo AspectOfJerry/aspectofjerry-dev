@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 import './Projects.scss';
 
 const Projects = () => {
     return (
-        <div>Projects</div>
+        <div>
+            Projects
+        </div>
     );
 };
 
