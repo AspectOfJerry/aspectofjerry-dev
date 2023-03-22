@@ -10,6 +10,7 @@ import {NotFound} from "./pages/NotFound/index.js";
 
 import "./App.scss";
 
+
 const App = () => {
     return (
         <BrowserRouter>

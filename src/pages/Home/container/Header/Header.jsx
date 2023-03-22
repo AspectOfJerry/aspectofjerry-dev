@@ -23,7 +23,7 @@ const Header = () => {
             <motion.div
                 whileInView={{
                     x: [-100, 0],
-                    opacity: [0.1, 1]
+                    opacity: [0, 1]
                 }}
                 transition={{duration: 0.75}}
                 className="app__header-info"
@@ -46,7 +46,7 @@ const Header = () => {
 
             <motion.div
                 whileInView={{scale: [0.90, 1]}}
-                transition={{duration: 1, delayChildren: 0}}
+                transition={{duration: 0.75, delayChildren: 0}}
                 className="app__header-img"
             >
                 <img src={images.AspectOfJerry_head} alt="profile_bg" />
@@ -59,18 +59,22 @@ const Header = () => {
                 /> */}
             </motion.div>
 
-            <motion.div
-                variant={scaleVariants}
-                whileInView={scaleVariants.whileInView}
-                className="app__header-circles"
-            >
-                {[images.nodejs, images.javascript, images.git, images.react, images.sass].map((circle, index) => (
-                    <div className="circle-cmp app__flex" key={`circle-${index}`}>
-                        <img src={circle} alt="circle" />
-                    </div>
-                ))}
-            </motion.div>
-        </div>
+            <div className="app__header-circles">
+                {[images.nodejs, images.javascript, images.git, images.react, images.sass].map((circle, index) => {
+                    return (
+                        <motion.div
+                            variant={scaleVariants}
+                            whileInView={scaleVariants.whileInView}
+                            className="circle-cmp app__flex"
+                            whileHover={{scale: [1, 1.25]}}
+                            key={`circle-${index}`}
+                        >
+                            <img src={circle} alt="circle" />
+                        </motion.div>
+                    );
+                })}
+            </div>
+        </div >
     );
 };
 
