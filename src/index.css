@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&display=swap");
 
 :root {
-    --font-base: 'Nunito', 'Roboto', sans-serif;
+    --font-base: "Nunito", "Roboto", sans-serif;
 
     --primary-color: rgb(238, 240, 242);
     --secondary-color: #87ceeb;
     --white-color: #fcfcfc;
+    --lighter-gray-color: #dcdcdc;
     --light-gray-color: #c8c8c8;
     --gray-color: #969696;
     --true-gray-color: #808080;

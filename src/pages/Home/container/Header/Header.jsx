@@ -8,10 +8,10 @@ import {images} from "../../../../constants";
 
 const scaleVariants = {
     whileInView: {
-        scale: [0, 1],
-        opacity: [0, 1],
+        scale: [0.9, 1],
+        opacity: [0.75, 1],
         transition: {
-            duration: 1,
+            duration: 0.5,
             ease: "easeInOut"
         }
     }
@@ -33,7 +33,7 @@ const Header = () => {
                         <span>👋</span>
                         <div style={{marginLeft: 20}}>
                             <p className="p-text">Hello, I'm</p>
-                            <hi className="head-text">Jerry</hi>
+                            <h1 className="head-text">Jerry</h1>
                         </div>
                     </div>
 
@@ -66,7 +66,6 @@ const Header = () => {
                             variant={scaleVariants}
                             whileInView={scaleVariants.whileInView}
                             className="circle-cmp app__flex"
-                            whileHover={{scale: [1, 1.25]}}
                             key={`circle-${index}`}
                         >
                             <img src={circle} alt="circle" />

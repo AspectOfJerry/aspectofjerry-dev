@@ -16,6 +16,14 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AspectOfJerry/aspectofjerry-dev.git"
+    },
+    "bugs": {
+        "url": "https://github.com/AspectOfJerry/aspectofjerry-dev/issues",
+        "email": "jerry@aspectofjerry.dev"
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build"

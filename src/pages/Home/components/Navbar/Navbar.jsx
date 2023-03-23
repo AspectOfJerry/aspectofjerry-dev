@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 
 import "./Navbar.scss";
 import {images} from "../../../../constants/index.js";

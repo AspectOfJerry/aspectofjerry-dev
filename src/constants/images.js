@@ -6,6 +6,7 @@ import git from "../assets/git.png";
 import html from "../assets/html.png";
 import javascript from "../assets/javascript.png";
 import nodejs from "../assets/nodejs.png";
+import placeholder from "../assets/placeholder.png";
 import react from "../assets/react.png";
 import sass from "../assets/sass.png";
 
@@ -17,6 +18,7 @@ export default {
     html,
     javascript,
     nodejs,
+    placeholder,
     react,
-    sass,
+    sass
 };
