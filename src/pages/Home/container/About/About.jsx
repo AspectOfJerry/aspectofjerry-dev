@@ -26,7 +26,7 @@ const text_fade_in = {
 const About = () => {
     return (
         <>
-            <h2 className="head-text">About <span>Me</span></h2>
+            <h2 id="about" className="head-text">About <span>Me</span></h2>
 
             <motion.p
                 className="text app__about-text"
