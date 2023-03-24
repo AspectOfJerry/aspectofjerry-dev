@@ -24,9 +24,13 @@ const App = () => {
                         <Header />
                         <Divider />
                         <About />
+                        <Divider />
                         <Skills />
+                        <Divider />
                         <Contact />
+                        <Divider />
                         <Projects />
+                        <Divider />
                         <Footer />
                     </div>
                 } />

@@ -13,12 +13,14 @@ const abouts = [
 
 const text_fade_in = {
     whileInView: {
-        y: [15, 0],
+        y: [20, 0],
         opacity: [0, 1]
     },
     transition: {
-        duration: 0.6,
-        delay: 0.1,
+        duration: 0.55,
+        type: "tween",
+        ease: "easeOut",
+        delay: 0.03
     }
 };
 
@@ -30,12 +32,13 @@ const About = () => {
 
             <motion.p
                 className="text app__about-text"
-                whileInView={{y: [15, 0], opacity: [0, 1]}}
-                transition={{duration: 0.75, delay: 0.1}}
+                whileInView={text_fade_in.whileInView}
+                transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry. That's all for now. 😄😐<br />
-                Gamer dolphin is here!<br />
-                -&gt; 🐬 &lt;-
+                Hello, I'm Jerry. That's all for now. 😐<br /><br />
+                The gamer dolphin is here!<br />
+                -&gt; 🐬 &lt;-<br />
+                Awesome! 😄
             </motion.p>
 
             <div className="app__profiles">

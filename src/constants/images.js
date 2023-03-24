@@ -7,7 +7,7 @@ import html from "../assets/html.png";
 import javascript from "../assets/javascript.png";
 import nodejs from "../assets/nodejs.png";
 import placeholder from "../assets/placeholder.png";
-import react from "../assets/react.png";
+import reactjs from "../assets/reactjs.png";
 import sass from "../assets/sass.png";
 
 export default {
@@ -19,6 +19,6 @@ export default {
     javascript,
     nodejs,
     placeholder,
-    react,
+    reactjs,
     sass
 };

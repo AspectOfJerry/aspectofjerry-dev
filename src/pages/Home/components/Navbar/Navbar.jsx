@@ -11,7 +11,9 @@ const Navbar = () => { // 32:35
     return (
         <nav className="app__navbar">
             <div className="app__navbar-logo">
-                <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
+                <a href="https://aspectofjerry.dev">
+                    <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
+                </a>
             </div>
             <div className="app__navbar-message">
                 <p>This website is under development</p>

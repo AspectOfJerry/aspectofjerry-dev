@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center; // 40:00
 
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background: rgba(135, 206, 235, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -32,8 +32,8 @@
 }
 
 .app__navbar-message {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .app__navbar-links {
@@ -45,30 +45,30 @@
     list-style: none;
 
     li {
-        margin: 0 1rem;
+        margin: 0 1.5rem;
         cursor: pointer;
 
         flex-direction: column;
 
         // Circle abover hover
         div {
-            width: 5px;
-            height: 5px;
+            width: 35px;
+            height: 2px;
             background: transparent;
-            border-radius: 50%;
+            border-radius: 25%;
 
             margin-bottom: 3px;
         }
 
         a {
-            color: var(--gray-color);
+            color: var(--true-gray-color);
             text-decoration: none;
             flex-direction: column;
 
             text-transform: capitalize;
             font-weight: 500;
 
-            transition: all 0.20s ease-in-out;
+            transition: all 0.25s ease-out;
 
             &:hover {
                 color: var(--secondary-color);
@@ -78,6 +78,7 @@
         // Circle abover hover
         &:hover {
             div {
+                transition: all 0.3s ease-out;
                 background: var(--secondary-color);
             }
         }

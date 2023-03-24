@@ -8,14 +8,25 @@ import {images} from "../../../../constants";
 
 const scaleVariants = {
     whileInView: {
-        scale: [0.9, 1],
-        opacity: [0.75, 1],
+        scale: [0.95, 1],
+        opacity: [0, 1],
+        x: [45, 0],
         transition: {
-            duration: 0.5,
-            ease: "easeInOut"
+            duration: 1.5,
+            type: "spring",
+            bounce: 0.3,
+            delay: 0.03
         }
     }
 }
+
+const header_circles = [
+    {name: "NodeJS", image: images.nodejs, url: "https://nodejs.org/en"},
+    {name: "JavaScript", image: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Git", image: images.git, url: "https://git-scm.com/"},
+    {name: "ReactJS", image: images.reactjs, url: "https://react.dev/"},
+    {name: "Sass", image: images.sass, url: "https://sass-lang.com/"}
+];
 
 const Header = () => {
     return (
@@ -25,7 +36,7 @@ const Header = () => {
                     x: [-100, 0],
                     opacity: [0, 1]
                 }}
-                transition={{duration: 0.75}}
+                transition={{duration: 1, type: "spring", bounce: 0.3, delay: 0.03}}
                 className="app__header-info"
             >
                 <div className="app__header-badge">
@@ -46,7 +57,7 @@ const Header = () => {
 
             <motion.div
                 whileInView={{scale: [0.90, 1]}}
-                transition={{duration: 0.75, delayChildren: 0}}
+                transition={{duration: 0.75, type: "tween", ease: "easeInOut", delay: 0.03, delayChildren: 0}}
                 className="app__header-img"
             >
                 <img src={images.AspectOfJerry_head} alt="profile_bg" />
@@ -60,7 +71,7 @@ const Header = () => {
             </motion.div>
 
             <div className="app__header-circles">
-                {[images.nodejs, images.javascript, images.git, images.react, images.sass].map((circle, index) => {
+                {header_circles.map((circle, index) => {
                     return (
                         <motion.div
                             variant={scaleVariants}
@@ -68,7 +79,9 @@ const Header = () => {
                             className="circle-cmp app__flex"
                             key={`circle-${index}`}
                         >
-                            <img src={circle} alt="circle" />
+                            <a href={circle.url} target="_blank" rel="noreferrer">
+                                <img src={circle.image} alt={circle.name} />
+                            </a>
                         </motion.div>
                     );
                 })}
