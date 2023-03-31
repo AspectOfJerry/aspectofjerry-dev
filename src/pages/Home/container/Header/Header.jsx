@@ -8,7 +8,7 @@ import {images} from "../../../../constants";
 
 const scaleVariants = {
     whileInView: {
-        scale: [0.95, 1],
+        // scale: [0.95, 1],
         opacity: [0, 1],
         x: [45, 0],
         transition: {
@@ -76,6 +76,7 @@ const Header = () => {
                         <motion.div
                             variant={scaleVariants}
                             whileInView={scaleVariants.whileInView}
+                            whileHover={{scale: 1.15}}
                             className="circle-cmp app__flex"
                             key={`circle-${index}`}
                         >

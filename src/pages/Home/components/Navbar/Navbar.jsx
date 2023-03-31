@@ -16,12 +16,12 @@ const Navbar = () => { // 32:35
                 </a>
             </div>
             <div className="app__navbar-message">
-                <p>This website is under development</p>
+                <p>🚧 Under development 🚧</p>
             </div>
             <ul className="app__navbar-links">
                 {["home", "about", "skills", "contact", "projects"].map((element) => (
                     <li className="app__flex p-text" key={`link-${element}`}>
-                        {/* Circle above hover */}
+                        {/* Line above hover */}
                         <div />
                         <a href={`#${element}`}>{element}</a>
                     </li>

@@ -35,7 +35,7 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry. That's all for now. 😐<br /><br />
+                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target={"_blank"} rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target={"_blank"} rel="noreferrer">First Robotics Competition</a>. That's all for now. 😐<br /><br />
                 The gamer dolphin is here!<br />
                 -&gt; 🐬 &lt;-<br />
                 Awesome! 😄
