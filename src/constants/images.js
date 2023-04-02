@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
+import background_shapes from "../assets/background_shapes.png";
 import css from "../assets/css.png";
 import favicon from "../assets/favicon.png";
 import git from "../assets/git.png";
@@ -28,6 +29,7 @@ import FTC_IconVert from "../assets/FIRST/FTC/FTC_IconVert.png";
 
 export default {
     aspectofjerry_head,
+    background_shapes,
     css,
     favicon,
     git,
@@ -49,5 +51,5 @@ export default {
     FTC_iconHorz_reverse,
     FTC_iconHorz,
     FTC_IconVert_reverse,
-    FTC_IconVert
+    FTC_IconVert,
 };

@@ -31,13 +31,13 @@
 
 .app__profile-item {
     // height: 190px;
-    width: 190px;
+    width: 256px;
 
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    margin: 2rem;
+    margin: 1rem;
 
     a {
         img {
@@ -49,8 +49,8 @@
         }
     }
 
-    @media screen and (min-width:2000px) {
-        width: 370px;
+    @media screen and (min-width:1920px) {
+        width: 320px;
         margin: 2rem 4rem;
 
         img {

@@ -62,13 +62,13 @@
         color: var(--secondary-color);
     }
 
-    @media screen and (min-width: 2000px) {
-        font-size: 4rem;
-    }
+    // @media screen and (min-width: 2000px) {
+    //     font-size: 4rem;
+    // }
 
-    @media screen and (max-width: 450px) {
-        font-size: 2rem;
-    }
+    // @media screen and (max-width: 450px) {
+    //     font-size: 2rem;
+    // }
 }
 
 .p-text {
@@ -76,9 +76,9 @@
     color: var(--true-gray-color);
     line-height: 1.5;
 
-    @media screen and (min-width: 2000px) {
-        font-size: 1.5rem;
-    }
+    // @media screen and (min-width: 2000px) {
+    //     font-size: 1.5rem;
+    // }
 }
 
 .text {
@@ -86,9 +86,9 @@
     color: var(--black-color);
     line-height: 1.75;
 
-    @media screen and (min-width: 2000px) {
-        font-size: 1.75rem;
-    }
+    // @media screen and (min-width: 2000px) {
+    //     font-size: 1.75rem;
+    // }
 }
 
 .bold-text {
@@ -97,13 +97,13 @@
     color: var(--black-color);
     text-align: left;
 
-    @media screen and (min-width: 2000px) {
-        font-size: 2rem;
-    }
+    // @media screen and (min-width: 2000px) {
+    //     font-size: 2rem;
+    // }
 
-    @media screen and (max-width: 450px) {
-        font-size: 0.9rem;
-    }
+    // @media screen and (max-width: 450px) {
+    //     font-size: 0.9rem;
+    // }
 }
 
 .app__social {
@@ -178,10 +178,10 @@
             background-color: var(--secondary-color);
         }
 
-        @media screen and (min-width: 2000px) {
-            width: 20px;
-            height: 20px;
-        }
+        // @media screen and (min-width: 2000px) {
+        //     width: 20px;
+        //     height: 20px;
+        // }
     }
 }
 

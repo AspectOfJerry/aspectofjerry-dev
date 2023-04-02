@@ -1,10 +1,11 @@
 #home {
     position: relative;
     // 1:16:27
-    background-size: auto;
-    background-repeat: repeat;
+    background: url("../../../../assets/background_shapes.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 3.25rem;
+    margin-bottom: 3rem;
 
     .app__wrapper {
         padding: 0;
@@ -87,9 +88,9 @@
     span {
         font-size: 2.5rem;
 
-        @media screen and (min-width: 2000px) {
-            font-size: 5rem;
-        }
+        // @media screen and (min-width: 2000px) {
+        //     font-size: 5rem;
+        // }
     }
 
     @media screen and (max-width: 1200px) {
@@ -106,7 +107,6 @@
     align-items: flex-start;
 
     height: 100%;
-    margin-left: 1rem;
 
     div {
         width: 100px;
@@ -158,49 +158,47 @@
         height: 120px;
     }
 
-    @media screen and (min-width: 2000px) {
-        div:nth-child(1) {
-            width: 220px;
-            height: 220px;
-        }
+    // @media screen and (min-width: 2000px) {
+    //     div:nth-child(1) {
+    //         width: 220px;
+    //         height: 220px;
+    //     }
 
-        div:nth-child(2) {
-            width: 260px;
-            height: 260px;
-        }
+    //     div:nth-child(2) {
+    //         width: 260px;
+    //         height: 260px;
+    //     }
 
-        div:nth-child(3) {
-            width: 200px;
-            height: 200px;
-        }
+    //     div:nth-child(3) {
+    //         width: 200px;
+    //         height: 200px;
+    //     }
 
-        div:nth-child(4) {
-            width: 280px;
-            height: 280px;
-        }
+    //     div:nth-child(4) {
+    //         width: 280px;
+    //         height: 280px;
+    //     }
 
-        div:nth-child(5) {
-            width: 240px;
-            height: 240px;
-        }
-    }
+    //     div:nth-child(5) {
+    //         width: 240px;
+    //         height: 240px;
+    //     }
+    // }
 
-    @media screen and (max-width:1200px) {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 0;
+    // @media screen and (max-width:1200px) {
+    //     width: 100%;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     margin-left: 0;
 
-        div {
-            margin: 0.6rem;
-        }
-    }
+    //     div {
+    //         margin: 0.6rem;
+    //     }
+    // }
 }
 
 .app__header-img {
-    flex: 1;
-    width: 90%;
-    height: 90%;
+    flex: 0.8;
     margin-left: 4.2%;
     margin-right: 4.2%;
     display: flex;

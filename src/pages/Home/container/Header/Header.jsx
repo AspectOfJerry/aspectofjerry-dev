@@ -63,9 +63,9 @@ const Header = () => {
                 <img src={images.aspectofjerry_head} alt="profile_bg" />
                 {/* <motion.img
                     className="background-img"
-                    whileInView={{scale: [0.5, 1], opacity: [1, 0.2]}}
+                    whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
                     transition={{duration: 1, ease: "easeInOut"}}
-                    src={images.glassEffect}
+                    src={images.CHARGED_UP_Vert}
                     alt="Hovering glass effect"
                 /> */}
             </motion.div>
