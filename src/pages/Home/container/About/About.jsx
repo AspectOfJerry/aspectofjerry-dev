@@ -5,10 +5,9 @@ import "./About.scss";
 import {images} from "../../../../constants";
 
 const abouts = [
-    {title: "foo", description: "bar", iconUrl: images.placeholder},
-    {title: "baz", description: "qux", iconUrl: images.placeholder},
-    {title: "quux", description: "corge", iconUrl: images.placeholder},
-    {title: "grault", description: "garply", iconUrl: images.placeholder}
+    {title: "Team 3990", description: "Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
+    {title: "FIRST Robotics Competition", description: "I am currently in Team 3990 for the FIRST Robotics Competition.", iconUrl: images.FRC_IconVert, url: "https://www.firstinspires.org/robotics/frc"},
+    {title: "FIRST Tech Challenge", description: "I was in team 20117 for the FIRST Tech Challenge.", iconUrl: images.FTC_IconVert, url: "https://www.firstinspires.org/robotics/ftc"},
 ];
 
 const text_fade_in = {
@@ -20,7 +19,7 @@ const text_fade_in = {
         duration: 0.55,
         type: "tween",
         ease: "easeOut",
-        delay: 0.03
+        delay: 0.1
     }
 };
 
@@ -28,6 +27,14 @@ const text_fade_in = {
 const About = () => {
     return (
         <>
+            <motion.p
+                className="p-text app__about_note"
+                whileInView={text_fade_in.whileInView}
+                transition={text_fade_in.transition}
+            >
+                🚧 This website is under development. More content will be added later. 🚧
+            </motion.p>
+
             <h2 id="about" className="head-text">About <span>Me</span></h2>
 
             <motion.p
@@ -35,10 +42,8 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target={"_blank"} rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target={"_blank"} rel="noreferrer">First Robotics Competition</a>. That's all for now. 😐<br /><br />
-                The gamer dolphin is here!<br />
-                -&gt; 🐬 &lt;-<br />
-                Awesome! 😄
+                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target={"_blank"} rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target={"_blank"} rel="noreferrer">First Robotics Competition</a>.<br />
+                📍Canada 🍁
             </motion.p>
 
             <div className="app__profiles">
@@ -51,7 +56,9 @@ const About = () => {
                             className="app__profile-item"
                             key={about.title + index}
                         >
-                            <img src={about.iconUrl} alt={about.title}></img>
+                            <a href={about.url} target="_blank" rel="noreferrer">
+                                <img src={about.iconUrl} alt={about.title}></img>
+                            </a>
                             <motion.h2
                                 className="bold-text"
                                 style={{marginTop: 20}}

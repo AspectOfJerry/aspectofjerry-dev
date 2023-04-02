@@ -1,5 +1,5 @@
 #about {
-    padding-top: 4.75rem;
+    padding-top: 1rem;
 }
 
 .app__about {
@@ -8,6 +8,11 @@
     flex-direction: column;
 }
 
+.app__about_note {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
 
 .app__about-text {
     padding-top: 2rem;
@@ -34,15 +39,17 @@
     flex-direction: column;
     margin: 2rem;
 
-    img {
-        width: 100%;
-        height: 190px;
+    a {
+        img {
+            width: 100%;
+            height: 190px;
 
-        border-radius: 15px;
-        object-fit: cover; // cover/contain
+            border-radius: 15px;
+            object-fit: contain; // cover/contain
+        }
     }
 
-    @media screen and(min-width:2000px) {
+    @media screen and (min-width:2000px) {
         width: 370px;
         margin: 2rem 4rem;
 

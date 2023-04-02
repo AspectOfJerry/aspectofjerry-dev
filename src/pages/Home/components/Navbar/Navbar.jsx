@@ -5,6 +5,15 @@ import {images} from "../../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
 import {motion} from "framer-motion";
 
+const links = [
+    {title: "home", url: "#home"},
+    {title: "about", url: "#about"},
+    {title: "skills", url: "#skills"},
+    {title: "contact", url: "#contact"},
+    {title: "projects", url: "#projects"},
+    {title: "status page", url: "https://status.aspectofjerry.dev"},
+]
+
 const Navbar = () => { // 32:35
     const [toggle, setToggle] = useState(false);
 
@@ -15,15 +24,12 @@ const Navbar = () => { // 32:35
                     <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>
-            <div className="app__navbar-message">
-                <p>🚧 Under development 🚧</p>
-            </div>
             <ul className="app__navbar-links">
-                {["home", "about", "skills", "contact", "projects"].map((element) => (
-                    <li className="app__flex p-text" key={`link-${element}`}>
-                        {/* Line above hover */}
+                {links.map((element) => (
+                    <li className="app__flex p-text" key={`link-${element.title}`}>
+                        {/* div for line on hover */}
                         <div />
-                        <a href={`#${element}`}>{element}</a>
+                        <a href={`${element.url}`}>{element.title}</a>
                     </li>
                 ))}
             </ul>
