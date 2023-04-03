@@ -185,16 +185,16 @@
     //     }
     // }
 
-    // @media screen and (max-width:1200px) {
-    //     width: 100%;
-    //     flex-direction: row;
-    //     flex-wrap: wrap;
-    //     margin-left: 0;
+    @media screen and (max-width:1200px) {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
 
-    //     div {
-    //         margin: 0.6rem;
-    //     }
-    // }
+        div {
+            margin: 0.6rem;
+        }
+    }
 }
 
 .app__header-img {
