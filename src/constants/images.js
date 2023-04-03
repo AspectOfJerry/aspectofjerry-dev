@@ -18,14 +18,17 @@ import FRC_iconHorz from "../assets/FIRST/FRC/FRC_iconHorz.png";
 import FRC_IconVert_reverse from "../assets/FIRST/FRC/FRC_IconVert_reverse.png";
 import FRC_IconVert from "../assets/FIRST/FRC/FRC_IconVert.png";
 
-import CHARGED_UP_Horiz_Reverse from "../assets/FIRST/FRC-ChargedUp/CHARGED_UP_Horiz_Reverse.png";
-import CHARGED_UP_Horiz from "../assets/FIRST/FRC-ChargedUp/CHARGED_UP_Horiz.png";
-import CHARGED_UP_Vert from "../assets/FIRST/FRC-ChargedUp/CHARGED_UP_Vert.png";
+import CHARGED_UP_Horiz_Reverse from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_Horiz_Reverse.png";
+import CHARGED_UP_Horiz from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_Horiz.png";
+import CHARGED_UP_Vert from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_Vert.png";
 
 import FTC_iconHorz_reverse from "../assets/FIRST/FTC/FTC_iconHorz_reverse.png";
 import FTC_iconHorz from "../assets/FIRST/FTC/FTC_iconHorz.png";
 import FTC_IconVert_reverse from "../assets/FIRST/FTC/FTC_IconVert_reverse.png";
 import FTC_IconVert from "../assets/FIRST/FTC/FTC_IconVert.png";
+
+import FREIGHT_FRENZY_Vert from "../assets/FIRST/FTC/FreightFrenzy/FREIGHT_FRENZY_Vert.jpg";
+
 
 export default {
     aspectofjerry_head,
@@ -52,4 +55,5 @@ export default {
     FTC_iconHorz,
     FTC_IconVert_reverse,
     FTC_IconVert,
+    FREIGHT_FRENZY_Vert
 };
