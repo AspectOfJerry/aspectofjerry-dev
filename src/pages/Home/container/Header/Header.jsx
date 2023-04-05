@@ -2,7 +2,7 @@ import React from "react";
 import {motion} from "framer-motion";
 
 import "./Header.scss";
-
+import {AppWrap} from "../../wrapper";
 import {images} from "../../../../constants";
 
 
@@ -30,7 +30,7 @@ const header_circles = [
 
 const Header = () => {
     return (
-        <div id="home" className="app__header app__flex">
+        <div className="app__header app__flex">
             <motion.div
                 whileInView={{
                     x: [-100, 0],
@@ -65,7 +65,7 @@ const Header = () => {
                     className="background-img"
                     whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
                     transition={{duration: 1, ease: "easeInOut"}}
-                    src={images.CHARGED_UP_Vert}
+                    src={images.CHARGED_UP_vert}
                     alt="Hovering glass effect"
                 /> */}
             </motion.div>
@@ -76,13 +76,11 @@ const Header = () => {
                         <motion.div
                             variant={scaleVariants}
                             whileInView={scaleVariants.whileInView}
-                            whileHover={{scale: 1.15}}
+                            whileHover={{scale: 1.10}}
                             className="circle-cmp app__flex"
                             key={`circle-${index}`}
                         >
-                            <a href={circle.url} target="_blank" rel="noreferrer">
-                                <img src={circle.image} alt={circle.name} />
-                            </a>
+                            <img src={circle.image} alt={circle.name} />
                         </motion.div>
                     );
                 })}
@@ -91,4 +89,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default AppWrap(Header, "home");
