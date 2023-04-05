@@ -14,9 +14,10 @@ const skills = [
     {name: "CSS", color: "", iconUrl: images.css, url: "https://www.w3.org/TR/CSS/#css"},
     {name: "Cloudflare", iconUrl: images.CF_logo, url: "https://www.cloudflare.com/"},
     {name: "DiscordJS", color: "", iconUrl: images.djs, url: "https://discord.js.org/#/"},
+    {name: "Git", color: "", iconUrl: images.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "", iconUrl: images.github, url: "https://github.com/"},
     {name: "HTML", color: "", iconUrl: images.html, url: "https://html.spec.whatwg.org/"},
-    {name: "Java", color: "", iconUrl: images.java, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Java", color: "", iconUrl: images.java, url: "https://www.java.com/en/"},
     {name: "JavaScript", color: "", iconUrl: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
     {name: "NodeJS", color: "", iconUrl: images.nodejs, url: "https://nodejs.org/en"},
     {name: "ReactJS", color: "", iconUrl: images.reactjs, url: "https://react.dev/"},
@@ -35,21 +36,23 @@ const experience = [
         year: "2020",
         works: [
             {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then", iconUrl: images.cpp},
+            {name: "Java", description: "I created a Minecraft mod using Java", iconUrl: images.cpp},
+            {name: "Python", description: "I used Python for EV3 robots", iconUrl: images.python},
         ]
     },
     {
         year: "2021",
         works: [
-            {name: "NodeJS", description: "Learned NodeJS to make a Discord bot", iconUrl: images.nodejs},
+            {name: "NodeJS", description: "Learned Node.JS", iconUrl: images.nodejs},
             {name: "JavaScript", description: "Learned JavaScript", iconUrl: images.javascript},
-            {name: "DiscordJS", description: "A Node.js module to interact with the Discord API for Discord bots", iconUrl: images.discordjs},
+            {name: "DiscordJS", description: "Discord.JS is a Node.js module to interact with the Discord API for Discord bots", iconUrl: images.discordjs},
             {name: "Java", description: "Learned Java", iconUrl: images.nodejs}
         ]
     },
     {
         year: "2022",
         works: [
-            {name: "Website", description: "Created the website are currently on", iconUrl: images.reactjs},
+            {name: "Website", description: "Created the website you are currently on", iconUrl: images.reactjs},
             {name: "ReactJS", description: "Learned ReactJS basics", iconUrl: images.reactjs},
             {name: "HTML", description: "Learned HyperText Markup Language", iconUrl: images.html},
             {name: "CSS", description: "Learned Cascading Style Sheets", iconUrl: images.html}
