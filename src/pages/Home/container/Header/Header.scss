@@ -57,7 +57,11 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    margin-top: 70%;
+    margin-top: 75%;
+
+    @media screen and (max-width: 1200px) {
+        margin-top: 2rem;
+    }
 
     .badge-cmp {
         backdrop-filter: blur(1px);

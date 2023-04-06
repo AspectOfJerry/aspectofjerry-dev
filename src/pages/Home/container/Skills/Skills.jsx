@@ -29,15 +29,14 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Interests in programming. Building EV3 robots", iconUrl: images.vscode_alt},
+            {name: "Programming", description: "Interests in programming. Building EV3 robots", iconUrl: images.vscode_alt}
         ]
     },
     {
         year: "2020",
         works: [
             {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then", iconUrl: images.cpp},
-            {name: "Java", description: "I created a Minecraft mod using Java", iconUrl: images.cpp},
-            {name: "Python", description: "I used Python for EV3 robots", iconUrl: images.python},
+            {name: "Java", description: "I created a Minecraft mod using Java", iconUrl: images.cpp}
         ]
     },
     {
@@ -61,7 +60,7 @@ const experience = [
     {
         year: "2023",
         works: [
-            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets", iconUrl: images.sass},
+            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets", iconUrl: images.sass}
         ]
     }
 ];
