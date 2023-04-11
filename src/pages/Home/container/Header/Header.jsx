@@ -65,7 +65,7 @@ const Header = () => {
                     className="background-img"
                     whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
                     transition={{duration: 1, ease: "easeInOut"}}
-                    src={images.CHARGED_UP_vert}
+                    src={images.charged_up_vert}
                     alt="Hovering glass effect"
                 /> */}
             </motion.div>

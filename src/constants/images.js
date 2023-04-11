@@ -27,22 +27,19 @@ import spotify from '../assets/spotify.png';
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
 
 // cloudflare
-import CF_horiz from "../assets/cloudflare/CF_horiz.svg";
-// import CF_horiz from "../assets/cloudflare/CF_horiz.png";
-import CF_logo from "../assets/cloudflare/CF_logo.svg";
-// import CF_logo from "../assets/cloudflare/CF_logo.png";
-import CF_stacked from "../assets/cloudflare/CF_stacked.svg";
-// import CF_stacked from "../assets/cloudflare/CF_stacked.png";
+import cf_horiz from "../assets/cloudflare/cf_horiz.svg";
+import cf_logo from "../assets/cloudflare/cf_logo.svg";
+import cf_stacked from "../assets/cloudflare/cf_stacked.svg";
 
 // FIRST
-import FRC_iconHorz_reverse from "../assets/FIRST/FRC/FRC_iconHorz_reverse.png";
-import FRC_iconHorz from "../assets/FIRST/FRC/FRC_iconHorz.png";
-import FRC_iconVert_reverse from "../assets/FIRST/FRC/FRC_iconVert_reverse.png";
-import FRC_iconVert from "../assets/FIRST/FRC/FRC_iconVert.png";
+import frc_icon_horz_reverse from "../assets/FIRST/FRC/frc_icon_horz_reverse.png";
+import frc_icon_horz from "../assets/FIRST/FRC/frc_icon_horz.png";
+import frc_icon_vert_reverse from "../assets/FIRST/FRC/frc_icon_vert_reverse.png";
+import frc_icon_vert from "../assets/FIRST/FRC/frc_icon_vert.png";
 
-import CHARGED_UP_horiz_reverse from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_horiz_reverse.png";
-import CHARGED_UP_horiz from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_horiz.png";
-import CHARGED_UP_vert from "../assets/FIRST/FRC/FRC-ChargedUp/CHARGED_UP_vert.png";
+import charged_up_horiz_reverse from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horiz_reverse.png";
+import charged_up_horiz from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horiz.png";
+import charged_up_vert from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_vert.png";
 
 import FTC_iconHorz_reverse from "../assets/FIRST/FTC/FTC_iconHorz_reverse.png";
 import FTC_iconHorz from "../assets/FIRST/FTC/FTC_iconHorz.png";
@@ -53,15 +50,11 @@ import FREIGHT_FRENZY_vert from "../assets/FIRST/FTC/FreightFrenzy/FREIGHT_FRENZ
 
 // github
 import github from "../assets/github/github.svg";
-// import github from "../assets/github/github.png";
 import github_white from "../assets/github/github_white.svg";
-// import github_white from "../assets/github/github_white.png";
 
 // vsc
 import vscode_alt from "../assets/vscode/vscode_alt.svg";
-// import vscode_alt from "../assets/vscode/vscode_alt.png";
 import vscode from "../assets/vscode/vscode.svg";
-// import vscode from "../assets/vscode/vscode.png";
 
 
 export default {
@@ -91,17 +84,17 @@ export default {
     spotify,
     t4k_logo_reduced,
     // cloudflare
-    CF_horiz,
-    CF_logo,
-    CF_stacked,
+    cf_horiz,
+    cf_logo,
+    cf_stacked,
     // FIRST
-    FRC_iconHorz_reverse,
-    FRC_iconHorz,
-    FRC_iconVert_reverse,
-    FRC_iconVert,
-    CHARGED_UP_horiz_reverse,
-    CHARGED_UP_horiz,
-    CHARGED_UP_vert,
+    frc_icon_horz_reverse,
+    frc_icon_horz,
+    frc_icon_vert_reverse,
+    frc_icon_vert,
+    charged_up_horiz_reverse,
+    charged_up_horiz,
+    charged_up_vert,
     FTC_iconHorz_reverse,
     FTC_iconHorz,
     FTC_iconVert_reverse,

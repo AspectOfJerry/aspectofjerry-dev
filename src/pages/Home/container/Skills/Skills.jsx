@@ -12,7 +12,7 @@ const skills = [
     {name: "Microsoft Azure", color: "", iconUrl: images.azure, url: "https://azure.microsoft.com/en-ca/"},
     {name: "C++", color: "", iconUrl: images.cpp, url: "https://isocpp.org/"},
     {name: "CSS", color: "", iconUrl: images.css, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "Cloudflare", iconUrl: images.CF_logo, url: "https://www.cloudflare.com/"},
+    {name: "Cloudflare", iconUrl: images.cf_logo, url: "https://www.cloudflare.com/"},
     {name: "DiscordJS", color: "", iconUrl: images.djs, url: "https://discord.js.org/#/"},
     {name: "Git", color: "", iconUrl: images.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "", iconUrl: images.github, url: "https://github.com/"},
