@@ -21,7 +21,7 @@ const scaleVariants = {
 }
 
 const header_circles = [
-    {name: "NodeJS", image: images.nodejs, url: "https://nodejs.org/en"},
+    {name: "NodeJS", image: images.nodejs_js, url: "https://nodejs.org/en"},
     {name: "JavaScript", image: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
     {name: "Git", image: images.git, url: "https://git-scm.com/"},
     {name: "ReactJS", image: images.reactjs, url: "https://react.dev/"},

@@ -7,12 +7,14 @@ import djs from "../assets/djs.png";
 import favicon from "../assets/favicon.png";
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.png';
-import git from "../assets/git.png";
+import git from "../assets/git.svg";
 import graphql from '../assets/graphql.png';
 import html from "../assets/html.png";
 import java from "../assets/java.svg";
 import javascript from "../assets/javascript.png";
-import nodejs from "../assets/nodejs.png";
+import nodejs from "../assets/nodejs.svg";
+import nodejs_side from "../assets/nodejs_side.svg";
+import nodejs_js from "../assets/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
 import python from '../assets/python.png';
 import redux from '../assets/redux.png';
@@ -25,28 +27,30 @@ import amazon from '../assets/amazon.png';
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import spotify from '../assets/spotify.png';
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
+import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 
 // cloudflare
-import cf_horiz from "../assets/cloudflare/cf_horiz.svg";
+import cf_horz from "../assets/cloudflare/cf_horz.svg";
 import cf_logo from "../assets/cloudflare/cf_logo.svg";
 import cf_stacked from "../assets/cloudflare/cf_stacked.svg";
 
+// discord
+import discord_full_black from "../assets/discord/discord_full_black.svg";
+import discord_full_blurple from "../assets/discord/discord_full_blurple.svg";
+import clyde_icon_black from "../assets/discord/clyde_icon_black.svg";
+import clyde_icon_blurple from "../assets/discord/clyde_icon_blurple.svg";
+
 // FIRST
-import frc_icon_horz_reverse from "../assets/FIRST/FRC/frc_icon_horz_reverse.png";
 import frc_icon_horz from "../assets/FIRST/FRC/frc_icon_horz.png";
-import frc_icon_vert_reverse from "../assets/FIRST/FRC/frc_icon_vert_reverse.png";
 import frc_icon_vert from "../assets/FIRST/FRC/frc_icon_vert.png";
 
-import charged_up_horiz_reverse from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horiz_reverse.png";
-import charged_up_horiz from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horiz.png";
+import charged_up_horz from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horz.png";
 import charged_up_vert from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_vert.png";
 
-import FTC_iconHorz_reverse from "../assets/FIRST/FTC/FTC_iconHorz_reverse.png";
-import FTC_iconHorz from "../assets/FIRST/FTC/FTC_iconHorz.png";
-import FTC_iconVert_reverse from "../assets/FIRST/FTC/FTC_iconVert_reverse.png";
-import FTC_iconVert from "../assets/FIRST/FTC/FTC_iconVert.png";
+import ftc_icon_horz from "../assets/FIRST/FTC/ftc_icon_horz.png";
+import ftc_icon_vert from "../assets/FIRST/FTC/ftc_icon_vert.png";
 
-import FREIGHT_FRENZY_vert from "../assets/FIRST/FTC/FreightFrenzy/FREIGHT_FRENZY_vert.jpg";
+import freight_frenzy_vert from "../assets/FIRST/FTC/FreightFrenzy/freight_frenzy_vert.jpg";
 
 // github
 import github from "../assets/github/github.svg";
@@ -72,6 +76,8 @@ export default {
     java,
     javascript,
     nodejs,
+    nodejs_side,
+    nodejs_js,
     placeholder,
     python,
     redux,
@@ -83,23 +89,24 @@ export default {
     amazon,
     spotify,
     t4k_logo_reduced,
+    twitch_glitch_purple,
     // cloudflare
-    cf_horiz,
+    cf_horz,
     cf_logo,
     cf_stacked,
+    // discord
+    discord_full_black,
+    discord_full_blurple,
+    clyde_icon_black,
+    clyde_icon_blurple,
     // FIRST
-    frc_icon_horz_reverse,
     frc_icon_horz,
-    frc_icon_vert_reverse,
     frc_icon_vert,
-    charged_up_horiz_reverse,
-    charged_up_horiz,
+    charged_up_horz,
     charged_up_vert,
-    FTC_iconHorz_reverse,
-    FTC_iconHorz,
-    FTC_iconVert_reverse,
-    FTC_iconVert,
-    FREIGHT_FRENZY_vert,
+    ftc_icon_horz,
+    ftc_icon_vert,
+    freight_frenzy_vert,
     // github
     github,
     github_white,

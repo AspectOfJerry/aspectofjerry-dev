@@ -13,9 +13,9 @@ import "./About.scss";
 const abouts = [
     {title: "Team 3990", description: "I'm in Team 3990 | Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
     {title: "FIRST® Robotics Competition", description: "FIRST Robotics Competition", iconUrl: images.frc_icon_vert, url: "https://www.firstinspires.org/robotics/frc"},
-    {title: "Charged Up", description: "CHARGED UP presented by Haas | 2022-2023", iconUrl: images.charged_up_horiz, url: "https://www.firstinspires.org/robotics/frc/game-and-season"},
-    {title: "FIRST® Tech Challenge", description: "I was in team 20117 for the FIRST Tech Challenge.", iconUrl: images.FTC_iconVert, url: "https://www.firstinspires.org/robotics/ftc"},
-    {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.FREIGHT_FRENZY_vert, url: "https://www.firstinspires.org/robotics/ftc/game-and-season"}
+    {title: "Charged Up", description: "CHARGED UP presented by Haas | 2022-2023", iconUrl: images.charged_up_horz, url: "https://www.firstinspires.org/robotics/frc/game-and-season"},
+    {title: "FIRST® Tech Challenge", description: "I was in team 20117 for the FIRST Tech Challenge.", iconUrl: images.ftc_icon_vert, url: "https://www.firstinspires.org/robotics/ftc"},
+    {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.freight_frenzy_vert, url: "https://www.firstinspires.org/robotics/ftc/game-and-season"}
 ];
 
 const text_fade_in = {
