@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Divider} from "./pages/Global/index.js";
 
 // pages/Home
-import {About, Contact, Footer, Header, Projects, Skills} from "./pages/Home/container/index.js";
+import {About, Socials, Footer, Header, Projects, Skills} from "./pages/Home/container/index.js";
 import {Navbar} from "./pages/Home/components/index.js";
 
 // pages/NotFound
@@ -27,7 +27,7 @@ const App = () => {
                         <Divider />
                         <Skills />
                         <Divider />
-                        <Contact />
+                        <Socials />
                         <Divider />
                         <Projects />
                         <Divider />

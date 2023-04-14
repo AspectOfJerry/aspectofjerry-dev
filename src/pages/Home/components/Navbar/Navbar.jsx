@@ -9,10 +9,10 @@ const links = [
     {title: "home", url: "#home"},
     {title: "about", url: "#about"},
     {title: "skills", url: "#skills"},
-    {title: "contact", url: "#contact"},
+    {title: "socials", url: "#socials"},
     {title: "projects", url: "#projects"},
-    {title: "status page", url: "https://status.aspectofjerry.dev"},
-]
+    {title: "status page", url: "https://status.aspectofjerry.dev"}
+];
 
 const Navbar = () => { // 32:35
     const [toggle, setToggle] = useState(false);
@@ -65,7 +65,7 @@ const Navbar = () => { // 32:35
                     >
                         <HiX onClick={() => setToggle(false)} />
                         <ul>
-                            {["home", "about", "skills", "contact", "projects"].map((element) => (
+                            {["home", "about", "skills", "socials", "projects"].map((element) => (
                                 <li key={element}>
                                     <a href={`#${element}`} onClick={() => setToggle(false)}>{element}</a>
                                 </li>

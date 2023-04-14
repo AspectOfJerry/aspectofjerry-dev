@@ -1,7 +1,8 @@
 import React from "react";
 import {motion} from "framer-motion";
 // import {Tooltip} from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+// import "react-tooltip/dist/react-tooltip.css";
+
 import {images} from "../../../../constants";
 import {AppWrap} from "../../wrapper";
 
@@ -106,8 +107,8 @@ const Skills = () => {
                                                 whileInView={{opacity: [0.25, 1], x: [50, 0]}}
                                                 transition={{duration: 0.75, ease: "easeOut"}}
                                                 className="app__skills-exp-work app__flex"
-                                                data-tip
-                                                data-for={work.name}
+                                                // data-tip
+                                                // data-for={work.name}
                                                 key={work.name}
                                             >
                                                 <h4 className="bold-text">{work.name}</h4>

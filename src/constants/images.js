@@ -48,9 +48,25 @@ import freight_frenzy_vert from "../assets/FIRST/FTC/FreightFrenzy/freight_frenz
 import github from "../assets/github/github.svg";
 import github_white from "../assets/github/github_white.svg";
 
+// instagram
+import instagram_black from "../assets/instagram/instagram_black.svg";
+import instagram_gradient from "../assets/instagram/instagram_gradient.png";
+// import instagram_gradient from "../assets/instagram/instagram_gradient.svg"; // the svg file breaks the code. Use png for now
+import instagram_white from "../assets/instagram/instagram_white.svg";
+
+// reddit
+import reddit_lockup from "../assets/reddit/reddit_lockup.svg";
+import reddit_logotype from "../assets/reddit/reddit_logotype.svg";
+import reddit_mark from "../assets/reddit/reddit_mark.svg";
+
 // vsc
 import vscode_alt from "../assets/vscode/vscode_alt.svg";
 import vscode from "../assets/vscode/vscode.svg";
+
+// youtube
+import youtube from "../assets/youtube/youtube.png";
+import youtube_icon from "../assets/youtube/youtube_icon.png";
+import youtube_reverse from "../assets/youtube/youtube_reverse.png";
 
 
 export default {
@@ -94,7 +110,19 @@ export default {
     // github
     github,
     github_white,
+    // instagram
+    instagram_black,
+    instagram_gradient,
+    instagram_white,
+    // reddit
+    reddit_lockup,
+    reddit_logotype,
+    reddit_mark,
     // vscode
     vscode_alt,
-    vscode
+    vscode,
+    // youtube
+    youtube,
+    youtube_icon,
+    youtube_reverse
 };
