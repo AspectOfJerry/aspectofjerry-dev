@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 import "./Navbar.scss";
 import {images} from "../../../../constants/index.js";
@@ -17,8 +17,29 @@ const links = [
 const Navbar = () => { // 32:35
     const [toggle, setToggle] = useState(false);
 
+    const [isShrunk, setShrunk] = useState(false);
+
+    useEffect(() => {
+        const handler = () => {
+            setShrunk((isShrunk) => {
+                if(!isShrunk && (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3)) {
+                    return true;
+                }
+
+                if(isShrunk && document.body.scrollTop < 2 && document.documentElement.scrollTop < 2) {
+                    return false;
+                }
+
+                return isShrunk;
+            });
+        }
+
+        window.addEventListener("scroll", handler);
+        return () => window.removeEventListener("scroll", handler);
+    }, []);
+
     return (
-        <nav className="app__navbar">
+        <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>
             <div className="app__navbar-logo">
                 <a href="https://aspectofjerry.dev">
                     <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />

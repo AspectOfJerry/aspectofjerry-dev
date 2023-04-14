@@ -5,14 +5,20 @@
     justify-content: space-between;
     align-items: center; // 40:00
 
-    padding: 0.8rem 2rem;
-    background: rgba(135, 206, 235, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    -moz-backdrop-filter: blur(6px);
-    border: 1px solid rgba(135, 206, 235, 0.15);
+    padding: 1rem 2rem;
+    background: rgba(150, 220, 250, 0.15); // 135, 206, 235
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    -moz-backdrop-filter: blur(7px);
+    border: 1px solid rgba(135, 206, 235, 0.10);
     position: fixed;
     z-index: 2;
+}
+
+.app__navbar-shrunk {
+    padding: 0.5rem 2rem;
+    box-shadow: 0 0 25px rgba(168, 168, 168, 0.25);
+    border: none;
 }
 
 .app__navbar-logo {
@@ -43,7 +49,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin-left: 5rem;
+    margin-left: 5%;
     list-style: none;
 
     li {

@@ -29,22 +29,20 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Interests in programming. Building EV3 robots", iconUrl: images.vscode_alt}
+            {name: "Programming", description: "Interest in programming. Hello, World!", iconUrl: images.vscode_alt}
         ]
     },
     {
         year: "2020",
         works: [
-            {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then", iconUrl: images.cpp},
-            {name: "Java", description: "I created a Minecraft mod using Java", iconUrl: images.cpp}
+            {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then", iconUrl: images.cpp}
         ]
     },
     {
         year: "2021",
         works: [
-            {name: "NodeJS", description: "Learned Node.JS", iconUrl: images.nodejs},
             {name: "JavaScript", description: "Learned JavaScript", iconUrl: images.javascript},
-            {name: "DiscordJS", description: "Discord.JS is a Node.js module to interact with the Discord API for Discord bots", iconUrl: images.discordjs},
+            {name: "NodeJS", description: "Learned Node.JS", iconUrl: images.nodejs},
             {name: "Java", description: "Learned Java", iconUrl: images.nodejs}
         ]
     },
@@ -105,8 +103,8 @@ const Skills = () => {
                                     {experience.works.map((work) => {
                                         return (
                                             <motion.div
-                                                whileInView={{opacity: [0, 1]}}
-                                                transition={{duration: 0.5}}
+                                                whileInView={{opacity: [0.25, 1], x: [50, 0]}}
+                                                transition={{duration: 0.75, ease: "easeOut"}}
                                                 className="app__skills-exp-work app__flex"
                                                 data-tip
                                                 data-for={work.name}
