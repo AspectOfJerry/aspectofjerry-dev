@@ -17,8 +17,8 @@ const socials = [
 ];
 
 const texts = [
-    {title: "Contact info", description: "You can find my contact information here."},
-    {title: "📧Public Email", description: "jerry@aspectofjerry.dev"}
+    {title: "Contact info", description: "📡 You can find my contact information and social media links here."},
+    {title: "Public Email", description: "📧 jerry@aspectofjerry.dev"}
 ];
 
 const Socials = () => {
@@ -52,8 +52,8 @@ const Socials = () => {
                     {texts.map((text, index) => {
                         return (
                             <motion.div
-                                whileInView={{opacity: [0.25, 1], x: [50, 0]}}
-                                transition={{duration: 0.75, ease: "easeOut"}}
+                                whileInView={{opacity: [0, 1], x: [40, 0]}}
+                                transition={{duration: 0.65, ease: "easeOut", delay: 0.03}}
                                 className="app__socials-text app__flex"
                                 key={index}
                             >

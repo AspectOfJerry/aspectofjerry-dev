@@ -40,7 +40,7 @@ const About = () => {
                 transition={text_fade_in.transition}
             > */}
             <p className="p-text app__about_note">
-                🚧 This website is under development. More content will be added later. 🚧
+                🚧 This website is under development. 🚧
             </p>
             {/* </motion.p> */}
 
@@ -51,8 +51,9 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target={"_blank"} rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target={"_blank"} rel="noreferrer">First Robotics Competition</a>.<br />
-                📍Canada 🍁
+                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target="_blank" rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target="_blank" rel="noreferrer">First Robotics Competition</a>.<br />
+                <br />
+                📍 Canada 🍁
             </motion.p>
 
             <div className="app__profiles">

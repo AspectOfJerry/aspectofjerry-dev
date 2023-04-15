@@ -74,8 +74,8 @@ const Skills = () => {
                     {skills.map((skill) => {
                         return (
                             <motion.div
-                                whileInView={{opacity: [0, 1]}}
-                                transition={{duration: 0.5}}
+                                // whileInView={{opacity: [0, 1]}}
+                                // transition={{duration: 0.5}}
                                 className="app__skills-item app__flex"
                                 key={skill.name}
                             >
@@ -104,8 +104,8 @@ const Skills = () => {
                                     {experience.works.map((work) => {
                                         return (
                                             <motion.div
-                                                whileInView={{opacity: [0.25, 1], x: [50, 0]}}
-                                                transition={{duration: 0.75, ease: "easeOut"}}
+                                                whileInView={{opacity: [0, 1], x: [40, 0]}}
+                                                transition={{duration: 0.65, ease: "easeOut", delay: 0.03}}
                                                 className="app__skills-exp-work app__flex"
                                                 // data-tip
                                                 // data-for={work.name}
