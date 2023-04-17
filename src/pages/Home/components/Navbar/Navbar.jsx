@@ -5,13 +5,21 @@ import {images} from "../../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
 import {motion} from "framer-motion";
 
-const links = [
-    {title: "home", url: "#home"},
-    {title: "about", url: "#about"},
-    {title: "skills", url: "#skills"},
-    {title: "socials", url: "#socials"},
-    {title: "projects", url: "#projects"},
-    {title: "status page", url: "https://status.aspectofjerry.dev"}
+
+// title prop (toLowerCase()) is used as key
+const nav_links = [
+    {title: "Home", url: "#home"},
+    {title: "About", url: "#about"},
+    {title: "Skills", url: "#skills"},
+    {title: "Socials", url: "#socials"},
+    {title: "Projects", url: "#projects"}
+];
+
+// title prop (toLowerCase()) is used as key
+const ext_links = [
+    {title: "Status page", url: "https://status.aspectofjerry.dev"},
+    {title: "Discord bot documentation", url: "https://bot.aspectofjerry.dev"}
+
 ];
 
 const Navbar = () => { // 32:35
@@ -45,14 +53,27 @@ const Navbar = () => { // 32:35
                     <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>
-            <ul className="app__navbar-links">
-                {links.map((element) => (
-                    <li className="app__flex p-text" key={`link-${element.title}`}>
-                        {/* div for line on hover */}
-                        <div />
-                        <a href={`${element.url}`}>{element.title}</a>
-                    </li>
-                ))}
+            <ul className="app__navbar-nav-links">
+                {nav_links.map((link) => {
+                    return (
+                        <li className="app__flex p-text" key={`link-${link.title.toLowerCase()}`}>
+                            {/* div for line on hover */}
+                            <div />
+                            <a href={`${link.url}`}>{link.title}</a>
+                        </li>
+                    )
+                })}
+            </ul>
+            <ul className="app__navbar-ext-links">
+                {ext_links.map((link) => {
+                    return (
+                        <li className="app__flex p-text" key={`link-${link.title.toLowerCase()}`}>
+                            {/* div for line on hover */}
+                            <div />
+                            <a href={`${link.url}`} target="_blank" rel="noreferrer">{link.title}</a>
+                        </li>
+                    )
+                })}
             </ul>
 
             <div className="app__navbar-menu">

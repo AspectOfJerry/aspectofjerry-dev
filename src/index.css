@@ -6,9 +6,9 @@
     --primary-color: #fafbfc;
     --secondary-color: #87ceeb;
     --white-color: #fcfcfc;
-    --lighter-gray-color: #dcdcdc;
-    --light-gray-color: #c8c8c8;
-    --gray-color: #969696;
+    --lighter-gray-color: rgb(233, 233, 233);
+    --light-gray-color: #dcdcdc;
+    --gray-color: #a0a0a0;
     --true-gray-color: #808080;
     --black-color: #202020;
 }
@@ -18,4 +18,21 @@
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--lighter-gray-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--light-gray-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-color);
 }

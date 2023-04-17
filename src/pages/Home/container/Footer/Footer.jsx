@@ -10,4 +10,5 @@ const Footer = () => {
     );
 };
 
+// no wrapping footer
 export default Footer;
