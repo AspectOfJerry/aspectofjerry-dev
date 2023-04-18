@@ -1,7 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
+import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import azure from "../assets/azure.png";
 import background_shapes from "../assets/background_shapes.png";
-import cpp from '../assets/cpp.png';
+import cpp from "../assets/cpp.png";
+import cs from "../assets/cs.png";
 import css from "../assets/css.png";
 import djs from "../assets/djs.png";
 import favicon from "../assets/favicon.png";
@@ -13,13 +15,13 @@ import nodejs from "../assets/nodejs.svg";
 import nodejs_side from "../assets/nodejs_side.svg";
 import nodejs_js from "../assets/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
-import sass from "../assets/sass.png";
-import typescript from '../assets/typescript.png';
 import reactjs from "../assets/reactjs.png";
-
-import aspectofjerry_head from "../assets/aspectofjerry_head.png";
+import sass from "../assets/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
+import typescript from "../assets/typescript.png";
+import unity from "../assets/unity.svg";
+import vbs from "../assets/vbs.png";
 
 // cloudflare
 import cf_horz from "../assets/cloudflare/cf_horz.svg";
@@ -70,9 +72,11 @@ import youtube_reverse from "../assets/youtube/youtube_reverse.png";
 
 
 export default {
+    aspectofjerry_head,
     azure,
     background_shapes,
     cpp,
+    cs,
     css,
     djs,
     favicon,
@@ -86,10 +90,11 @@ export default {
     placeholder,
     reactjs,
     sass,
-    typescript,
-    aspectofjerry_head,
     t4k_logo_reduced,
     twitch_glitch_purple,
+    typescript,
+    unity,
+    vbs,
     // cloudflare
     cf_horz,
     cf_logo,

@@ -1,9 +1,10 @@
 import React from "react";
 import {motion} from "framer-motion";
 
-import "./Header.scss";
-import {AppWrap} from "../../../Global/wrapper/";
 import {images} from "../../../../constants";
+import {AppWrap} from "../../../Global/wrapper";
+
+import "./Header.scss";
 
 
 const scaleVariants = {
@@ -21,11 +22,11 @@ const scaleVariants = {
 }
 
 const header_circles = [
-    {name: "NodeJS", image: images.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "JavaScript", image: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
-    {name: "Git", image: images.git, url: "https://git-scm.com/"},
-    {name: "ReactJS", image: images.reactjs, url: "https://react.dev/"},
-    {name: "Sass", image: images.sass, url: "https://sass-lang.com/"}
+    {name: "NodeJS", image: images.github, url: "https://nodejs.org/en"},
+    {name: "JavaScript", image: images.github, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Git", image: images.github, url: "https://git-scm.com/"},
+    {name: "ReactJS", image: images.github, url: "https://react.dev/"},
+    {name: "Sass", image: images.github, url: "https://sass-lang.com/"}
 ];
 
 const Header = () => {
@@ -45,7 +46,7 @@ const Header = () => {
                             <span>👋</span>
                             <div style={{marginLeft: 20}}>
                                 <p className="p-text">Hello, I'm</p>
-                                <h1 className="head-text">Jerry</h1>
+                                <h1 className="head-text">Arnaud</h1>
                             </div>
                         </div>
 
@@ -61,7 +62,7 @@ const Header = () => {
                     transition={{duration: 0.75, type: "tween", ease: "easeInOut", delay: 0.03, delayChildren: 0}}
                     className="app__header-img"
                 >
-                    <img src={images.aspectofjerry_head} alt="profile_bg" />
+                    <img src={images.github} alt="profile_bg" />
                     {/* <motion.img
                     className="background-img"
                     whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
@@ -91,4 +92,4 @@ const Header = () => {
     );
 };
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, "cake-home");

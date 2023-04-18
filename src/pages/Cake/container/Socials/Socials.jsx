@@ -2,23 +2,21 @@ import React from "react";
 import {motion} from "framer-motion";
 
 import {images} from "../../../../constants";
-import {AppWrap} from "../../../Global/wrapper/";
+import {AppWrap} from "../../../Global/wrapper";
 
 import "./Socials.scss";
 
 
 const socials = [
-    {name: "Discord", description: "Jerry#3756", iconUrl: images.clyde_icon_blurple},
-    {name: "GitHub", description: "AspectOfJerry", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
-    {name: "Instagram", description: "aspectofjerry", iconUrl: images.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
-    {name: "Reddit", description: "AspectOfJerry", iconUrl: images.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
-    {name: "Twitch", description: "aspectofjerrylive", iconUrl: images.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
-    {name: "YouTube", description: "@aspectofjerry", iconUrl: images.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
+    {name: "Discord", description: "Cake111#2346", iconUrl: images.clyde_icon_blurple},
+    {name: "GitHub", description: "Arnaud-5G", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
+    {name: "Twitch", description: "", iconUrl: images.twitch_glitch_purple, url: "https://www.twitch.tv/"},
+    {name: "YouTube", description: "", iconUrl: images.youtube_icon, url: "https://www.youtube.com/"}
 ];
 
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here."},
-    {title: "Public Email", description: "📧 jerry@aspectofjerry.dev"}
+    {title: "Public Email", description: "📧 cake@aspectofjerry.dev"}
 ];
 
 const Socials = () => {

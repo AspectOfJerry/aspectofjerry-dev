@@ -2,7 +2,7 @@ import React from "react";
 import {motion} from "framer-motion";
 import {images} from "../../../../constants";
 
-import {AppWrap} from "../../../Global/wrapper/";
+import {AppWrap} from "../../../Global/wrapper";
 import "./About.scss";
 
 
@@ -13,9 +13,9 @@ import "./About.scss";
 const abouts = [
     {title: "Team 3990", description: "I'm in Team 3990 | Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
     {title: "FIRST® Robotics Competition", description: "FIRST Robotics Competition", iconUrl: images.frc_icon_vert, url: "https://www.firstinspires.org/robotics/frc"},
-    {title: "Charged Up", description: "CHARGED UP presented by Haas | 2022-2023", iconUrl: images.charged_up_horz, url: "https://www.firstinspires.org/robotics/frc/game-and-season"},
+    // {title: "Charged Up", description: "CHARGED UP presented by Haas | 2022-2023", iconUrl: images.charged_up_horz, url: "https://www.firstinspires.org/robotics/frc/game-and-season"},
     {title: "FIRST® Tech Challenge", description: "I was in team 20117 for the FIRST Tech Challenge.", iconUrl: images.ftc_icon_vert, url: "https://www.firstinspires.org/robotics/ftc"},
-    {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.freight_frenzy_vert, url: "https://www.firstinspires.org/robotics/ftc/game-and-season"}
+    // {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.freight_frenzy_vert, url: "https://www.firstinspires.org/robotics/ftc/game-and-season"}
 ];
 
 const text_fade_in = {
@@ -39,9 +39,9 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             > */}
-            <p className="p-text app__about_note">
+            {/* <p className="p-text app__about_note">
                 🚧 This website is under development. 🚧
-            </p>
+            </p> */}
             {/* </motion.p> */}
 
             <h2 className="head-text">About <span>Me</span></h2>
@@ -51,9 +51,7 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target="_blank" rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target="_blank" rel="noreferrer">First Robotics Competition</a>.<br />
-                <br />
-                📍 Canada 🍁
+                Hello!
             </motion.p>
 
             <div className="app__profiles">

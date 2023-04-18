@@ -4,25 +4,21 @@ import {motion} from "framer-motion";
 // import "react-tooltip/dist/react-tooltip.css";
 
 import {images} from "../../../../constants";
-import {AppWrap} from "../../../Global/wrapper/";
+import {AppWrap} from "../../../Global/wrapper";
 
 import "./Skills.scss";
 
 
 const skills = [
-    {name: "Microsoft Azure", color: "", iconUrl: images.azure, url: "https://azure.microsoft.com/en-ca/"},
-    {name: "C++", color: "", iconUrl: images.cpp, url: "https://isocpp.org/"},
-    {name: "CSS", color: "", iconUrl: images.css, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "Cloudflare", iconUrl: images.cf_logo, url: "https://www.cloudflare.com/"},
-    {name: "DiscordJS", color: "", iconUrl: images.djs, url: "https://discord.js.org/#/"},
+    {name: "Aseprite", color: "", iconUrl: "", url: ""},
+    {name: "C#", color: "", iconUrl: images.cs, url: ""},
+    {name: "Batch", color: "", iconUrl: "", url: ""},
     {name: "Git", color: "", iconUrl: images.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
     {name: "HTML", color: "", iconUrl: images.html, url: "https://html.spec.whatwg.org/"},
     {name: "Java", color: "", iconUrl: images.java, url: "https://www.java.com/en/"},
-    {name: "JavaScript", color: "", iconUrl: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
-    {name: "NodeJS", color: "", iconUrl: images.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "ReactJS", color: "", iconUrl: images.reactjs, url: "https://react.dev/"},
-    {name: "Sass", color: "", iconUrl: images.sass, url: "https://sass-lang.com/"},
+    {name: "Unity", color: "", iconUrl: images.unity, url: ""},
+    {name: "VBS", color: "", iconUrl: images.vbs, url: ""},
     {name: "Visual Studio Code", color: "", iconUrl: images.vscode, url: "https://code.visualstudio.com/"},
 ];
 
@@ -30,36 +26,34 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Interest in programming. Hello, World!"}
+            {name: "Programming", description: "Interest in programming. Hello, World!", iconUrl: images.vscode_alt}
         ]
     },
     {
         year: "2020",
         works: [
-            {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then"}
+            {name: "Unity", description: "Learned Unity"},
+            {name: "C#", description: "Learned C#"}
         ]
     },
     {
         year: "2021",
         works: [
-            {name: "JavaScript", description: "Learned JavaScript"},
-            {name: "NodeJS", description: "Learned Node.JS"},
             {name: "Java", description: "Learned Java"}
         ]
     },
     {
         year: "2022",
         works: [
-            {name: "Website", description: "Created the website you are currently on"},
-            {name: "ReactJS", description: "Learned ReactJS basics"},
-            {name: "HTML", description: "Learned HyperText Markup Language"},
-            {name: "CSS", description: "Learned Cascading Style Sheets"}
+            {name: "Batch/CMD", description: "Learned Batch"},
+            {name: "Pixel Art", description: "Started Pixel Art using Aseprite"}
         ]
     },
     {
         year: "2023",
         works: [
-            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets"}
+            {name: "VBS", description: "Learned VBS"},
+            {name: "HTML", description: "Learned HTML"}
         ]
     }
 ];

@@ -1,0 +1,238 @@
+.app__navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center; // 40:00
+
+    padding: 1rem 2rem;
+    background: rgba(150, 220, 250, 0.15); // 135, 206, 235
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    -moz-backdrop-filter: blur(7px);
+    border: 1px solid rgba(135, 206, 235, 0.10);
+    position: fixed;
+    z-index: 2;
+}
+
+.app__navbar-shrunk {
+    padding: 0.32rem 2rem;
+    box-shadow: 0 0 25px rgba(168, 168, 168, 0.25);
+    border: none;
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        width: 48px;
+        height: 48px;
+        padding: 5%;
+
+        // @media screen and (min-width: 2000px) {
+        //     width: 96;
+        //     height: auto;
+        // }
+    }
+}
+
+// .app__navbar-message {
+//     margin-left: 5rem;
+//     margin-right: 5rem;
+// }
+
+.app__navbar-nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-left: 5%;
+    list-style: none;
+
+    li {
+        margin: 0 1.75rem;
+        cursor: pointer;
+
+        flex-direction: column;
+
+        // Line above hover
+        div {
+            width: 65%;
+            height: 2px;
+            background: transparent;
+            border-radius: 25%;
+
+            margin-bottom: 3px;
+        }
+
+        a {
+            color: var(--true-gray-color);
+            text-decoration: none;
+            flex-direction: column;
+
+            font-weight: 500;
+
+            transition: all 0.25s ease-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        // Line above hover
+        &:hover {
+            div {
+                transition: all 0.3s ease-out;
+                background: var(--secondary-color);
+            }
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        display: none;
+    }
+}
+
+.app__navbar-ext-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    list-style: none;
+
+    li {
+        margin: 0 2.5rem;
+        cursor: pointer;
+
+        flex-direction: column;
+
+        // Line above hover
+        div {
+            width: 65%;
+            height: 2px;
+            background: transparent;
+            border-radius: 25%;
+
+            margin-bottom: 3px;
+        }
+
+        a {
+            color: var(--true-gray-color);
+            text-decoration: none;
+            flex-direction: column;
+
+            font-weight: 500;
+
+            transition: all 0.25s ease-out;
+
+            &:hover {
+                color: var(--secondary-color);
+            }
+        }
+
+        // Line above hover
+        &:hover {
+            div {
+                transition: all 0.3s ease-out;
+                background: var(--secondary-color);
+            }
+        }
+    }
+
+    @media screen and (max-width:900px) {
+        display: none;
+    }
+}
+
+.app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--white-color);
+    }
+
+    // motion.div
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        padding: 1rem;
+
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        // background: url("../../assets/bgWhite.png"); // 57:51
+        background-color: var(--white-color);
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 25px rgba(168, 168, 168, 0.15);
+
+        svg {
+            width: 35px;
+            height: 35px;
+            color: var(--secondary-color);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            li {
+                margin: 1rem;
+
+                a {
+                    color: var(--gray-color);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    font-weight: 500;
+
+                    transition: all 0.20s ease-in-out;
+
+                    &:hover {
+                        color: var(--secondary-color);
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        display: none;
+    }
+}
