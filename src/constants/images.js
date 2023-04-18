@@ -1,7 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
+import arrow_up from "../assets/arrow_up.svg";
+import aseprite from "../assets/aseprite.png";
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import azure from "../assets/azure.png";
 import background_shapes from "../assets/background_shapes.png";
+import cmd from "../assets/cmd.jpg";
 import cpp from "../assets/cpp.png";
 import cs from "../assets/cs.png";
 import css from "../assets/css.png";
@@ -72,9 +75,12 @@ import youtube_reverse from "../assets/youtube/youtube_reverse.png";
 
 
 export default {
+    arrow_up,
+    aseprite,
     aspectofjerry_head,
     azure,
     background_shapes,
+    cmd,
     cpp,
     cs,
     css,

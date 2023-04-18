@@ -13,12 +13,14 @@
     border: 1px solid rgba(135, 206, 235, 0.10);
     position: fixed;
     z-index: 2;
+    transition: padding 0.5s, box-shadow 0.5s;
 }
 
 .app__navbar-shrunk {
-    padding: 0.32rem 2rem;
+    padding: 0.30rem 2rem;
     box-shadow: 0 0 25px rgba(168, 168, 168, 0.25);
     border: none;
+    // transition: all 0.5s;
 }
 
 .app__navbar-logo {

@@ -5,7 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Divider} from "./pages/Global/index.js";
 
 // pages/Home (main)
-import {Navbar} from "./pages/Home/components/index.js";
+import {Navbar, ReturnToTop} from "./pages/Home/components/index.js";
 import {About, Socials, Footer, Header, Projects, Skills} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
@@ -25,6 +25,7 @@ const App = () => {
                 <Route path="/" element={
                     <div className="app">
                         <Navbar />
+                        <ReturnToTop />
                         <Header />
                         <Divider />
                         <About />

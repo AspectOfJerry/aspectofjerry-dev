@@ -10,8 +10,8 @@ import "./Socials.scss";
 const socials = [
     {name: "Discord", description: "Cake111#2346", iconUrl: images.clyde_icon_blurple},
     {name: "GitHub", description: "Arnaud-5G", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
-    {name: "Twitch", description: "", iconUrl: images.twitch_glitch_purple, url: "https://www.twitch.tv/"},
-    {name: "YouTube", description: "", iconUrl: images.youtube_icon, url: "https://www.youtube.com/"}
+    {name: "Twitch", description: "cake111__", iconUrl: images.twitch_glitch_purple, url: "https://www.twitch.tv/cake111__"},
+    {name: "YouTube", description: "Cake111_", iconUrl: images.youtube_icon, url: "https://www.youtube.com/@Cake111_"}
 ];
 
 const texts = [

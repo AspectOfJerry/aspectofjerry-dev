@@ -10,9 +10,9 @@ import "./Skills.scss";
 
 
 const skills = [
-    {name: "Aseprite", color: "", iconUrl: "", url: ""},
+    {name: "Aseprite", color: "", iconUrl: images.aseprite, url: ""},
     {name: "C#", color: "", iconUrl: images.cs, url: ""},
-    {name: "Batch", color: "", iconUrl: "", url: ""},
+    {name: "Batch", color: "", iconUrl: images.cmd, url: ""},
     {name: "Git", color: "", iconUrl: images.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
     {name: "HTML", color: "", iconUrl: images.html, url: "https://html.spec.whatwg.org/"},

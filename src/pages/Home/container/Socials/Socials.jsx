@@ -31,8 +31,8 @@ const Socials = () => {
                     {socials.map((social) => {
                         return (
                             <motion.div
-                                whileInView={{opacity: [0, 1]}}
-                                transition={{duration: 0.5}}
+                                // whileInView={{opacity: [0, 1]}}
+                                // transition={{duration: 0.5}}
                                 className="app__socials-item app__flex"
                                 key={social.name}
                             >
