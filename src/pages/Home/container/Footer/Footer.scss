@@ -1,0 +1,29 @@
+.app__footer {}
+
+.app__footer-bg {
+    background-color: rgb(246, 247, 248);
+}
+
+.app__footer-divider {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 3rem 0;
+    box-shadow: 0 0 35px rgba(160, 160, 160, 0.15);
+
+    @media screen and (max-width: 450px) {
+        padding: 1rem 1.5rem;
+    }
+}
+
+.app__footer-divider-rounded {
+    border: 2px solid var(--lighter-gray-color);
+    border-radius: 2px;
+}
+
+.app__footer-sites {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}

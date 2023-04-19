@@ -35,7 +35,7 @@ const App = () => {
                         <Socials />
                         <Divider />
                         <Projects />
-                        <Divider />
+                        {/* <Divider /> */}
                         <Footer />
                     </div>
                 } />
