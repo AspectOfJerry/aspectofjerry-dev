@@ -1,6 +1,10 @@
-.app__footer {}
+.app__footer {
+    width: 100%;
+    padding: 3rem 8%;
+}
 
 .app__footer-bg {
+    width: 100%;
     background-color: rgb(246, 247, 248);
 }
 
@@ -26,4 +30,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+
+    h4 {
+        padding-bottom: 0.8rem;
+    }
+
+    a {
+        line-height: 1.75;
+    }
 }

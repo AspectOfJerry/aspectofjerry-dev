@@ -17,8 +17,9 @@ const socials = [
 ];
 
 const texts = [
-    {title: "Contact info", description: "📡 You can find my contact information and social media links here."},
-    {title: "Public Email", description: "📧 jerry@aspectofjerry.dev"}
+    {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
+    {title: "Public Email", description: "📧 jerry@aspectofjerry.dev", imageUrl: ""},
+    {title: "GitHub languages", descriptino: "Here are my most used languages on GitHub.", imageUrl: "https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=fafbfc&title_color=87ceeb"}
 ];
 
 const Socials = () => {
@@ -59,6 +60,9 @@ const Socials = () => {
                             >
                                 <h4 className="bold-text">{text.title}</h4>
                                 <p className="p-text">{text.description}</p>
+                                <div className="app__image-socials-text-image">
+                                    {text.imageUrl ? <img src={text.imageUrl} alt={text.title} /> : ""}
+                                </div>
                             </motion.div>
                         )
                     })}
