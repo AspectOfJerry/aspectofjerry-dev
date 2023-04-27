@@ -18,7 +18,7 @@ import nodejs from "../assets/nodejs.svg";
 import nodejs_side from "../assets/nodejs_side.svg";
 import nodejs_js from "../assets/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
-import reactjs from "../assets/reactjs.png";
+import reactjs from "../assets/reactjs.svg";
 import sass from "../assets/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
@@ -37,17 +37,22 @@ import discord_full_blurple from "../assets/discord/discord_full_blurple.svg";
 import clyde_icon_black from "../assets/discord/clyde_icon_black.svg";
 import clyde_icon_blurple from "../assets/discord/clyde_icon_blurple.svg";
 
-// FIRST
-import frc_icon_horz from "../assets/FIRST/FRC/frc_icon_horz.png";
-import frc_icon_vert from "../assets/FIRST/FRC/frc_icon_vert.png";
+// first
+import frc_icon_horz from "../assets/first/frc/frc_icon_horz.png";
+import frc_icon_vert from "../assets/first/frc/frc_icon_vert.png";
 
-import charged_up_horz from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_horz.png";
-import charged_up_vert from "../assets/FIRST/FRC/FRC-ChargedUp/charged_up_vert.png";
+import crescendo_horz from "../assets/first/frc/crescendo/crescendo_horz.png";
+import crescendo_horz_reverse from "../assets/first/frc/crescendo/crescendo_horz_reverse.png";
 
-import ftc_icon_horz from "../assets/FIRST/FTC/ftc_icon_horz.png";
-import ftc_icon_vert from "../assets/FIRST/FTC/ftc_icon_vert.png";
+import first_cmp_2023 from "../assets/first/first_championship_2023.png";
+import charged_up_horz from "../assets/first/frc/chargedUp/charged_up_horz.svg";
+import charged_up_vert from "../assets/first/frc/chargedUp/charged_up_vert.png";
 
-import freight_frenzy_vert from "../assets/FIRST/FTC/FreightFrenzy/freight_frenzy_vert.jpg";
+import ftc_icon_horz from "../assets/first/ftc/ftc_icon_horz.png";
+import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
+
+import freight_frenzy_vert from "../assets/first/ftc/freightFrenzy/freight_frenzy_vert.jpg";
+
 
 // github
 import github from "../assets/github/github.svg";
@@ -110,11 +115,14 @@ export default {
     discord_full_blurple,
     clyde_icon_black,
     clyde_icon_blurple,
-    // FIRST
-    frc_icon_horz,
-    frc_icon_vert,
+    // first
     charged_up_horz,
     charged_up_vert,
+    crescendo_horz,
+    crescendo_horz_reverse,
+    first_cmp_2023,
+    frc_icon_horz,
+    frc_icon_vert,
     ftc_icon_horz,
     ftc_icon_vert,
     freight_frenzy_vert,

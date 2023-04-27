@@ -10,8 +10,7 @@ const Projects = () => {
     return (
         <>
             <h2 className="head-text"><span>Pro</span>jects</h2>
-            <p className="p-text">y r u here</p>
-            <input type="range" min="0" max="100" defaultValue="20" />
+            <p className="text">💭</p>
         </>
     );
 };

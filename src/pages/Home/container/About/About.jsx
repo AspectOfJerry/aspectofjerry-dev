@@ -11,11 +11,13 @@ import "./About.scss";
 // https://info.firstinspires.org/hubfs/2022%20Season%20Assets/free-season-assets/ft%20-%20freight%20frenzy/firstforward-ftc-freightfrenzy-styleguide.pdf
 
 const abouts = [
-    {title: "Team 3990", description: "I'm in Team 3990 | Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
+    {title: "Team 3990", description: "I'm in Team 3990, Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
     {title: "FIRST® Robotics Competition", description: "FIRST Robotics Competition", iconUrl: images.frc_icon_vert, url: "https://www.firstinspires.org/robotics/frc"},
+    {title: "Crescendo", description: "CRESCENDO presented by Haas | 2023-2024", iconUrl: images.crescendo_horz},
+    {title: "2023 FIRST® Championship", description: "FIRST ENERGIZE season championship at Houston, Texas, April 19-22 | 2023.", iconUrl: images.first_cmp_2023, url: "https://www.firstchampionship.org/"},
     {title: "Charged Up", description: "CHARGED UP presented by Haas | 2022-2023", iconUrl: images.charged_up_horz, url: "https://www.firstinspires.org/robotics/frc/game-and-season"},
     {title: "FIRST® Tech Challenge", description: "I was in team 20117 for the FIRST Tech Challenge.", iconUrl: images.ftc_icon_vert, url: "https://www.firstinspires.org/robotics/ftc"},
-    {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.freight_frenzy_vert, url: "https://www.firstinspires.org/robotics/ftc/game-and-season"}
+    {title: "Freight Frenzy", description: "FREIGHT FRENZY presented by Raytheon Technologies | 2021-2022", iconUrl: images.freight_frenzy_vert}
 ];
 
 const text_fade_in = {
@@ -78,7 +80,7 @@ const About = () => {
                                 {about.title}
                             </motion.h2>
                             <motion.p
-                                className="p-text"
+                                className="desc-text"
                                 style={{marginTop: 10}}
                                 whileInView={text_fade_in.whileInView}
                                 transition={text_fade_in.transition}
