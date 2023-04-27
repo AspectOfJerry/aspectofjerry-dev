@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 // import "react-tooltip/dist/react-tooltip.css";
 
 import {images} from "../../../../constants";
-import {AppWrap} from "../../../Global/wrapper/";
+import {AppWrap} from "../../../components/index.js";
 
 import "./Skills.scss";
 

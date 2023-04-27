@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 // Gobal
-import {Divider} from "./pages/Global/index.js";
+import {Divider} from "./pages/components/index.js";
 
 // pages/Home (main)
 import {Navbar, ReturnToTop} from "./pages/Home/components/index.js";
@@ -10,10 +10,6 @@ import {About, Socials, Footer, Header, Projects, Skills} from "./pages/Home/con
 
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
-
-// pages/Cake (cake)
-import {CNavbar} from "./pages/Cake/components/index.js";
-import {CAbout, CSocials, CFooter, CHeader, CProjects, CSkills} from "./pages/Cake/container/index.js";
 
 import "./App.scss";
 
@@ -42,23 +38,6 @@ const App = () => {
 
                 <Route path="/ping" element={
                     <p>pong</p>
-                } />
-
-                <Route path="/cake" element={
-                    <div className="app">
-                        <CNavbar />
-                        <CHeader />
-                        <Divider />
-                        <CAbout />
-                        <Divider />
-                        <CSkills />
-                        <Divider />
-                        <CSocials />
-                        <Divider />
-                        <CProjects />
-                        <Divider />
-                        <CFooter />
-                    </div>
                 } />
 
                 <Route path="*" element={

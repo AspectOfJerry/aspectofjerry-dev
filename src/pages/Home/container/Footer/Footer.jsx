@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="app__footer-divider app__footer-bg">
                 <hr className="app__footer-divider-rounded" />
             </div>
-            <div className="app__footer">
+            <div className="app__footer app__footer-bg">
                 <div className="app__footer-sites">
                     <h4 className="bold-text">Other sites</h4>
                     {sites.map((site) => {

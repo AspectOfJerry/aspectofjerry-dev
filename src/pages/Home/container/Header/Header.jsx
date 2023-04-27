@@ -2,7 +2,7 @@ import React from "react";
 import {motion} from "framer-motion";
 
 import "./Header.scss";
-import {AppWrap} from "../../../Global/wrapper/";
+import {AppWrap} from "../../../components/index.js";
 import {images} from "../../../../constants";
 
 
