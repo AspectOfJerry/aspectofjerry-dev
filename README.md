@@ -6,6 +6,8 @@
 
 ## Notes
 
+Please be sure to not ignore the case of directories `git config core.ignorecase false`.
+
 To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
 
 ```xml

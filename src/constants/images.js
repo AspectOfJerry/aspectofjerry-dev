@@ -45,13 +45,13 @@ import crescendo_horz from "../assets/first/frc/crescendo/crescendo_horz.png";
 import crescendo_horz_reverse from "../assets/first/frc/crescendo/crescendo_horz_reverse.png";
 
 import first_cmp_2023 from "../assets/first/first_championship_2023.png";
-import charged_up_horz from "../assets/first/frc/chargedUp/charged_up_horz.svg";
-import charged_up_vert from "../assets/first/frc/chargedUp/charged_up_vert.png";
+import charged_up_horz from "../assets/first/frc/charged_up/charged_up_horz.svg";
+import charged_up_vert from "../assets/first/frc/charged_up/charged_up_vert.png";
 
 import ftc_icon_horz from "../assets/first/ftc/ftc_icon_horz.png";
 import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
 
-import freight_frenzy_vert from "../assets/first/ftc/freightFrenzy/freight_frenzy_vert.jpg";
+import freight_frenzy_vert from "../assets/first/ftc/freight_frenzy/freight_frenzy_vert.jpg";
 
 
 // github
