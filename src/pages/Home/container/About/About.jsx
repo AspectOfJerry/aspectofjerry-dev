@@ -11,7 +11,7 @@ import "./About.scss";
 // https://info.firstinspires.org/hubfs/2022%20Season%20Assets/free-season-assets/ft%20-%20freight%20frenzy/firstforward-ftc-freightfrenzy-styleguide.pdf
 
 const abouts = [
-    {title: "Team 3990", description: "I'm in Team 3990, Tech For Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
+    {title: "Team 3990", description: "I'm in Team 3990, Tech for Kids, participating in the FIRST Robotics Competition.", iconUrl: images.t4k_logo_reduced, url: "https://www.team3990.com/en/"},
     {title: "FIRST® Robotics Competition", description: "FIRST Robotics Competition", iconUrl: images.frc_icon_vert, url: "https://www.firstinspires.org/robotics/frc"},
     {title: "Crescendo", description: "CRESCENDO presented by Haas | 2023-2024", iconUrl: images.crescendo_horz},
     {title: "2023 FIRST® Championship", description: "FIRST ENERGIZE season championship at Houston, Texas, April 19-22 | 2023.", iconUrl: images.first_cmp_2023},
@@ -55,7 +55,7 @@ const About = () => {
             >
                 Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target="_blank" rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target="_blank" rel="noreferrer">First Robotics Competition</a>.<br />
                 <br />
-                📍 Canada 🍁
+                🌎 Canada 🍁
             </motion.p>
 
             <div className="app__profiles">

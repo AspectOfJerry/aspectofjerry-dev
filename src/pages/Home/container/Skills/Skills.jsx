@@ -91,6 +91,9 @@ const Skills = () => {
                 </motion.div>
                 {/* 2:58:35 */}
                 <motion.div className="app__skills-exp">
+                    <h4 className="bold-text">GitHub languages</h4>
+                    <p className="p-text"></p>
+                    <img className="app__skills-gh-card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=fafbfc&title_color=87ceeb" alt="Github languages card" />
                     {experience.map((experience) => {
                         return (
                             <motion.div

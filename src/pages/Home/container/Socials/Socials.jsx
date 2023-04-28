@@ -19,7 +19,6 @@ const socials = [
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
     {title: "Public Email", description: "📧 jerry@aspectofjerry.dev", imageUrl: ""},
-    {title: "GitHub languages", descriptino: "Here are my most used languages on GitHub.", imageUrl: "https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=fafbfc&title_color=87ceeb"}
 ];
 
 const Socials = () => {
