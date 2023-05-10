@@ -20,7 +20,9 @@ const skills = [
     {name: "HTML", color: "", iconUrl: images.html, url: "https://html.spec.whatwg.org/"},
     {name: "Java", color: "", iconUrl: images.java, url: "https://www.java.com/en/"},
     {name: "JavaScript", color: "", iconUrl: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "MongoDB", color: "", iconUrl: images.mongodb_leaf, url: "https://www.mongodb.com/"},
     {name: "NodeJS", color: "", iconUrl: images.nodejs_js, url: "https://nodejs.org/en"},
+    {name: "Python", color: "", iconUrl: images.python_logo, url: "https://www.python.org/"},
     {name: "ReactJS", color: "", iconUrl: images.reactjs, url: "https://react.dev/"},
     {name: "Sass", color: "", iconUrl: images.sass, url: "https://sass-lang.com/"},
     {name: "Visual Studio Code", color: "", iconUrl: images.vscode, url: "https://code.visualstudio.com/"},
@@ -50,7 +52,7 @@ const experience = [
     {
         year: "2022",
         works: [
-            {name: "Website", description: "Created the website you are currently on"},
+            // {name: "Website", description: "Created the website you are currently on"},
             {name: "ReactJS", description: "Learned ReactJS basics"},
             {name: "HTML", description: "Learned HyperText Markup Language"},
             {name: "CSS", description: "Learned Cascading Style Sheets"}
@@ -59,7 +61,8 @@ const experience = [
     {
         year: "2023",
         works: [
-            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets"}
+            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets"},
+            {name: "Python", description: "Learned Python"}
         ]
     }
 ];

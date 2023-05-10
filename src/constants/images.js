@@ -14,10 +14,14 @@ import git from "../assets/git.svg";
 import html from "../assets/html.png";
 import java from "../assets/java.svg";
 import javascript from "../assets/javascript.png";
+import mongodb from "../assets/mongodb.svg";
+import mongodb_leaf from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/nodejs.svg";
 import nodejs_side from "../assets/nodejs_side.svg";
 import nodejs_js from "../assets/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
+import python from "../assets/python.png";
+import python_logo from "../assets/python_logo.png";
 import reactjs from "../assets/reactjs.svg";
 import sass from "../assets/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
@@ -95,10 +99,14 @@ export default {
     html,
     java,
     javascript,
+    mongodb,
+    mongodb_leaf,
     nodejs,
     nodejs_side,
     nodejs_js,
     placeholder,
+    python,
+    python_logo,
     reactjs,
     sass,
     t4k_logo_reduced,
