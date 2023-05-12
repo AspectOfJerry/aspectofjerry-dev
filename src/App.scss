@@ -1,14 +1,118 @@
-.app {
-    background-color: var(--primary-color);
-    font-family: var(--font-base);
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+html {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: #87ceeb;
+    --secondary-color: rgb(250, 252, 252);
+    --lighter-color: #e9e9e9;
+    --light-color: #dcdcdc;
+    --dark-color: #a0a0a0;
+    --darker-color: #808080;
+    --darkest-color: #202020;
+
+    --navbar-color: rgba(150, 220, 250, 0.15);
+    --divier-color: var(--lighter-color);
+    --footer-color: #f6f7f8;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
+}
+
+html.app_dark {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: rgb(135, 206, 235);
+    --secondary-color: #202020;
+    --lighter-color: #c0c0c0;
+    --light-color: #b0b0b0;
+    --dark-color: #a0a0a0;
+    --darker-color: #909090;
+    --darkest-color: #808080;
+
+    --navbar-color: rgba(135, 206, 235, 0.20);
+    --divier-color: var(--light-color);
+    --footer-color: #202020;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
+}
+
+html.app_green {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: rgb(210, 225, 205);
+    --secondary-color: rgb(252, 252, 250);
+    --lighter-color: #E9E9E9;
+    --light-color: #DCDCDC;
+    --dark-color: #A0A0A0;
+    --darker-color: #808080;
+    --darkest-color: #202020;
+    --navbar-color: rgba(210, 250, 200, 0.20);
+    --divier-color: var(--lighter-color);
+    --footer-color: #f6f7f8;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
+}
+
+html.app_pink {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: rgb(255, 192, 203);
+    --secondary-color: rgb(252, 248, 250);
+    --lighter-color: #e9e9e9;
+    --light-color: #dcdcdc;
+    --dark-color: #a0a0a0;
+    --darker-color: #808080;
+    --darkest-color: #202020;
+
+    --navbar-color: rgba(255, 192, 203, 0.20);
+    --divier-color: var(--lighter-color);
+    --footer-color: #f6f7f8;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
+}
+
+html.app_debug {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: #ffffff;
+    --secondary-color: #00ff00;
+    --lighter-color: #000000;
+    --light-color: #00ffff;
+    --dark-color: #dddddd;
+    --darker-color: #ff0000;
+    --darkest-color: #ff00ff;
+
+    --navbar-color: #ffff00;
+    --divier-color: var(--lighter-color);
+    --footer-color: #aaffaa;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
+}
+
+html.app_debug_full {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    --primary-color: #00ff00;
+    --secondary-color: #00ff00;
+    --lighter-color: #00ff00;
+    --light-color: #00ff00;
+    --dark-color: #00ff00;
+    --darker-color: #00ff00;
+    --darkest-color: #00ff00;
+
+    --navbar-color: #00ff00;
+    --divier-color: var(--lighter-color);
+    --footer-color: #00ff00;
+
+    background-color: var(--secondary-color);
+    transition: background-color 0.50s;
 }
 
 .app__whitebg {
-    background-color: var(--white-color);
+    background-color: var(--secondary-color);
 }
 
 .app__primarybg {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .app__container {
@@ -51,7 +155,7 @@
 
     p {
         // text-transform: uppercase;
-        color: var(--black-color);
+        color: var(--darkest-color);
     }
 }
 
@@ -59,11 +163,13 @@
     font-size: 2.75rem;
     font-weight: 800;
     text-align: center;
-    color: var(--black-color);
+    color: var(--darkest-color);
     text-transform: capitalize;
 
+    transition: color 0.35s;
+
     span {
-        color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     // @media screen and (min-width: 2000px) {
@@ -77,9 +183,10 @@
 
 .p-text {
     font-size: 1rem;
-    color: var(--true-gray-color);
+    color: var(--darker-color);
     line-height: 1.50;
 
+    transition: color 0.50s;
     // @media screen and (min-width: 2000px) {
     //     font-size: 1.50rem;
     // }
@@ -87,9 +194,10 @@
 
 .desc-text {
     font-size: 0.95rem;
-    color: var(--true-gray-color);
+    color: var(--darker-color);
     line-height: 1.45;
 
+    transition: color 0.50s;
     // @media screen and (min-width: 2000px) {
     //     font-size: 1.50rem;
     // }
@@ -97,9 +205,10 @@
 
 .text {
     font-size: 1.20rem;
-    color: var(--black-color);
+    color: var(--darkest-color);
     line-height: 1.75;
 
+    transition: color 0.50s;
     // @media screen and (min-width: 2000px) {
     //     font-size: 1.75rem;
     // }
@@ -108,9 +217,10 @@
 .bold-text {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--black-color);
+    color: var(--darkest-color);
     text-align: left;
 
+    transition: color 0.50s;
     // @media screen and (min-width: 2000px) {
     //     font-size: 2rem;
     // }
@@ -132,9 +242,9 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: var(--white-color);
+        background-color: var(--secondary-color);
         margin: 0.25rem 0;
-        border: 1px solid var(--light-gray-color);
+        border: 1px solid var(--light-color);
 
         display: flex;
         justify-content: center;
@@ -145,15 +255,15 @@
         svg {
             width: 15px;
             height: 15px;
-            color: var(--gray-color);
+            color: var(--dark-color);
         }
 
         &:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
 
             svg {
-                color: var(--white-color);
+                color: var(--secondary-color);
             }
         }
 
@@ -189,7 +299,7 @@
         transition: background-color 0.20s ease-in-out;
 
         &:hover {
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
         }
 
         // @media screen and (min-width: 2000px) {

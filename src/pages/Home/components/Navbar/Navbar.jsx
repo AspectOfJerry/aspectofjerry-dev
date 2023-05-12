@@ -18,13 +18,10 @@ const nav_links = [
 // title prop (toLowerCase()) is used as key
 const ext_links = [
     {title: "Status page", url: "https://status.aspectofjerry.dev"},
-    {title: "Discord bot documentation", url: "https://bot.aspectofjerry.dev"}
-
 ];
 
-const Navbar = () => { // 32:35
+const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
     const [toggle, setToggle] = useState(false);
-
     const [isShrunk, setShrunk] = useState(false);
 
     useEffect(() => {
@@ -75,6 +72,13 @@ const Navbar = () => { // 32:35
                     )
                 })}
             </ul>
+
+            <div className="app__narbar-theme-toggle">
+                <button onClick={() => toggleTheme(Object.values(themes))}>
+                    <div className={`theme-circle ${theme.className}`}></div>
+                    <div>{theme.name}</div>
+                </button>
+            </div>
 
             <div className="app__navbar-menu">
                 <HiMenuAlt4 onClick={() => setToggle(true)} />
