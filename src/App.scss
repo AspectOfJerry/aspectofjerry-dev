@@ -97,17 +97,17 @@ html.app_debug {
 
 html.app_debug_full {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    --primary-color: #00ff00;
-    --secondary-color: #00ff00;
-    --lighter-color: #00ff00;
-    --light-color: #00ff00;
-    --dark-color: #00ff00;
-    --darker-color: #00ff00;
-    --darkest-color: #00ff00;
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --lighter-color: #ffffff;
+    --light-color: #ffffff;
+    --dark-color: #ffffff;
+    --darker-color: #ffffff;
+    --darkest-color: #ffffff;
 
-    --navbar-color: #00ff00;
+    --navbar-color: #ffffff;
     --divier-color: var(--lighter-color);
-    --footer-color: #00ff00;
+    --footer-color: #ffffff;
 
     background-color: var(--secondary-color);
     transition: background-color 0.50s;

@@ -73,10 +73,12 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                 })}
             </ul>
 
-            <div className="app__narbar-theme-toggle">
+            <div className="app__navbar-theme-toggle">
                 <button onClick={() => toggleTheme(Object.values(themes))}>
-                    <div className={`theme-circle ${theme.className}`}></div>
-                    <div>{theme.name}</div>
+                    <div className="theme-container">
+                        <div className={`theme-circle ${theme.className}`} />
+                        <div className="text theme-name">{theme.name}</div>
+                    </div>
                 </button>
             </div>
 
