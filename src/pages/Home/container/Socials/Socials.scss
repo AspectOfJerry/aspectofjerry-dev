@@ -43,7 +43,7 @@
         margin-bottom: 0.50rem;
         border-radius: 30%;
 
-        background-color: #ffffff;
+        background-color: var(--secondary-color);
 
         a {
             width: 100%;
@@ -113,7 +113,7 @@
 
         p {
             font-weight: 400;
-            color: var(--gray-color);
+            color: var(--dark-color);
             margin-top: 5px
         }
     }

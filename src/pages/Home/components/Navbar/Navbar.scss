@@ -6,7 +6,7 @@
     align-items: center; // 40:00
 
     padding: 1rem 2rem;
-    background: rgba(150, 220, 250, 0.15); // 135, 206, 235
+    background: var(--navbar-color);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     -moz-backdrop-filter: blur(7px);
@@ -71,7 +71,7 @@
         }
 
         a {
-            color: var(--true-gray-color);
+            color: var(--darker-color);
             text-decoration: none;
             flex-direction: column;
 
@@ -80,7 +80,7 @@
             transition: all 0.25s ease-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: var(--primary-color);
             }
         }
 
@@ -88,7 +88,7 @@
         &:hover {
             div {
                 transition: all 0.3s ease-out;
-                background: var(--secondary-color);
+                background: var(--primary-color);
             }
         }
     }
@@ -123,7 +123,7 @@
         }
 
         a {
-            color: var(--true-gray-color);
+            color: var(--darker-color);
             text-decoration: none;
             flex-direction: column;
 
@@ -132,7 +132,7 @@
             transition: all 0.25s ease-out;
 
             &:hover {
-                color: var(--secondary-color);
+                color: var(--primary-color);
             }
         }
 
@@ -140,13 +140,37 @@
         &:hover {
             div {
                 transition: all 0.3s ease-out;
-                background: var(--secondary-color);
+                background: var(--primary-color);
             }
         }
     }
 
     @media screen and (max-width:900px) {
         display: none;
+    }
+}
+
+.app__narbar-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 1px solid #000;
+    cursor: pointer;
+
+    transition: background-color 0.50s;
+
+    button {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
     }
 }
 
@@ -159,12 +183,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
 
     svg {
         width: 70%;
         height: 70%;
-        color: var(--white-color);
+        color: var(--secondary-color);
     }
 
     // motion.div
@@ -186,7 +210,7 @@
         flex-direction: column;
 
         // background: url("../../assets/bgWhite.png"); // 57:51
-        background-color: var(--white-color);
+        background-color: var(--secondary-color);
         background-size: cover;
         background-repeat: repeat;
 
@@ -195,7 +219,7 @@
         svg {
             width: 35px;
             height: 35px;
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         ul {
@@ -214,7 +238,7 @@
                 margin: 1rem;
 
                 a {
-                    color: var(--gray-color);
+                    color: var(--dark-color);
                     text-decoration: none;
                     font-size: 1rem;
                     text-transform: capitalize;
@@ -223,7 +247,7 @@
                     transition: all 0.20s ease-in-out;
 
                     &:hover {
-                        color: var(--secondary-color);
+                        color: var(--primary-color);
                     }
                 }
             }

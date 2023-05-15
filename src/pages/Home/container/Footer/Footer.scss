@@ -5,7 +5,7 @@
 
 .app__footer-bg {
     width: 100%;
-    background-color: rgb(246, 247, 248);
+    background-color: var(--footer-color);
 }
 
 .app__footer-divider {
@@ -21,7 +21,7 @@
 }
 
 .app__footer-divider-rounded {
-    border: 2px solid var(--lighter-gray-color);
+    border: 2px solid var(--lighter-color);
     border-radius: 2px;
 }
 
