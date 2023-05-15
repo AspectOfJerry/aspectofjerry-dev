@@ -22,11 +22,17 @@ html.app_dark {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     --primary-color: rgb(135, 206, 235);
     --secondary-color: #202020;
-    --lighter-color: #c0c0c0;
-    --light-color: #b0b0b0;
+    // --lighter-color: #c0c0c0;
+    // --light-color: #b0b0b0;
+    // --dark-color: #a0a0a0;
+    // --darker-color: #909090;
+    // --darkest-color: #808080;
+    --lighter-color: #808080;
+    --light-color: #909090;
     --dark-color: #a0a0a0;
-    --darker-color: #909090;
-    --darkest-color: #808080;
+    --darker-color: #b0b0b0;
+    --darkest-color: #c0c0c0;
+
 
     --navbar-color: rgba(135, 206, 235, 0.20);
     --divier-color: var(--light-color);
