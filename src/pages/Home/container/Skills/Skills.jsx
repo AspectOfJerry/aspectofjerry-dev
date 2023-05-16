@@ -1,7 +1,5 @@
 import React from "react";
 import {motion} from "framer-motion";
-// import {Tooltip} from "react-tooltip";
-// import "react-tooltip/dist/react-tooltip.css";
 
 import {images} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
@@ -96,7 +94,7 @@ const Skills = () => {
                 <motion.div className="app__skills-exp">
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
-                    <img className="app__skills-gh-card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=fafbfc&title_color=87ceeb" alt="Github languages card" />
+                    <img className="app__skills-gh-card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb" alt="Github languages card" />
                     {experience.map((experience) => {
                         return (
                             <motion.div

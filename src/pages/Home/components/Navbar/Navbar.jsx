@@ -6,7 +6,7 @@ import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
 import {motion} from "framer-motion";
 
 
-// title prop (toLowerCase()) is used as key
+// title prop toLowerCase() is used as key
 const nav_links = [
     {title: "Home", url: "#home"},
     {title: "About", url: "#about"},
@@ -15,7 +15,7 @@ const nav_links = [
     {title: "Projects", url: "#projects"}
 ];
 
-// title prop (toLowerCase()) is used as key
+// title prop toLowerCase() is used as key
 const ext_links = [
     {title: "Status page", url: "https://status.aspectofjerry.dev"},
 ];
@@ -23,25 +23,56 @@ const ext_links = [
 const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
     const [toggle, setToggle] = useState(false);
     const [isShrunk, setShrunk] = useState(false);
+    const scrollThreshold = 96;
 
     useEffect(() => {
-        const handler = () => {
-            setShrunk((isShrunk) => {
-                if(!isShrunk && (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3)) {
-                    return true;
-                }
+        let isScrolling = false;
 
-                if(isShrunk && document.body.scrollTop < 2 && document.documentElement.scrollTop < 2) {
-                    return false;
-                }
+        const handleScroll = () => {
+            if(!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    setShrunk(
+                        document.body.scrollTop > scrollThreshold ||
+                        document.documentElement.scrollTop > scrollThreshold
+                    );
+                    isScrolling = false;
+                });
+            }
 
-                return isShrunk;
-            });
-        }
+            isScrolling = true;
+        };
 
-        window.addEventListener("scroll", handler);
-        return () => window.removeEventListener("scroll", handler);
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+
+    // Rest of your code...
+
+    // SHRINKS WHEN SCROLLING UP AND DOWN
+    // useEffect(() => {
+    //     let prevScrollY = window.pageYOffset;
+
+    //     const handleScroll = () => {
+    //         const currentScrollY = window.pageYOffset;
+
+    //         if(currentScrollY > prevScrollY) {
+    //             setShrunk(true);
+    //         } else {
+    //             setShrunk(false);
+    //         }
+
+    //         prevScrollY = currentScrollY;
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     return (
         <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>

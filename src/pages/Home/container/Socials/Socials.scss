@@ -59,7 +59,7 @@
         }
 
         &:hover {
-            box-shadow: 0 0 20px rgba(150, 220, 250, 0.30);
+            box-shadow: 0 0 20px var(--shadow-glow-color);
         }
 
         @media screen and (min-width: 2000px) {

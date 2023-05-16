@@ -73,7 +73,7 @@
         flex-direction: row;
         width: auto;
 
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px var(--shadow-color);
     }
 
     .tag-cmp {
@@ -86,7 +86,7 @@
         flex-direction: row;
         width: auto;
 
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 15px var(--shadow-color);
         flex-direction: column;
         margin-top: 1.50rem;
 
@@ -127,7 +127,7 @@
         border-radius: 30%;
 
         background: var(--secondary-color);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 10px var(--shadow-color);
 
         img {
             object-fit: contain;

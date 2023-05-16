@@ -5,20 +5,20 @@
     justify-content: space-between;
     align-items: center; // 40:00
 
-    padding: 1rem 2rem;
+    padding: 0.9rem 2rem;
     background: var(--navbar-color);
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
     -moz-backdrop-filter: blur(7px);
-    border: 1px solid rgba(135, 206, 235, 0.10);
+    border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
     transition: padding 0.5s, box-shadow 0.5s;
 }
 
 .app__navbar-shrunk {
-    padding: 0.30rem 2rem;
-    box-shadow: 0 0 20px rgba(160, 160, 160, 0.15);
+    padding: 0.25rem 2rem;
+    box-shadow: 0 0 20px var(--shadow-color);
     border: none;
     // transition: all 0.5s;
 }
@@ -178,15 +178,12 @@
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    border: 1px solid var(--darkest-color);
     background-color: var(--navbar-color);
 }
 
 .theme-name {
     margin-left: 12px;
-    // color: var(--white-color);
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-    // overflow: hidden;
 }
 
 .app__navbar-menu {
@@ -229,7 +226,7 @@
         background-size: cover;
         background-repeat: repeat;
 
-        box-shadow: 0 0 25px rgba(160, 160, 160, 0.15);
+        box-shadow: 0 0 25px var(--shadow-color);
 
         svg {
             width: 35px;
