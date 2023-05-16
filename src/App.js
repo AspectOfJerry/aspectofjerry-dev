@@ -105,9 +105,9 @@ const App = () => {
                             <Divider />
                             <About />
                             <Divider />
-                            <Skills />
+                            <Skills theme={theme} />
                             <Divider />
-                            <Socials />
+                            <Socials theme={theme} />
                             <Divider />
                             <Projects />
                             <Footer />

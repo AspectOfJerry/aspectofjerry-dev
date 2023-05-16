@@ -21,7 +21,9 @@ const texts = [
     {title: "Public Email", description: "📧 jerry@aspectofjerry.dev", imageUrl: ""},
 ];
 
-const Socials = () => {
+const Socials = ({theme}) => {
+    socials.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? images.github_white : images.github;
+
     return (
         <>
             <h2 className="head-text">Contact <span>info</span> & Socials</h2>

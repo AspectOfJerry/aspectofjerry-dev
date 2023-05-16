@@ -65,7 +65,9 @@ const experience = [
     }
 ];
 
-const Skills = () => {
+const Skills = ({theme}) => {
+    skills.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? images.github_white : images.github;
+
     return (
         <>
             <h2 className="head-text">Skills, Tools & <span>Exp</span>erience</h2>
