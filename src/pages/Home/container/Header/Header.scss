@@ -1,4 +1,4 @@
-#home {
+#header {
     position: relative;
     // 1:16:27
     background: url("../../../../assets/background_shapes.png");
@@ -28,7 +28,7 @@
         padding-top: 8rem;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
         flex-direction: column;
     }
 
@@ -59,7 +59,7 @@
     flex-direction: column;
     margin-top: 82%;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
         margin-top: 2rem;
     }
 
@@ -104,7 +104,7 @@
         // }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1024px) {
         justify-content: flex-start;
         align-items: flex-start;
     }

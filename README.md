@@ -8,6 +8,10 @@
 
 Please be sure to not ignore the case of directories `git config core.ignorecase false`.
 
+Sass media queries dimensions
+- tablet: max-width `1024px`
+- mobile: max-width `480px`
+
 To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
 
 ```xml

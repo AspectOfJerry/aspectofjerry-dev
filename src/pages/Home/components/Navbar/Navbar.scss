@@ -80,7 +80,7 @@
             transition: all 0.25s ease-out;
 
             &:hover {
-                color: var(--primary-color);
+                color: var(--darkest-color);
             }
         }
 
@@ -93,7 +93,7 @@
         }
     }
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width: 964px) {
         display: none;
     }
 }
@@ -132,7 +132,7 @@
             transition: all 0.25s ease-out;
 
             &:hover {
-                color: var(--primary-color);
+                color: var(--darkest-color);
             }
         }
 
@@ -145,7 +145,7 @@
         }
     }
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width: 964px) {
         display: none;
     }
 }
@@ -265,12 +265,12 @@
             }
         }
 
-        @media screen and (min-width: 900px) {
+        @media screen and (max-width: 964px) {
             display: none;
         }
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 964px) {
         display: none;
     }
 }

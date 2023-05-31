@@ -6,7 +6,7 @@ import {Divider} from "./pages/components/index.js";
 
 // pages/Home (main)
 import {Navbar, ReturnToTop} from "./pages/Home/components/index.js";
-import {About, Socials, Footer, Header, Projects, Skills} from "./pages/Home/container/index.js";
+import {About, Socials, Footer, Home, Projects, Skills} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
@@ -101,8 +101,8 @@ const App = () => {
                         <div className={theme.className}>
                             <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
                             <ReturnToTop />
-                            <Header />
-                            <Divider />
+                            <Home theme={theme} />
+                            {/* <Header /> */}
                             <About />
                             <Divider />
                             <Skills theme={theme} />
