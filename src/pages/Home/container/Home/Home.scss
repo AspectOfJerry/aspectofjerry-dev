@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
 
-    transition: all 0.5s;
+    transition: background-color 0.5s;
 }
 
 .app__text-container {
@@ -13,7 +13,8 @@
 
 .app__home_shadow {
     width: 100vw;
-    box-shadow: 0 0 48px 32px var(--primary-color);
+    box-shadow: 0 0 48px 32px var(--head-background-color);
+    transition: box-shadow 0.5s;
 }
 
 .app__home-text-big {

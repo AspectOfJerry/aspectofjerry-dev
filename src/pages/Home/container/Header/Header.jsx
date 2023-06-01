@@ -58,14 +58,14 @@ const Header = () => {
 
                 <motion.div
                     whileInView={{scale: [0.90, 1]}}
-                    transition={{duration: 0.75, type: "tween", ease: "easeInOut", delay: 0.03, delayChildren: 0}}
+                    transition={{duration: 0.75, type: "tween", ease: "ease", delay: 0.03, delayChildren: 0}}
                     className="app__header-img"
                 >
                     <img src={images.aspectofjerry_head} alt="profile_bg" />
                     {/* <motion.img
                     className="background-img"
                     whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
-                    transition={{duration: 1, ease: "easeInOut"}}
+                    transition={{duration: 1, ease: "ease"}}
                     src={images.charged_up_vert}
                     alt="Hovering glass effect"
                 /> */}

@@ -30,7 +30,7 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Interest in programming. Hello, World!"}
+            {name: "Programming", description: "Maybe when I started programming? Hello, World!"}
         ]
     },
     {

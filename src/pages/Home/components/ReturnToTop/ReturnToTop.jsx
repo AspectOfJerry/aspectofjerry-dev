@@ -35,8 +35,10 @@ const ReturnToTop = () => {
             className="app__return-to-top"
             onClick={topFunction()}
             title="Return to top"
-            whileHover={{scale: 1.1, rotate: 180}}
-            whileTap={{scale: 0.8, rotate: 145, borderRadius: "100%"}}
+            whileInView={{y: [50, 0]}}
+            initial={{y: 50}}
+            whileHover={{scale: 1.1}}
+            whileTap={{scale: [1, 0.95], borderRadius: "100%"}}
         >
             <img src={images.arrow_up} alt="Arrow up" />
         </motion.button>

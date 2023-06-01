@@ -41,7 +41,7 @@ const Home = ({theme}) => {
                     </motion.h1>
                 </div>
             </div>
-<div className="app__home_shadow"></div>       
+            <div className="app__home_shadow"></div>
         </>
     );
 };
