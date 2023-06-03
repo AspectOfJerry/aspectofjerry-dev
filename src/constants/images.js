@@ -25,10 +25,10 @@ import python_logo from "../assets/python_logo.png";
 import reactjs from "../assets/reactjs.svg";
 import sass from "../assets/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
+import theme_pink_bg from "../assets/theme_pink_bg.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 import typescript from "../assets/typescript.png";
 import unity from "../assets/unity.svg";
-import vbs from "../assets/vbs.png";
 
 // cloudflare
 import cf_horz from "../assets/cloudflare/cf_horz.svg";
@@ -56,7 +56,6 @@ import ftc_icon_horz from "../assets/first/ftc/ftc_icon_horz.png";
 import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
 
 import freight_frenzy_vert from "../assets/first/ftc/freight_frenzy/freight_frenzy_vert.jpg";
-
 
 // github
 import github from "../assets/github/github.svg";
@@ -110,10 +109,10 @@ export default {
     reactjs,
     sass,
     t4k_logo_reduced,
+    theme_pink_bg,
     twitch_glitch_purple,
     typescript,
     unity,
-    vbs,
     // cloudflare
     cf_horz,
     cf_logo,
