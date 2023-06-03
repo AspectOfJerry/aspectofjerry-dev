@@ -1,29 +1,29 @@
 import React from "react";
 import {motion} from "framer-motion";
 
-import {images} from "../../../../constants";
+import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Skills.scss";
 
 
 const skills = [
-    {name: "Microsoft Azure", color: "", iconUrl: images.azure, url: "https://azure.microsoft.com/en-ca/"},
-    {name: "C++", color: "", iconUrl: images.cpp, url: "https://isocpp.org/"},
-    {name: "CSS", color: "", iconUrl: images.css, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "Cloudflare", iconUrl: images.cf_logo, url: "https://www.cloudflare.com/"},
-    {name: "DiscordJS", color: "", iconUrl: images.djs, url: "https://discord.js.org/#/"},
-    {name: "Git", color: "", iconUrl: images.git, url: "https://git-scm.com/"},
-    {name: "GitHub", color: "", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
-    {name: "HTML", color: "", iconUrl: images.html, url: "https://html.spec.whatwg.org/"},
-    {name: "Java", color: "", iconUrl: images.java, url: "https://www.java.com/en/"},
-    {name: "JavaScript", color: "", iconUrl: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
-    {name: "MongoDB", color: "", iconUrl: images.mongodb_leaf, url: "https://www.mongodb.com/"},
-    {name: "NodeJS", color: "", iconUrl: images.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "Python", color: "", iconUrl: images.python_logo, url: "https://www.python.org/"},
-    {name: "ReactJS", color: "", iconUrl: images.reactjs, url: "https://react.dev/"},
-    {name: "Sass", color: "", iconUrl: images.sass, url: "https://sass-lang.com/"},
-    {name: "Visual Studio Code", color: "", iconUrl: images.vscode, url: "https://code.visualstudio.com/"},
+    {name: "Microsoft Azure", color: "", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
+    {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
+    {name: "CSS", color: "", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
+    {name: "Cloudflare", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
+    {name: "DiscordJS", color: "", iconUrl: media.djs, url: "https://discord.js.org/#/"},
+    {name: "Git", color: "", iconUrl: media.git, url: "https://git-scm.com/"},
+    {name: "GitHub", color: "", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
+    {name: "HTML", color: "", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
+    {name: "Java", color: "", iconUrl: media.java, url: "https://www.java.com/en/"},
+    {name: "JavaScript", color: "", iconUrl: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "MongoDB", color: "", iconUrl: media.mongodb_leaf, url: "https://www.mongodb.com/"},
+    {name: "NodeJS", color: "", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
+    {name: "Python", color: "", iconUrl: media.python_logo, url: "https://www.python.org/"},
+    {name: "ReactJS", color: "", iconUrl: media.reactjs, url: "https://react.dev/"},
+    {name: "Sass", color: "", iconUrl: media.sass, url: "https://sass-lang.com/"},
+    {name: "Visual Studio Code", color: "", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
 ];
 
 const experience = [
@@ -66,7 +66,7 @@ const experience = [
 ];
 
 const Skills = ({theme}) => {
-    skills.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? images.github_white : images.github;
+    skills.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? media.github_white : media.github;
 
     return (
         <>

@@ -25,6 +25,8 @@ import python_logo from "../assets/python_logo.png";
 import reactjs from "../assets/reactjs.svg";
 import sass from "../assets/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
+import theme_green_bg from "../assets/theme_green_bg.webm";
+// https://app.spline.design/file/94c1b503-8987-4620-8b4b-daa6a65e3f99
 import theme_pink_bg from "../assets/theme_pink_bg.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 import typescript from "../assets/typescript.png";
@@ -109,6 +111,7 @@ export default {
     reactjs,
     sass,
     t4k_logo_reduced,
+    theme_green_bg,
     theme_pink_bg,
     twitch_glitch_purple,
     typescript,

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {motion} from "framer-motion";
-import {images} from "../../../../constants";
+import {media} from "../../../../constants";
 
 import {AppWrap} from "../../../components/index.js";
 

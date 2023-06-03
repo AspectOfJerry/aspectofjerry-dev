@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {images} from "../../../../constants/index.js";
+import {media} from "../../../../constants/index.js";
 import {motion} from "framer-motion";
 
 import "./ReturnToTop.scss";
@@ -40,7 +40,7 @@ const ReturnToTop = () => {
             whileHover={{scale: 1.1}}
             whileTap={{scale: [1, 0.95], borderRadius: "100%"}}
         >
-            <img src={images.arrow_up} alt="Arrow up" />
+            <img src={media.arrow_up} alt="Arrow up" />
         </motion.button>
     )
 };

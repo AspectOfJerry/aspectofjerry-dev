@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 
 import "./Header.scss";
 import {AppWrap} from "../../../components/index.js";
-import {images} from "../../../../constants";
+import {media} from "../../../../constants";
 
 
 const scaleVariants = {
@@ -21,11 +21,11 @@ const scaleVariants = {
 }
 
 const header_circles = [
-    {name: "NodeJS", image: images.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "JavaScript", image: images.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
-    {name: "Git", image: images.git, url: "https://git-scm.com/"},
-    {name: "ReactJS", image: images.reactjs, url: "https://react.dev/"},
-    {name: "Sass", image: images.sass, url: "https://sass-lang.com/"}
+    {name: "NodeJS", image: media.nodejs_js, url: "https://nodejs.org/en"},
+    {name: "JavaScript", image: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Git", image: media.git, url: "https://git-scm.com/"},
+    {name: "ReactJS", image: media.reactjs, url: "https://react.dev/"},
+    {name: "Sass", image: media.sass, url: "https://sass-lang.com/"}
 ];
 
 const Header = () => {
@@ -61,12 +61,12 @@ const Header = () => {
                     transition={{duration: 0.75, type: "tween", ease: "ease", delay: 0.03, delayChildren: 0}}
                     className="app__header-img"
                 >
-                    <img src={images.aspectofjerry_head} alt="profile_bg" />
+                    <img src={media.aspectofjerry_head} alt="profile_bg" />
                     {/* <motion.img
                     className="background-img"
                     whileInView={{scale: [0.75, 1], opacity: [0, 0.05]}}
                     transition={{duration: 1, ease: "ease"}}
-                    src={images.charged_up_vert}
+                    src={media.charged_up_vert}
                     alt="Hovering glass effect"
                 /> */}
                 </motion.div>

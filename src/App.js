@@ -11,6 +11,8 @@ import {About, Socials, Footer, Home, Projects, Skills} from "./pages/Home/conta
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
 
+import {media} from "./constants";
+
 import "./App.scss";
 
 
@@ -25,11 +27,15 @@ const themes = [
     },
     {
         name: "Green",
-        className: "app_green"
+        className: "app_green",
+        bgMedia: media.theme_green_bg,
+        bgMediaType: "webm"
     },
     {
         name: "Pink",
-        className: "app_pink"
+        className: "app_pink",
+        bgMedia: media.theme_pink_bg,
+        bgMediaType: "image"
     }
     // {
     //     name: "Debug",

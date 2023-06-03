@@ -7,19 +7,27 @@
 
     padding: 0.9rem 2rem;
     background: var(--navbar-color);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    -moz-backdrop-filter: blur(7px);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    filter: brightness(1.03);
+
     border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
-    transition: padding 0.5s, box-shadow 0.5s;
+    transition: padding 0.5s, box-shadow 0.5s, backdrop-filter 0.5s, filter 0.5s;
 }
 
 .app__navbar-shrunk {
     padding: 0.25rem 2rem;
     box-shadow: 0 0 20px var(--shadow-color);
     border: none;
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    -moz-backdrop-filter: blur(7px);
+    filter: brightness(1);
     // transition: all 0.5s;
 }
 

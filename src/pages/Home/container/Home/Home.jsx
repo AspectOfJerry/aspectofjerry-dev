@@ -3,19 +3,32 @@ import {motion} from "framer-motion";
 
 import "./Home.scss";
 import {AppWrap} from "../../../components/index.js";
-import {images} from "../../../../constants";
+import {media} from "../../../../constants";
 
 
 const Home = ({theme}) => {
     return (
         <>
             <div id="home" className="app__container">
-                <motion.img
-                    className="app__home-bg-image"
-                    src={theme.className === "app_pink" ? images.theme_pink_bg : void (0)}
-                    alt="Background Image"
-                />
-                {console.log(theme.className)}
+                {
+                    theme.bgMediaType === "image" ? (
+                        <motion.img
+                            key={theme.className}
+                            className="app__home-bg-image"
+                            src={theme.bgMedia}
+                            alt="Background image"
+                        />
+                    ) : (
+                        <motion.video autoPlay muted
+                            className="app__home-bg-video"
+                            key={theme.className}
+                            alt="Background video"
+                        >
+                            <source src={theme.bgMedia} />
+                        </motion.video>
+                    )
+                }
+
                 <div className="app__text-container">
                     <motion.h1
                         className="app__home-text-big"

@@ -1,19 +1,19 @@
 import React from "react";
 import {motion} from "framer-motion";
 
-import {images} from "../../../../constants";
+import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Socials.scss";
 
 
 const socials = [
-    {name: "Discord", description: "Jerry#3756", iconUrl: images.clyde_icon_blurple},
-    {name: "GitHub", description: "AspectOfJerry", iconUrl: images.github, url: "https://github.com/AspectOfJerry"},
-    {name: "Instagram", description: "aspectofjerry", iconUrl: images.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
-    {name: "Reddit", description: "AspectOfJerry", iconUrl: images.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
-    {name: "Twitch", description: "aspectofjerrylive", iconUrl: images.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
-    {name: "YouTube", description: "@aspectofjerry", iconUrl: images.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
+    {name: "Discord", description: "Jerry#3756", iconUrl: media.clyde_icon_blurple},
+    {name: "GitHub", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
+    {name: "Instagram", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
+    {name: "Reddit", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
+    {name: "Twitch", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
+    {name: "YouTube", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
 
 const texts = [
@@ -22,7 +22,7 @@ const texts = [
 ];
 
 const Socials = ({theme}) => {
-    socials.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? images.github_white : images.github;
+    socials.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? media.github_white : media.github;
 
     return (
         <>

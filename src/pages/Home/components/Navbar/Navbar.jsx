@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import "./Navbar.scss";
-import {images} from "../../../../constants/index.js";
+import {media} from "../../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
 import {motion} from "framer-motion";
 
@@ -78,7 +78,7 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
         <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>
             <div className="app__navbar-logo">
                 <a href="https://aspectofjerry.dev">
-                    <img src={images.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
+                    <img src={media.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>
             <ul className="app__navbar-nav-links">
