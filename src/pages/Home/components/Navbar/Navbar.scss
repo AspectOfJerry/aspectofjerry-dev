@@ -5,30 +5,40 @@
     justify-content: space-between;
     align-items: center; // 40:00
 
-    padding: 0.9rem 2rem;
-    background: var(--navbar-color);
+    padding: 0.95rem 2rem;
+    background-color: var(--navbar-color);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    -moz-backdrop-filter: blur(12px);
-    filter: brightness(1.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
 
     border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
-    transition: padding 0.5s, box-shadow 0.5s, backdrop-filter 0.5s, filter 0.5s;
+    transition: padding 0.5s, box-shadow 0.5s, background-color 0.5s, backdrop-filter 0.5s;
 }
 
 .app__navbar-shrunk {
-    padding: 0.25rem 2rem;
+    padding: 0.65rem 2rem;
     box-shadow: 0 0 20px var(--shadow-color);
+    background-color: var(--navbar-s-color);
     border: none;
 
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
-    -moz-backdrop-filter: blur(7px);
-    filter: brightness(1);
-    // transition: all 0.5s;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+
+    .app__navbar-logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+
+    }
 }
 
 .app__navbar-logo {
@@ -37,9 +47,10 @@
     align-items: center;
 
     img {
-        width: 48px;
-        height: 48px;
-        padding: 5%;
+        width: 46px;
+        height: 46px;
+
+        transition: all 0.5s;
 
         // @media screen and (min-width: 2000px) {
         //     width: 96;
@@ -96,7 +107,7 @@
         &:hover {
             div {
                 transition: all 0.3s ease-out;
-                background: var(--primary-color);
+                background-color: var(--primary-color);
             }
         }
     }
@@ -148,7 +159,7 @@
         &:hover {
             div {
                 transition: all 0.3s ease-out;
-                background: var(--primary-color);
+                background-color: var(--primary-color);
             }
         }
     }

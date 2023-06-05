@@ -6,7 +6,7 @@ import {Divider} from "./pages/components/index.js";
 
 // pages/Home (main)
 import {Navbar, ReturnToTop} from "./pages/Home/components/index.js";
-import {About, Socials, Footer, Home, Projects, Skills} from "./pages/Home/container/index.js";
+import {About, Socials, Footer, Home, Header, Projects, Skills} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";

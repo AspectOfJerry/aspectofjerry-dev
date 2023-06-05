@@ -24,14 +24,14 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--lighter-color);
+    background-color: var(--lighter-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--light-color);
+    background-color: var(--dark-color);
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--dark-color);
+    background-color: var(--darker-color);
 }

@@ -10,7 +10,9 @@ html {
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(150, 220, 250, 0.15);
+    --navbar-color: rgba(150, 220, 250, 0.40);
+    --navbar-s-color: rgba(150, 220, 250, 0.20);
+
     --divier-color: var(--lighter-color);
     --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
@@ -31,7 +33,9 @@ html.app_dark {
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
-    --navbar-color: rgba(135, 206, 235, 0.20);
+    --navbar-color: rgba(135, 206, 235, 0.10);
+    --navbar-s-color: rgba(135, 206, 235, 0.15);
+
     --divier-color: var(--light-color);
     --footer-color: rgb(16, 16, 16);
     --shadow-color: rgba(160, 160, 160, 0.20);
@@ -52,7 +56,9 @@ html.app_green {
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(170, 235, 150, 0.20);
+    --navbar-color: rgba(170, 235, 150, 0.40);
+    --navbar-s-color: rgba(170, 235, 150, 0.20);
+
     --divier-color: var(--lighter-color);
     --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
@@ -73,7 +79,9 @@ html.app_pink {
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(255, 192, 203, 0.20);
+    --navbar-color: rgba(255, 192, 203, 0.40);
+    --navbar-s-color: rgba(255, 192, 203, 0.20);
+
     --divier-color: var(--lighter-color);
     --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
