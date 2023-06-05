@@ -7,6 +7,8 @@ import {media} from "../../../../constants";
 
 
 const Home = ({theme}) => {
+    const isMobile = window.innerWidth <= 768;
+
     return (
         <>
             <div id="home" className="app__container">
@@ -18,7 +20,7 @@ const Home = ({theme}) => {
                             src={theme.bgMedia}
                             alt="Background image"
                         />
-                    ) : (
+                    ) : !isMobile && (
                         <motion.video autoPlay muted
                             className="app__home-bg-video"
                             key={theme.className}

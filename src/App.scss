@@ -7,7 +7,7 @@ html {
     --lighter-color: rgb(235, 235, 235);
     --light-color: rgb(220, 220, 220);
     --dark-color: rgb(160, 160, 160);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(150, 220, 250, 0.15);
@@ -49,7 +49,7 @@ html.app_green {
     --lighter-color: rgb(235, 235, 235);
     --light-color: rgb(220, 220, 220);
     --dark-color: rgb(160, 160, 160);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(170, 235, 150, 0.20);
@@ -70,7 +70,7 @@ html.app_pink {
     --lighter-color: rgb(235, 235, 235);
     --light-color: rgb(220, 220, 220);
     --dark-color: rgb(160, 160, 160);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(255, 192, 203, 0.20);
@@ -80,47 +80,6 @@ html.app_pink {
     --shadow-glow-color: rgba(255, 192, 203, 0.25);
 
     --head-background-color: var(--primary-color);
-    background-color: var(--secondary-color);
-    transition: background-color 0.50s;
-}
-
-html.app_debug {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    --primary-color: #ffffff;
-    --secondary-color: #00ff00;
-    --lighter-color: #000000;
-    --light-color: #00ffff;
-    --dark-color: #dddddd;
-    --darker-color: #ff0000;
-    --darkest-color: #ff00ff;
-
-    --navbar-color: #ffff00;
-    --divier-color: var(--lighter-color);
-    --footer-color: #aaffaa;
-    --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(255, 255, 255, 0.25);
-
-    --head-background-color: var(--primary-color);
-    background-color: var(--secondary-color);
-    transition: background-color 0.50s;
-}
-
-html.app_debug_full {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    --primary-color: #ffffff;
-    --secondary-color: #ffffff;
-    --lighter-color: #ffffff;
-    --light-color: #ffffff;
-    --dark-color: #ffffff;
-    --darker-color: #ffffff;
-    --darkest-color: #ffffff;
-
-    --navbar-color: #ffffff;
-    --divier-color: var(--lighter-color);
-    --footer-color: #ffffff;
-    --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(255, 255, 255 0.25);
-
     background-color: var(--secondary-color);
     transition: background-color 0.50s;
 }
@@ -234,7 +193,7 @@ html.app_debug_full {
 
 .bold-text {
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--darkest-color);
     text-align: left;
 

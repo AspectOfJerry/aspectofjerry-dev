@@ -37,14 +37,6 @@ const themes = [
         bgMedia: media.theme_pink_bg,
         bgMediaType: "image"
     }
-    // {
-    //     name: "Debug",
-    //     className: "app_debug"
-    // },
-    // {
-    //     name: "DebugFull",
-    //     className: "app_debug_full"
-    // }
 ];
 
 const getInitialColorMode = () => {

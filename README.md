@@ -30,6 +30,11 @@ To ensure the proper functioning of the React Router, make sure to have the foll
                 </rule>
             </rules>
         </rewrite>
+        <staticContent>
+            <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
+            <mimeMap fileExtension=".ogv" mimeType="video/ogg" />
+            <mimeMap fileExtension=".webm" mimeType="video/webm" />
+        </staticContent>
     </system.webServer>
 </configuration>
 ```
