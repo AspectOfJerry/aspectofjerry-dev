@@ -6,22 +6,8 @@ import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
 import {motion} from "framer-motion";
 
 
-// title prop toLowerCase() is used as key
-const nav_links = [
-    {title: "Home", url: "#home"},
-    {title: "About", url: "#about"},
-    {title: "Skills", url: "#skills"},
-    {title: "Socials", url: "#socials"},
-    {title: "Projects", url: "#projects"}
-];
-
-// title prop toLowerCase() is used as key
-const ext_links = [
-    {title: "Status page", url: "https://status.aspectofjerry.dev"},
-];
-
 const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
-    const [toggle, setToggle] = useState(false);
+    const [showMenu, setShowMenu] = useState(false);
     const [isShrunk, setShrunk] = useState(false);
     const scrollThreshold = 96;
 
@@ -49,30 +35,6 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
         };
     }, []);
 
-    // Rest of your code...
-
-    // SHRINKS WHEN SCROLLING UP AND DOWN
-    // useEffect(() => {
-    //     let prevScrollY = window.pageYOffset;
-
-    //     const handleScroll = () => {
-    //         const currentScrollY = window.pageYOffset;
-
-    //         if(currentScrollY > prevScrollY) {
-    //             setShrunk(true);
-    //         } else {
-    //             setShrunk(false);
-    //         }
-
-    //         prevScrollY = currentScrollY;
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
 
     return (
         <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>
@@ -82,26 +44,34 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                 </a>
             </div>
             <ul className="app__navbar-nav-links">
-                {nav_links.map((link) => {
-                    return (
-                        <li className="app__flex p-text" key={`link-${link.title.toLowerCase()}`}>
-                            {/* div for line on hover */}
-                            <div />
-                            <a href={`${link.url}`}>{link.title}</a>
-                        </li>
-                    )
-                })}
+                {/* div for line on hover */}
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="#home">Home</a>
+                </li>
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="#about">About</a>
+                </li>
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="#skills">Skills</a>
+                </li>
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="#socials">Socials</a>
+                </li>
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="#projects">Projects</a>
+                </li>
             </ul>
             <ul className="app__navbar-ext-links">
-                {ext_links.map((link) => {
-                    return (
-                        <li className="app__flex p-text" key={`link-${link.title.toLowerCase()}`}>
-                            {/* div for line on hover */}
-                            <div />
-                            <a href={`${link.url}`} target="_blank" rel="noreferrer">{link.title}</a>
-                        </li>
-                    )
-                })}
+                {/* div for line on hover */}
+                <li className="app__flex p-text">
+                    <div />
+                    <a href="https://status.aspectofjerry.dev" target="_blank" rel="noreferrer">Status page</a>
+                </li>
             </ul>
 
             <div className="app__navbar-theme-toggle">
@@ -113,24 +83,38 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                 </button>
             </div>
 
-            <div className="app__navbar-menu">
-                <HiMenuAlt4 onClick={() => setToggle(true)} />
+            <div className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
+                <HiMenuAlt4 onClick={() => setShowMenu(true)} />
 
-                {toggle && (
-                    <motion.div
-                        whileInView={{x: [300, 0]}}
-                        transition={{duration: 0.85, ease: "easeOut"}}
-                    >
-                        <HiX onClick={() => setToggle(false)} />
-                        <ul>
-                            {["home", "about", "skills", "socials", "projects"].map((element) => (
-                                <li key={element}>
-                                    <a href={`#${element}`} onClick={() => setToggle(false)}>{element}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-                )}
+                <motion.div
+                // whileInView={{width: [0, 200]}}
+                // initial={{width: 0}}
+                // transition={{duration: 5, ease: "easeOut"}}
+                >
+                    <HiX onClick={() => setShowMenu(false)} />
+                    <ul>
+                        <li className="app__flex p-text">
+                            <a href="#home" onClick={() => setShowMenu(false)}>Home</a>
+                        </li>
+                        <li className="app__flex p-text">
+                            <a href="#about" onClick={() => setShowMenu(false)}>About</a>
+                        </li>
+                        <li className="app__flex p-text">
+                            <a href="#skills" onClick={() => setShowMenu(false)}>Skills</a>
+                        </li>
+                        <li className="app__flex p-text">
+                            <a href="#socials" onClick={() => setShowMenu(false)}>Socials</a>
+                        </li>
+                        <li className="app__flex p-text">
+                            <a href="#projects" onClick={() => setShowMenu(false)}>Projects</a>
+                        </li>
+                    </ul>
+                    <ul className="app__navbar-ext-links">
+                        <li className="app__flex p-text">
+                            <a href="https://status.aspectofjerry.dev" target="_blank" rel="noreferrer">Status page</a>
+                        </li>
+                    </ul>
+                </motion.div>
             </div>
         </nav >
     );

@@ -6,8 +6,6 @@
 
 ## Notes
 
-Please be sure to not ignore the case of directories `git config core.ignorecase false`.
-
 Sass media queries dimensions
 - tablet: max-width `1024px`
 - mobile: max-width `480px`

@@ -232,8 +232,10 @@
 
         padding: 1rem;
 
-        width: 80%;
+        width: 45%;
         height: 100vh;
+
+        transition: all 0.75s;
 
         display: flex;
         justify-content: flex-end;
@@ -284,12 +286,102 @@
             }
         }
 
-        @media screen and (max-width: 964px) {
+        @media screen and (min-width: 1024px) {
             display: none;
         }
     }
 
-    @media screen and (min-width: 964px) {
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.app__navbar-menu-hidden {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--secondary-color);
+    }
+
+    // motion.div
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+
+        width: 0%;
+        height: 100vh;
+
+        transition: all 0.75s;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+
+        // background: url("../../assets/bgWhite.png"); // 57:51
+        background-color: var(--secondary-color);
+        background-size: cover;
+        background-repeat: repeat;
+
+        box-shadow: 0 0 25px var(--shadow-color);
+
+        svg {
+            display: none;
+            width: 35px;
+            height: 35px;
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+
+            li {
+                margin: 1rem;
+
+                a {
+                    color: var(--dark-color);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    font-weight: 500;
+
+                    transition: all 0.20s ease-in-out;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
         display: none;
     }
 }
