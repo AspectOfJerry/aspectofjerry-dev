@@ -18,7 +18,7 @@ const socials = [
 
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
-    {title: "Public Email", description: "📧 jerry@aspectofjerry.dev", imageUrl: ""},
+    {title: "Public Email", description: "📧 jerry@jerrydev.net", imageUrl: ""},
 ];
 
 const Socials = ({theme}) => {

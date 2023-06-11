@@ -1,6 +1,6 @@
-# aspectofjerry.dev
+# jerrydev
 
-[aspectofjerry.dev](https://aspectofjerry.dev) is my personal/portfolio website.
+[jerrydev.net](https://jerrydev.net) (formely known as [aspectofjerry.dev](https://aspectofjerry.dev)) is my personal/portfolio website.
 
 <br>
 

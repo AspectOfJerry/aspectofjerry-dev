@@ -1,5 +1,5 @@
 {
-    "name": "aspectofjerry-dev",
+    "name": "jerrydev",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -17,11 +17,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/AspectOfJerry/aspectofjerry-dev.git"
+        "url": "https://github.com/AspectOfJerry/jerrydev.git"
     },
     "bugs": {
-        "url": "https://github.com/AspectOfJerry/aspectofjerry-dev/issues",
-        "email": "jerry@aspectofjerry.dev"
+        "url": "https://github.com/AspectOfJerry/jerrydev/issues",
+        "email": "jerry@jerrydev.net"
     },
     "scripts": {
         "start": "react-scripts start",

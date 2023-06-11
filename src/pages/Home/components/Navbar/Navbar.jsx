@@ -39,7 +39,7 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
     return (
         <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>
             <div className="app__navbar-logo">
-                <a href="https://aspectofjerry.dev">
+                <a href="https://jerrydev.net">
                     <img src={media.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>
@@ -70,7 +70,7 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                 {/* div for line on hover */}
                 <li className="app__flex p-text">
                     <div />
-                    <a href="https://status.aspectofjerry.dev" target="_blank" rel="noreferrer">Status page</a>
+                    <a href="https://status.jerrydev.net" target="_blank" rel="noreferrer">Status page</a>
                 </li>
             </ul>
 
@@ -111,7 +111,7 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                     </ul>
                     <ul className="app__navbar-ext-links">
                         <li className="app__flex p-text">
-                            <a href="https://status.aspectofjerry.dev" target="_blank" rel="noreferrer">Status page</a>
+                            <a href="https://status.jerrydev.net" target="_blank" rel="noreferrer">Status page</a>
                         </li>
                     </ul>
                 </motion.div>
