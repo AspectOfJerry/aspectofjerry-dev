@@ -3,26 +3,15 @@
     padding: 2.50rem 8% 2rem;
 }
 
-.app__footer-bg {
+.app__footer_bg {
     width: 100%;
     background-color: var(--footer-color);
 }
 
-.app__footer-divider {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-    padding: 1rem 3rem 0;
-    box-shadow: 0 0 30px var(--shadow-color);
-
-    @media screen and (max-width: 480px) {
-        padding: 1rem 1.50rem;
-    }
-}
-
-.app__footer-divider-rounded {
-    border: 2px solid var(--lighter-color);
-    border-radius: 2px;
+.app__footer_shadow {
+    width: 100vw;
+    box-shadow: 0 0 48px 32px var(--footer-color);
+    transition: box-shadow 0.5s;
 }
 
 .app__footer-sites {

@@ -42,7 +42,7 @@ const About = () => {
                 transition={text_fade_in.transition}
             > */}
             <p className="p-text app__about_note">
-                {/* 📌 Release notes: testing page themes! */}
+                📌 Alpha testing: page themes!
             </p>
             {/* </motion.p> */}
 

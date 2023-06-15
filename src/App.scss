@@ -2,6 +2,8 @@
 
 html {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
     --primary-color: rgb(135, 206, 235); // 87ceeb
     --secondary-color: rgb(249, 251, 252);
     --lighter-color: rgb(235, 235, 235);
@@ -12,19 +14,19 @@ html {
 
     --navbar-color: rgba(150, 220, 250, 0.40);
     --navbar-s-color: rgba(150, 220, 250, 0.20);
-
+    --head-background-color: rgb(168, 220, 240);
     --divier-color: var(--lighter-color);
-    --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --footer-color: rgb(246, 247, 248);
 
-    --head-background-color: var(--primary-color);
-    background-color: var(--secondary-color);
-    transition: background-color 0.50s;
+    transition: background-color 0.75s;
 }
 
 html.app_dark {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
     --primary-color: rgb(135, 206, 235);
     --secondary-color: rgb(8, 8, 8);
     --lighter-color: rgb(32, 32, 32);
@@ -35,19 +37,42 @@ html.app_dark {
 
     --navbar-color: rgba(135, 206, 235, 0.10);
     --navbar-s-color: rgba(135, 206, 235, 0.15);
-
+    --head-background-color: var(--secondary-color);
     --divier-color: var(--light-color);
-    --footer-color: rgb(16, 16, 16);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --footer-color: rgb(16, 16, 16);
 
-    --head-background-color: var(--secondary-color);
+    transition: background-color 0.75s;
+}
+
+html.app_deep-space {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
-    transition: background-color 0.50s;
+
+    --primary-color: rgb(0, 64, 128);
+    --secondary-color: rgb(3, 0, 12);
+    --lighter-color: rgb(32, 32, 32);
+    --light-color: rgb(128, 128, 128);
+    --dark-color: rgb(160, 160, 160);
+    --darker-color: rgb(220, 220, 220);
+    --darkest-color: rgb(235, 235, 235);
+
+    --navbar-color: rgba(0, 0, 128, 0.40);
+    --navbar-s-color: rgba(0, 0, 128, 0.20);
+    --head-background-color: rgb(16, 0, 64);
+    --divier-color: var(--head-background-color);
+    --shadow-color: rgba(160, 160, 160, 0.20);
+    --shadow-glow-color: rgba(0, 0, 128, 0.30);
+    --footer-color: rgb(0, 0, 64);
+
+    transition: background-color 0.75s;
 }
 
 html.app_green {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
     --primary-color: rgb(170, 235, 150);
     --secondary-color: rgb(250, 252, 249);
     --lighter-color: rgb(235, 235, 235);
@@ -58,38 +83,84 @@ html.app_green {
 
     --navbar-color: rgba(170, 235, 150, 0.40);
     --navbar-s-color: rgba(170, 235, 150, 0.20);
-
+    --head-background-color: var(--primary-color);
     --divier-color: var(--lighter-color);
-    --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(170, 235, 150, 0.30);
+    --footer-color: rgb(246, 247, 248);
 
-    --head-background-color: var(--primary-color);
+    transition: background-color 0.75s;
+}
+
+html.app_navy {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
-    transition: background-color 0.50s;
+
+    --primary-color: rgb(0, 0, 176);
+    --secondary-color: rgb(0, 0, 48);
+    --lighter-color: rgb(32, 32, 32);
+    --light-color: rgb(128, 128, 128);
+    --dark-color: rgb(160, 160, 160);
+    --darker-color: rgb(220, 220, 220);
+    --darkest-color: rgb(235, 235, 235);
+
+    --navbar-color: rgba(0, 0, 128, 0.40);
+    --navbar-s-color: rgba(0, 0, 128, 0.20);
+    --head-background-color: rgb(0, 0, 77);
+    --divier-color: var(--head-background-color);
+    --shadow-color: rgba(160, 160, 160, 0.20);
+    --shadow-glow-color: rgba(0, 0, 128, 0.30);
+    --footer-color: rgb(0, 0, 64);
+
+    transition: background-color 0.75s;
+}
+
+html.app_dark-red {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
+    --primary-color: rgb(150, 0, 0);
+    --secondary-color: rgb(48, 0, 0);
+    --light-color: rgb(128, 128, 128);
+    --dark-color: rgb(160, 160, 160);
+    --darker-color: rgb(220, 220, 220);
+    --darkest-color: rgb(235, 235, 235);
+
+    --navbar-color: rgba(135, 206, 235, 0.10);
+    --navbar-s-color: rgba(135, 206, 235, 0.15);
+    --head-background-color: rgb(77, 0, 0);
+    --divier-color: var(--light-color);
+    --shadow-color: rgba(160, 160, 160, 0.20);
+    --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --footer-color: rgb(64, 0, 0);
+
+    transition: background-color 0.75s;
 }
 
 html.app_pink {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
     --primary-color: rgb(255, 192, 203);
-    --secondary-color: rgb(252, 250, 251);
+    --secondary-color: rgb(255, 245, 247);
     --lighter-color: rgb(235, 235, 235);
     --light-color: rgb(220, 220, 220);
     --dark-color: rgb(160, 160, 160);
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(255, 192, 203, 0.40);
-    --navbar-s-color: rgba(255, 192, 203, 0.20);
+    // 90%
+    --navbar-color: rgba(255, 204, 214, 0.40);
+    --navbar-s-color: rgba(255, 204, 214, 0.20);
+    // 92%
+    --head-background-color: rgb(255, 214, 222);
 
     --divier-color: var(--lighter-color);
-    --footer-color: rgb(246, 247, 248);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(255, 192, 203, 0.25);
+    --footer-color: rgb(246, 247, 248);
 
-    --head-background-color: var(--primary-color);
-    background-color: var(--secondary-color);
-    transition: background-color 0.50s;
+    transition: background-color 0.75s;
 }
 
 .app__whitebg {

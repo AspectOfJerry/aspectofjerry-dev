@@ -12,7 +12,7 @@ const Home = ({theme}) => {
     return (
         <>
             <div id="home" className="app__container">
-                {
+                {/* {
                     theme.bgMediaType === "image" ? (
                         <motion.img
                             key={theme.className}
@@ -29,7 +29,7 @@ const Home = ({theme}) => {
                             <source src={theme.bgMedia} />
                         </motion.video>
                     )
-                }
+                } */}
 
                 <div className="app__text-container">
                     <motion.h1

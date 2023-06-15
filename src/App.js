@@ -19,21 +19,40 @@ import "./App.scss";
 const themes = [
     {
         name: "Default",
-        className: "app_default"
+        className: "app_default",
+        theme: "light"
     },
     {
         name: "Dark",
-        className: "app_dark"
+        className: "app_dark",
+        theme: "dark"
+    },
+    {
+        name: "Deep Space",
+        className: "app_deep-space",
+        theme: "dark"
     },
     {
         name: "Green",
         className: "app_green",
+        theme: "light",
         bgMedia: media.theme_green_bg,
         bgMediaType: "webm"
     },
     {
+        name: "Navy",
+        className: "app_navy",
+        theme: "dark"
+    },
+    {
+        name: "Dark Red",
+        className: "app_dark-red",
+        theme: "dark"
+    },
+    {
         name: "Pink",
         className: "app_pink",
+        theme: "light",
         bgMedia: media.theme_pink_bg,
         bgMediaType: "image"
     }

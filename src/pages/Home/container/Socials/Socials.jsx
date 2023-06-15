@@ -22,7 +22,7 @@ const texts = [
 ];
 
 const Socials = ({theme}) => {
-    socials.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? media.github_white : media.github;
+    socials.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
 
     return (
         <>

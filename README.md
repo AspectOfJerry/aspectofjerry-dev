@@ -7,8 +7,16 @@
 ## Notes
 
 Sass media queries dimensions
+
 - tablet: max-width `1024px`
 - mobile: max-width `480px`
+
+CSS color brightness values
+
+- very very light: 98%
+- very light 96%
+- lighter 90%
+- light 85%
 
 To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
 

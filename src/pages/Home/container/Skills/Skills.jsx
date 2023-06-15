@@ -9,7 +9,7 @@ import "./Skills.scss";
 
 const skills = [
     {name: "Microsoft Azure", color: "", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
-    {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
+    // {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
     {name: "CSS", color: "", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
     {name: "Cloudflare", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
     {name: "DiscordJS", color: "", iconUrl: media.djs, url: "https://discord.js.org/#/"},
@@ -30,7 +30,7 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Maybe when I started programming? Hello, World!"}
+            {name: "Programming", description: "Maybe when I started programming (forgor)? Hello, World!"}
         ]
     },
     {
@@ -66,7 +66,7 @@ const experience = [
 ];
 
 const Skills = ({theme}) => {
-    skills.find(e => e.name === "GitHub").iconUrl = theme.className === "app_dark" ? media.github_white : media.github;
+    skills.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
 
     return (
         <>

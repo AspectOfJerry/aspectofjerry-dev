@@ -15,10 +15,9 @@ const texts = [
 const Footer = () => {
     return (
         <>
-            <div className="app__footer-divider app__footer-bg">
-                <hr className="app__footer-divider-rounded" />
-            </div>
-            <div className="app__footer app__footer-bg">
+            <div className="app__footer_shadow"></div>
+
+            <div className="app__footer app__footer_bg">
                 <div className="app__footer-sites">
                     <h4 className="bold-text">Other sites</h4>
                     {sites.map((site) => {
@@ -28,8 +27,8 @@ const Footer = () => {
                     })}
                 </div>
             </div>
-            <div className="copyright app__footer-bg">
-                <p>Copyright © 2022 AspectOfJerry, Jerrydev, Jerry</p>
+            <div className="copyright app__footer_bg">
+                <p>Copyright © 2022 AspectOfJerry, Jerry</p>
             </div>
         </>
     );
