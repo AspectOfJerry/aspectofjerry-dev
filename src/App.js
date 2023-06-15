@@ -5,10 +5,11 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Divider} from "./pages/components/index.js";
 
 // pages/Home (main)
-import {Navbar, ReturnToTop} from "./pages/Home/components/index.js";
-import {About, Socials, Footer, Home, Header, Projects, Skills} from "./pages/Home/container/index.js";
+import {AppNavbar, AppReturnToTop} from "./pages/Home/components/index.js";
+import {AppAbout, AppSocials, AppFooter, AppHome, AppHeader, AppProjects, AppSkills} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
+import {NotFoundNavbar} from "./pages/NotFound/components/index.js";
 import {NotFound} from "./pages/NotFound/index.js";
 
 import {media} from "./constants";
@@ -116,18 +117,18 @@ const App = () => {
                     path="/"
                     element={
                         <div className={theme.className}>
-                            <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
-                            <ReturnToTop />
-                            <Home theme={theme} />
+                            <AppNavbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
+                            <AppReturnToTop />
+                            <AppHome theme={theme} />
                             {/* <Header /> */}
-                            <About />
+                            <AppAbout />
                             <Divider />
-                            <Skills theme={theme} />
+                            <AppSkills theme={theme} />
                             <Divider />
-                            <Socials theme={theme} />
+                            <AppSocials theme={theme} />
                             <Divider />
-                            <Projects />
-                            <Footer />
+                            <AppProjects />
+                            <AppFooter />
                         </div>
                     }
                 />
@@ -138,7 +139,8 @@ const App = () => {
                     path="*"
                     element={
                         <div className="app">
-                            <NotFound />
+                            {/* <NotFoundNavbar toggleTheme={toggleTheme} themes={themes} theme={theme} /> */}
+                            <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
                         </div>
                     }
                 />

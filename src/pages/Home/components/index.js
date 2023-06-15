@@ -1,2 +1,2 @@
-export {default as Navbar} from "./Navbar/Navbar.jsx";
-export {default as ReturnToTop} from "./ReturnToTop/ReturnToTop.jsx";
+export {default as AppNavbar} from "./Navbar/Navbar.jsx";
+export {default as AppReturnToTop} from "./ReturnToTop/ReturnToTop.jsx";

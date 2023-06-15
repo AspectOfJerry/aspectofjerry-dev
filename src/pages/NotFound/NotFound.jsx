@@ -1,18 +1,23 @@
 import React, {useEffect} from "react";
 
 import "./NotFound.scss";
+import Navbar from "./components/Navbar/Navbar.jsx";
 
-
-const NotFound = () => {
+const NotFound = ({toggleTheme, themes, theme}) => {
     useEffect(() => {
         document.title = "AspectOfJerry • 404"
     }, []);
 
     return (
-        <div id="NotFound" className="app__notfound">
-            <h1>Welcome to the stunning 404 page! This is probably not what you are looking for.</h1>
-            <a href="https://jerrydev.net">Take me home</a>
-        </div>
+        <>
+            <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
+            <div id="NotFound" className="not-found">
+                <h1 className="head-text">This is probably not what you are looking for!</h1>
+                <a href="https://jerrydev.net">
+                    <p className="text">Take me home</p>
+                </a>
+            </div>
+        </>
     );
 };
 
