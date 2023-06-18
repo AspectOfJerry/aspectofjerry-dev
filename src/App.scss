@@ -14,10 +14,11 @@ html {
 
     --navbar-color: rgba(150, 220, 250, 0.40);
     --navbar-s-color: rgba(150, 220, 250, 0.20);
-    --head-background-color: rgb(168, 220, 240);
+    --head-background-color: rgb(168, 220, 240, 0.90);
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --glow-color: rgba(228, 244, 251, 0.40);
     --footer-color: rgb(246, 247, 248);
 
     transition: background-color 0.75s;
@@ -41,6 +42,7 @@ html.app_dark {
     --divier-color: var(--light-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --glow-color: rgba(135, 206, 235, 0.40);
     --footer-color: rgb(16, 16, 16);
 
     transition: background-color 0.75s;
@@ -50,21 +52,49 @@ html.app_deep-space {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgb(0, 64, 128);
-    --secondary-color: rgb(3, 0, 12);
+    --primary-color: rgb(16, 64, 128);
+    --secondary-color: rgb(1, 3, 12);
     --lighter-color: rgb(32, 32, 32);
     --light-color: rgb(128, 128, 128);
     --dark-color: rgb(160, 160, 160);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
-    --navbar-color: rgba(0, 0, 128, 0.40);
-    --navbar-s-color: rgba(0, 0, 128, 0.20);
-    --head-background-color: rgb(16, 0, 64);
+    --navbar-color: rgba(32, 32, 64, 0.40);
+    --navbar-s-color: rgba(16, 16, 64, 0.20);
+    --head-background-color: rgb(4, 8, 24);
     --divier-color: var(--head-background-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(0, 0, 128, 0.30);
-    --footer-color: rgb(0, 0, 64);
+    --shadow-glow-color: rgba(200, 200, 235, 0.30);
+    --glow-color: rgba(200, 200, 235, 0.40);
+    --footer-color: rgb(0, 0, 32);
+
+    transition: background-color 0.75s;
+}
+
+html.app_pink {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
+    --primary-color: rgb(255, 192, 203);
+    --secondary-color: rgb(255, 240, 245);
+    --lighter-color: rgb(235, 235, 235);
+    --light-color: rgb(220, 220, 220);
+    --dark-color: rgb(160, 160, 160);
+    --darker-color: rgb(128, 128, 128);
+    --darkest-color: rgb(32, 32, 32);
+
+    // 90%
+    --navbar-color: rgba(255, 204, 214, 0.40);
+    --navbar-s-color: rgba(255, 204, 214, 0.20);
+    // 92%
+    --head-background-color: rgb(255, 204, 213);
+
+    --divier-color: var(--lighter-color);
+    --shadow-color: rgba(160, 160, 160, 0.20);
+    --shadow-glow-color: rgba(255, 192, 203, 0.25);
+    --glow-color: rgba(255, 240, 243, 0.40);
+    --footer-color: rgb(246, 247, 248);
 
     transition: background-color 0.75s;
 }
@@ -87,6 +117,7 @@ html.app_green {
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(170, 235, 150, 0.30);
+    --glow-color: rgba(234, 250, 229, 0.40);
     --footer-color: rgb(246, 247, 248);
 
     transition: background-color 0.75s;
@@ -109,7 +140,8 @@ html.app_navy {
     --head-background-color: rgb(0, 0, 77);
     --divier-color: var(--head-background-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(0, 0, 128, 0.30);
+    --shadow-glow-color: rgba(172, 172, 220, 0.30);
+    --glow-color: rgba(160, 160, 200, 0.40);
     --footer-color: rgb(0, 0, 64);
 
     transition: background-color 0.75s;
@@ -131,37 +163,13 @@ html.app_dark-red {
     --head-background-color: rgb(77, 0, 0);
     --divier-color: var(--light-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --shadow-glow-color: rgba(233, 124, 124, 0.25);
+    --glow-color: rgba(235, 135, 135, 0.40);
     --footer-color: rgb(64, 0, 0);
 
     transition: background-color 0.75s;
 }
 
-html.app_pink {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    background-color: var(--secondary-color);
-
-    --primary-color: rgb(255, 192, 203);
-    --secondary-color: rgb(255, 245, 247);
-    --lighter-color: rgb(235, 235, 235);
-    --light-color: rgb(220, 220, 220);
-    --dark-color: rgb(160, 160, 160);
-    --darker-color: rgb(128, 128, 128);
-    --darkest-color: rgb(32, 32, 32);
-
-    // 90%
-    --navbar-color: rgba(255, 204, 214, 0.40);
-    --navbar-s-color: rgba(255, 204, 214, 0.20);
-    // 92%
-    --head-background-color: rgb(255, 214, 222);
-
-    --divier-color: var(--lighter-color);
-    --shadow-color: rgba(160, 160, 160, 0.20);
-    --shadow-glow-color: rgba(255, 192, 203, 0.25);
-    --footer-color: rgb(246, 247, 248);
-
-    transition: background-color 0.75s;
-}
 
 .app__whitebg {
     background-color: var(--secondary-color);
@@ -173,7 +181,7 @@ html.app_pink {
 
 .app__container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
 
     display: flex;
     flex-direction: row;
@@ -192,7 +200,7 @@ html.app_pink {
     padding: 4rem 2rem;
 
     @media screen and (max-width: 480px) {
-        padding: 4rem 1rem 2rem;
+        padding: 3rem 1rem 2rem;
     }
 }
 

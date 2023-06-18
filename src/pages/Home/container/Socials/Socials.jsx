@@ -8,7 +8,7 @@ import "./Socials.scss";
 
 
 const socials = [
-    {name: "Discord", description: "Jerry#3756", iconUrl: media.clyde_icon_blurple},
+    {name: "Discord", description: "jerrydev", iconUrl: media.clyde_icon_blurple},
     {name: "GitHub", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "Instagram", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
     {name: "Reddit", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},

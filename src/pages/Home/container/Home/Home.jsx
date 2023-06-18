@@ -11,7 +11,7 @@ const Home = ({theme}) => {
 
     return (
         <>
-            <div id="home" className="app__container">
+            <div id="home" className="app__home app__container">
                 {/* {
                     theme.bgMediaType === "image" ? (
                         <motion.img
@@ -35,13 +35,13 @@ const Home = ({theme}) => {
                     <motion.h1
                         className="app__home-text-big"
                         animate={{
-                            y: [75, 0],
+                            y: [95, 0],
                             opacity: [0, 100]
                         }}
                         transition={{
                             ease: "easeOut",
-                            duration: 0.75,
-                            delay: 0.10
+                            duration: 1.1,
+                            delay: 0.90
                         }}
                     >
                         Hello
@@ -49,17 +49,23 @@ const Home = ({theme}) => {
                     <motion.h1
                         className="app__home-small"
                         animate={{
-                            y: [50, 0],
+                            y: [35, 0],
                             opacity: [0, 100]
                         }}
                         transition={{
                             ease: "easeOut",
-                            duration: 0.75,
-                            delay: 0.80
+                            duration: 0.90,
+                            delay: 1.25
                         }}
                     >
                         I'm Jerry
                     </motion.h1>
+                    <motion.div
+                        className="app__text-container-line"
+                        initial={{width: 0}}
+                        animate={{width: ["0%", "150%"]}}
+                        transition={{delay: 0.15, duration: 1}}
+                    ></motion.div>
                 </div>
             </div>
 

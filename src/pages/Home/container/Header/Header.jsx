@@ -58,7 +58,7 @@ const Header = () => {
 
                 <motion.div
                     whileInView={{scale: [0.90, 1]}}
-                    transition={{duration: 0.75, type: "tween", ease: "ease", delay: 0.03, delayChildren: 0}}
+                    transition={{duration: 0.75, type: "tween", ease: "easeInOut", delay: 0.03, delayChildren: 0}}
                     className="app__header-img"
                 >
                     <img src={media.aspectofjerry_head} alt="profile_bg" />

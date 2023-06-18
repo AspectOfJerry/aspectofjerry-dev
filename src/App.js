@@ -34,6 +34,13 @@ const themes = [
         theme: "dark"
     },
     {
+        name: "Pink",
+        className: "app_pink",
+        theme: "light",
+        bgMedia: media.theme_pink_bg,
+        bgMediaType: "image"
+    },
+    {
         name: "Green",
         className: "app_green",
         theme: "light",
@@ -50,13 +57,6 @@ const themes = [
         className: "app_dark-red",
         theme: "dark"
     },
-    {
-        name: "Pink",
-        className: "app_pink",
-        theme: "light",
-        bgMedia: media.theme_pink_bg,
-        bgMediaType: "image"
-    }
 ];
 
 const getInitialColorMode = () => {
@@ -120,13 +120,13 @@ const App = () => {
                             <AppNavbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
                             <AppReturnToTop />
                             <AppHome theme={theme} />
-                            {/* <Header /> */}
+                            {/* <AppHeader /> */}
                             <AppAbout />
-                            <Divider />
+                            {/* <Divider /> */}
                             <AppSkills theme={theme} />
-                            <Divider />
+                            {/* <Divider /> */}
                             <AppSocials theme={theme} />
-                            <Divider />
+                            {/* <Divider /> */}
                             <AppProjects />
                             <AppFooter />
                         </div>

@@ -37,13 +37,23 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
 
 
     return (
-        <nav className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}>
+        <motion.nav
+            className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}
+            initial={{opacity: 1, y: -96}}
+            animate={{opacity: [0, 1], y: [-96, 0]}}
+            transition={{delay: 1.75}}
+        >
             <div className="app__navbar-logo">
                 <a href="https://jerrydev.net">
                     <img src={media.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>
-            <ul className="app__navbar-nav-links">
+            <motion.ul
+                className="app__navbar-nav-links"
+                initial={{opacity: 1, y: 0}}
+                animate={{opacity: [0, 1], y: [25, 0]}}
+                transition={{delay: 2}}
+            >
                 {/* div for line on hover */}
                 <li className="app__flex p-text">
                     <div />
@@ -65,14 +75,18 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                     <div />
                     <a href="#projects">Projects</a>
                 </li>
-            </ul>
-            <ul className="app__navbar-ext-links">
+            </motion.ul>
+            <motion.ul
+                className="app__navbar-ext-links"
+                initial={{opacity: 1, y: 0}}
+                animate={{opacity: [0, 1], y: [25, 0]}}
+                transition={{delay: 2}}>
                 {/* div for line on hover */}
                 <li className="app__flex p-text">
                     <div />
                     <a href="https://status.jerrydev.net" target="_blank" rel="noreferrer">Status page</a>
                 </li>
-            </ul>
+            </motion.ul>
 
             <div className="app__navbar-theme-toggle">
                 <button onClick={() => toggleTheme(Object.values(themes))}>
@@ -86,11 +100,7 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
             <div className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
                 <HiMenuAlt4 onClick={() => setShowMenu(true)} />
 
-                <motion.div
-                // whileInView={{width: [0, 200]}}
-                // initial={{width: 0}}
-                // transition={{duration: 5, ease: "easeOut"}}
-                >
+                <div>
                     <HiX onClick={() => setShowMenu(false)} />
                     <ul>
                         <li className="app__flex p-text">
@@ -114,9 +124,9 @@ const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
                             <a href="https://status.jerrydev.net" target="_blank" rel="noreferrer">Status page</a>
                         </li>
                     </ul>
-                </motion.div>
+                </div>
             </div>
-        </nav >
+        </motion.nav >
     );
 };
 

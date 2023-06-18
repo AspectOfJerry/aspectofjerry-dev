@@ -30,37 +30,37 @@ const experience = [
     {
         year: "2017",
         works: [
-            {name: "Programming", description: "Maybe when I started programming (forgor)? Hello, World!"}
+            {name: "Programming", description: "?"}
         ]
     },
     {
         year: "2020",
         works: [
-            {name: "C++", description: "Learned C++ but forgot everything about it because I haven't used it since then"}
+            {name: "C++", description: ""}
         ]
     },
     {
         year: "2021",
         works: [
-            {name: "JavaScript", description: "Learned JavaScript"},
-            {name: "NodeJS", description: "Learned Node.JS"},
-            {name: "Java", description: "Learned Java"}
+            {name: "JavaScript", description: ""},
+            {name: "NodeJS", description: ""},
+            {name: "Java", description: ""}
         ]
     },
     {
         year: "2022",
         works: [
             // {name: "Website", description: "Created the website you are currently on"},
-            {name: "ReactJS", description: "Learned ReactJS basics"},
-            {name: "HTML", description: "Learned HyperText Markup Language"},
-            {name: "CSS", description: "Learned Cascading Style Sheets"}
+            {name: "ReactJS", description: ""},
+            {name: "HTML", description: ""},
+            {name: "CSS", description: ""}
         ]
     },
     {
         year: "2023",
         works: [
-            {name: "Sass", description: "Learned Syntactically Awesome Style Sheets"},
-            {name: "Python", description: "Learned Python"}
+            {name: "Sass", description: ""},
+            {name: "Python", description: ""}
         ]
     }
 ];
