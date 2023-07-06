@@ -6,6 +6,8 @@
 
 ## Notes
 
+Static file names: MD5 hash
+
 Sass media queries dimensions
 
 - tablet: max-width `1024px`
