@@ -9,7 +9,7 @@ import {motion} from "framer-motion";
 const Navbar = ({toggleTheme, themes, theme}) => { // 32:35
     const [showMenu, setShowMenu] = useState(false);
     const [isShrunk, setShrunk] = useState(false);
-    const scrollThreshold = 96;
+    const scrollThreshold = 32;
 
     useEffect(() => {
         let isScrolling = false;

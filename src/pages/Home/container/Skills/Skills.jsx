@@ -28,9 +28,15 @@ const skills = [
 
 const experience = [
     {
-        year: "2017",
+        year: "2015",
         works: [
-            {name: "Programming", description: "..."}
+            {name: "Scratch 😄", description: ""}
+        ]
+    },
+    {
+        year: "2016",
+        works: [
+            {name: "NXT/EV3", description: ""}
         ]
     },
     {
@@ -50,16 +56,12 @@ const experience = [
     {
         year: "2022",
         works: [
-            // {name: "Website", description: "Created the website you are currently on"},
-            {name: "ReactJS", description: ""},
-            {name: "HTML", description: ""},
-            {name: "CSS", description: ""}
+            {name: "Web dev", description: ""}
         ]
     },
     {
         year: "2023",
         works: [
-            {name: "Sass", description: ""},
             {name: "Python", description: ""}
         ]
     }

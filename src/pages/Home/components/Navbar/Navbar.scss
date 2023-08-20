@@ -15,15 +15,27 @@
     border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
-    transition: padding 0.50s, box-shadow 0.50s, background-color 0.50s, backdrop-filter 0.50s;
+
+    transition:
+        padding 0.65s,
+        box-shadow 0.65s,
+        background-color 0.65s,
+        backdrop-filter 0.65s,
+        border-radius 0.65s,
+        scale 0.85s,
+        margin-top 0.95s;
 }
 
 .app__navbar-shrunk {
-    padding: 0.65rem 2rem;
-    box-shadow: 0 0 20px var(--shadow-color);
+    padding: 0.90rem 1.80rem;
+    margin-top: 5px;
+    box-shadow: 0 0 16px 4px var(--shadow-color);
     background-color: var(--navbar-s-color);
     border: none;
 
+
+    scale: 85%;
+    border-radius: 20px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
@@ -225,13 +237,14 @@
 
     div {
         position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
+        top: 8px;
+        // bottom: 0;
+        right: 5px;
         z-index: 5;
 
-        width: 55%;
-        height: 100vh;
+        width: 48%;
+        height: 65vh;
+        border-radius: 25px;
 
         transition: all 0.70s;
 
@@ -294,7 +307,7 @@
             transition: all 0.70s;
         }
 
-        padding: 1rem 1rem 50% 1rem;
+        padding: 0.75rem 0.75rem 15% 0.75rem;
 
         @media screen and (min-width: 1024px) {
             display: none;
@@ -305,7 +318,7 @@
 .app__navbar-menu-hidden {
     div {
         width: 0%;
-
+        opacity: 0%;
         transition: all 0.70s;
 
         svg {

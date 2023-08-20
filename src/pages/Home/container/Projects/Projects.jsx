@@ -19,12 +19,12 @@ const categories = [
         imageUrl: ""
     },
     {
-        name: "Python",
+        name: "Java",
         description: "",
         imageUrl: ""
     },
     {
-        name: "Java",
+        name: "Python",
         description: "",
         imageUrl: ""
     }
@@ -66,5 +66,5 @@ const Projects = () => {
         </>
     );
 };
-
+// https://youtu.be/3HNyXCPDQ7Q?t=8126
 export default AppWrap(Projects, "projects");
