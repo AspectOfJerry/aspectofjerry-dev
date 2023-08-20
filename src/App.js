@@ -48,11 +48,6 @@ const themes = [
         bgMediaType: "webm"
     },
     {
-        name: "Navy",
-        className: "app_navy",
-        theme: "dark"
-    },
-    {
         name: "Dark Red",
         className: "app_dark-red",
         theme: "dark"
