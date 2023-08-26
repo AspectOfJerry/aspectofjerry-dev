@@ -2,14 +2,13 @@ import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 // Global
-import {Divider} from "./pages/components/index.js";
+import {Divider, Navbar} from "./pages/components/index.js";
 
 // pages/Home (main)
-import {AppNavbar, AppReturnToTop} from "./pages/Home/components/index.js";
+import {AppReturnToTop} from "./pages/Home/components/index.js";
 import {AppAbout, AppSocials, AppFooter, AppHome, AppHeader, AppProjects, AppSkills} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
-import {NotFoundNavbar} from "./pages/NotFound/components/index.js";
 import {NotFound} from "./pages/NotFound/index.js";
 
 import {media} from "./constants";
@@ -48,9 +47,9 @@ const themes = [
         bgMediaType: "webm"
     },
     {
-        name: "Dark Red",
-        className: "app_dark-red",
-        theme: "dark"
+        name: "Nether",
+        className: "app_nether",
+        theme: "nether"
     },
 ];
 
@@ -112,7 +111,10 @@ const App = () => {
                     path="/"
                     element={
                         <div className={theme.className}>
-                            <AppNavbar toggleTheme={toggleTheme} themes={themes} theme={theme} />
+                            <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
+                                links={[{name: "Home", link: "#home"}, {name: "About", link: "#about"}, {name: "Skills", link: "#skills"}, {name: "Socials", link: "#socials"}, {name: "Projects", link: "#projects"}]}
+                                extLinks={[{name: "Skyblock mod", link: "https://bap.jerrydev.net"}, {name: "Status page", link: "https://status.jerrydev.net"}]}
+                            />
                             <AppReturnToTop />
                             <AppHome theme={theme} />
                             {/* <AppHeader /> */}
@@ -134,7 +136,6 @@ const App = () => {
                     path="*"
                     element={
                         <div className="app">
-                            {/* <NotFoundNavbar toggleTheme={toggleTheme} themes={themes} theme={theme} /> */}
                             <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
                         </div>
                     }

@@ -12,8 +12,8 @@ html {
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(150, 220, 250, 0.80);
-    --navbar-s-color: rgba(150, 220, 250, 0.60);
+    --navbar-color: rgba(150, 220, 250, 0.30);
+    --navbar-s-color: rgba(150, 220, 250, 0.45);
     --head-background-color: rgb(168, 220, 240, 0.90);
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
@@ -77,16 +77,15 @@ html.app_pink {
     background-color: var(--secondary-color);
 
     --primary-color: rgb(255, 192, 203);
-    --secondary-color: rgb(255, 235, 242); // 96%
+    --secondary-color: rgb(255, 240, 245); // 97%
     --lighter-color: rgb(235, 235, 235);
     --light-color: rgb(220, 220, 220);
     --dark-color: rgb(160, 160, 160);
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    // 90%
-    --navbar-color: rgba(255, 204, 214, 0.40);
-    --navbar-s-color: rgba(255, 204, 214, 0.20);
+    --navbar-color: rgba(255, 204, 214, 0.30);
+    --navbar-s-color: rgba(255, 204, 214, 0.45);
     // 92%
     --head-background-color: rgb(255, 204, 213);
 
@@ -111,8 +110,8 @@ html.app_green {
     --darker-color: rgb(128, 128, 128);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(170, 235, 150, 0.40);
-    --navbar-s-color: rgba(170, 235, 150, 0.20);
+    --navbar-color: rgba(170, 235, 150, 0.30);
+    --navbar-s-color: rgba(170, 235, 150, 0.45);
     --head-background-color: var(--primary-color);
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
@@ -123,7 +122,7 @@ html.app_green {
     transition: background-color 0.75s;
 }
 
-html.app_dark-red {
+html.app_nether {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
 

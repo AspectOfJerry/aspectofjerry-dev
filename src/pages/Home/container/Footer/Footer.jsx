@@ -4,8 +4,10 @@ import "./Footer.scss";
 
 
 const sites = [
-    {title: "Discord bot documentation", url: "https://bot.jerrydev.net"},
-    {title: "Status page", url: "https://status.jerrydev.net"}
+    {title: "Hypixel Skyblock mod (forge-1.8.9)", url: "https://bap.jerrydev.net"},
+    {title: "Discord bot", url: "https://bot.jerrydev.net"},
+    {title: "Status page", url: "https://status.jerrydev.net"},
+    {title: "404", url: "/404"}
 ];
 
 const texts = [
