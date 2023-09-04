@@ -41,7 +41,7 @@ const Home = ({theme}) => {
                         transition={{
                             ease: "easeOut",
                             duration: 1.1,
-                            delay: 0.90
+                            delay: 0.85
                         }}
                     >
                         Hello
@@ -55,7 +55,7 @@ const Home = ({theme}) => {
                         transition={{
                             ease: "easeOut",
                             duration: 0.90,
-                            delay: 1.25
+                            delay: 1.20
                         }}
                     >
                         I'm Jerry
@@ -64,7 +64,7 @@ const Home = ({theme}) => {
                         className="app__text-container-line"
                         initial={{width: 0}}
                         animate={{width: ["0%", "150%"]}}
-                        transition={{delay: 0.15, duration: 1}}
+                        transition={{duration: 1}}
                     ></motion.div>
                 </div>
             </div>

@@ -22,29 +22,21 @@ const abouts = [
 
 const text_fade_in = {
     whileInView: {
-        y: [15, 0],
+        y: [25, 0],
         opacity: [0, 1]
     },
     transition: {
         duration: 0.5,
-        type: "tween",
         ease: "easeOut",
-        delay: 0.1
     }
 };
 
 const About = () => {
     return (
         <>
-            {/* <motion.p
-                className="p-text app__about_note"
-                whileInView={text_fade_in.whileInView}
-                transition={text_fade_in.transition}
-            > */}
-            <p className="p-text app__about_note">
-                📌 Testing page themes!
-            </p>
-            {/* </motion.p> */}
+            {/* <p className="p-text app__about_note">
+                📌 Hello, World!
+            </p> */}
 
             <h2 className="head-text">About <span>Me</span></h2>
 
@@ -64,7 +56,7 @@ const About = () => {
                         <motion.div
                             whileInView={{opacity: 1}}
                             whileHover={{scale: 1.1}}
-                            transition={{type: "spring", duration: 0.5}}
+                            transition={{ease: "easeInOut", duration: 0.1}}
                             className="app__profile-item"
                             key={about.title + index}
                         >

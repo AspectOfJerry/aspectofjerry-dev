@@ -24,7 +24,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin-right: 5rem;
+    margin-right: 3rem;
 
     @media screen and (max-width: 900px) {
         margin-right: 0;
@@ -36,7 +36,7 @@
 .app__skills-item {
     flex-direction: column;
     text-align: center;
-    margin: 1rem 1.50rem;
+    margin: 1rem;
     transition: all 0.3 ease-in-out;
 
     div {
@@ -48,8 +48,8 @@
         background-color: var(--secondary-color);
 
         a {
-            width: 65%;
-            height: 65%;
+            width: 60%;
+            height: 60%;
 
             img {
                 object-fit: contain;
@@ -88,7 +88,7 @@
 }
 
 .app__skills-exp {
-    flex: 1;
+    flex: 0.80;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;

@@ -50,7 +50,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
             <motion.ul
                 className="app__navbar-nav-links"
                 initial={{opacity: 1, y: 0}}
-                animate={{opacity: [0, 1], y: [25, 0]}}
+                animate={{opacity: [0, 1], y: [-25, 0]}}
                 transition={{delay: 0.50}}
             >
                 {/* div for line on hover */}
@@ -64,7 +64,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
             <motion.ul
                 className="app__navbar-ext-links"
                 initial={{opacity: 1, y: 0}}
-                animate={{opacity: [0, 1], y: [25, 0]}}
+                animate={{opacity: [0, 1], y: [-25, 0]}}
                 transition={{delay: 0.50}}>
                 {/* div for line on hover */}
                 {extLinks.map((target, index) => (

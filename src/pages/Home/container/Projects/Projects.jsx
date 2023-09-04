@@ -14,12 +14,12 @@ const categories = [
         imageUrl: ""
     },
     {
-        name: "JavaScript",
+        name: "Java",
         description: "",
         imageUrl: ""
     },
     {
-        name: "Java",
+        name: "JavaScript",
         description: "",
         imageUrl: ""
     },
@@ -61,10 +61,14 @@ const Projects = () => {
                 transition={{duration: 0.50, delayChildren: 0.50}}
                 className="app__project-portfolio"
             >
+                {filterProject.map((project) => (
+                    <div className="app__project-portfolio-item app__flex">
 
+                    </div>
+                ))}
             </motion.div>
         </>
     );
 };
-// https://youtu.be/3HNyXCPDQ7Q?t=8126
+// https://youtu.be/3HNyXCPDQ7Q?t=8276
 export default AppWrap(Projects, "projects");

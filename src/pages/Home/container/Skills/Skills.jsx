@@ -113,8 +113,8 @@ const Skills = ({theme}) => {
                                     {experience.works.map((work) => {
                                         return (
                                             <motion.div
-                                                whileInView={{opacity: [0, 1], x: [40, 0]}}
-                                                transition={{duration: 0.65, ease: "easeOut", delay: 0.03}}
+                                                whileInView={{opacity: [0, 1], x: [50, 0]}}
+                                                transition={{duration: 0.65, ease: "easeInOut"}}
                                                 className="app__skills-exp-work app__flex"
                                                 // data-tip
                                                 // data-for={work.name}
