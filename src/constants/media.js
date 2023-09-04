@@ -83,6 +83,7 @@ import youtube from "../assets/youtube/youtube.png";
 import youtube_icon from "../assets/youtube/youtube_icon.png";
 import youtube_reverse from "../assets/youtube/youtube_reverse.png";
 
+import intellij_icon from "../assets/intellij_idea_icon.svg";
 
 export default {
     arrow_up,
@@ -153,5 +154,6 @@ export default {
     // youtube
     youtube,
     youtube_icon,
-    youtube_reverse
+    youtube_reverse,
+    intellij_icon
 };

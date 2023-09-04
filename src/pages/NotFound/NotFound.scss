@@ -11,17 +11,15 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: black;
+    background-color: var(--darkest-color);
     z-index: 9998;
 }
 
 .notfound__fade-overlay__text {
-    font-size: 1.50rem;
-    color: var(--dark-color);
-    line-height: 1.75;
-    font-style: italic;
+    font-size: 1.75rem;
+    color: var(--light-color);
 
-    transition: color 0.50s;
+    // transition: color 0.50s;
     position: absolute;
     top: 50%;
     left: 50%;
