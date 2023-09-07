@@ -10,12 +10,15 @@
 }
 
 .app__about-text {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    text-align: center;
+    margin: 2rem 3rem;
+    text-align: justify;
 
     a {
         color: inherit;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin: 2rem 1rem;
     }
 }
 

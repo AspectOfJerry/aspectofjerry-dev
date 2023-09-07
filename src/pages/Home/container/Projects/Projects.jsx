@@ -34,13 +34,13 @@ const projectsData = [
         name: "BapUtils",
         category: "Java",
         description: "description",
-        imageUrl: media.intellij_icon
+        imageUrl: media.bap_dolphin
     },
     {
         name: "JerryBot",
         category: "JavaScript",
         description: "description",
-        imageUrl: media.intellij_icon
+        imageUrl: ""
     }
 ];
 
@@ -73,7 +73,6 @@ const Projects = () => {
                         key={category.name}
                         onClick={() => handleFilter(category)}
                         className={`app__projects-filter-cat app__flex p-text ${activeFilter === category ? "item-active" : ""}`}
-
                     >
                         {category.name}
                     </div>
@@ -89,7 +88,7 @@ const Projects = () => {
                     <motion.div
                         className="app__projects-item app__flex"
                         key={index}
-                        whileHover={{scale: [1, 1.1]}}
+                        whileHover={{scale: [1, 1.15]}}
                     >
                         <div className="app__projects-img app__flex">
                             <img src={project.imageUrl} alt={project.name} />

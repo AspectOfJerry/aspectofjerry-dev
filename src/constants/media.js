@@ -4,6 +4,7 @@ import aseprite from "../assets/aseprite.png";
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import azure from "../assets/azure.png";
 import background_shapes from "../assets/background_shapes.png";
+import bap_dolphin from "../assets/bap_dolphin.jpg";
 import cmd from "../assets/cmd.jpg";
 import cpp from "../assets/cpp.png";
 import cs from "../assets/cs.png";
@@ -12,6 +13,7 @@ import djs from "../assets/djs.png";
 import favicon from "../assets/favicon.png";
 import git from "../assets/git.svg";
 import html from "../assets/html.png";
+import intellij_icon from "../assets/intellij_idea_icon.svg";
 import java from "../assets/java.svg";
 import javascript from "../assets/javascript.png";
 import mongodb from "../assets/mongodb.svg";
@@ -83,7 +85,6 @@ import youtube from "../assets/youtube/youtube.png";
 import youtube_icon from "../assets/youtube/youtube_icon.png";
 import youtube_reverse from "../assets/youtube/youtube_reverse.png";
 
-import intellij_icon from "../assets/intellij_idea_icon.svg";
 
 export default {
     arrow_up,
@@ -91,6 +92,7 @@ export default {
     aspectofjerry_head,
     azure,
     background_shapes,
+    bap_dolphin,
     cmd,
     cpp,
     cs,
@@ -99,6 +101,7 @@ export default {
     favicon,
     git,
     html,
+    intellij_icon,
     java,
     javascript,
     mongodb,
@@ -154,6 +157,5 @@ export default {
     // youtube
     youtube,
     youtube_icon,
-    youtube_reverse,
-    intellij_icon
+    youtube_reverse
 };

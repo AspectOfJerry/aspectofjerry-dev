@@ -1,27 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;600;700&display=swap");
 
+/*
+    HTML standard color names: https://www.w3schools.com/colors/colors_names.asp
+*/
+
 html {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgb(135, 206, 235); // 87ceeb
-    --secondary-color: rgb(250, 253, 254); // 99%
-    --alt-color: rgb(121, 224, 169);
-    --lightest-color: rgb(254, 254, 254);
-    --lighter-color: rgb(235, 235, 235);
-    --light-color: rgb(220, 220, 220);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(120, 120, 120);
-    --darkest-color: rgb(32, 32, 32);
+    --primary-color: rgba(135, 206, 235, 1); // 87ceeb
+    --secondary-color: rgb(250, 253, 254, 1); // 99%
+    --alt-color: rgba(121, 224, 169, 1);
+    --lightest-color: rgba(254, 254, 254, 1);
+    --lighter-color: rgba(242, 242, 242, 1);
+    --light-color: rgba(232, 232, 232, 1);
+    --dark-color: rgba(150, 150, 150, 1);
+    --darker-color: rgba(120, 120, 120, 1);
+    --darkest-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(150, 220, 250, 0.30);
     --navbar-s-color: rgba(150, 220, 250, 0.45);
-    --head-background-color: rgb(168, 220, 240, 0.90);
+    --head-background-color: rgba(168, 220, 240, 0.90);
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(16, 16, 16, 0.20);
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
     --glow-color: rgba(228, 244, 251, 0.40);
-    --footer-color: rgb(246, 247, 248);
+    --footer-color: rgba(246, 247, 248, 1);
 
     transition: background-color 0.75s;
 }
@@ -30,10 +34,10 @@ html.app_dark {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgb(135, 206, 235);
+    --primary-color: rgba(135, 206, 235, 1);
     --secondary-color: rgb(20, 20, 20);
-    --alt-color: rgb(140, 215, 245);
-    --lightest-color: rgb(8, 8, 8);
+    --alt-color: rgba(69, 128, 96, 1);
+    --lightest-color: rgb(10, 10, 10);
     --lighter-color: rgb(32, 32, 32);
     --light-color: rgb(120, 120, 120);
     --dark-color: rgb(150, 150, 150);
@@ -58,8 +62,8 @@ html.app_deep-space {
 
     --primary-color: rgb(16, 64, 128);
     --secondary-color: rgb(4, 8, 16);
-    --alt-color: rgb(16, 64, 245);
-    --lightest-color: rgb(254, 254, 254);
+    --alt-color: rgba(168, 107, 188, 1);
+    --lightest-color: rgb(8, 10, 12);
     --lighter-color: rgb(16, 16, 16);
     --light-color: rgb(120, 120, 120);
     --dark-color: rgb(150, 150, 150);
@@ -86,8 +90,8 @@ html.app_pink {
     --secondary-color: rgb(255, 240, 245); // 97%
     --alt-color: rgb(140, 215, 245);
     --lightest-color: rgb(254, 254, 254);
-    --lighter-color: rgb(235, 235, 235);
-    --light-color: rgb(220, 220, 220);
+    --lighter-color: rgba(242, 242, 242, 1);
+    --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgb(150, 150, 150);
     --darker-color: rgb(120, 120, 120);
     --darkest-color: rgb(32, 32, 32);
@@ -114,8 +118,8 @@ html.app_green {
     --secondary-color: rgb(234, 250, 229); // 94%
     --alt-color: rgb(140, 215, 245);
     --lightest-color: rgb(254, 254, 254);
-    --lighter-color: rgb(235, 235, 235);
-    --light-color: rgb(220, 220, 220);
+    --lighter-color: rgba(242, 242, 242, 1);
+    --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgb(150, 150, 150);
     --darker-color: rgb(120, 120, 120);
     --darkest-color: rgb(32, 32, 32);
@@ -139,8 +143,9 @@ html.app_nether {
     --primary-color: rgb(150, 0, 0);
     --secondary-color: rgb(48, 0, 0);
     --alt-color: rgb(140, 215, 245);
-    --lightest-color: rgb(64, 64, 64);
-    --light-color: rgb(120, 102, 120);
+    --lightest-color: rgb(32, 8, 8);
+    --lighter-color: rgb(64, 16, 16);
+    --light-color: rgb(120, 120, 120);
     --dark-color: rgb(150, 150, 150);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
@@ -262,7 +267,7 @@ html.app_nether {
 }
 
 .text {
-    font-size: 1.20rem;
+    font-size: 1.15rem;
     color: var(--darkest-color);
     line-height: 1.75;
 

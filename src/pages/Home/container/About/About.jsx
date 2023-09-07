@@ -45,9 +45,13 @@ const About = () => {
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hello, I'm Jerry, a student and member of <a href="https://www.team3990.com/en/" target="_blank" rel="noreferrer">Team 3990</a> at the <a href="https://www.firstinspires.org/robotics/frc" target="_blank" rel="noreferrer">First Robotics Competition</a>.<br />
+                Hey there, I'm Jerry - a coding enthusiast residing in the great white north, 🍁Canada!
                 <br />
-                🌎 Canada 🍁
+                💡 Coding is more than just a hobby for me; it's a daily adventure. I'm always looking for new ways to challenge myself and expand my knowledge.
+                <br />
+                🔍 But I don't stop at just coding; I'm captivated by machine learning, AI, computer vision, networking, game engines, and the art of ethical hacking.
+                <br />
+                🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or contemplating my lack of skill in Valorant.
             </motion.p>
 
             <div className="app__profiles">
