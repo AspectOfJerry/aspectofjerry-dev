@@ -88,7 +88,7 @@ const Projects = () => {
                     <motion.div
                         className="app__projects-item app__flex"
                         key={index}
-                        whileHover={{scale: [1, 1.15]}}
+                        whileHover={{scale: [1, 1.10]}}
                     >
                         <div className="app__projects-img app__flex">
                             <img src={project.imageUrl} alt={project.name} />
