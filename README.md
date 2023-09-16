@@ -1,12 +1,8 @@
 # jerrydev
 
-[jerrydev.net](https://jerrydev.net) (formely known as [aspectofjerry.dev](https://aspectofjerry.dev)) is my personal/portfolio website.
-
-<br>
+<https://jerrydev.net> (was <https://aspectofjerry.dev>) is my personal website.
 
 ## Notes
-
-Static file names: MD5 hash
 
 Sass media queries dimensions
 
@@ -23,25 +19,26 @@ CSS color brightness values
 To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
 
 ```xml
+
 <configuration>
     <system.webServer>
         <rewrite>
             <rules>
                 <rule name="React Routes" stopProcessing="true">
-                    <match url=".*" />
+                    <match url=".*"/>
                     <conditions logicalGrouping="MatchAll">
-                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
-                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
-                        <add input="{REQUEST_URI}" pattern="^/(api)" negate="true" />
+                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true"/>
+                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true"/>
+                        <add input="{REQUEST_URI}" pattern="^/(api)" negate="true"/>
                     </conditions>
-                    <action type="Rewrite" url="/" />
+                    <action type="Rewrite" url="/"/>
                 </rule>
             </rules>
         </rewrite>
         <staticContent>
-            <mimeMap fileExtension=".mp4" mimeType="video/mp4" />
-            <mimeMap fileExtension=".ogv" mimeType="video/ogg" />
-            <mimeMap fileExtension=".webm" mimeType="video/webm" />
+            <mimeMap fileExtension=".mp4" mimeType="video/mp4"/>
+            <mimeMap fileExtension=".ogv" mimeType="video/ogg"/>
+            <mimeMap fileExtension=".webm" mimeType="video/webm"/>
         </staticContent>
     </system.webServer>
 </configuration>
@@ -85,11 +82,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from
+your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control
+over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your
+own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature.
+However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 
@@ -103,15 +104,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
 ### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
 ### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
@@ -119,4 +123,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved
+here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

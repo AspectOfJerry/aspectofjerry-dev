@@ -1,10 +1,20 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import "./NotFound.scss";
 import {Navbar} from "../components/index.js";
 
 const NotFound = ({toggleTheme, themes, theme}) => {
     const [fadeOut, setFadeOut] = useState(false);
+
+    useEffect(() => {
+        // change title when component mounts
+        document.title = "jerrydev • 404";
+
+        // reset the title when component unmounts
+        return () => {
+            document.title = "jerrydev • Jerry";
+        };
+    }, []);
 
     const handleRedirect = () => {
         setFadeOut(true);
@@ -38,7 +48,8 @@ const NotFound = ({toggleTheme, themes, theme}) => {
                     )}
                 </AnimatePresence>
                 <h1 className="head-text">This is probably not what you are looking for!</h1>
-                <p className="notfound__redirect-text text" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me home &nbsp;&lt;&lt;&lt;</p>
+                <p className="notfound__redirect-text text" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me
+                    home &nbsp;&lt;&lt;&lt;</p>
             </div>
         </>
     );

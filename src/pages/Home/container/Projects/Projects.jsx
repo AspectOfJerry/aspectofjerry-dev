@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {motion, AnimatePresence} from "framer-motion";
-import {AiFillEye, AiFillGithub} from "react-icons/ai";
+import React, {useState} from "react";
+import {motion} from "framer-motion";
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
@@ -56,7 +55,7 @@ const Projects = () => {
         setTimeout(() => {
             setAnimateCard([{y: 0, opacity: 1}]);
 
-            if(category === "All") {
+            if (category === "All") {
                 setFilterProjects(projectsData);
             } else {
                 setFilterProjects(projectsData.filter((project) => project.category === category));
@@ -78,6 +77,8 @@ const Projects = () => {
                     </div>
                 ))}
             </div>
+
+            <p className="p-text">🚧 work in progress 🚧</p>
 
             <motion.div
                 animate={animateCard}

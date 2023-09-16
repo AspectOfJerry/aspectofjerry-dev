@@ -21,8 +21,10 @@ const ReturnToTop = () => {
         };
 
         function scrollFunction() {
-            window.onscroll = function () {scrollFunction()};
-            if(document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
+            window.onscroll = function () {
+                scrollFunction()
+            };
+            if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
                 button.classList.remove("hidden");
             } else {
                 button.classList.add("hidden");

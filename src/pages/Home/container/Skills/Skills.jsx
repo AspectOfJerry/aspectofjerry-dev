@@ -99,8 +99,12 @@ const Skills = ({theme}) => {
                 <motion.div className="app__skills-exp">
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
-                    <img className="app__skills-gh-card" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb" alt="Github languages card" />
-                    {experience.map((experience) => {
+                    <img className="app__skills-gh-card"
+                         src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
+                         alt="Github languages card" />
+
+                    <p className="p-text">🚧 rework in progress 🚧</p>
+                    {/*    {experience.map((experience) => {
                         return (
                             <motion.div
                                 className="app__skills-exp-item"
@@ -122,13 +126,13 @@ const Skills = ({theme}) => {
                                             >
                                                 <h4 className="bold-text">{work.name}</h4>
                                                 <p className="p-text">{work.description}</p>
-                                            </motion.div >
+                                            </motion.div>
                                         )
                                     })}
                                 </motion.div>
                             </motion.div>
                         )
-                    })}
+                    })}*/}
                 </motion.div>
             </div>
         </>

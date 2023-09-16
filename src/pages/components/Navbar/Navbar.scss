@@ -10,20 +10,18 @@
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
 
     border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
 
-    transition:
-        padding 0.65s,
-        box-shadow 0.65s,
-        background-color 0.65s,
-        backdrop-filter 0.65s,
-        border-radius 0.65s,
-        scale 0.85s,
-        margin-top 0.95s;
+    transition: padding 0.65s,
+    box-shadow 0.65s,
+    background-color 0.65s,
+    backdrop-filter 0.65s,
+    border-radius 0.65s,
+    scale 0.85s,
+    margin-top 0.95s;
 }
 
 .app__navbar-shrunk {
@@ -38,7 +36,6 @@
     border-radius: 20px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    -moz-backdrop-filter: blur(5px);
 
     .app__navbar-logo {
         display: flex;
@@ -119,7 +116,7 @@
         &:hover {
             div {
                 transition: all 0.15s ease-out;
-                background-color: var(--primary-color);
+                background-color: var(--alt-color);
             }
         }
     }
@@ -172,7 +169,7 @@
         &:hover {
             div {
                 transition: all 0.30s ease-out;
-                background-color: var(--primary-color);
+                background-color: var(--alt-color);
             }
         }
     }
@@ -308,7 +305,7 @@
             transition: all 0.70s;
         }
 
-        padding: 0.75rem 0.75rem 15% 0.75rem;
+        padding: 0.75rem;
 
         @media screen and (min-width: 1024px) {
             display: none;
@@ -318,14 +315,14 @@
 
 .app__navbar-menu-hidden {
     div {
-        width: 0%;
-        opacity: 0%;
+        width: 0;
+        opacity: 0;
         transition: all 0.70s;
 
         svg {
             // display: none;
-            width: 0px;
-            height: 0px;
+            width: 0;
+            height: 0;
             transition: all 0.70s;
         }
 
