@@ -35,7 +35,7 @@
     flex-direction: column;
     text-align: center;
     margin: 0 3.25rem 3rem;
-    transition: all 0.30 ease-in-out;
+    transition: all 0.30s ease-in-out;
 
     div {
         width: 128px;
@@ -107,13 +107,7 @@
         align-items: flex-start;
         margin-bottom: 3rem;
 
-        h4 {
-            font-weight: 500;
-        }
-
         p {
-            font-weight: 400;
-            color: var(--dark-color);
             margin-top: 5px
         }
     }

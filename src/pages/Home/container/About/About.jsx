@@ -59,17 +59,17 @@ const About = () => {
             <h2 className="head-text">About <span>Me</span></h2>
 
             <motion.p
-                className="text app__about-text"
+                className="p-text app__about-text"
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                Hey there, I'm Jerry - a coding enthusiast residing in the great white north, 🍁Canada!
-                <br />
+                👋 Hey there, I'm Jerry - a coding enthusiast residing in the great white north, 🍁Canada!
+                <br /><br />
                 💡 Coding is more than just a hobby for me; it's a daily adventure. I'm always looking for new ways to challenge myself and expand my knowledge.
-                <br />
+                <br /><br />
                 🔍 But I don't stop at just coding; I'm captivated by machine learning, AI, computer vision, networking, game engines, and the art of ethical
                 hacking.
-                <br />
+                <br /><br />
                 🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or contemplating my lack of skill in
                 Valorant.
             </motion.p>

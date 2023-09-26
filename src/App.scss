@@ -15,7 +15,7 @@ html {
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgba(150, 150, 150, 1);
-    --darker-color: rgba(120, 120, 120, 1);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(150, 220, 250, 0.30);
@@ -94,7 +94,7 @@ html.app_pink {
     --lighter-color: rgba(255, 235, 235, 1);
     --light-color: rgba(255, 224, 224, 1);
     --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(255, 204, 214, 0.30);
@@ -122,7 +122,7 @@ html.app_green {
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(170, 235, 150, 0.30);
@@ -246,7 +246,7 @@ html.app_nether {
 }
 
 .p-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--darker-color);
     line-height: 1.50;
 
