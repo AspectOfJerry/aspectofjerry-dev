@@ -56,7 +56,7 @@ const About = () => {
             {/*<p className="p-text app__about_note">
                 📌 Hello, World! 🚧
             </p>*/}
-            <h2 className="head-text">About <span>Me</span></h2>
+            <h2 className="title-text">About <span>Me</span></h2>
 
             <motion.p
                 className="p-text app__about-text"

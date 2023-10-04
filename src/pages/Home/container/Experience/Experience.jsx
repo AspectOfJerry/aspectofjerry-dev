@@ -59,7 +59,7 @@ const experience = [
 const Experience = () => {
     return (
         <>
-            <h2 className="head-text"><span>Exp</span>erience</h2>
+            <h2 className="title-text"><span>Exp</span>erience</h2>
 
             <p className="p-text">🚧 work in progress 🚧</p>
             <div className="app__exp-years">

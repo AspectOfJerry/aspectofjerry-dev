@@ -47,7 +47,7 @@ const NotFound = ({toggleTheme, themes, theme}) => {
                         </motion.div>
                     )}
                 </AnimatePresence>
-                <h1 className="head-text">This is probably not what you are looking for!</h1>
+                <h1 className="title-text">This is probably not what you are looking for!</h1>
                 <p className="notfound__redirect-text text" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me
                     home &nbsp;&lt;&lt;&lt;</p>
             </div>

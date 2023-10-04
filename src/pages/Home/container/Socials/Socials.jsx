@@ -26,7 +26,7 @@ const Socials = ({theme}) => {
 
     return (
         <>
-            <h2 className="head-text">Contact <span>info</span> & Socials</h2>
+            <h2 className="title-text">Contact <span>info</span> & Socials</h2>
 
             <div className="app__socials-container">
                 <motion.div className="app__socials-list">

@@ -13,9 +13,9 @@ import djs from "../assets/djs.png";
 import favicon from "../assets/favicon.png";
 import git from "../assets/git.svg";
 import html from "../assets/html.png";
-import intellij_icon from "../assets/intellij_idea_icon.svg";
 import java from "../assets/java.svg";
 import javascript from "../assets/javascript.png";
+import kotlin from "../assets/kotlin.svg";
 import mongodb from "../assets/mongodb.svg";
 import mongodb_leaf from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/nodejs.svg";
@@ -76,9 +76,12 @@ import reddit_lockup from "../assets/reddit/reddit_lockup.svg";
 import reddit_logotype from "../assets/reddit/reddit_logotype.svg";
 import reddit_mark from "../assets/reddit/reddit_mark.svg";
 
-// vsc
+// ides
 import vscode_alt from "../assets/vscode/vscode_alt.svg";
 import vscode from "../assets/vscode/vscode.svg";
+import intellij_idea from "../assets/jetbrains/intellij_idea.svg";
+import pycharm from "../assets/jetbrains/pycharm.svg";
+import webstorm from "../assets/jetbrains/webstorm.svg"
 
 // youtube
 import youtube from "../assets/youtube/youtube.png";
@@ -101,9 +104,9 @@ export default {
     favicon,
     git,
     html,
-    intellij_icon,
     java,
     javascript,
+    kotlin,
     mongodb,
     mongodb_leaf,
     nodejs,
@@ -151,9 +154,12 @@ export default {
     reddit_lockup,
     reddit_logotype,
     reddit_mark,
-    // vscode
+    // ides
     vscode_alt,
     vscode,
+    intellij_idea,
+    pycharm,
+    webstorm,
     // youtube
     youtube,
     youtube_icon,

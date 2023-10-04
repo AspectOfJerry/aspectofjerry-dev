@@ -16,15 +16,18 @@ const skills = [
     {name: "Git", color: "", iconUrl: media.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "HTML", color: "", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
-    {name: "IntelliJ IDEA", color: "", iconUrl: media.intellij_icon, url: "https://www.jetbrains.com/idea/"},
     {name: "Java", color: "", iconUrl: media.java, url: "https://www.java.com/en/"},
     {name: "JavaScript", color: "", iconUrl: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Kotlin", color: "", iconUrl: media.kotlin, url: "https://kotlinlang.org/"},
     // {name: "MongoDB", color: "", iconUrl: media.mongodb_leaf, url: "https://www.mongodb.com/"},
     {name: "NodeJS", color: "", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
     {name: "Python", color: "", iconUrl: media.python_logo, url: "https://www.python.org/"},
     {name: "ReactJS", color: "", iconUrl: media.reactjs, url: "https://react.dev/"},
     {name: "Sass", color: "", iconUrl: media.sass, url: "https://sass-lang.com/"},
     {name: "Visual Studio Code", color: "", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
+    {name: "IntelliJ IDEA", color: "", iconUrl: media.intellij_idea, url: "https://www.jetbrains.com/idea/"},
+    {name: "PyCharm", color: "", iconUrl: media.pycharm, url: "https://www.jetbrains.com/pycharm/"},
+    {name: "WebStorm", color: "", iconUrl: media.webstorm, url: "https://www.jetbrains.com/webstorm/"}
 ];
 
 const experience = [
@@ -73,9 +76,10 @@ const Skills = ({theme}) => {
 
     return (
         <>
-            <h2 className="head-text">Skills, Tools & <span>Exp</span>erience</h2>
+            <h2 className="title-text">Skills <span>&</span> Tools</h2>
 
             <div className="app__skills-container">
+                <h3 className="subtitle-text">Tech stack</h3>
                 <motion.div className="app__skills-list">
                     {skills.map((skill) => {
                         return (
@@ -95,6 +99,7 @@ const Skills = ({theme}) => {
                         )
                     })}
                 </motion.div>
+                <h3 className={"subtitle-text"}>Development tools</h3>
                 {/* 2:58:35 */}
                 <motion.div className="app__skills-exp">
                     <h4 className="bold-text">GitHub languages</h4>

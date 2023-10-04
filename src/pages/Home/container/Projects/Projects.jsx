@@ -65,7 +65,7 @@ const Projects = () => {
 
     return (
         <>
-            <h2 className="head-text"><span>Pro</span>jects</h2>
+            <h2 className="title-text"><span>Pro</span>jects</h2>
             <div className="app__projects-filter">
                 {categories.map((category) => (
                     <div
