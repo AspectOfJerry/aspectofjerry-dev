@@ -50,10 +50,10 @@ const Projects = () => {
 
     const handleFilter = (category) => {
         setActiveFilter(category);
-        setAnimateCard([{y: 100, opacity: 0}]);
+        setAnimateCard({y: 100, opacity: 0});
 
         setTimeout(() => {
-            setAnimateCard([{y: 0, opacity: 1}]);
+            setAnimateCard({y: 0, opacity: 1});
 
             if (category === "All") {
                 setFilterProjects(projectsData);
@@ -63,6 +63,7 @@ const Projects = () => {
         }, 500);
     };
 
+    console.log(activeFilter.name);
     return (
         <>
             <h2 className="title-text"><span>Pro</span>jects</h2>
@@ -71,7 +72,7 @@ const Projects = () => {
                     <div
                         key={category.name}
                         onClick={() => handleFilter(category)}
-                        className={`app__projects-filter-cat app__flex p-text ${activeFilter === category ? "item-active" : ""}`}
+                        className={`app__projects-filter-cat app__flex p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
                     >
                         {category.name}
                     </div>

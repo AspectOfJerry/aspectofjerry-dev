@@ -74,7 +74,7 @@ const About = () => {
                 Valorant.
             </motion.p>
 
-            <p className="p-text">🚧 rework in progress 🚧</p>
+            <p className="p-text">🚧 under construction 🚧</p>
 
             {/*<div className="app__profiles">
                 {abouts.map((about, index) => {
