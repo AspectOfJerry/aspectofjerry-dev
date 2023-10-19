@@ -81,7 +81,7 @@ const Skills = ({theme}) => {
         <>
             <h2 className="title-text">Skills <span>&</span> Tools</h2>
 
-            <div className="app__skills-container">
+            <div className="app__tech-stack-container">
                 {/*<h3 className="subtitle-text">Tech stack</h3>*/}
                 <motion.div className="app__tech-stack-list">
                     {tech_stack.map((skill) => {
@@ -102,37 +102,39 @@ const Skills = ({theme}) => {
                         )
                     })}
                 </motion.div>
-                {/*<h3 className={"subtitle-text"}>Development tools</h3>*/}
-                <motion.div className="app__dev-tools-list">
+
+            </div>
+            <motion.div className="app__dev-tools-container">
+                <div>
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
                     <img className="app__dev-tools-gh-card"
                          src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
                          alt="Github languages card" />
+                </div>
 
-                    <h3 className={"subtitle-text"}>Development tools</h3>
-                    <p className="p-text">🚧 under construction 🚧</p>
+                <h3 className={"subtitle-text"}>Development tools</h3>
+                <p className="p-text">🚧 under construction 🚧</p>
+                {dev_tools.map((tool) => {
+                    return (
+                        <motion.div
+                            // whileInView={{opacity: [0, 1]}}
+                            // transition={{duration: 0.5}}
+                            className="app__tech-stack-item app__flex"
+                            key={tool.name}
+                        >
+                            <div className="app__flex" style={{backgroundColor: tool.color}}>
+                                <a href={tool.url} target="_blank" rel="noreferrer">
+                                    <img src={tool.iconUrl} alt={tool.name} />
+                                </a>
+                            </div>
+                            <p className="p-text">{tool.name}</p>
+                        </motion.div>
+                    )
+                })}
 
-                    {tech_stack.map((skill) => {
-                        return (
-                            <motion.div
-                                // whileInView={{opacity: [0, 1]}}
-                                // transition={{duration: 0.5}}
-                                className="app__tech-stack-item app__flex"
-                                key={skill.name}
-                            >
-                                <div className="app__flex" style={{backgroundColor: skill.color}}>
-                                    <a href={skill.url} target="_blank" rel="noreferrer">
-                                        <img src={skill.iconUrl} alt={skill.name} />
-                                    </a>
-                                </div>
-                                <p className="p-text">{skill.name}</p>
-                            </motion.div>
-                        )
-                    })}
 
-
-                    {/*    {experience.map((experience) => {
+                {/*    {experience.map((experience) => {
                         return (
                             <motion.div
                                 className="app__skills-exp-item"
@@ -161,8 +163,7 @@ const Skills = ({theme}) => {
                             </motion.div>
                         )
                     })}*/}
-                </motion.div>
-            </div>
+            </motion.div>
         </>
     );
 };
