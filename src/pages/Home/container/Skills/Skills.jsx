@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
@@ -20,7 +20,7 @@ const tech_stack = [
     {name: "Kotlin", color: "", iconUrl: media.kotlin, url: "https://kotlinlang.org/"},
     // {name: "MongoDB", color: "", iconUrl: media.mongodb_leaf, url: "https://www.mongodb.com/"},
     {name: "NodeJS", color: "", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "Python", color: "", iconUrl: media.python_logo, url: "https://www.python.org/"},
+    {name: "Python", color: "", iconUrl: media.python, url: "https://www.python.org/"},
     {name: "ReactJS", color: "", iconUrl: media.reactjs, url: "https://react.dev/"},
     {name: "Sass", color: "", iconUrl: media.sass, url: "https://sass-lang.com/"}
 ];
@@ -33,62 +33,27 @@ const dev_tools = [
     {name: "WebStorm", color: "", iconUrl: media.webstorm, url: "https://www.jetbrains.com/webstorm/"}
 ];
 
-const experience = [
-    {
-        year: "2015",
-        works: [
-            {name: "Scratch :)", description: ""}
-        ]
-    },
-    {
-        year: "2016",
-        works: [
-            {name: "NXT/EV3", description: ""}
-        ]
-    },
-    {
-        year: "2020",
-        works: [
-            {name: "C++", description: ""}
-        ]
-    },
-    {
-        year: "2021",
-        works: [
-            {name: "JavaScript", description: ""},
-            {name: "NodeJS", description: ""},
-            {name: "Java", description: ""}
-        ]
-    },
-    {
-        year: "2022",
-        works: [
-            {name: "Web dev", description: ""}
-        ]
-    },
-    {
-        year: "2023",
-        works: [
-            {name: "Python", description: ""}
-        ]
-    }
-];
 
 const Skills = ({theme}) => {
     dev_tools.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
+    const {scrollYProgress} = useScroll();
 
     return (
         <>
             <h2 className="title-text">Skills <span>&</span> Tools</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
 
-            <div className="app__tech-stack-container">
-                {/*<h3 className="subtitle-text">Tech stack</h3>*/}
-                <motion.div className="app__tech-stack-list">
+            <h3 className="subtitle-text">Tech stack</h3>
+            <div className="app__skills-container">
+                <motion.div className="app__skills-list">
                     {tech_stack.map((skill) => {
                         return (
                             <motion.div
-                                // whileInView={{opacity: [0, 1]}}
-                                // transition={{duration: 0.5}}
                                 className="app__tech-stack-item app__flex"
                                 key={skill.name}
                             >
@@ -97,41 +62,39 @@ const Skills = ({theme}) => {
                                         <img src={skill.iconUrl} alt={skill.name} />
                                     </a>
                                 </div>
-                                <p className="p-text">{skill.name}</p>
+                                <p className="p-text app__skills-item-name">{skill.name}</p>
                             </motion.div>
                         )
                     })}
                 </motion.div>
 
             </div>
-            <motion.div className="app__dev-tools-container">
+            <h3 className={"subtitle-text"}>Development tools</h3>
+            <motion.div className="app__skills-container">
                 <div>
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
-                    <img className="app__dev-tools-gh-card"
+                    <img className="app__dev-tools-langs-card"
                          src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
                          alt="Github languages card" />
                 </div>
-
-                <h3 className={"subtitle-text"}>Development tools</h3>
-                <p className="p-text">🚧 under construction 🚧</p>
-                {dev_tools.map((tool) => {
-                    return (
-                        <motion.div
-                            // whileInView={{opacity: [0, 1]}}
-                            // transition={{duration: 0.5}}
-                            className="app__tech-stack-item app__flex"
-                            key={tool.name}
-                        >
-                            <div className="app__flex" style={{backgroundColor: tool.color}}>
-                                <a href={tool.url} target="_blank" rel="noreferrer">
-                                    <img src={tool.iconUrl} alt={tool.name} />
-                                </a>
-                            </div>
-                            <p className="p-text">{tool.name}</p>
-                        </motion.div>
-                    )
-                })}
+                <div className="app__skills-list">
+                    {dev_tools.map((tool) => {
+                        return (
+                            <motion.div
+                                className="app__tech-stack-item app__flex"
+                                key={tool.name}
+                            >
+                                <div className="app__flex" style={{backgroundColor: tool.color}}>
+                                    <a href={tool.url} target="_blank" rel="noreferrer">
+                                        <img src={tool.iconUrl} alt={tool.name} />
+                                    </a>
+                                </div>
+                                <p className="p-text app__skills-item-name">{tool.name}</p>
+                            </motion.div>
+                        )
+                    })}
+                </div>
 
 
                 {/*    {experience.map((experience) => {

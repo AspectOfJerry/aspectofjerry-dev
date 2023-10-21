@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
@@ -23,10 +23,17 @@ const texts = [
 
 const Socials = ({theme}) => {
     socials.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
+    const {scrollYProgress} = useScroll();
 
     return (
         <>
             <h2 className="title-text">Contact <span>info</span> & Socials</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
 
             <div className="app__socials-container">
                 <motion.div className="app__socials-list">
@@ -38,11 +45,9 @@ const Socials = ({theme}) => {
                                 className="app__socials-item app__flex"
                                 key={social.name}
                             >
-                                <div className="app__flex">
-                                    <a href={social.url} target="_blank" rel="noreferrer">
-                                        <img src={social.iconUrl} alt={social.name} />
-                                    </a>
-                                </div>
+                                <a href={social.url} target="_blank" rel="noreferrer">
+                                    <img src={social.iconUrl} alt={social.name} />
+                                </a>
                                 <p className="bold-text">{social.name}</p>
                                 <p className="p-text">{social.description}</p>
                             </motion.div>

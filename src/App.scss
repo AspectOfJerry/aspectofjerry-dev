@@ -174,7 +174,7 @@ html.app_nether {
 
 .app__container {
     width: 100%;
-    min-height: 90vh;
+    min-height: 65vh;
 
     display: flex;
     flex-direction: row;
@@ -182,8 +182,8 @@ html.app_nether {
 
 .app__flex {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .app__wrapper {
@@ -224,26 +224,29 @@ html.app_nether {
     }
 }
 
+.title-text-line {
+    border: 2px solid var(--alt-color);
+    border-radius: 2px;
+    width: 50%;
+    max-width: 20vw;
+    margin-left: 4%;
+    opacity: 75%;
+    transform-origin: left;
+    margin-top: 0.25rem;
+}
+
 .title-text {
     font-size: 2.75rem;
     font-weight: 600;
-    text-align: center;
-    color: var(--darkest-color);
+    margin-left: 3%;
 
-    transition: color 0.35s;
+    color: var(--darkest-color);
 
     span {
         color: var(--primary-color);
     }
-
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 4rem;
-    // }
-
-    // @media screen and (max-width: 480px) {
-    //     font-size: 2rem;
-    // }
 }
+
 
 .subtitle-text {
     font-size: 1.80rem;

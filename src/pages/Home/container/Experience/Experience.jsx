@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 import {media} from "../../../../constants";
 
 import {AppWrap} from "../../../components/index.js";
@@ -53,13 +53,18 @@ const experience = [
     }
 ];
 
-/*
-    !WORK IN PROGRESS!
- */
 const Experience = () => {
+    const {scrollYProgress} = useScroll();
+
     return (
         <>
             <h2 className="title-text"><span>Exp</span>erience</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
 
             <p className="p-text">🚧 work in progress 🚧</p>
             <div className="app__exp-years">

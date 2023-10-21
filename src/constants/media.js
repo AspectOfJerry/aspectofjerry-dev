@@ -2,36 +2,34 @@
 import arrow_up from "../assets/arrow_up.svg";
 import aseprite from "../assets/aseprite.png";
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
-import azure from "../assets/azure.png";
+import azure from "../assets/tech_stack/azure.png";
 import background_shapes from "../assets/background_shapes.png";
 import bap_dolphin from "../assets/bap_dolphin.jpg";
 import cmd from "../assets/cmd.jpg";
-import cpp from "../assets/cpp.png";
-import cs from "../assets/cs.png";
-import css from "../assets/css.png";
-import djs from "../assets/djs.png";
+import cpp from "../assets/tech_stack/cpp.png";
+import cs from "../assets/tech_stack/cs.png";
+import css from "../assets/tech_stack/css.png";
+import djs from "../assets/tech_stack/djs.png";
 import favicon from "../assets/favicon.png";
-import git from "../assets/git.svg";
-import html from "../assets/html.png";
-import java from "../assets/java.svg";
-import javascript from "../assets/javascript.png";
-import kotlin from "../assets/kotlin.svg";
+import git from "../assets/tech_stack/git.svg";
+import html from "../assets/tech_stack/html.png";
+import java from "../assets/tech_stack/java.svg";
+import javascript from "../assets/tech_stack/javascript.png";
+import kotlin from "../assets/tech_stack/kotlin.svg";
 import mongodb from "../assets/mongodb.svg";
 import mongodb_leaf from "../assets/mongodb_leaf.svg";
-import nodejs from "../assets/nodejs.svg";
-import nodejs_side from "../assets/nodejs_side.svg";
-import nodejs_js from "../assets/nodejs_js.svg";
+import nodejs from "../assets/tech_stack/nodejs.svg";
+import nodejs_js from "../assets/tech_stack/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
-import python from "../assets/python.png";
-import python_logo from "../assets/python_logo.png";
-import reactjs from "../assets/reactjs.svg";
-import sass from "../assets/sass.png";
+import python from "../assets/tech_stack/python.png";
+import reactjs from "../assets/tech_stack/reactjs.svg";
+import sass from "../assets/tech_stack/sass.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
 import theme_green_bg from "../assets/theme_green_bg.webm";
 // https://app.spline.design/file/94c1b503-8987-4620-8b4b-daa6a65e3f99
 import theme_pink_bg from "../assets/theme_pink_bg.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
-import typescript from "../assets/typescript.png";
+import typescript from "../assets/tech_stack/typescript.png";
 import unity from "../assets/unity.svg";
 
 // cloudflare
@@ -79,9 +77,9 @@ import reddit_mark from "../assets/reddit/reddit_mark.svg";
 // ides
 import vscode_alt from "../assets/vscode/vscode_alt.svg";
 import vscode from "../assets/vscode/vscode.svg";
-import intellij_idea from "../assets/jetbrains/intellij_idea.svg";
-import pycharm from "../assets/jetbrains/pycharm.svg";
-import webstorm from "../assets/jetbrains/webstorm.svg"
+import intellij_idea from "../assets/dev_tools/jetbrains/intellij_idea.svg";
+import pycharm from "../assets/dev_tools/jetbrains/pycharm.svg";
+import webstorm from "../assets/dev_tools/jetbrains/webstorm.svg"
 
 // youtube
 import youtube from "../assets/youtube/youtube.png";
@@ -110,11 +108,9 @@ export default {
     mongodb,
     mongodb_leaf,
     nodejs,
-    nodejs_side,
     nodejs_js,
     placeholder,
     python,
-    python_logo,
     reactjs,
     sass,
     t4k_logo_reduced,

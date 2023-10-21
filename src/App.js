@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 // Global
-import {Divider, Navbar} from "./pages/components/index.js";
+import {Navbar} from "./pages/components/index.js";
 
 // pages/Home (main)
 import {AppReturnToTop} from "./pages/Home/components/index.js";
@@ -137,14 +137,10 @@ const App = () => {
                             />
                             <AppReturnToTop />
                             <AppHome theme={theme} />
-                            {/* <AppHeader /> */}
                             <AppAbout />
-                            {/* <Divider /> */}
                             <AppSkills theme={theme} />
-                            {/* <Divider /> */}
                             <AppExperience />
                             <AppSocials theme={theme} />
-                            {/* <Divider /> */}
                             <AppProjects />
                             <AppFooter />
                         </div>

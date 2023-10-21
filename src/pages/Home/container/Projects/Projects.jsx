@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
@@ -63,10 +63,18 @@ const Projects = () => {
         }, 500);
     };
 
-    console.log(activeFilter.name);
+    const {scrollYProgress} = useScroll();
+
     return (
         <>
             <h2 className="title-text"><span>Pro</span>jects</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
+
             <div className="app__projects-filter">
                 {categories.map((category) => (
                     <div

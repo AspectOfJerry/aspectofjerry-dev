@@ -1,5 +1,5 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 import {media} from "../../../../constants";
 
 import {AppWrap} from "../../../components/index.js";
@@ -51,12 +51,21 @@ const text_fade_in = {
 };
 
 const About = () => {
+    const {scrollYProgress} = useScroll();
+
     return (
         <>
             {/*<p className="p-text app__about_note">
                 📌 Hello, World! 🚧
             </p>*/}
+            <div style={{marginTop: "4rem"}} />
             <h2 className="title-text">About <span>Me</span></h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
 
             <motion.p
                 className="p-text app__about-text"
@@ -73,8 +82,6 @@ const About = () => {
                 🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or contemplating my lack of skill in
                 Valorant.
             </motion.p>
-
-            <p className="p-text">🚧 under construction 🚧</p>
 
             {/*<div className="app__profiles">
                 {abouts.map((about, index) => {

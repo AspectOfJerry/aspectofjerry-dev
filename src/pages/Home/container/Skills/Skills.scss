@@ -4,9 +4,25 @@
     flex-direction: column;
 }
 
-.app__tech-stack-container {
-    width: 85%;
-    margin-top: 3rem;
+
+.app__skills-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__skills-item-name {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app__skills-container {
+    width: 85vw;
+    margin: 1rem auto 3rem;
 
     display: flex;
     flex-direction: row;
@@ -17,25 +33,9 @@
     }
 }
 
-.app__tech-stack-list {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    margin-right: 3rem;
-
-    @media screen and (max-width: 900px) {
-        margin-right: 0;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 .app__tech-stack-item {
-    flex-direction: column;
-    text-align: center;
+    //flex-direction: column;
+    //text-align: center;
     margin: 1rem;
     transition: all 0.30s ease-in-out;
 
@@ -50,6 +50,7 @@
         a {
             width: 60%;
             height: 60%;
+            margin: auto;
 
             img {
                 object-fit: contain;
@@ -87,21 +88,8 @@
     }
 }
 
-.app__dev-tools-container {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    @media screen and (max-width: 900px) {
-        margin-top: 2rem;
-    }
-
-}
-
-.app__dev-tools-gh-card {
-    margin-bottom: 2rem;
+.app__dev-tools-langs-card {
+    margin-right: 2rem;
 }
 
 //.app__tech-stack-exp-item {
