@@ -12,6 +12,12 @@ import "./Experience.scss";
 
 const experience = [
     {
+        year: "2017-2019",
+        experiences: [
+            {}
+        ]
+    },
+    {
         year: "2022",
         experiences: [
             {
@@ -28,7 +34,7 @@ const experience = [
         experiences: [
             {
                 title: "Team 3990",
-                description: "I'm on Team 3990, Tech for Kids, competing in the FIRST Robotics Competition.",
+                description: "Joined Team 3990, \"Tech for Kids\", competing in the FIRST Robotics Competition.",
                 iconUrl: media.t4k_logo_reduced,
                 url: "https://www.team3990.com/en/"
             },
@@ -39,16 +45,25 @@ const experience = [
                 url: "https://www.firstinspires.org/robotics/frc"
             },
             {
+                title: "Charged Up",
+                description: "CHARGED UP presented by Haas | FRC 2022-2023",
+                iconUrl: media.charged_up_horz
+            },
+            {
+                title: "2023 FIRST® Championship",
+                description: "FIRST ENERGIZE season championship at Houston, Texas, April 19-22 | FRC 2023.",
+                iconUrl: media.first_cmp_2023
+            }
+        ]
+    },
+    {
+        year: "2024",
+        experiences: [
+            {
                 title: "Crescendo",
-                description: "CRESCENDO presented by Haas | 2023-2024",
+                description: "CRESCENDO presented by Haas | FRC 2023-2024",
                 iconUrl: media.crescendo_horz
             },
-            // {title: "2023 FIRST® Championship", description: "FIRST ENERGIZE season championship at Houston, Texas, April 19-22 | 2023.", iconUrl: media.first_cmp_2023},
-            {
-                title: "Charged Up & Championship",
-                description: "CHARGED UP and FIRST ENERGIZE Championship | Houston, TX, Apr 19-22, 2023",
-                iconUrl: media.charged_up_horz
-            }
         ]
     }
 ];
@@ -66,8 +81,8 @@ const Experience = () => {
                 transition={{duration: 0.5}}
             />
 
-            <p className="p-text">🚧 work in progress 🚧</p>
             <div className="app__exp-years">
+                <p className="p-text">🚧 work in progress 🚧</p>
                 {experience.map((year) => {
                     return (
                         <motion.div
@@ -80,8 +95,8 @@ const Experience = () => {
                             <h2 className="app__exp-year-text"><span>\\</span> {year.year}</h2>
 
                             <div className="app__exp-year-experiences">
-                                {year.experiences.map((experience) => {
-                                })}
+                                {/*{year.experiences.map((experience) => {*/}
+                                {/*})}*/}
                             </div>
                         </motion.div>
                     )

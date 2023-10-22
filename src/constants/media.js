@@ -5,7 +5,6 @@ import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import azure from "../assets/tech_stack/azure.png";
 import background_shapes from "../assets/background_shapes.png";
 import bap_dolphin from "../assets/bap_dolphin.jpg";
-import cmd from "../assets/cmd.jpg";
 import cpp from "../assets/tech_stack/cpp.png";
 import cs from "../assets/tech_stack/cs.png";
 import css from "../assets/tech_stack/css.png";
@@ -16,18 +15,18 @@ import html from "../assets/tech_stack/html.png";
 import java from "../assets/tech_stack/java.svg";
 import javascript from "../assets/tech_stack/javascript.png";
 import kotlin from "../assets/tech_stack/kotlin.svg";
-import mongodb from "../assets/mongodb.svg";
-import mongodb_leaf from "../assets/mongodb_leaf.svg";
+import mongodb from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/tech_stack/nodejs.svg";
 import nodejs_js from "../assets/tech_stack/nodejs_js.svg";
 import placeholder from "../assets/placeholder.png";
 import python from "../assets/tech_stack/python.png";
+import pytorch_flame from "../assets/tech_stack/pytorch_flame.png";
 import reactjs from "../assets/tech_stack/reactjs.svg";
 import sass from "../assets/tech_stack/sass.png";
+import tensorflow_logo from "../assets/tech_stack/tensorflow_logo.svg";
+import wpilib from "../assets/tech_stack/wpilib.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
-import theme_green_bg from "../assets/theme_green_bg.webm";
 // https://app.spline.design/file/94c1b503-8987-4620-8b4b-daa6a65e3f99
-import theme_pink_bg from "../assets/theme_pink_bg.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 import typescript from "../assets/tech_stack/typescript.png";
 import unity from "../assets/unity.svg";
@@ -35,12 +34,9 @@ import unity from "../assets/unity.svg";
 // cloudflare
 import cf_horz from "../assets/cloudflare/cf_horz.svg";
 import cf_logo from "../assets/cloudflare/cf_logo.svg";
-import cf_stacked from "../assets/cloudflare/cf_stacked.svg";
 
 // discord
-import discord_full_black from "../assets/discord/discord_full_black.svg";
 import discord_full_blurple from "../assets/discord/discord_full_blurple.svg";
-import clyde_icon_black from "../assets/discord/clyde_icon_black.svg";
 import clyde_icon_blurple from "../assets/discord/clyde_icon_blurple.svg";
 
 // first
@@ -71,7 +67,6 @@ import instagram_white from "../assets/instagram/instagram_white.svg";
 
 // reddit
 import reddit_lockup from "../assets/reddit/reddit_lockup.svg";
-import reddit_logotype from "../assets/reddit/reddit_logotype.svg";
 import reddit_mark from "../assets/reddit/reddit_mark.svg";
 
 // ides
@@ -94,7 +89,6 @@ export default {
     azure,
     background_shapes,
     bap_dolphin,
-    cmd,
     cpp,
     cs,
     css,
@@ -106,27 +100,25 @@ export default {
     javascript,
     kotlin,
     mongodb,
-    mongodb_leaf,
+    mongodb_leaf: mongodb,
     nodejs,
     nodejs_js,
     placeholder,
     python,
+    pytorch_flame,
     reactjs,
     sass,
+    tensorflow_logo,
     t4k_logo_reduced,
-    theme_green_bg,
-    theme_pink_bg,
     twitch_glitch_purple,
     typescript,
+    wpilib,
     unity,
     // cloudflare
     cf_horz,
     cf_logo,
-    cf_stacked,
     // discord
-    discord_full_black,
     discord_full_blurple,
-    clyde_icon_black,
     clyde_icon_blurple,
     // first
     charged_up_horz,
@@ -148,7 +140,6 @@ export default {
     instagram_white,
     // reddit
     reddit_lockup,
-    reddit_logotype,
     reddit_mark,
     // ides
     vscode_alt,

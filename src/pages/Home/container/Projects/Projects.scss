@@ -14,7 +14,7 @@
     margin: 3rem 0 1rem;
 
     .app__projects-filter-cat {
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.80rem;
         border-radius: 0.5rem;
         background-color: var(--lighter-color);
 
@@ -25,11 +25,6 @@
         &:hover {
             background-color: var(--alt-color);
             // color: var(--dark-color);
-        }
-
-        @media screen and (min-width: 2000px) {
-            padding: 1rem 2rem;
-            border-radius: 0.85rem;
         }
     }
 

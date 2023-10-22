@@ -219,7 +219,6 @@ html.app_nether {
     align-items: flex-end;
 
     p {
-        // text-transform: uppercase;
         color: var(--darkest-color);
     }
 }
@@ -228,11 +227,15 @@ html.app_nether {
     border: 2px solid var(--alt-color);
     border-radius: 2px;
     width: 50%;
-    max-width: 20vw;
-    margin-left: 4%;
-    opacity: 75%;
+    max-width: 15vw;
+    margin-left: 3.5%;
+    opacity: 65%;
     transform-origin: left;
-    margin-top: 0.25rem;
+
+    @media screen and (max-width: 480px) {
+        margin-left: 0;
+        max-width: 60vw;
+    }
 }
 
 .title-text {
@@ -244,6 +247,11 @@ html.app_nether {
 
     span {
         color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 2.5rem;
+        margin-left: 0;
     }
 }
 
@@ -260,13 +268,9 @@ html.app_nether {
         color: var(--primary-color);
     }
 
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 4rem;
-    // }
-
-    // @media screen and (max-width: 480px) {
-    //     font-size: 2rem;
-    // }
+    @media screen and (max-width: 480px) {
+        font-size: 1.75rem;
+    }
 }
 
 .p-text {
@@ -275,9 +279,10 @@ html.app_nether {
     line-height: 1.50;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.50rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 
 .desc-text {
@@ -286,9 +291,10 @@ html.app_nether {
     line-height: 1.45;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.50rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.90rem;
+    }
 }
 
 .text {
@@ -297,9 +303,10 @@ html.app_nether {
     line-height: 1.75;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.75rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.10rem;
+    }
 }
 
 .bold-text {
@@ -309,13 +316,10 @@ html.app_nether {
     text-align: left;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 2rem;
-    // }
 
-    // @media screen and (max-width: 480px) {
-    //     font-size: 0.90rem;
-    // }
+    @media screen and (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 
 .app__social {
@@ -389,11 +393,6 @@ html.app_nether {
         &:hover {
             background-color: var(--primary-color);
         }
-
-        // @media screen and (min-width: 2000px) {
-        //     width: 20px;
-        //     height: 20px;
-        // }
     }
 }
 

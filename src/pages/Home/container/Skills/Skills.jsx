@@ -7,30 +7,34 @@ import {AppWrap} from "../../../components/index.js";
 import "./Skills.scss";
 
 
+// color: H, S:35%, V: 100%
 const tech_stack = [
-    {name: "Microsoft Azure", color: "", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
     // {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
-    {name: "CSS", color: "", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "Cloudflare", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
-    {name: "DiscordJS", color: "", iconUrl: media.djs, url: "https://discord.js.org/#/"},
-    {name: "Git", color: "", iconUrl: media.git, url: "https://git-scm.com/"},
-    {name: "HTML", color: "", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
-    {name: "Java", color: "", iconUrl: media.java, url: "https://www.java.com/en/"},
-    {name: "JavaScript", color: "", iconUrl: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
-    {name: "Kotlin", color: "", iconUrl: media.kotlin, url: "https://kotlinlang.org/"},
+    {name: "CSS", color: "#a6c1ff", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
+    {name: "Cloudflare", color: "#ffcea6", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
+    {name: "DiscordJS", color: "#a6adff", iconUrl: media.djs, url: "https://discord.js.org/#/"},
+    {name: "Git", color: "#ffaca6", iconUrl: media.git, url: "https://git-scm.com/"},
+    {name: "HTML", color: "#ffc1a6", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
+    {name: "Java", color: "#a6eaff", iconUrl: media.java, url: "https://www.java.com/en/"},
+    {name: "JavaScript", color: "#fff5a6", iconUrl: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
+    {name: "Kotlin", color: "#e6a6ff", iconUrl: media.kotlin, url: "https://kotlinlang.org/"},
     // {name: "MongoDB", color: "", iconUrl: media.mongodb_leaf, url: "https://www.mongodb.com/"},
-    {name: "NodeJS", color: "", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
-    {name: "Python", color: "", iconUrl: media.python, url: "https://www.python.org/"},
-    {name: "ReactJS", color: "", iconUrl: media.reactjs, url: "https://react.dev/"},
-    {name: "Sass", color: "", iconUrl: media.sass, url: "https://sass-lang.com/"}
+    {name: "NodeJS", color: "#b8ffa6", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
+    {name: "Python", color: "#ffeda6", iconUrl: media.python, url: "https://www.python.org/"},
+    {name: "PyTorch", color: "#ffb5a6", iconUrl: media.pytorch_flame, url: "https://pytorch.org/"},
+    {name: "ReactJS", color: "#a6edff", iconUrl: media.reactjs, url: "https://react.dev/"},
+    {name: "Sass", color: "#ffa6d2", iconUrl: media.sass, url: "https://sass-lang.com/"},
+    {name: "TensorFlow", color: "#ffe1a6", iconUrl: media.tensorflow_logo, url: "https://www.tensorflow.org/"},
+    {name: "WPILib", color: "#ffa6af", iconUrl: media.wpilib, url: "https://docs.wpilib.org/en/stable/"},
 ];
 
 const dev_tools = [
-    {name: "GitHub", color: "", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
-    {name: "IntelliJ IDEA", color: "", iconUrl: media.intellij_idea, url: "https://www.jetbrains.com/idea/"},
-    {name: "PyCharm", color: "", iconUrl: media.pycharm, url: "https://www.jetbrains.com/pycharm/"},
-    {name: "Visual Studio Code", color: "", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
-    {name: "WebStorm", color: "", iconUrl: media.webstorm, url: "https://www.jetbrains.com/webstorm/"}
+    {name: "Microsoft Azure", color: "#a6d8ff", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
+    {name: "GitHub", color: "#a6d2ff", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
+    {name: "IntelliJ IDEA", color: "#ffa6b9", iconUrl: media.intellij_idea, url: "https://www.jetbrains.com/idea/"},
+    {name: "PyCharm", color: "#a6ffdb", iconUrl: media.pycharm, url: "https://www.jetbrains.com/pycharm/"},
+    {name: "Visual Studio Code", color: "#a6dbff", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
+    {name: "WebStorm", color: "#a6fbff", iconUrl: media.webstorm, url: "https://www.jetbrains.com/webstorm/"}
 ];
 
 
@@ -54,14 +58,15 @@ const Skills = ({theme}) => {
                     {tech_stack.map((skill) => {
                         return (
                             <motion.div
-                                className="app__tech-stack-item app__flex"
+                                className="app__skills-item app__flex"
                                 key={skill.name}
                             >
-                                <div className="app__flex" style={{backgroundColor: skill.color}}>
-                                    <a href={skill.url} target="_blank" rel="noreferrer">
-                                        <img src={skill.iconUrl} alt={skill.name} />
-                                    </a>
-                                </div>
+                                <motion.a href={skill.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          whileHover={{boxShadow: `0 0 20px ${skill.color}`}}>
+                                    <img src={skill.iconUrl} alt={skill.name} />
+                                </motion.a>
                                 <p className="p-text app__skills-item-name">{skill.name}</p>
                             </motion.div>
                         )
@@ -82,14 +87,15 @@ const Skills = ({theme}) => {
                     {dev_tools.map((tool) => {
                         return (
                             <motion.div
-                                className="app__tech-stack-item app__flex"
+                                className="app__skills-item app__flex"
                                 key={tool.name}
                             >
-                                <div className="app__flex" style={{backgroundColor: tool.color}}>
-                                    <a href={tool.url} target="_blank" rel="noreferrer">
-                                        <img src={tool.iconUrl} alt={tool.name} />
-                                    </a>
-                                </div>
+                                <motion.a href={tool.url}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          whileHover={{boxShadow: `0 0 20px ${tool.color}`}}>
+                                    <img src={tool.iconUrl} alt={tool.name} />
+                                </motion.a>
                                 <p className="p-text app__skills-item-name">{tool.name}</p>
                             </motion.div>
                         )
