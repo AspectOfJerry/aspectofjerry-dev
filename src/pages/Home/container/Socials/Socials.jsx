@@ -1,19 +1,19 @@
 import React from "react";
-import {motion} from "framer-motion";
+import {motion, useScroll} from "framer-motion";
 
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Socials.scss";
 
-
+// color: H, S:35%, V: 100%
 const socials = [
-    {name: "Discord", description: "jerrydev", iconUrl: media.clyde_icon_blurple},
-    {name: "GitHub", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
-    {name: "Instagram", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
-    {name: "Reddit", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
-    {name: "Twitch", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
-    {name: "YouTube", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
+    {name: "Discord", color: "#a6adff", description: "jerrydev", iconUrl: media.clyde_icon_blurple},
+    {name: "GitHub", color: "#a6d2ff", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
+    {name: "Instagram", color: "#ffa6c3", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
+    {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
+    {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
+    {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
 
 const texts = [
@@ -23,26 +23,32 @@ const texts = [
 
 const Socials = ({theme}) => {
     socials.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
+    const {scrollYProgress} = useScroll();
 
     return (
         <>
-            <h2 className="head-text">Contact <span>info</span> & Socials</h2>
+            <h2 className="title-text">Contact <span>info</span> & Socials</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
 
             <div className="app__socials-container">
                 <motion.div className="app__socials-list">
                     {socials.map((social) => {
                         return (
                             <motion.div
-                                // whileInView={{opacity: [0, 1]}}
-                                // transition={{duration: 0.5}}
                                 className="app__socials-item app__flex"
                                 key={social.name}
                             >
-                                <div className="app__flex">
-                                    <a href={social.url} target="_blank" rel="noreferrer">
-                                        <img src={social.iconUrl} alt={social.name} />
-                                    </a>
-                                </div>
+                                <motion.a href={social.url}
+                                          rel="noreferrer"
+                                          whileHover={{boxShadow: `0 0 30px ${social.color}`}}
+                                >
+                                    <img src={social.iconUrl} alt={social.name} />
+                                </motion.a>
                                 <p className="bold-text">{social.name}</p>
                                 <p className="p-text">{social.description}</p>
                             </motion.div>

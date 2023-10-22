@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {motion, AnimatePresence} from "framer-motion";
-import {AiFillEye, AiFillGithub} from "react-icons/ai";
+import React, {useState} from "react";
+import {motion, useScroll} from "framer-motion";
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
@@ -51,12 +50,12 @@ const Projects = () => {
 
     const handleFilter = (category) => {
         setActiveFilter(category);
-        setAnimateCard([{y: 100, opacity: 0}]);
+        setAnimateCard({y: 100, opacity: 0});
 
         setTimeout(() => {
-            setAnimateCard([{y: 0, opacity: 1}]);
+            setAnimateCard({y: 0, opacity: 1});
 
-            if(category === "All") {
+            if (category === "All") {
                 setFilterProjects(projectsData);
             } else {
                 setFilterProjects(projectsData.filter((project) => project.category === category));
@@ -64,20 +63,31 @@ const Projects = () => {
         }, 500);
     };
 
+    const {scrollYProgress} = useScroll();
+
     return (
         <>
-            <h2 className="head-text"><span>Pro</span>jects</h2>
+            <h2 className="title-text"><span>Pro</span>jects</h2>
+            <motion.div
+                className="title-text-line"
+                initial={{scaleX: 0}}
+                style={{scaleX: scrollYProgress}}
+                transition={{duration: 0.5}}
+            />
+
             <div className="app__projects-filter">
                 {categories.map((category) => (
                     <div
                         key={category.name}
                         onClick={() => handleFilter(category)}
-                        className={`app__projects-filter-cat app__flex p-text ${activeFilter === category ? "item-active" : ""}`}
+                        className={`app__projects-filter-cat app__flex p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
                     >
                         {category.name}
                     </div>
                 ))}
             </div>
+
+            <p className="p-text">🚧 work in progress 🚧</p>
 
             <motion.div
                 animate={animateCard}

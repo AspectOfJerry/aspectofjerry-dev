@@ -2,11 +2,19 @@ import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 // Global
-import {Divider, Navbar} from "./pages/components/index.js";
+import {Navbar} from "./pages/components/index.js";
 
 // pages/Home (main)
 import {AppReturnToTop} from "./pages/Home/components/index.js";
-import {AppAbout, AppSocials, AppFooter, AppHome, AppHeader, AppProjects, AppSkills} from "./pages/Home/container/index.js";
+import {
+    AppHome,
+    AppAbout,
+    AppSkills,
+    AppExperience,
+    AppSocials,
+    AppProjects,
+    AppFooter,
+} from "./pages/Home/container/index.js";
 
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
@@ -23,13 +31,13 @@ const themes = [
         theme: "light"
     },
     {
-        name: "Dark",
-        className: "app_dark",
+        name: "Deep Space",
+        className: "app_deep-space",
         theme: "dark"
     },
     {
-        name: "Deep Space",
-        className: "app_deep-space",
+        name: "Dark",
+        className: "app_dark",
         theme: "dark"
     },
     {
@@ -59,17 +67,18 @@ const getInitialColorMode = () => {
 
     const is_dark_more = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    if(has_persisted_theme && !is_dark_more) {
+    if (has_persisted_theme && !is_dark_more) {
         const persistedTheme = themes.find(
             (theme) => theme.className === persisted_theme
         );
-        if(persistedTheme) {
+        if (persistedTheme) {
             return persistedTheme;
         }
     }
 
+    // automatically set light/dark theme based on system
     const system_theme = is_dark_more
-        ? themes.find((theme) => theme.className === "app_dark")
+        ? themes.find((theme) => theme.className === "app_deep-space")
         : themes.find((theme) => theme.className === "app_default");
 
     return system_theme || themes.find((theme) => theme.className === "app_dark");
@@ -99,7 +108,7 @@ const App = () => {
         const persisted_theme = window.localStorage.getItem("color-mode");
         const has_persisted_theme = typeof persisted_theme === "string";
 
-        if(!has_persisted_theme) {
+        if (!has_persisted_theme) {
             window.localStorage.setItem("color-mode", "app_default");
         }
     }, []);
@@ -111,19 +120,27 @@ const App = () => {
                     path="/"
                     element={
                         <div className={theme.className}>
+                            <title>jerrydev • Jerry</title>
+
                             <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
-                                links={[{name: "Home", link: "#home"}, {name: "About", link: "#about"}, {name: "Skills", link: "#skills"}, {name: "Socials", link: "#socials"}, {name: "Projects", link: "#projects"}]}
-                                extLinks={[{name: "Skyblock mod", link: "https://bap.jerrydev.net"}, {name: "Status page", link: "https://status.jerrydev.net"}]}
+                                    links={[
+                                        // {name: "Home", link: "#home"},
+                                        {name: "About", link: "#about"},
+                                        {name: "Skills", link: "#skills"},
+                                        {name: "Experience", link: "#experience"},
+                                        {name: "Socials", link: "#socials"},
+                                        {name: "Projects", link: "#projects"}]}
+                                    extLinks={[
+                                        {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
+                                        // {name: "Status page", link: "https://status.jerrydev.net"}
+                                    ]}
                             />
                             <AppReturnToTop />
                             <AppHome theme={theme} />
-                            {/* <AppHeader /> */}
                             <AppAbout />
-                            {/* <Divider /> */}
                             <AppSkills theme={theme} />
-                            {/* <Divider /> */}
+                            <AppExperience />
                             <AppSocials theme={theme} />
-                            {/* <Divider /> */}
                             <AppProjects />
                             <AppFooter />
                         </div>
@@ -135,7 +152,8 @@ const App = () => {
                 <Route
                     path="*"
                     element={
-                        <div className="app">
+                        <div className={theme.className}>
+                            <title>jerrydev • 404</title>
                             <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
                         </div>
                     }

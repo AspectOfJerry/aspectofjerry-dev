@@ -10,12 +10,12 @@ html {
 
     --primary-color: rgba(135, 206, 235, 1); // 87ceeb
     --secondary-color: rgb(250, 253, 254, 1); // 99%
-    --alt-color: rgba(121, 224, 169, 1);
+    --alt-color: rgba(116, 214, 162, 1); // 84%
     --lightest-color: rgba(254, 254, 254, 1);
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgba(150, 150, 150, 1);
-    --darker-color: rgba(120, 120, 120, 1);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(150, 220, 250, 0.30);
@@ -26,32 +26,6 @@ html {
     --shadow-glow-color: rgba(135, 206, 235, 0.25);
     --glow-color: rgba(228, 244, 251, 0.40);
     --footer-color: rgba(246, 247, 248, 1);
-
-    transition: background-color 0.75s;
-}
-
-html.app_dark {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    background-color: var(--secondary-color);
-
-    --primary-color: rgba(135, 206, 235, 1);
-    --secondary-color: rgb(20, 20, 20);
-    --alt-color: rgba(69, 128, 96, 1);
-    --lightest-color: rgb(10, 10, 10);
-    --lighter-color: rgb(32, 32, 32);
-    --light-color: rgb(120, 120, 120);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(220, 220, 220);
-    --darkest-color: rgb(235, 235, 235);
-
-    --navbar-color: rgba(135, 206, 235, 0.10);
-    --navbar-s-color: rgba(135, 206, 235, 0.15);
-    --head-background-color: var(--secondary-color);
-    --divier-color: var(--light-color);
-    --shadow-color: rgba(160, 160, 160, 0.25);
-    --shadow-glow-color: rgba(135, 206, 235, 0.25);
-    --glow-color: rgba(135, 206, 235, 0.40);
-    --footer-color: rgb(16, 16, 16);
 
     transition: background-color 0.75s;
 }
@@ -82,6 +56,33 @@ html.app_deep-space {
     transition: background-color 0.75s;
 }
 
+html.app_dark {
+    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    background-color: var(--secondary-color);
+
+    --primary-color: rgba(135, 206, 235, 1);
+    --secondary-color: rgb(20, 20, 20);
+    --alt-color: rgba(69, 128, 96, 1);
+    --lightest-color: rgb(10, 10, 10);
+    --lighter-color: rgb(32, 32, 32);
+    --light-color: rgb(120, 120, 120);
+    --dark-color: rgb(150, 150, 150);
+    --darker-color: rgb(220, 220, 220);
+    --darkest-color: rgb(235, 235, 235);
+
+    --navbar-color: rgba(135, 206, 235, 0.10);
+    --navbar-s-color: rgba(135, 206, 235, 0.15);
+    --head-background-color: var(--secondary-color);
+    --divier-color: var(--light-color);
+    --shadow-color: rgba(160, 160, 160, 0.25);
+    --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --glow-color: rgba(135, 206, 235, 0.40);
+    --footer-color: rgb(16, 16, 16);
+
+    transition: background-color 0.75s;
+}
+
+
 html.app_pink {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
@@ -93,7 +94,7 @@ html.app_pink {
     --lighter-color: rgba(255, 235, 235, 1);
     --light-color: rgba(255, 224, 224, 1);
     --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(255, 204, 214, 0.30);
@@ -121,7 +122,7 @@ html.app_green {
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
     --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(120, 120, 120);
+    --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(170, 235, 150, 0.30);
@@ -173,7 +174,7 @@ html.app_nether {
 
 .app__container {
     width: 100%;
-    min-height: 90vh;
+    min-height: 65vh;
 
     display: flex;
     flex-direction: row;
@@ -181,8 +182,8 @@ html.app_nether {
 
 .app__flex {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .app__wrapper {
@@ -218,14 +219,46 @@ html.app_nether {
     align-items: flex-end;
 
     p {
-        // text-transform: uppercase;
         color: var(--darkest-color);
     }
 }
 
-.head-text {
+.title-text-line {
+    border: 2px solid var(--alt-color);
+    border-radius: 2px;
+    width: 50%;
+    max-width: 15vw;
+    margin-left: 3.5%;
+    opacity: 65%;
+    transform-origin: left;
+
+    @media screen and (max-width: 480px) {
+        margin-left: 0;
+        max-width: 60vw;
+    }
+}
+
+.title-text {
     font-size: 2.75rem;
     font-weight: 600;
+    margin-left: 3%;
+
+    color: var(--darkest-color);
+
+    span {
+        color: var(--primary-color);
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 2.5rem;
+        margin-left: 0;
+    }
+}
+
+
+.subtitle-text {
+    font-size: 1.80rem;
+    font-weight: 500;
     text-align: center;
     color: var(--darkest-color);
 
@@ -235,24 +268,21 @@ html.app_nether {
         color: var(--primary-color);
     }
 
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 4rem;
-    // }
-
-    // @media screen and (max-width: 480px) {
-    //     font-size: 2rem;
-    // }
+    @media screen and (max-width: 480px) {
+        font-size: 1.75rem;
+    }
 }
 
 .p-text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--darker-color);
     line-height: 1.50;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.50rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 
 .desc-text {
@@ -261,9 +291,10 @@ html.app_nether {
     line-height: 1.45;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.50rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 0.90rem;
+    }
 }
 
 .text {
@@ -272,9 +303,10 @@ html.app_nether {
     line-height: 1.75;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 1.75rem;
-    // }
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.10rem;
+    }
 }
 
 .bold-text {
@@ -284,13 +316,10 @@ html.app_nether {
     text-align: left;
 
     transition: color 0.50s;
-    // @media screen and (min-width: 2000px) {
-    //     font-size: 2rem;
-    // }
 
-    // @media screen and (max-width: 480px) {
-    //     font-size: 0.90rem;
-    // }
+    @media screen and (max-width: 480px) {
+        font-size: 1rem;
+    }
 }
 
 .app__social {
@@ -364,11 +393,6 @@ html.app_nether {
         &:hover {
             background-color: var(--primary-color);
         }
-
-        // @media screen and (min-width: 2000px) {
-        //     width: 20px;
-        //     height: 20px;
-        // }
     }
 }
 

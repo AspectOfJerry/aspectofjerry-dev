@@ -1,0 +1,28 @@
+.app__exp {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__exp-years {
+    margin: 3rem 5% 0;
+
+    @media screen and (max-width: 480px) {
+        margin: 3rem 0 0;
+    }
+}
+
+.app__exp-year {
+    margin-bottom: 1rem;
+}
+
+.app__exp-year-text {
+    color: var(--alt-color);
+
+    span {
+        color: var(--light-color);
+    }
+
+    @media screen and (max-width: 480px) {
+    }
+}

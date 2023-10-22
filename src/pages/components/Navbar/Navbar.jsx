@@ -14,7 +14,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
         let isScrolling = false;
 
         const handleScroll = () => {
-            if(!isScrolling) {
+            if (!isScrolling) {
                 window.requestAnimationFrame(() => {
                     setShrunk(
                         document.body.scrollTop > scrollThreshold ||
@@ -55,7 +55,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
             >
                 {/* div for line on hover */}
                 {links.map((dest, index) => (
-                    <li className="app__flex p-text" key={index}>
+                    <li className="app__flex bold-text" key={index}>
                         <div />
                         <a href={dest.link}>{dest.name}</a>
                     </li>
@@ -68,7 +68,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                 transition={{delay: 0.50}}>
                 {/* div for line on hover */}
                 {extLinks.map((target, index) => (
-                    <li className="app__flex p-text" key={index}>
+                    <li className="app__flex bold-text" key={index}>
                         <div />
                         <a href={target.link} target="_blank" rel="noreferrer">{target.name}</a>
                     </li>
@@ -105,7 +105,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                     </ul>
                 </div>
             </div>
-        </motion.nav >
+        </motion.nav>
     );
 };
 

@@ -40,9 +40,9 @@
     transform: translateX(-50%);
     width: 150%;
     box-shadow: inset 0 0 18px 18px var(--glow-color),
-        0 0 18px 18px var(--glow-color),
-        inset 0 0 0 3px var(--glow-color), // fix thin line between shadows for ellipse
-        0 0 0 3px var(--glow-color);
+    0 0 18px 18px var(--glow-color),
+    inset 0 0 0 3px var(--glow-color), // fix thin line between shadows for ellipse
+    0 0 0 3px var(--glow-color);
     // border-radius: 50%;
     // height: 32px;
 }
@@ -61,11 +61,11 @@
 
     transition: color 0.5s;
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width: 1024px) {
         font-size: 8rem;
     }
 
-    @media screen and (max-width:480px) {
+    @media screen and (max-width: 480px) {
         font-size: 5rem;
     }
 }
@@ -78,11 +78,11 @@
 
     transition: color 0.5s;
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width: 1024px) {
         font-size: 1.75rem;
     }
 
-    @media screen and (max-width:480px) {
+    @media screen and (max-width: 480px) {
         font-size: 1.5rem;
     }
 }
