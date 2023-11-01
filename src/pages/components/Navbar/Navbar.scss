@@ -72,6 +72,29 @@
 //     margin-right: 5rem;
 // }
 
+.app__navbar-nav-links,
+.app__navbar-ext-links {
+    li {
+        position: relative;
+        display: block;
+        margin: 0 1.75rem;
+        cursor: pointer;
+        flex-direction: column;
+
+        a {
+            color: var(--darker-color);
+            text-decoration: none;
+            flex-direction: column;
+            font-weight: 500;
+            transition: all 0.25s ease-out;
+
+            &:hover {
+                color: var(--darkest-color);
+            }
+        }
+    }
+}
+
 .app__navbar-nav-links {
     flex: 1;
     display: flex;
@@ -80,45 +103,6 @@
 
     margin-left: 5%;
     list-style: none;
-
-    li {
-        margin: 0 1.75rem;
-        cursor: pointer;
-
-        flex-direction: column;
-
-        // Line above hover
-        div {
-            width: 65%;
-            height: 2px;
-            background: transparent;
-            border-radius: 25%;
-
-            margin-bottom: 3px;
-        }
-
-        a {
-            color: var(--darker-color);
-            text-decoration: none;
-            flex-direction: column;
-
-            font-weight: 500;
-
-            transition: all 0.25s ease-out;
-
-            &:hover {
-                color: var(--darkest-color);
-            }
-        }
-
-        // Line above hover
-        &:hover {
-            div {
-                transition: all 0.15s ease-out;
-                background-color: var(--alt-color);
-            }
-        }
-    }
 
     @media screen and (max-width: 1024px) {
         display: none;
@@ -133,45 +117,6 @@
 
     margin-right: 2%;
     list-style: none;
-
-    li {
-        margin: 0 1.750rem;
-        cursor: pointer;
-
-        flex-direction: column;
-
-        // Line above hover
-        div {
-            width: 65%;
-            height: 2px;
-            background: transparent;
-            border-radius: 25%;
-
-            margin-bottom: 3px;
-        }
-
-        a {
-            color: var(--darker-color);
-            text-decoration: none;
-            flex-direction: column;
-
-            font-weight: 500;
-
-            transition: all 0.15s ease-out;
-
-            &:hover {
-                color: var(--darkest-color);
-            }
-        }
-
-        // Line above hover
-        &:hover {
-            div {
-                transition: all 0.30s ease-out;
-                background-color: var(--alt-color);
-            }
-        }
-    }
 
     @media screen and (max-width: 1024px) {
         display: none;

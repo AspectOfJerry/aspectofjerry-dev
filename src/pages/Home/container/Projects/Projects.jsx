@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {motion, useScroll} from "framer-motion";
+import {motion} from "framer-motion";
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
@@ -63,17 +63,31 @@ const Projects = () => {
         }, 500);
     };
 
-    const {scrollYProgress} = useScroll();
-
     return (
         <>
-            <h2 className="title-text"><span>Pro</span>jects</h2>
-            <motion.div
-                className="title-text-line"
-                initial={{scaleX: 0}}
-                style={{scaleX: scrollYProgress}}
-                transition={{duration: 0.5}}
-            />
+            <div style={{position: "relative"}}>
+                <motion.div
+                    className="title-text-bars"
+                    initial={{width: 0, opacity: 1}}
+                    whileInView={{x: [0, 180], opacity: 0}} // Animate "//" from left to right
+                    exit={{opacity: 0}}
+                    transition={{
+                        x: {duration: 0.65, ease: "easeInOut"},
+                        opacity: {delay: 0.60} // Delay the fade out of "//" to allow the title text to fade in
+                    }}
+                >
+                    <span id="inner">/</span>/<span>/</span>
+                </motion.div>
+                <motion.h2
+                    className="title-text"
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}} // Fade in the title text
+                    exit={{opacity: 1}}
+                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                >
+                    <span>Pro</span>jects
+                </motion.h2>
+            </div>
 
             <div className="app__projects-filter">
                 {categories.map((category) => (

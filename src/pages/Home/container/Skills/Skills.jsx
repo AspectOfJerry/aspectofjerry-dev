@@ -1,5 +1,5 @@
 import React from "react";
-import {motion, useScroll} from "framer-motion";
+import {motion} from "framer-motion";
 
 import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
@@ -40,19 +40,34 @@ const dev_tools = [
 
 const Skills = ({theme}) => {
     dev_tools.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
-    const {scrollYProgress} = useScroll();
 
     return (
         <>
-            <h2 className="title-text">Skills <span>&</span> Tools</h2>
-            <motion.div
-                className="title-text-line"
-                initial={{scaleX: 0}}
-                style={{scaleX: scrollYProgress}}
-                transition={{duration: 0.5}}
-            />
+            <div style={{position: "relative"}}>
+                <motion.div
+                    className="title-text-bars"
+                    initial={{width: 0, opacity: 1}}
+                    whileInView={{x: [0, 280], opacity: 0}} // Animate "//" from left to right
+                    exit={{opacity: 0}}
+                    transition={{
+                        x: {duration: 0.65, ease: "easeInOut"},
+                        opacity: {delay: 0.60} // Delay the fade out of "//" to allow the title text to fade in
+                    }}
+                >
+                    <span id="inner">/</span>/<span>/</span>
+                </motion.div>
+                <motion.h2
+                    className="title-text"
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}} // Fade in the title text
+                    exit={{opacity: 1}}
+                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                >
+                    Skills <span>&</span> Tools
+                </motion.h2>
+            </div>
 
-            <h3 className="subtitle-text">Tech stack</h3>
+            <h3 className="subtitle-text" style={{marginTop: "1rem"}}>Tech stack</h3>
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
                     {tech_stack.map((skill) => {
@@ -74,7 +89,7 @@ const Skills = ({theme}) => {
                 </motion.div>
 
             </div>
-            <h3 className={"subtitle-text"}>Development tools</h3>
+            <h3 className="subtitle-text" style={{marginTop: "0.5rem"}}>Development tools</h3>
             <motion.div className="app__skills-container">
                 <div>
                     <h4 className="bold-text">GitHub languages</h4>

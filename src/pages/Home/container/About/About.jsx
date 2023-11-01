@@ -1,5 +1,5 @@
 import React from "react";
-import {motion, useScroll} from "framer-motion";
+import {motion} from "framer-motion";
 
 import {AppWrap} from "../../../components/index.js";
 import "./About.scss";
@@ -16,21 +16,35 @@ const text_fade_in = {
 };
 
 const About = () => {
-    const {scrollYProgress} = useScroll();
-
     return (
         <>
             {/*<p className="p-text app__about_note">
                 📌 Hello, World! 🚧
             </p>*/}
             <div style={{marginTop: "4rem"}} />
-            <h2 className="title-text">About <span>Me</span></h2>
-            <motion.div
-                className="title-text-line"
-                initial={{scaleX: 0}}
-                style={{scaleX: scrollYProgress}}
-                transition={{duration: 0.5}}
-            />
+            <div style={{position: "relative"}}>
+                <motion.div
+                    className="title-text-bars"
+                    initial={{width: 0, opacity: 1}}
+                    whileInView={{x: [0, 210], opacity: 0}} // Animate "//" from left to right
+                    exit={{opacity: 0}}
+                    transition={{
+                        x: {duration: 0.65, ease: "easeInOut"},
+                        opacity: {delay: 0.60} // Delay the fade out of "//" to allow the title text to fade in
+                    }}
+                >
+                    <span id="inner">/</span>/<span>/</span>
+                </motion.div>
+                <motion.h2
+                    className="title-text"
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}} // Fade in the title text
+                    exit={{opacity: 1}}
+                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                >
+                    About <span>Me</span>
+                </motion.h2>
+            </div>
 
             <motion.p
                 className="p-text app__about-text"

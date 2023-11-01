@@ -53,11 +53,9 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                 animate={{opacity: [0, 1], y: [-25, 0]}}
                 transition={{delay: 0.50}}
             >
-                {/* div for line on hover */}
                 {links.map((dest, index) => (
-                    <li className="app__flex bold-text" key={index}>
-                        <div />
-                        <a href={dest.link}>{dest.name}</a>
+                    <li className="app__flex text" key={index}>
+                        <a className="text-underline" href={dest.link}>{dest.name}</a>
                     </li>
                 ))}
             </motion.ul>
@@ -66,11 +64,9 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                 initial={{opacity: 1, y: 0}}
                 animate={{opacity: [0, 1], y: [-25, 0]}}
                 transition={{delay: 0.50}}>
-                {/* div for line on hover */}
-                {extLinks.map((target, index) => (
-                    <li className="app__flex bold-text" key={index}>
-                        <div />
-                        <a href={target.link} target="_blank" rel="noreferrer">{target.name}</a>
+                {extLinks.map((dest, index) => (
+                    <li className="app__flex text" key={index}>
+                        <a className="text-underline" href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
                     </li>
                 ))}
             </motion.ul>
@@ -91,15 +87,15 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                     <HiX onClick={() => setShowMenu(false)} />
                     <ul>
                         {links.map((dest, index) => (
-                            <li className="app__flex p-text" key={index}>
-                                <a href={dest.link} onClick={() => setShowMenu(false)}>{dest.name}</a>
+                            <li className="app__flex text" key={index}>
+                                <a className="text-underline" href={dest.link}>{dest.name}</a>
                             </li>
                         ))}
                     </ul>
                     <ul className="app__navbar-ext-links">
                         {extLinks.map((dest, index) => (
-                            <li className="app__flex p-text" key={index}>
-                                <a href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
+                            <li className="app__flex text" key={index}>
+                                <a className="text-underline" href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
                             </li>
                         ))}
                     </ul>
