@@ -46,7 +46,7 @@ const Socials = ({theme}) => {
                     exit={{opacity: 1}}
                     transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
                 >
-                    Contact <span>info</span> & Socials
+                    <span>So</span>cials
                 </motion.h2>
             </div>
 

@@ -21,7 +21,7 @@ const About = () => {
             {/*<p className="p-text app__about_note">
                 📌 Hello, World! 🚧
             </p>*/}
-            <div style={{marginTop: "4rem"}} />
+            <div style={{marginTop: "2rem"}} />
             <div style={{position: "relative"}}>
                 <motion.div
                     className="title-text-bars"

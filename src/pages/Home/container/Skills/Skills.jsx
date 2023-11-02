@@ -67,7 +67,7 @@ const Skills = ({theme}) => {
                 </motion.h2>
             </div>
 
-            <h3 className="subtitle-text" style={{marginTop: "1rem"}}>Tech stack</h3>
+            <h3 className="subtitle-text" style={{marginTop: "1.5rem"}}>Tech stack</h3>
             <div className="app__skills-container">
                 <motion.div className="app__skills-list">
                     {tech_stack.map((skill) => {
@@ -89,7 +89,7 @@ const Skills = ({theme}) => {
                 </motion.div>
 
             </div>
-            <h3 className="subtitle-text" style={{marginTop: "0.5rem"}}>Development tools</h3>
+            <h3 className="subtitle-text" style={{marginTop: "1rem"}}>Development tools</h3>
             <motion.div className="app__skills-container">
                 <div>
                     <h4 className="bold-text">GitHub languages</h4>
