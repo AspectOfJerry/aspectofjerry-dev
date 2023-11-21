@@ -30,7 +30,7 @@ const Socials = ({theme}) => {
                 <motion.div
                     className="title-text-bars"
                     initial={{width: 0, opacity: 1}}
-                    whileInView={{x: [0, 450], opacity: 0}} // Animate "//" from left to right
+                    whileInView={{x: [0, 170], opacity: 0}} // Animate "//" from left to right
                     exit={{opacity: 0}}
                     transition={{
                         x: {duration: 0.65, ease: "easeInOut"},
@@ -62,7 +62,7 @@ const Socials = ({theme}) => {
                                           rel="noreferrer"
                                           whileHover={{boxShadow: `0 0 30px ${social.color}`}}
                                 >
-                                    <img src={social.iconUrl} alt={social.name} />
+                                    <img src={social.iconUrl} alt={`${social.name} img`} />
                                 </motion.a>
                                 <p className="bold-text">{social.name}</p>
                                 <p className="p-text">{social.description}</p>
@@ -70,7 +70,6 @@ const Socials = ({theme}) => {
                         )
                     })}
                 </motion.div>
-                {/* 2:58:35 */}
                 <motion.div className="app__socials-texts">
                     {texts.map((text, index) => {
                         return (

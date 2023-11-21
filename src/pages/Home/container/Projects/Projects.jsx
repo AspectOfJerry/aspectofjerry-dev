@@ -32,13 +32,15 @@ const projectsData = [
     {
         name: "BapUtils",
         category: "Java",
-        description: "description",
+        description: "BapUtils is a Hypixel Skyblock mod featuring a variety of random utility features for Minecraft Forge 1.8.9.",
+        homepage: "https://bap.jerrydev.net/",
         imageUrl: media.bap_dolphin
     },
     {
         name: "JerryBot",
         category: "JavaScript",
-        description: "description",
+        description: "JerryBot#9090 is a Discord bot built on discord.js v13.",
+        homepage: "",
         imageUrl: ""
     }
 ];
@@ -115,7 +117,7 @@ const Projects = () => {
                         whileHover={{scale: [1, 1.10]}}
                     >
                         <div className="app__projects-img app__flex">
-                            <img src={project.imageUrl} alt={project.name} />
+                            <img src={project.imageUrl} alt={`${project.name} img`} />
                             {/* <motion.div
                                 whileHover={{opacity: [0, 1]}}
                                 transition={{duration: 0.25, ease: "easeInOut", staggerChildren: 0.5}}

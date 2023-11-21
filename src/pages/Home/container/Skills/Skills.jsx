@@ -80,7 +80,7 @@ const Skills = ({theme}) => {
                                           target="_blank"
                                           rel="noreferrer"
                                           whileHover={{boxShadow: `0 0 20px ${skill.color}`}}>
-                                    <img src={skill.iconUrl} alt={skill.name} />
+                                    <img src={skill.iconUrl} alt={`${skill.name} img`} />
                                 </motion.a>
                                 <p className="p-text app__skills-item-name">{skill.name}</p>
                             </motion.div>
@@ -109,44 +109,13 @@ const Skills = ({theme}) => {
                                           target="_blank"
                                           rel="noreferrer"
                                           whileHover={{boxShadow: `0 0 20px ${tool.color}`}}>
-                                    <img src={tool.iconUrl} alt={tool.name} />
+                                    <img src={tool.iconUrl} alt={`${tool.name} img`} />
                                 </motion.a>
                                 <p className="p-text app__skills-item-name">{tool.name}</p>
                             </motion.div>
                         )
                     })}
                 </div>
-
-
-                {/*    {experience.map((experience) => {
-                        return (
-                            <motion.div
-                                className="app__skills-exp-item"
-                                key={experience.year}
-                            >
-                                <div className="app__skills-exp-year">
-                                    <p className="bold-text">{experience.year}</p>
-                                </div>
-                                <motion.div className="app__skills-exp-works">
-                                    {experience.works.map((work) => {
-                                        return (
-                                            <motion.div
-                                                whileInView={{opacity: [0, 1], x: [50, 0]}}
-                                                transition={{duration: 0.65, ease: "easeInOut"}}
-                                                className="app__skills-exp-work app__flex"
-                                                // data-tip
-                                                // data-for={work.name}
-                                                key={work.name}
-                                            >
-                                                <h4 className="bold-text">{work.name}</h4>
-                                                <p className="p-text">{work.description}</p>
-                                            </motion.div>
-                                        )
-                                    })}
-                                </motion.div>
-                            </motion.div>
-                        )
-                    })}*/}
             </motion.div>
         </>
     );

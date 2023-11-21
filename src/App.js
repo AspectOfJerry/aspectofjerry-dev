@@ -19,8 +19,6 @@ import {
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
 
-import {media} from "./constants";
-
 import "./App.scss";
 
 
@@ -43,17 +41,17 @@ const themes = [
     {
         name: "Pink",
         className: "app_pink",
-        theme: "light",
-        bgMedia: media.theme_pink_bg,
-        bgMediaType: "image"
+        theme: "light"
+        // bgMedia: media.theme_pink_bg,
+        // bgMediaType: "image"
     },
-    {
-        name: "Green",
-        className: "app_green",
-        theme: "light",
-        bgMedia: media.theme_green_bg,
-        bgMediaType: "webm"
-    },
+    // {
+    //     name: "Green",
+    //     className: "app_green",
+    //     theme: "light",
+    //     bgMedia: media.theme_green_bg,
+    //     bgMediaType: "webm"
+    // },
     {
         name: "Nether",
         className: "app_nether",
