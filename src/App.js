@@ -49,9 +49,17 @@ const getInitialColorMode = () => {
     const persisted_theme = window.localStorage.getItem("color-mode");
     const has_persisted_theme = typeof persisted_theme === "string";
 
-    const is_dark_more = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // Check if the device is a mobile device based on the screen width
+    const isMobile = window.innerWidth <= 768;
 
-    if (has_persisted_theme && !is_dark_more) {
+    const is_dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    // automatically set light/dark theme based on system
+    const system_theme = is_dark_mode
+        ? themes.find((theme) => theme.className === "app_deep-space")
+        : themes.find((theme) => theme.className === "app_default");
+
+    if (has_persisted_theme) {
         const persistedTheme = themes.find(
             (theme) => theme.className === persisted_theme
         );
@@ -60,12 +68,12 @@ const getInitialColorMode = () => {
         }
     }
 
-    // automatically set light/dark theme based on system
-    const system_theme = is_dark_more
-        ? themes.find((theme) => theme.className === "app_deep-space")
-        : themes.find((theme) => theme.className === "app_default");
-
-    return system_theme || themes.find((theme) => theme.className === "app_dark");
+    // Only automatically set the dark mode for mobile devices
+    if (isMobile) {
+        return system_theme;
+    } else {
+        return themes.find((theme) => theme.className === "app_default");
+    }
 };
 
 const App = () => {

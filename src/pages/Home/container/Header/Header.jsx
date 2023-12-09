@@ -6,8 +6,8 @@ import "./Header.scss";
 const texts = [
     "🌟 Crafting code and chasing dreams.",
     "💡 Ctrl + Alt + Defeat is not in my vocabulary.",
+    "✨ Let's build something magic together!",
     "🐞 Debugger of life's quirks and quantum glitches.",
-    "✨ Let’s build something magic together!",
     "🖋 Committed to pixels and a passionate relationship with my IDE.",
     "🌈 Transforming errors into applause-worthy features.",
     "🔮 Embracing a world of brackets, semicolons, and creative chaos.",
@@ -16,7 +16,6 @@ const texts = [
     "☕ I don't sweat, I debug in style.",
     "🔁 Living in loops, logic, and infinite curiosity.",
     "🌙 Debugger by day, dreamer by night. What's your superpower?",
-    "🧠 Turning logic into lines of elegantly woven poetry.",
     "🛠️ Breaking things to uncover better ways of building them.",
     "🎯 Making the complex simple, one line at a time.",
     "🔥 Writing code that sets keyboards on fire.",
@@ -25,7 +24,8 @@ const texts = [
     "🚀 Code is my canvas; elegance is my masterpiece.",
     "🚀 Launching into the universe of code, propelled by creativity.",
     "🌟 Navigating the digital matrix with a keyboard as my compass.",
-    "💭 If you think programming is boring, it’s because you’re not doing it right!"
+    "💭 If you think programming is boring, it's because you're not doing it right!",
+    "👋 Hello, World!",
 ];
 
 const Header = ({theme}) => {
@@ -35,12 +35,15 @@ const Header = ({theme}) => {
     }, []);
 
     const [headerText, setHeaderText] = useState("");
-    const [textIndex, setTextIndex] = useState(Math.floor(Math.random() * texts.length));
+    // const [textIndex, setTextIndex] = useState(Math.floor(Math.random() * texts.length));
+    const [textIndex, setTextIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
+    const [isBlinking, setIsBlinking] = useState(false);
 
     useEffect(() => {
         const typeText = () => {
+            setIsBlinking(false);
             if (!isDeleting) {
                 setHeaderText((prevText) => prevText + texts[textIndex][charIndex]);
                 setCharIndex((prevIndex) => prevIndex + 1);
@@ -51,23 +54,24 @@ const Header = ({theme}) => {
         };
 
         if (!isDeleting && charIndex < texts[textIndex].length) {
-            const timeout = setTimeout(typeText, 45); // typing delay
+            const timeout = setTimeout(typeText, 48); // typing delay
             return () => clearTimeout(timeout);
         } else if (isDeleting && charIndex > 0) {
             const timeout = setTimeout(typeText, 18); // untyping delay
             return () => clearTimeout(timeout);
         } else {
+            setIsBlinking(true);
             if (isDeleting) {
                 const timeout = setTimeout(() => {
                     setTextIndex(Math.floor(Math.random() * texts.length)); // generate a random index
                     setIsDeleting(!isDeleting);
                     setCharIndex(0);
-                }, 150); // delay between texts after untyping
+                }, 200); // delay between texts after untyping
                 return () => clearTimeout(timeout);
             } else {
                 const timeout = setTimeout(() => {
                     setIsDeleting(!isDeleting);
-                }, 1800); // delay between texts after typing
+                }, 3000); // delay between texts after typing
                 return () => clearTimeout(timeout);
             }
         }
@@ -112,10 +116,8 @@ const Header = ({theme}) => {
                         transition={{duration: 1}}>
                     </motion.div>
                 </div>
-                <motion.p
-                    className="app__typing-texts text"
-                >
-                    {headerText}&thinsp;|
+                <motion.p className="app__typing-texts text">
+                    {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </motion.p>
             </div>
 

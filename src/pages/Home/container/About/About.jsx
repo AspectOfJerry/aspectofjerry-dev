@@ -38,9 +38,9 @@ const About = () => {
                 <motion.h2
                     className="title-text"
                     initial={{opacity: 0}}
-                    whileInView={{opacity: 1}} // Fade in the title text
+                    whileInView={{opacity: [0, 1]}} // Fade in the title text
                     exit={{opacity: 1}}
-                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                    transition={{duration: 0.50, delay: 0.45, ease: "easeInOut"}}
                 >
                     About <span>Me</span>
                 </motion.h2>
@@ -58,7 +58,7 @@ const About = () => {
                 🔍 But I don't stop at just coding; I'm captivated by machine learning, AI, computer vision, networking, game engines, and the art of ethical
                 hacking.
                 <br /><br />
-                🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or contemplating my lack of skill in
+                🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or engaging in tactical battles in
                 Valorant.
             </motion.p>
 

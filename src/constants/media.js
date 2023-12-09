@@ -15,9 +15,11 @@ import html from "../assets/tech_stack/html.png";
 import java from "../assets/tech_stack/java.svg";
 import javascript from "../assets/tech_stack/javascript.png";
 import kotlin from "../assets/tech_stack/kotlin.svg";
+import minecraft from "../assets/minecraft_icon.jpg";
 import mongodb from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/tech_stack/nodejs.svg";
 import nodejs_js from "../assets/tech_stack/nodejs_js.svg";
+import riot_games from "../assets/riot_games.png";
 import placeholder from "../assets/placeholder.png";
 import python from "../assets/tech_stack/python.png";
 import pytorch_flame from "../assets/tech_stack/pytorch_flame.png";
@@ -99,10 +101,11 @@ export default {
     java,
     javascript,
     kotlin,
+    minecraft,
     mongodb,
-    mongodb_leaf: mongodb,
     nodejs,
     nodejs_js,
+    riot_games,
     placeholder,
     python,
     pytorch_flame,

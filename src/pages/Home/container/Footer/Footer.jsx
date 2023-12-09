@@ -7,7 +7,8 @@ const sites = [
     {title: "Hypixel Skyblock mod (forge-1.8.9)", url: "https://bap.jerrydev.net"},
     {title: "Discord bot", url: "https://bot.jerrydev.net"},
     {title: "Status page", url: "https://status.jerrydev.net"},
-    {title: "404", url: "/404"}
+    {title: "404", url: "/404"},
+    {title: "Have a suggestion? Message me or open an issue on GitHub", url: "https://github.com/AspectOfJerry/jerrydev/issues"}
 ];
 
 const texts = [
@@ -21,7 +22,7 @@ const Footer = () => {
 
             <div className="app__footer app__footer_bg">
                 <div className="app__footer-sites">
-                    <h4 className="bold-text">Other sites</h4>
+                    <h4 className="bold-text">Links</h4>
                     {sites.map((site) => {
                         return (
                             <a className="p-text" href={site.url} key={site.title}>{site.title}</a>

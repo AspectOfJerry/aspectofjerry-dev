@@ -61,7 +61,7 @@ const Skills = ({theme}) => {
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}} // Fade in the title text
                     exit={{opacity: 1}}
-                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                    transition={{duration: 0.50, delay: 0.45, ease: "easeInOut"}}
                 >
                     Skills <span>&</span> Tools
                 </motion.h2>

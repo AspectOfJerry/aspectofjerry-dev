@@ -11,7 +11,9 @@ const socials = [
     {name: "Discord", color: "#a6adff", description: "jerrydev", iconUrl: media.clyde_icon_blurple},
     {name: "GitHub", color: "#a6d2ff", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "Instagram", color: "#ffa6c3", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
+    {name: "Minecraft", color: "#beffa6", description: "AspectOfJerry", iconUrl: media.minecraft, url: "https://www.minecraft.net/"},
     // {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
+    {name: "Riot ID", color: "#ffa6b5", description: "jerry#dev", iconUrl: media.riot_games, url: "https://playvalorant.com/"},
     {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
     {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
@@ -19,6 +21,7 @@ const socials = [
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
     {title: "Public Email", description: "📧 jerry@jerrydev.net", imageUrl: ""},
+    {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
 
 const Socials = ({theme}) => {
@@ -44,7 +47,7 @@ const Socials = ({theme}) => {
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}} // Fade in the title text
                     exit={{opacity: 1}}
-                    transition={{duration: 0.50, delay: 0.55, ease: "easeInOut"}}
+                    transition={{duration: 0.50, delay: 0.45, ease: "easeInOut"}}
                 >
                     <span>So</span>cials
                 </motion.h2>
