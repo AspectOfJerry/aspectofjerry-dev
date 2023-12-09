@@ -1,4 +1,4 @@
-export {default as AppHome} from "./Home/Home.jsx";
+export {default as AppHome} from "./Header/Header.jsx";
 export {default as AppAbout} from "./About/About.jsx";
 export {default as AppSkills} from "./Skills/Skills.jsx";
 export {default as AppExperience} from "./Experience/Experience.jsx";

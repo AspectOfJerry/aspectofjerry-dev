@@ -56,33 +56,6 @@ html.app_deep-space {
     transition: background-color 0.75s;
 }
 
-html.app_dark {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    background-color: var(--secondary-color);
-
-    --primary-color: rgba(135, 206, 235, 1);
-    --secondary-color: rgb(20, 20, 20);
-    --alt-color: rgba(69, 128, 96, 1);
-    --lightest-color: rgb(10, 10, 10);
-    --lighter-color: rgb(32, 32, 32);
-    --light-color: rgb(120, 120, 120);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(220, 220, 220);
-    --darkest-color: rgb(235, 235, 235);
-
-    --navbar-color: rgba(135, 206, 235, 0.10);
-    --navbar-s-color: rgba(135, 206, 235, 0.15);
-    --head-background-color: var(--secondary-color);
-    --divier-color: var(--light-color);
-    --shadow-color: rgba(160, 160, 160, 0.25);
-    --shadow-glow-color: rgba(135, 206, 235, 0.25);
-    --glow-color: rgba(135, 206, 235, 0.40);
-    --footer-color: rgb(16, 16, 16);
-
-    transition: background-color 0.75s;
-}
-
-
 html.app_pink {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
@@ -143,7 +116,7 @@ html.app_nether {
 
     --primary-color: rgb(150, 0, 0);
     --secondary-color: rgb(48, 0, 0);
-    --alt-color: rgb(140, 215, 245);
+    --alt-color: rgba(69, 128, 96, 1);
     --lightest-color: rgb(32, 8, 8);
     --lighter-color: rgb(64, 16, 16);
     --light-color: rgb(120, 120, 120);

@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 // Global
 import {Navbar} from "./pages/components/index.js";
 
-// pages/Home (main)
+// pages/Header (main)
 import {AppReturnToTop} from "./pages/Home/components/index.js";
 import {
     AppHome,
@@ -34,24 +34,10 @@ const themes = [
         theme: "dark"
     },
     {
-        name: "Dark",
-        className: "app_dark",
-        theme: "dark"
-    },
-    {
         name: "Pink",
         className: "app_pink",
         theme: "light"
-        // bgMedia: media.theme_pink_bg,
-        // bgMediaType: "image"
     },
-    // {
-    //     name: "Green",
-    //     className: "app_green",
-    //     theme: "light",
-    //     bgMedia: media.theme_green_bg,
-    //     bgMediaType: "webm"
-    // },
     {
         name: "Nether",
         className: "app_nether",
@@ -122,7 +108,7 @@ const App = () => {
 
                             <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
                                     links={[
-                                        // {name: "Home", link: "#home"},
+                                        // {name: "Header", link: "#home"},
                                         {name: "About", link: "#about"},
                                         {name: "Skills", link: "#skills"},
                                         {name: "Experience", link: "#experience"},
