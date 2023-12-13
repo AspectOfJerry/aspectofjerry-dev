@@ -20,6 +20,7 @@ import mongodb from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/tech_stack/nodejs.svg";
 import nodejs_js from "../assets/tech_stack/nodejs_js.svg";
 import riot_games from "../assets/riot_games.png";
+import snapcode_aspectofjerry from "../assets/snapcode_aspectofjerry.jpg";
 import placeholder from "../assets/placeholder.png";
 import python from "../assets/tech_stack/python.png";
 import pytorch_flame from "../assets/tech_stack/pytorch_flame.png";
@@ -106,6 +107,7 @@ export default {
     nodejs,
     nodejs_js,
     riot_games,
+    snapcode_aspectofjerry,
     placeholder,
     python,
     pytorch_flame,

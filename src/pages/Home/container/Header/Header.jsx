@@ -71,7 +71,7 @@ const Header = ({theme}) => {
             } else {
                 const timeout = setTimeout(() => {
                     setIsDeleting(!isDeleting);
-                }, 3000); // delay between texts after typing
+                }, 2800); // delay between texts after typing
                 return () => clearTimeout(timeout);
             }
         }

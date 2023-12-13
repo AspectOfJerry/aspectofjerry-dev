@@ -14,6 +14,7 @@ const socials = [
     {name: "Minecraft", color: "#beffa6", description: "AspectOfJerry", iconUrl: media.minecraft, url: "https://www.minecraft.net/"},
     // {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
     {name: "Riot ID", color: "#ffa6b5", description: "jerry#dev", iconUrl: media.riot_games, url: "https://playvalorant.com/"},
+    {name:"Snapchat", color: "#fffea6", description: "aspectofjerry", iconUrl: media.snapcode_aspectofjerry, url: "https://t.snapchat.com/ZyCoCeUP"},
     {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
     {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
