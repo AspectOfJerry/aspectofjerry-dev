@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-// Global
 import {Navbar} from "./pages/components/index.js";
+import OpeningAnimation from "./pages/components/OpeningAnimation"
 
 // pages/Header (main)
 import {AppReturnToTop} from "./pages/Home/components/index.js";
@@ -39,9 +39,9 @@ const themes = [
         theme: "light"
     },
     {
-        name: "Nether",
-        className: "app_nether",
-        theme: "nether"
+        name: "Burgundy",
+        className: "app_burgundy",
+        theme: "dark"
     },
 ];
 
@@ -78,6 +78,15 @@ const getInitialColorMode = () => {
 
 const App = () => {
     const [theme, setTheme] = useState(() => getInitialColorMode());
+    const [showAnimation, setShowAnimation] = useState(false); // temporarily disabled
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setShowAnimation(false);
+        }, 5000); // Show the animation for 5 seconds
+
+        return () => clearTimeout(timeout);
+    }, []);
 
     const toggleTheme = () => {
         const currentIndex = themes.findIndex(
@@ -111,31 +120,33 @@ const App = () => {
                 <Route
                     path="/"
                     element={
-                        <div className={theme.className}>
-                            <title>jerrydev • Jerry</title>
+                        showAnimation ?
+                            <OpeningAnimation onAnimationEnd={() => setShowAnimation(false)} /> :
+                            <div className={theme.className}>
+                                <title>jerrydev • Jerry</title>
 
-                            <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
-                                    links={[
-                                        // {name: "Header", link: "#home"},
-                                        {name: "About", link: "#about"},
-                                        {name: "Skills", link: "#skills"},
-                                        {name: "Experience", link: "#experience"},
-                                        {name: "Socials", link: "#socials"},
-                                        {name: "Projects", link: "#projects"}]}
-                                    extLinks={[
-                                        {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
-                                        // {name: "Status page", link: "https://status.jerrydev.net"}
-                                    ]}
-                            />
-                            <AppReturnToTop />
-                            <AppHome theme={theme} />
-                            <AppAbout />
-                            <AppSkills theme={theme} />
-                            <AppExperience />
-                            <AppSocials theme={theme} />
-                            <AppProjects />
-                            <AppFooter />
-                        </div>
+                                <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
+                                        links={[
+                                            // {name: "Header", link: "#home"},
+                                            {name: "About", link: "#about"},
+                                            {name: "Skills", link: "#skills"},
+                                            {name: "Experience", link: "#experience"},
+                                            {name: "Socials", link: "#socials"},
+                                            {name: "Projects", link: "#projects"}]}
+                                        extLinks={[
+                                            {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
+                                            // {name: "Status page", link: "https://status.jerrydev.net"}
+                                        ]}
+                                />
+                                <AppReturnToTop />
+                                <AppHome theme={theme} />
+                                <AppAbout />
+                                <AppSkills theme={theme} />
+                                <AppExperience />
+                                <AppSocials theme={theme} />
+                                <AppProjects />
+                                <AppFooter />
+                            </div>
                     }
                 />
 

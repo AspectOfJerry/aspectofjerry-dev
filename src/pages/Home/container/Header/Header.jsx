@@ -31,7 +31,7 @@ const texts = [
 const Header = ({theme}) => {
     useEffect(() => {
         // change title when component mounts
-        document.title = "jerrydev • Jerry";
+        document.title = "Jerry";
     }, []);
 
     const [headerText, setHeaderText] = useState("");
@@ -84,13 +84,13 @@ const Header = ({theme}) => {
                     <motion.h1
                         className="app__header-text-big"
                         animate={{
-                            y: [95, 0],
+                            y: [95, 0], // up
                             opacity: [0, 100],
                         }}
                         transition={{
                             ease: "easeOut",
                             duration: 1.1,
-                            delay: 0.85,
+                            delay: 0.60,
                         }}
                     >
                         Hello
@@ -98,13 +98,13 @@ const Header = ({theme}) => {
                     <motion.h1
                         className="app__header-small"
                         animate={{
-                            y: [35, 0],
+                            y: [35, 0], // up
                             opacity: [0, 100],
                         }}
                         transition={{
                             ease: "easeOut",
                             duration: 0.90,
-                            delay: 1.20,
+                            delay: 1,
                         }}
                     >
                         I'm Jerry

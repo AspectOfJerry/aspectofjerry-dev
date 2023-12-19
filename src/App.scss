@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600;6..12,700&family=Nunito:wght@300;400;600;700&display=swap");
 
 /*
     HTML standard color names: https://www.w3schools.com/colors/colors_names.asp
 */
 
 html {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    font-family: "Nunito","Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
     --primary-color: rgba(135, 206, 235, 1); // 87ceeb
@@ -84,38 +84,12 @@ html.app_pink {
     transition: background-color 0.75s;
 }
 
-html.app_green {
+html.app_burgundy {
     font-family: "Nunito", "Roboto", "Verdana", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgb(170, 235, 150);
-    --secondary-color: rgb(234, 250, 229); // 94%
-    --alt-color: rgb(140, 215, 245);
-    --lightest-color: rgb(254, 254, 254);
-    --lighter-color: rgba(242, 242, 242, 1);
-    --light-color: rgba(232, 232, 232, 1);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgba(110, 110, 110, 1);
-    --darkest-color: rgb(32, 32, 32);
-
-    --navbar-color: rgba(170, 235, 150, 0.30);
-    --navbar-s-color: rgba(170, 235, 150, 0.45);
-    --head-background-color: var(--primary-color);
-    --divier-color: var(--lighter-color);
-    --shadow-color: rgba(16, 16, 16, 0.25);
-    --shadow-glow-color: rgba(170, 235, 150, 0.30);
-    --glow-color: rgba(234, 250, 229, 0.40);
-    --footer-color: rgb(246, 247, 248);
-
-    transition: background-color 0.75s;
-}
-
-html.app_nether {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
-    background-color: var(--secondary-color);
-
-    --primary-color: rgb(150, 0, 0);
-    --secondary-color: rgb(48, 0, 0);
+    --primary-color: rgb(128, 0, 32);
+    --secondary-color: rgb(36, 0, 9);
     --alt-color: rgba(69, 128, 96, 1);
     --lightest-color: rgb(32, 8, 8);
     --lighter-color: rgb(64, 16, 16);
@@ -124,14 +98,14 @@ html.app_nether {
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
-    --navbar-color: rgba(135, 206, 235, 0.10);
-    --navbar-s-color: rgba(135, 206, 235, 0.15);
-    --head-background-color: rgb(77, 0, 0);
+    --navbar-color: rgba(160, 0, 40, 0.10);
+    --navbar-s-color: rgba(160, 0, 40, 0.15);
+    --head-background-color: rgb(64, 0, 16);
     --divier-color: var(--light-color);
     --shadow-color: rgba(160, 160, 160, 0.20);
     --shadow-glow-color: rgba(233, 124, 124, 0.25);
     --glow-color: rgba(235, 135, 135, 0.40);
-    --footer-color: rgb(64, 0, 0);
+    --footer-color: rgb(48, 0, 12);
 
     transition: background-color 0.75s;
 }
