@@ -5,10 +5,10 @@
 */
 
 html {
-    font-family: "Nunito","Mulish", "Nunito Sans", "Nunito", sans-serif;
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgba(135, 206, 235, 1); // 87ceeb
+    --primary-color: rgba(176, 215, 230, 1); // #b0d7e6
     --secondary-color: rgb(250, 253, 254, 1); // 99%
     --alt-color: rgba(116, 214, 162, 1); // 84%
     --lightest-color: rgba(254, 254, 254, 1);
@@ -18,12 +18,12 @@ html {
     --darker-color: rgba(110, 110, 110, 1);
     --darkest-color: rgba(32, 32, 32, 1);
 
-    --navbar-color: rgba(150, 220, 250, 0.30);
-    --navbar-s-color: rgba(150, 220, 250, 0.45);
-    --head-background-color: rgba(168, 220, 240, 0.90);
+    --navbar-color: rgba(170, 212, 228, 0.30); // 78%
+    --navbar-s-color: rgba(170, 212, 228, 0.45); // 78%
+    --head-background-color: rgba(176, 215, 230, 0.90); // #b0d7e6
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(16, 16, 16, 0.20);
-    --shadow-glow-color: rgba(135, 206, 235, 0.25);
+    --shadow-glow-color: rgba(146, 200, 221, 0.25); // 72%
     --glow-color: rgba(228, 244, 251, 0.40);
     --footer-color: rgba(246, 247, 248, 1);
 
@@ -31,7 +31,7 @@ html {
 }
 
 html.app_deep-space {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
     --primary-color: rgb(16, 64, 128);
@@ -56,13 +56,39 @@ html.app_deep-space {
     transition: background-color 0.75s;
 }
 
+html.app_cloudy {
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
+    background-color: var(--secondary-color);
+
+    --primary-color: rgb(201, 218, 248);
+    --secondary-color: rgb(250, 252, 255);
+    --alt-color: rgba(240, 225, 204, 1);
+    --lightest-color: rgb(253, 254, 255);
+    --lighter-color: rgb(242, 242, 242);
+    --light-color: rgb(232, 232, 232);
+    --dark-color: rgb(150, 150, 150);
+    --darker-color: rgb(110, 110, 110);
+    --darkest-color: rgb(32, 32, 32);
+
+    --navbar-color: rgba(186, 208, 247, 0.30);
+    --navbar-s-color: rgba(186, 208, 247, 0.45);
+    --head-background-color: rgb(201, 218, 248);
+    --divier-color: var(--lighter-color);
+    --shadow-color: rgba(16, 16, 16, 0.20);
+    --shadow-glow-color: rgba(201, 218, 248, 0.25);
+    --glow-color: rgba(228, 244, 251, 0.40);
+    --footer-color: rgb(222, 234, 252);
+
+    transition: background-color 0.75s;
+}
+
 html.app_pink {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
     --primary-color: rgb(255, 204, 213); // 90%
-    --secondary-color: rgb(255, 243, 242); // 98%
-    --alt-color: rgb(224, 211, 195);
+    --secondary-color: rgb(255, 244, 243); // 98%
+    --alt-color: rgb(230, 213, 188);
     --lightest-color: rgba(255, 248, 248, 1);
     --lighter-color: rgba(255, 235, 235, 1);
     --light-color: rgba(255, 224, 224, 1);
@@ -85,11 +111,11 @@ html.app_pink {
 }
 
 html.app_burgundy {
-    font-family: "Nunito", "Roboto", "Verdana", sans-serif;
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
     --primary-color: rgb(128, 0, 32);
-    --secondary-color: rgb(36, 0, 9);
+    --secondary-color: rgb(48, 0, 12);
     --alt-color: rgba(69, 128, 96, 1);
     --lightest-color: rgb(32, 8, 8);
     --lighter-color: rgb(64, 16, 16);

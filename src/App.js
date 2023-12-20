@@ -34,6 +34,11 @@ const themes = [
         theme: "dark"
     },
     {
+        name: "Cloudy",
+        className: "app_cloudy",
+        theme: "light"
+    },
+    {
         name: "Pink",
         className: "app_pink",
         theme: "light"
