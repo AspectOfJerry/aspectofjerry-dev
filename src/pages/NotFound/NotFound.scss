@@ -5,7 +5,14 @@
     padding-top: 7rem;
 }
 
-.fade-overlay {
+.nf__nf-text {
+    margin: 3rem;
+    font-size: 1.75rem;
+    color: var(--darkest-color);
+    text-align: center;
+}
+
+.nf__fade-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +22,7 @@
     z-index: 9998;
 }
 
-.notfound__fade-overlay__text {
+.nf__fade-overlay-text {
     font-size: 1.75rem;
     color: var(--light-color);
 
@@ -27,10 +34,10 @@
     z-index: 9999;
 }
 
-.notfound__redirect-text {
+.nf__redirect-text {
     margin-top: 5rem;
+    font-size: 1.5rem;
     text-align: center;
-    scale: 150%;
 
     cursor: pointer;
 }

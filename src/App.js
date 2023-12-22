@@ -139,7 +139,9 @@ const App = () => {
                                             {name: "Socials", link: "#socials"},
                                             {name: "Projects", link: "#projects"}]}
                                         extLinks={[
-                                            {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
+                                            {name: "Elements (soon)", link: "/elements"},
+                                            {name: "DataBoard (soon)", link: "/databoard"},
+                                            // {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
                                             // {name: "Status page", link: "https://status.jerrydev.net"}
                                         ]}
                                 />

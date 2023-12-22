@@ -5,6 +5,7 @@ import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Socials.scss";
+import SectionTitle from "../../../components/SectionTitle";
 
 // color: H, S:35%, V: 100%
 const socials = [
@@ -14,7 +15,7 @@ const socials = [
     {name: "Minecraft", color: "#beffa6", description: "AspectOfJerry", iconUrl: media.minecraft, url: "https://www.minecraft.net/"},
     // {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
     {name: "Riot ID", color: "#ffa6b5", description: "jerry#dev", iconUrl: media.riot_games, url: "https://playvalorant.com/"},
-    {name:"Snapchat", color: "#fffea6", description: "aspectofjerry", iconUrl: media.snapcode_aspectofjerry, url: "https://t.snapchat.com/ZyCoCeUP"},
+    {name: "Snapchat", color: "#fffea6", description: "aspectofjerry", iconUrl: media.snapcode_aspectofjerry, url: "https://t.snapchat.com/ZyCoCeUP"},
     {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
     {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
@@ -30,29 +31,9 @@ const Socials = ({theme}) => {
 
     return (
         <>
-            <div style={{position: "relative"}}>
-                <motion.div
-                    className="title-text-bars"
-                    initial={{width: 0, opacity: 1}}
-                    whileInView={{x: [0, 170], opacity: 0}} // Animate "//" from left to right
-                    exit={{opacity: 0}}
-                    transition={{
-                        x: {duration: 0.65, ease: "easeInOut"},
-                        opacity: {delay: 0.60} // Delay the fade out of "//" to allow the title text to fade in
-                    }}
-                >
-                    <span id="inner">/</span>/<span>/</span>
-                </motion.div>
-                <motion.h2
-                    className="title-text"
-                    initial={{opacity: 0}}
-                    whileInView={{opacity: 1}} // Fade in the title text
-                    exit={{opacity: 1}}
-                    transition={{duration: 0.50, delay: 0.45, ease: "easeInOut"}}
-                >
-                    <span>So</span>cials
-                </motion.h2>
-            </div>
+            <SectionTitle raw="Socials">
+                <span>So</span>cials
+            </SectionTitle>
 
             <div className="app__socials-container">
                 <motion.div className="app__socials-list">

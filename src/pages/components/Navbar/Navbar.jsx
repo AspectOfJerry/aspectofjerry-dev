@@ -43,7 +43,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
             transition={{delay: 0.25}}
         >
             <div className="app__navbar-logo">
-                <a href="https://jerrydev.net">
+                <a href="/">
                     <img src={media.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
                 </a>
             </div>

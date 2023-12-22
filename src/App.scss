@@ -309,6 +309,19 @@ html.app_burgundy {
     font-size: 1.15rem;
     color: var(--darkest-color);
     line-height: 1.75;
+    font-weight: 400;
+
+    transition: color 0.50s;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.10rem;
+    }
+}
+
+.ctext {
+    color: var(--darkest-color);
+    line-height: 1.75;
+    font-weight: 400;
 
     transition: color 0.50s;
 

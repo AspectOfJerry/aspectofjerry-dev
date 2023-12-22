@@ -4,6 +4,7 @@ import {media} from "../../../../constants";
 
 import {AppWrap} from "../../../components/index.js";
 import "./Experience.scss";
+import SectionTitle from "../../../components/SectionTitle";
 
 
 // https://www.firstinspires.org/sites/default/files/uploads/resource_library/brand/first-brand-guidelines-2020.pdf
@@ -71,29 +72,9 @@ const experience = [
 const Experience = () => {
     return (
         <>
-            <div style={{position: "relative"}}>
-                <motion.div
-                    className="title-text-bars"
-                    initial={{width: 0, opacity: 1}}
-                    whileInView={{x: [0, 230], opacity: 0}} // Animate "//" from left to right
-                    exit={{opacity: 0}}
-                    transition={{
-                        x: {duration: 0.65, ease: "easeInOut"},
-                        opacity: {delay: 0.60} // Delay the fade out of "//" to allow the title text to fade in
-                    }}
-                >
-                    <span id="inner">/</span>/<span>/</span>
-                </motion.div>
-                <motion.h2
-                    className="title-text"
-                    initial={{opacity: 0}}
-                    whileInView={{opacity: 1}} // Fade in the title text
-                    exit={{opacity: 1}}
-                    transition={{duration: 0.50, delay: 0.45, ease: "easeInOut"}}
-                >
-                    <span>Exp</span>erience
-                </motion.h2>
-            </div>
+            <SectionTitle raw="Experience">
+                <span>Exp</span>erience
+            </SectionTitle>
 
             <div className="app__exp-years">
                 <p className="p-text">🚧 work in progress 🚧</p>

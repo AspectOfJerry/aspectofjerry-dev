@@ -8,11 +8,11 @@ const NotFound = ({toggleTheme, themes, theme}) => {
 
     useEffect(() => {
         // change title when component mounts
-        document.title = "jerrydev • 404";
+        document.title = "404 • jerrydev";
 
         // reset the title when component unmounts
         return () => {
-            document.title = "jerrydev • Jerry";
+            document.title = "Jerry";
         };
     }, []);
 
@@ -41,15 +41,20 @@ const NotFound = ({toggleTheme, themes, theme}) => {
                             animate={{opacity: 1}}
                             exit={{opacity: 0}}
                             transition={{duration: 0.50, ease: "easeInOut"}}
-                            className="fade-overlay"
+                            className="nf__fade-overlay"
                         >
-                            <p className="notfound__fade-overlay__text">You feel a strange shift in reality as the world around you transforms...</p>
+                            <p className="nf__fade-overlay-text">You feel a strange shift in reality as the world around you transforms...</p>
                         </motion.div>
                     )}
                 </AnimatePresence>
-                <h1 className="title-text">This is probably not what you are looking for!</h1>
-                <p className="notfound__redirect-text text" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me
-                    home &nbsp;&lt;&lt;&lt;</p>
+                <h1 className="nf__nf-text ctext">
+                    Error 404 <br /> <br />
+                    Whoops! It seems you've stumbled into the digital wilderness. <br />
+                    The only way out is to press the mystical button below that says "Take me home". <br />
+                    Rumor has it, it's the secret passage to a realm of bug-free adventures and endless wonders. <br />
+                    Good luck, brave explorer!
+                </h1>
+                <p className="nf__redirect-text cext" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me home &nbsp;&lt;&lt;&lt;</p>
             </div>
         </>
     );

@@ -34,7 +34,7 @@ const ReturnToTop = () => {
 
     return (
         <motion.button
-            className="app__return-to-top"
+            className="app__return-to-top hidden"
             onClick={topFunction()}
             title="Return to top"
             whileInView={{y: [50, 0]}}
