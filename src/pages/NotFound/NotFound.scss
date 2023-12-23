@@ -8,7 +8,6 @@
 .nf__nf-text {
     margin: 3rem;
     font-size: 1.75rem;
-    color: var(--darkest-color);
     text-align: center;
 }
 
@@ -24,7 +23,6 @@
 
 .nf__fade-overlay-text {
     font-size: 1.75rem;
-    color: var(--light-color);
 
     // transition: color 0.50s;
     position: absolute;
@@ -35,9 +33,15 @@
 }
 
 .nf__redirect-text {
-    margin-top: 5rem;
+    margin-top: 3rem;
     font-size: 1.5rem;
     text-align: center;
-
     cursor: pointer;
+    color: var(--darkest-color);
+    line-height: 1.75;
+    transition: transform 1s ease-out, color 0.50s;
+
+    @media screen and (max-width: 480px) {
+        font-size: 1.10rem;
+    }
 }

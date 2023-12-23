@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 
 import "./Navbar.scss";
 import {media} from "../../../constants/index.js";
-import {HiMenuAlt4, HiX} from "react-icons/hi"; // 49:42
+import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {motion} from "framer-motion";
 
-const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
+const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => {
     const [showMenu, setShowMenu] = useState(false);
     const [isShrunk, setShrunk] = useState(false);
     const scrollThreshold = 32;
+
+    const menuRef = useRef(null);
 
     useEffect(() => {
         let isScrolling = false;
@@ -31,6 +33,20 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
 
         return () => {
             window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    // Add this useEffect hook
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setShowMenu(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
         };
     }, []);
 
@@ -80,7 +96,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                 </button>
             </div>
 
-            <div className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
+            <div ref={menuRef} className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
                 <HiMenuAlt4 onClick={() => setShowMenu(true)} />
 
                 <div>
@@ -88,14 +104,18 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => { // 32:35
                     <ul>
                         {links.map((dest, index) => (
                             <li className="app__flex text" key={index}>
-                                <a className="text-underline" href={dest.link}>{dest.name}</a>
+                                <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link}>
+                                    {dest.name}
+                                </a>
                             </li>
                         ))}
                     </ul>
                     <ul className="app__navbar-ext-links">
                         {extLinks.map((dest, index) => (
                             <li className="app__flex text" key={index}>
-                                <a className="text-underline" href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
+                                <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link} target="_blank" rel="noreferrer">
+                                    {dest.name}
+                                </a>
                             </li>
                         ))}
                     </ul>

@@ -1,16 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import "./NotFound.scss";
 import {Navbar} from "../components/index.js";
 
 const NotFound = ({toggleTheme, themes, theme}) => {
     const [fadeOut, setFadeOut] = useState(false);
+    const [buttonPos, setButtonPos] = useState({x: 0, y: 0});
 
     useEffect(() => {
-        // change title when component mounts
         document.title = "404 • jerrydev";
-
-        // reset the title when component unmounts
         return () => {
             document.title = "Jerry";
         };
@@ -20,7 +18,34 @@ const NotFound = ({toggleTheme, themes, theme}) => {
         setFadeOut(true);
         setTimeout(() => {
             window.location.href = "/";
-        }, 2350); // delay before redirecting
+        }, 2350);
+    };
+
+    const buttonRef = useRef(null);
+
+    const handleMouseMove = (e) => {
+        // Disable on mobile devices
+        if (window.innerWidth < 768) {
+            return;
+        }
+
+        const buttonRect = buttonRef.current.getBoundingClientRect();
+        const x = e.clientX - buttonRect.left - buttonRect.width / 2;
+        const y = e.clientY - buttonRect.top - buttonRect.height / 2;
+        const distance = Math.hypot(x, y);
+        const threshold = 150;
+
+        if (distance < threshold) {
+            const angle = Math.atan2(y, x);
+            const moveFactor = 5;
+            const moveDistance = (threshold - distance) * moveFactor;
+            setButtonPos({
+                x: -Math.cos(angle) * moveDistance,
+                y: -Math.sin(angle) * moveDistance
+            });
+        } else {
+            setButtonPos({x: 0, y: 0});
+        }
     };
 
     return (
@@ -32,8 +57,7 @@ const NotFound = ({toggleTheme, themes, theme}) => {
                 links={[{name: "Take me home", link: "/"}]}
                 extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
             />
-
-            <div id="NotFound" className="notfound">
+            <div id="NotFound" className="notfound" onMouseMove={handleMouseMove}>
                 <AnimatePresence>
                     {fadeOut && (
                         <motion.div
@@ -48,13 +72,22 @@ const NotFound = ({toggleTheme, themes, theme}) => {
                     )}
                 </AnimatePresence>
                 <h1 className="nf__nf-text ctext">
-                    Error 404 <br /> <br />
+                    oh no... Error 404 <br /> <br />
                     Whoops! It seems you've stumbled into the digital wilderness. <br />
                     The only way out is to press the mystical button below that says "Take me home". <br />
                     Rumor has it, it's the secret passage to a realm of bug-free adventures and endless wonders. <br />
                     Good luck, brave explorer!
                 </h1>
-                <p className="nf__redirect-text cext" onClick={handleRedirect}>&gt;&gt;&gt;&nbsp; Take me home &nbsp;&lt;&lt;&lt;</p>
+                <p
+                    className="nf__redirect-text"
+                    onClick={handleRedirect}
+                    ref={buttonRef}
+                    style={{
+                        transform: `translate(${buttonPos.x}px, ${buttonPos.y}px)`
+                    }}
+                >
+                    &gt;&nbsp;Take me home&nbsp;&lt;
+                </p>
             </div>
         </>
     );
