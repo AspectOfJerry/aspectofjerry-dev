@@ -12,7 +12,6 @@ import SectionTitle from "../../../components/SectionTitle";
 const tech_stack = [
     // {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
     {name: "CSS", color: "#a6c1ff", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "Cloudflare", color: "#ffcea6", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
     {name: "DiscordJS", color: "#a6adff", iconUrl: media.djs, url: "https://discord.js.org/#/"},
     {name: "Git", color: "#ffaca6", iconUrl: media.git, url: "https://git-scm.com/"},
     {name: "HTML", color: "#ffc1a6", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
@@ -30,11 +29,13 @@ const tech_stack = [
 ];
 
 const dev_tools = [
-    {name: "Microsoft Azure", color: "#a6d8ff", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
+    {name: "Azure", color: "#a6d8ff", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
+    {name: "Cloudflare", color: "#ffcea6", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
+    {name: "DigitalOcean", color: "#a6d2ff", iconUrl: media.digitalocean, url: "https://www.digitalocean.com/"},
     {name: "GitHub", color: "#a6d2ff", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "IntelliJ IDEA", color: "#ffa6b9", iconUrl: media.intellij_idea, url: "https://www.jetbrains.com/idea/"},
     {name: "PyCharm", color: "#a6ffdb", iconUrl: media.pycharm, url: "https://www.jetbrains.com/pycharm/"},
-    {name: "Visual Studio Code", color: "#a6dbff", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
+    {name: "VS Code", color: "#a6dbff", iconUrl: media.vscode, url: "https://code.visualstudio.com/"},
     {name: "WebStorm", color: "#a6fbff", iconUrl: media.webstorm, url: "https://www.jetbrains.com/webstorm/"}
 ];
 
@@ -50,6 +51,9 @@ const Skills = ({theme}) => {
 
             <h3 className="subtitle-text" style={{marginTop: "1.5rem"}}>Tech stack</h3>
             <div className="app__skills-container">
+                <p>
+                    🚧 work in progress 🚧
+                </p>
                 <motion.div className="app__skills-list">
                     {tech_stack.map((skill) => {
                         return (
@@ -71,7 +75,7 @@ const Skills = ({theme}) => {
 
             </div>
             <h3 className="subtitle-text" style={{marginTop: "1rem"}}>Development tools</h3>
-            <motion.div className="app__skills-container">
+            <div className="app__skills-container">
                 <div>
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
@@ -97,7 +101,7 @@ const Skills = ({theme}) => {
                         )
                     })}
                 </div>
-            </motion.div>
+            </div>
         </>
     );
 };

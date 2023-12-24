@@ -95,7 +95,7 @@
 }
 
 .app__navbar-nav-links {
-    flex: 1;
+    flex: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -109,7 +109,7 @@
 }
 
 .app__navbar-ext-links {
-    flex: 1;
+    flex: auto;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;

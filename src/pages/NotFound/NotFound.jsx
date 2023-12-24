@@ -1,9 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import "./NotFound.scss";
-import {Navbar} from "../components/index.js";
 
-const NotFound = ({toggleTheme, themes, theme}) => {
+const NotFound = () => {
     const [fadeOut, setFadeOut] = useState(false);
     const [buttonPos, setButtonPos] = useState({x: 0, y: 0});
 
@@ -50,14 +49,7 @@ const NotFound = ({toggleTheme, themes, theme}) => {
 
     return (
         <>
-            <Navbar
-                toggleTheme={toggleTheme}
-                themes={themes}
-                theme={theme}
-                links={[{name: "Take me home", link: "/"}]}
-                extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
-            />
-            <div id="NotFound" className="notfound" onMouseMove={handleMouseMove}>
+            <div id="NotFound" className="nf" onMouseMove={handleMouseMove}>
                 <AnimatePresence>
                     {fadeOut && (
                         <motion.div

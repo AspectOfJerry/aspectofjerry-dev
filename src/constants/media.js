@@ -8,6 +8,7 @@ import bap_dolphin from "../assets/bap_dolphin.jpg";
 import cpp from "../assets/tech_stack/cpp.png";
 import cs from "../assets/tech_stack/cs.png";
 import css from "../assets/tech_stack/css.png";
+import digitalocean from "../assets/dev_tools/digitalocean.png";
 import djs from "../assets/tech_stack/djs.png";
 import favicon from "../assets/favicon.png";
 import git from "../assets/tech_stack/git.svg";
@@ -29,14 +30,10 @@ import sass from "../assets/tech_stack/sass.png";
 import tensorflow_logo from "../assets/tech_stack/tensorflow_logo.svg";
 import wpilib from "../assets/tech_stack/wpilib.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
-// https://app.spline.design/file/94c1b503-8987-4620-8b4b-daa6a65e3f99
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 import typescript from "../assets/tech_stack/typescript.png";
 import unity from "../assets/unity.svg";
-
-// cloudflare
-import cf_horz from "../assets/cloudflare/cf_horz.svg";
-import cf_logo from "../assets/cloudflare/cf_logo.svg";
+import cf_logo from "../assets/dev_tools/cf_logo.svg";
 
 // discord
 import discord_full_blurple from "../assets/discord/discord_full_blurple.svg";
@@ -95,6 +92,7 @@ export default {
     cpp,
     cs,
     css,
+    digitalocean,
     djs,
     favicon,
     git,
@@ -119,8 +117,6 @@ export default {
     typescript,
     wpilib,
     unity,
-    // cloudflare
-    cf_horz,
     cf_logo,
     // discord
     discord_full_blurple,

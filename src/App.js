@@ -19,6 +19,9 @@ import {
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
 
+// pages/Elements
+import {Elements} from "./pages/Elements/index.js";
+
 import "./App.scss";
 
 
@@ -139,11 +142,12 @@ const App = () => {
                                             {name: "Socials", link: "#socials"},
                                             {name: "Projects", link: "#projects"}]}
                                         extLinks={[
-                                            {name: "Elements (soon)", link: "/elements"},
+                                            {name: "Periodic Table (WIP)", link: "/elements"},
                                             {name: "DataBoard (soon)", link: "/databoard"},
                                             // {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
                                             // {name: "Status page", link: "https://status.jerrydev.net"}
                                         ]}
+                                        lockShrink={false}
                                 />
                                 <AppReturnToTop />
                                 <AppHome theme={theme} />
@@ -157,15 +161,44 @@ const App = () => {
                     }
                 />
 
+                <Route path="/elements" element={
+                    <>
+                        <Navbar
+                            toggleTheme={toggleTheme}
+                            themes={themes}
+                            theme={theme}
+                            links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
+                            extLinks={[
+                                {name: "🔗 Periodic table", link: "https://en.wikipedia.org/wiki/Periodic_table"},
+                                {name: "🔗 Periods", link: "https://en.wikipedia.org/wiki/Period_(periodic_table)"},
+                                {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
+                                {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
+                            ]}
+                            lockShrink={true}
+                        />
+                        <Elements themeType={theme.theme} />
+                    </>
+                } />
+
                 <Route path="/ping" element={<p>pong</p>} />
 
                 <Route
                     path="*"
                     element={
-                        <div className={theme.className}>
-                            <title>jerrydev • 404</title>
-                            <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
-                        </div>
+                        <>
+                            <Navbar
+                                toggleTheme={toggleTheme}
+                                themes={themes}
+                                theme={theme}
+                                links={[{name: "Take me home", link: "/"}]}
+                                extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
+                                lockShrink={false}
+                            />
+                            <div className={theme.className}>
+                                <title>jerrydev • 404</title>
+                                <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
+                            </div>
+                        </>
                     }
                 />
             </Routes>

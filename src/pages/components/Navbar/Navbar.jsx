@@ -5,14 +5,15 @@ import {media} from "../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {motion} from "framer-motion";
 
-const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => {
+const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
     const [showMenu, setShowMenu] = useState(false);
-    const [isShrunk, setShrunk] = useState(false);
+    const [isShrunk, setShrunk] = useState(!!lockShrink);
     const scrollThreshold = 32;
 
     const menuRef = useRef(null);
 
     useEffect(() => {
+        if (lockShrink) return;
         let isScrolling = false;
 
         const handleScroll = () => {
@@ -34,7 +35,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks}) => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [lockShrink]);
 
     // Add this useEffect hook
     useEffect(() => {

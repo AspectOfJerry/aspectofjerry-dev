@@ -1,0 +1,260 @@
+.e__desc-container {
+    z-index: 5;
+    position: absolute;
+    top: 22%;
+    left: 12%;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: var(--darkest-color);
+
+        @media screen and (min-width: 480px) {
+            font-size: calc((99vw / 100) * 2.4); // Adjust as needed
+        }
+    }
+
+    .e__desc-props-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .e__desc-props-container > div {
+        flex: 1 1 auto;
+        margin: 0 1.40rem;
+    }
+
+    p {
+        font-size: 1.45rem;
+
+        span {
+            color: var(--darkest-color);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        @media screen and (min-width: 480px) {
+            font-size: calc((99vw / 100) * 1.35); // Adjust as needed
+        }
+    }
+}
+
+.e__table-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 10rem;
+    overflow: auto;
+
+    p {
+        width: 100%;
+        height: 100%;
+        font-family: "Nunito", "sans-serif";
+        font-size: 1.5rem;
+        text-align: center;
+        vertical-align: middle;
+        line-height: calc((99vw / 32) - 4px); // same as width and height
+    }
+}
+
+.e__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.e__element {
+    width: calc((99vw / 32) - 4px); // Divide by number of columns
+    height: calc((99vw / 32) - 4px);
+    border: none var(--secondary-color);
+    margin: 2px;
+    border-radius: 10%;
+    transition: all 0.65s;
+
+    &:hover {
+        cursor: pointer;
+        scale: 130%;
+        border: 1px solid var(--dark-color);
+        box-shadow: 0 0 20px var(--shadow-color);
+        transition: all 0.10s ease-out;
+    }
+}
+
+.e__type-empty {
+    opacity: 0;
+
+    width: calc((99vw / 32) - 4px); // Divide by number of columns
+    height: calc((99vw / 32) - 5px);
+    border: none var(--secondary-color);
+    margin: 2px;
+    border-radius: 10%;
+    transition: all 0.65s;
+}
+
+.e__type-alkali-metal {
+    background: #d8f8ff;
+
+    p {
+        color: #00758c;
+    }
+}
+
+.e__type-dark-alkali-metal {
+    background: #00758c;
+
+    p {
+        color: #d8f8ff;
+    }
+}
+
+.e__type-alkaline-earth-metal {
+    background: #ffe7e7;
+
+    p {
+        color: #d60024;
+    }
+}
+
+.e__type-dark-alkaline-earth-metal {
+    background: #d60024;
+
+    p {
+        color: #ffe7e7;
+    }
+}
+
+.e__type-transition-metal {
+    background: #f3e8fd;
+
+    p {
+        color: #6232ec;
+    }
+}
+
+.e__type-dark-transition-metal {
+    background: #6232ec;
+
+    p {
+        color: #f3e8fd;
+    }
+}
+
+
+.e__type-post-transition-metal {
+    background: #d6f9e8;
+
+    p {
+        color: #002c00;
+    }
+}
+
+.e__type-dark-post-transition-metal {
+    background: #002c00;
+
+    p {
+        color: #d6f9e8;
+    }
+}
+
+
+.e__type-metalloid {
+    background: #fef7e0;
+
+    p {
+        color: #945700;
+    }
+}
+
+.e__type-dark-metalloid {
+    background: #945700;
+
+    p {
+        color: #fef7e0;
+    }
+}
+
+.e__type-reactive-nonmetal {
+    background: #e2eeff;
+
+    p {
+        color: #0060f0;
+    }
+}
+
+.e__type-dark-reactive-nonmetal {
+    background: #0060f0;
+
+    p {
+        color: #e2eeff;
+    }
+}
+
+.e__type-noble-gas {
+    background: #ffe7eb;
+
+    p {
+        color: #cd1d5e;
+    }
+}
+
+.e__type-dark-noble-gas {
+    background: #cd1d5e;
+
+    p {
+        color: #ffe7eb;
+    }
+}
+
+
+.e__type-lanthanide {
+    background: #dff3ff;
+
+    p {
+        color: #003355;
+    }
+}
+
+.e__type-dark-lanthanide {
+    background: #003355;
+
+    p {
+        color: #dff3ff;
+    }
+}
+
+
+.e__type-actinide {
+    background: #ffe6d4;
+
+    p {
+        color: #c73200;
+    }
+}
+
+.e__type-dark-actinide {
+    background: #c73200;
+
+    p {
+        color: #ffe6d4;
+    }
+}
+
+.e__type-unknown {
+    background: #e7e7ea;
+
+    p {
+        color: #3f374f;
+    }
+}
+
+.e__type-dark-unknown {
+    background: #3f374f;
+
+    p {
+        color: #e7e7ea;
+    }
+}
