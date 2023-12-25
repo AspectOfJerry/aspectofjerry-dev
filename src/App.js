@@ -145,6 +145,7 @@ const App = () => {
                                             {name: "Socials", link: "#socials"},
                                             {name: "Projects", link: "#projects"}]}
                                         extLinks={[
+                                            {name: "Countdown 🎉", link: "/countdown"},
                                             {name: "Periodic Table (WIP)", link: "/elements"},
                                             {name: "DataBoard (soon)", link: "/databoard"},
                                             // {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
@@ -170,8 +171,12 @@ const App = () => {
                             toggleTheme={toggleTheme}
                             themes={themes}
                             theme={theme}
-                            links={[]}
-                            extLinks={[]}
+                            links={[
+                                {name: "🎄", link: "https://jerrydev.net/countdown"},
+                                {name: "🎁", link: "https://jerrydev.net/countdown"},
+                                {name: "❄️", link: "https://jerrydev.net/countdown"}
+                            ]}
+                            extLinks={[{name: "Merry Christmas", link: "https://jerrydev.net/countdown"}]}
                             lockShrink={true}
                         />
                         <Countdown themeType={theme.theme} />
