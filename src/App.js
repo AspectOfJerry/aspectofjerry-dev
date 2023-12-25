@@ -26,6 +26,7 @@ import "./App.scss";
 
 // pages/Countdown
 import {Countdown} from "./pages/Countdown/index.js";
+import {Unix} from "./pages/Unix";
 
 
 const themes = [
@@ -171,17 +172,34 @@ const App = () => {
                             toggleTheme={toggleTheme}
                             themes={themes}
                             theme={theme}
-                            links={[
-                                {name: "🎄", link: "https://jerrydev.net/countdown"},
-                                {name: "🎁", link: "https://jerrydev.net/countdown"},
-                                {name: "❄️", link: "https://jerrydev.net/countdown"}
-                            ]}
-                            extLinks={[{name: "Merry Christmas", link: "https://jerrydev.net/countdown"}]}
+                            links={[]}
+                            extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
                             lockShrink={true}
                         />
                         <Countdown themeType={theme.theme} />
                     </>
                 } />
+
+                <Route path="/unix" element={
+                    <>
+                        <Navbar
+                            toggleTheme={toggleTheme}
+                            themes={themes}
+
+                            theme={theme}
+                            links={[]}
+                            extLinks={[
+                                {name: "🔗 Unix", link: "https://en.wikipedia.org/wiki/Unix"},
+                                {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"},
+                                {name: "🔗 Unix shell", link: "https://en.wikipedia.org/wiki/Unix_shell"},
+                                {name: "🔗 Unix filesystem", link: "https://en.wikipedia.org/wiki/Unix_filesystem"},
+                            ]}
+                            lockShrink={true}
+                        />
+                        <Unix />
+                    </>
+                } />
+
 
                 <Route path="/elements" element={
                     <>
