@@ -24,6 +24,9 @@ import {Elements} from "./pages/Elements/index.js";
 
 import "./App.scss";
 
+// pages/Countdown
+import {Countdown} from "./pages/Countdown/index.js";
+
 
 const themes = [
     {
@@ -160,6 +163,20 @@ const App = () => {
                             </div>
                     }
                 />
+
+                <Route path="/countdown" element={
+                    <>
+                        <Navbar
+                            toggleTheme={toggleTheme}
+                            themes={themes}
+                            theme={theme}
+                            links={[]}
+                            extLinks={[]}
+                            lockShrink={true}
+                        />
+                        <Countdown themeType={theme.theme} />
+                    </>
+                } />
 
                 <Route path="/elements" element={
                     <>
