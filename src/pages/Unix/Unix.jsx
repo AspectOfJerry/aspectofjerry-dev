@@ -14,7 +14,7 @@ const Unix = () => {
 
     return (
         <div className="u__container">
-            <h2 className="ctext">Unix Timestamp Clock</h2>
+            <h2 className="ctext">🕰️ Unix Timestamp 🕰️</h2>
             <p className="ctext">{timestamp}</p>
         </div>
     );

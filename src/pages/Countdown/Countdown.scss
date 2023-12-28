@@ -7,13 +7,22 @@
     font-size: calc(10px + 2vmin);
 
     h2 {
-        font-size: 3rem;
-        scale: 150%;
+        font-size: 4vw;
+
+        @media screen and (max-width: 480px) {
+            font-size: 7vw;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
     }
 
     p {
-        margin-top: 3em;
-        scale: 150%;
-        font-size: 2rem;
+        margin-top: 3rem;
+        font-size: 2.75vw;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 1rem;
+            font-size: 8vw;
+        }
     }
 }

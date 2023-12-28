@@ -35,7 +35,7 @@ const ChristmasCountdown = () => {
 
     return (
         <div className="c__container">
-            <h2 className="ctext">✨New year countdown!📅</h2>
+            <h2 className="ctext"> ✨New year countdown! 📅</h2>
             <p className="ctext">{countdown}</p>
             <p className="ctext">{year}</p>
             {celebrate && <Confetti numberOfPieces={250} />}
