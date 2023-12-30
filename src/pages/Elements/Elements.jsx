@@ -12,7 +12,7 @@ const Elements = (themeType) => {
         type: "n/a",
         group: "1-18",
         period: "1-7",
-        block: "s/p/d/f",
+        block: "spdf",
         protons: 0,
         neutrons: 0,
         electrons: 0

@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright app__footer_bg">
-                <p>Copyright © 2022 AspectOfJerry, Jerry</p>
+                <p>Copyright © 2022 Jerry</p>
             </div>
         </>
     );
