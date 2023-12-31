@@ -15,7 +15,7 @@ const ChristmasCountdown = () => {
         const timer = setInterval(() => {
             const target = new Date(new Date().getFullYear() + 1, 0, 1);
             const now = new Date();
-            const delta = 0;
+            const delta = target - now;
 
             if (delta <= 0) {
                 setCelebrate(true);
