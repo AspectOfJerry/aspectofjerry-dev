@@ -8,10 +8,14 @@ const ChristmasCountdown = () => {
     const [celebrate, setCelebrate] = useState(false);
 
     useEffect(() => {
+        document.title = "• " + countdown;
+    }, [countdown]);
+
+    useEffect(() => {
         const timer = setInterval(() => {
             const target = new Date(new Date().getFullYear() + 1, 0, 1);
             const now = new Date();
-            const delta = target - now;
+            const delta = 0;
 
             if (delta <= 0) {
                 setCelebrate(true);
@@ -35,7 +39,7 @@ const ChristmasCountdown = () => {
 
     return (
         <div className="c__container">
-            <h2 className="ctext"> ✨New year countdown! 📅</h2>
+            <h2 className="ctext">✨ New year countdown! 📅</h2>
             <p className="ctext">{countdown}</p>
             <p className="ctext">{year}</p>
             {celebrate && <Confetti numberOfPieces={250} />}

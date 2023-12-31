@@ -32,7 +32,7 @@ const texts = [
 const Header = ({theme}) => {
     useEffect(() => {
         // change title when component mounts
-        document.title = "Jerry";
+        document.title = "jerrydev • Jerry";
     }, []);
 
     const [headerText, setHeaderText] = useState("");

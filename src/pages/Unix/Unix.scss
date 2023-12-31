@@ -4,22 +4,22 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-size: calc(10px + 2vmin);
 
     h2 {
-        font-size: 5rem;
+        font-size: 5vw;
 
         @media screen and (max-width: 480px) {
-            font-size: 2.20rem;
+            font-weight: 600;
+            font-size: 8vw;
         }
     }
 
     p {
-        margin-top: 1rem;
-        font-size: 3.5rem;
+        margin-top: 1.5rem;
+        font-size: 3.5vw;
 
         @media screen and (max-width: 480px) {
-            font-size: 2.75rem;
+            font-size: 8.5vw;
         }
     }
 }

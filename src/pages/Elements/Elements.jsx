@@ -3,6 +3,10 @@ import {motion} from "framer-motion";
 import "./Elements.scss";
 
 const Elements = (themeType) => {
+    useEffect(() => {
+        document.title = "• Periodic Table";
+    }, []);
+
     const [periodicTableData, setPeriodicTableData] = useState([]);
     const [currentElement, setCurrentElement] = useState({
         name: "Periodic Table!",

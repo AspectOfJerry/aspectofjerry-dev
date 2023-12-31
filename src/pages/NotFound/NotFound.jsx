@@ -7,10 +7,7 @@ const NotFound = () => {
     const [buttonPos, setButtonPos] = useState({x: 0, y: 0});
 
     useEffect(() => {
-        document.title = "404 • jerrydev";
-        return () => {
-            document.title = "Jerry";
-        };
+        document.title = "jerrydev • 404";
     }, []);
 
     const handleRedirect = () => {
