@@ -13,18 +13,18 @@ const ChristmasCountdown = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            const target = new Date(new Date().getFullYear() + 1, 0, 1);
             const now = new Date();
+            const target = new Date(2025, 0, 1); // Update this every year
             const delta = target - now;
 
             if (delta <= 0) {
                 setCelebrate(true);
-                setYear("2️⃣0️⃣2️⃣4️⃣");
+                setYear("2️⃣0️⃣2️⃣5️⃣"); // Update this every year
                 setCountdown("🎉 Happy New Year! 🎉");
                 clearInterval(timer);
             } else {
                 setCelebrate(false);
-                setYear("2️⃣0️⃣2️⃣3️⃣");
+                setYear("2️⃣0️⃣2️⃣4️⃣"); // Update this every year
                 const days = Math.floor(delta / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((delta % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((delta % (1000 * 60 * 60)) / (1000 * 60));
