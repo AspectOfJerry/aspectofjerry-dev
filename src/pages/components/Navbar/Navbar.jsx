@@ -59,9 +59,9 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
             animate={{opacity: [0, 1], y: [-96, 0]}}
             transition={{delay: 0.25}}
         >
-            <div className="app__navbar-logo">
+            <div className="app__navbar-icon">
                 <a href="/">
-                    <img src={media.favicon} alt="AspectOfJerry Minecraft Head" height="16" />
+                    <img src={media.favicon} alt="jerrydev icon" />
                 </a>
             </div>
             <motion.ul

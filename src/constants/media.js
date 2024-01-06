@@ -11,10 +11,12 @@ import css from "../assets/tech_stack/css.png";
 import digitalocean from "../assets/dev_tools/digitalocean.png";
 import djs from "../assets/tech_stack/djs.png";
 import favicon from "../assets/favicon.png";
+import favicon_old from "../assets/favicon_old.png";
 import git from "../assets/tech_stack/git.svg";
 import html from "../assets/tech_stack/html.png";
 import java from "../assets/tech_stack/java.svg";
 import javascript from "../assets/tech_stack/javascript.png";
+import jerrybot from "../assets/jerrybot.png";
 import kotlin from "../assets/tech_stack/kotlin.svg";
 import minecraft from "../assets/minecraft_icon.jpg";
 import mongodb from "../assets/mongodb_leaf.svg";
@@ -32,7 +34,6 @@ import wpilib from "../assets/tech_stack/wpilib.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
 import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
 import typescript from "../assets/tech_stack/typescript.png";
-import unity from "../assets/unity.svg";
 import cf_logo from "../assets/dev_tools/cf_logo.svg";
 
 // discord
@@ -95,10 +96,12 @@ export default {
     digitalocean,
     djs,
     favicon,
+    favicon_old,
     git,
     html,
     java,
     javascript,
+    jerrybot,
     kotlin,
     minecraft,
     mongodb,
@@ -116,7 +119,6 @@ export default {
     twitch_glitch_purple,
     typescript,
     wpilib,
-    unity,
     cf_logo,
     // discord
     discord_full_blurple,

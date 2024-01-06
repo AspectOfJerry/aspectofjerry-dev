@@ -37,7 +37,7 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 
-    .app__navbar-logo {
+    .app__navbar-icon {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -49,7 +49,7 @@
     }
 }
 
-.app__navbar-logo {
+.app__navbar-icon {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -57,6 +57,7 @@
     img {
         width: 46px;
         height: 46px;
+        border-radius: 25%;
 
         transition: all 0.50s;
 

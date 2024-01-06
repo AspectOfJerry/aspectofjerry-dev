@@ -41,8 +41,8 @@ const projectsData = [
         name: "JerryBot",
         category: "JavaScript",
         description: "JerryBot#9090 is a Discord bot built on discord.js v13.",
-        homepage: "",
-        imageUrl: ""
+        homepage: "https://bot.jerrydev.net/",
+        imageUrl: media.jerrybot
     }
 ];
 
@@ -95,43 +95,13 @@ const Projects = () => {
                     <motion.div
                         className="app__projects-item app__flex"
                         key={index}
-                        whileHover={{scale: [1, 1.10]}}
+                        whileHover={{scale: [1, 1.05]}}
                     >
-                        <div className="app__projects-img app__flex">
-                            <img src={project.imageUrl} alt={`${project.name} img`} />
-                            {/* <motion.div
-                                whileHover={{opacity: [0, 1]}}
-                                transition={{duration: 0.25, ease: "easeInOut", staggerChildren: 0.5}}
-                                className="app__projects-hover app__flex"
-                            >
-                                <a href={project.projectLink} target="_blank" rel="noreferrer">
-                                    <motion.div
-                                        whileInView={{scale: [0, 1]}}
-                                        whileHover={{scale: [1, 0.90]}}
-                                        transition={{duration: 0.25}}
-                                        className="app__flex"
-                                    >
-                                        <AiFillEye />
-                                    </motion.div>
-                                </a>
-                                <a href={project.codeLink} target="_blank" rel="noreferrer">
-                                    <motion.div
-                                        whileInView={{scale: [0, 1]}}
-                                        whileHover={{scale: [1, 0.90]}}
-                                        transition={{duration: 0.25}}
-                                        className="app__flex"
-                                    >
-                                        <AiFillGithub />
-                                    </motion.div>
-                                </a>
-                            </motion.div> */}
-                        </div>
+                        <img className="app__projects-img" src={project.imageUrl} alt={`${project.name} img`} />
                         <div className="app__projects-content app__flex">
+                            <p className="app__projects-category p-text">{project.category}</p>
                             <h4 className="bold-text">{project.name}</h4>
-                            <p className="p-text" style={{marginTop: 10}}>{project.description}</p>
-                            <div className="app__projects-tag app__flex">
-                                <p className="p-text">{project.category}</p>
-                            </div>
+                            <p className="p-text">{project.description}</p>
                         </div>
                     </motion.div>
                 ))}
