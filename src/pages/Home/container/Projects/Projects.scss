@@ -37,7 +37,7 @@
 .app__projects-portfolio {
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-around;
 
     .app__projects-item {

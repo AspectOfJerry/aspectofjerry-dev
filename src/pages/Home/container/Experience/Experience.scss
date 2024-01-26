@@ -26,3 +26,25 @@
     @media screen and (max-width: 480px) {
     }
 }
+
+.app__exp-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 1rem;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    h3 {
+        margin: 0.5rem 0;
+        color: var(--alt-color);
+    }
+
+    p {
+        margin: 0;
+        color: var(--light-color);
+    }
+}

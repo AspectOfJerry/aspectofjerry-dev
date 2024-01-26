@@ -16,13 +16,15 @@ const socials = [
     // {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
     {name: "Riot ID", color: "#ffa6b5", description: "jerry#dev", iconUrl: media.riot_games, url: "https://playvalorant.com/"},
     {name: "Snapchat", color: "#fffea6", description: "aspectofjerry", iconUrl: media.snapcode_aspectofjerry, url: "https://t.snapchat.com/ZyCoCeUP"},
-    {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
-    {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
+    {name: "Steam", color: "#a6eaff", description: "jerryberrydev", iconUrl: media.steam}
+    // {name: "Twitch", color: "#c9a6ff", description: "aspectofjerrylive", iconUrl: media.twitch_glitch_purple, url: "https://www.twitch.tv/aspectofjerrylive"},
+    // {name: "YouTube", color: "#ffaaa6", description: "@aspectofjerry", iconUrl: media.youtube_icon, url: "https://www.youtube.com/@aspectofjerry"}
 ];
 
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
     {title: "Public Email", description: "📧 jerry@jerrydev.net", imageUrl: ""},
+    {title: "", description: "👋 Most of the time, you'll find me on Instagram and Discord.", imageUrl: ""},
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
 

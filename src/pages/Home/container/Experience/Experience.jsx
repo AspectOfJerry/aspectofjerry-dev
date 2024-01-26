@@ -87,11 +87,20 @@ const Experience = () => {
                             animate={{opacity: 1}}
                             transition={{duration: 0.5}}
                         >
-                            <h2 className="app__exp-year-text"><span>\\</span> {year.year}</h2>
+                            <h2 className="app__exp-year-text"><span>\</span>\ {year.year}</h2>
 
                             <div className="app__exp-year-experiences">
-                                {/*{year.experiences.map((experience) => {*/}
-                                {/*})}*/}
+                                {year.experiences.map((experience, index) => {
+                                    return (
+                                        <motion.div key={index} className="app__exp-experience">
+                                            <a href={experience.url} target="_blank" rel="noopener noreferrer">
+                                                <img src={experience.iconUrl} alt={experience.title} />
+                                            </a>
+                                            <h3 className="">{experience.title}</h3>
+                                            <p className="p-text">{experience.description}</p>
+                                        </motion.div>
+                                    )
+                                })}
                             </div>
                         </motion.div>
                     )

@@ -18,12 +18,12 @@ import java from "../assets/tech_stack/java.svg";
 import javascript from "../assets/tech_stack/javascript.png";
 import jerrybot from "../assets/jerrybot.png";
 import kotlin from "../assets/tech_stack/kotlin.svg";
-import minecraft from "../assets/minecraft_icon.jpg";
+import minecraft from "../assets/socials/minecraft_icon.jpg";
 import mongodb from "../assets/mongodb_leaf.svg";
 import nodejs from "../assets/tech_stack/nodejs.svg";
 import nodejs_js from "../assets/tech_stack/nodejs_js.svg";
-import riot_games from "../assets/riot_games.png";
-import snapcode_aspectofjerry from "../assets/snapcode_aspectofjerry.jpg";
+import riot_games from "../assets/socials/riot_games.png";
+import snapcode_aspectofjerry from "../assets/socials/snapcode_aspectofjerry.jpg";
 import placeholder from "../assets/placeholder.png";
 import python from "../assets/tech_stack/python.png";
 import pytorch_flame from "../assets/tech_stack/pytorch_flame.png";
@@ -32,13 +32,11 @@ import sass from "../assets/tech_stack/sass.png";
 import tensorflow_logo from "../assets/tech_stack/tensorflow_logo.svg";
 import wpilib from "../assets/tech_stack/wpilib.png";
 import t4k_logo_reduced from "../assets/t4k_logo_reduced.png";
-import twitch_glitch_purple from "../assets/twitch_glitch_purple.svg";
+import t4k_special_edition from "../assets/t4k_special_edition.png";
+import twitch_glitch_purple from "../assets/socials/twitch_glitch_purple.svg";
 import typescript from "../assets/tech_stack/typescript.png";
 import cf_logo from "../assets/dev_tools/cf_logo.svg";
 
-// discord
-import discord_full_blurple from "../assets/discord/discord_full_blurple.svg";
-import clyde_icon_blurple from "../assets/discord/clyde_icon_blurple.svg";
 
 // first
 import frc_icon_horz from "../assets/first/frc/frc_icon_horz.png";
@@ -56,31 +54,31 @@ import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
 
 import freight_frenzy_vert from "../assets/first/ftc/freight_frenzy/freight_frenzy_vert.jpg";
 
-// github
-import github from "../assets/github/github.svg";
-import github_white from "../assets/github/github_white.svg";
-
+// socials
+import steam from "../assets/socials/steam_icon.svg";
 // instagram
-import instagram_black from "../assets/instagram/instagram_black.svg";
-import instagram_gradient from "../assets/instagram/instagram_gradient.png";
-// import instagram_gradient from "../assets/instagram/instagram_gradient.svg"; // the svg file breaks the code. Use png for now
-import instagram_white from "../assets/instagram/instagram_white.svg";
-
+import instagram_gradient from "../assets/socials/instagram_gradient.png";
+// import instagram_gradient from "../assets/socials/instagram_gradient.svg"; // the svg file breaks the code. Use png for now
+// discord
+import discord_full_blurple from "../assets/socials/discord_full_blurple.svg";
+import clyde_icon_blurple from "../assets/socials/clyde_icon_blurple.svg";
 // reddit
-import reddit_lockup from "../assets/reddit/reddit_lockup.svg";
-import reddit_mark from "../assets/reddit/reddit_mark.svg";
-
-// ides
-import vscode_alt from "../assets/vscode/vscode_alt.svg";
-import vscode from "../assets/vscode/vscode.svg";
-import intellij_idea from "../assets/dev_tools/jetbrains/intellij_idea.svg";
-import pycharm from "../assets/dev_tools/jetbrains/pycharm.svg";
-import webstorm from "../assets/dev_tools/jetbrains/webstorm.svg"
-
+import reddit_lockup from "../assets/socials/reddit_lockup.svg";
+import reddit_mark from "../assets/socials/reddit_mark.svg";
 // youtube
-import youtube from "../assets/youtube/youtube.png";
-import youtube_icon from "../assets/youtube/youtube_icon.png";
-import youtube_reverse from "../assets/youtube/youtube_reverse.png";
+import youtube from "../assets/socials/youtube.png";
+import youtube_icon from "../assets/socials/youtube_icon.png";
+import youtube_reverse from "../assets/socials/youtube_reverse.png";
+
+// dev_tools
+import vscode_alt from "../assets/dev_tools/vscode_alt.svg";
+import vscode from "../assets/dev_tools/vscode.svg";
+import intellij_idea from "../assets/dev_tools/intellij_idea.svg";
+import pycharm from "../assets/dev_tools/pycharm.svg";
+import webstorm from "../assets/dev_tools/webstorm.svg"
+// github
+import github from "../assets/dev_tools/github.svg";
+import github_white from "../assets/dev_tools/github_white.svg";
 
 
 export default {
@@ -116,13 +114,12 @@ export default {
     sass,
     tensorflow_logo,
     t4k_logo_reduced,
+    t4k_special_edition,
     twitch_glitch_purple,
     typescript,
     wpilib,
     cf_logo,
-    // discord
-    discord_full_blurple,
-    clyde_icon_blurple,
+
     // first
     charged_up_horz,
     charged_up_vert,
@@ -134,22 +131,27 @@ export default {
     ftc_icon_horz,
     ftc_icon_vert,
     freight_frenzy_vert,
-    // github
-    github,
-    github_white,
-    // instagram
-    instagram_black,
-    instagram_gradient,
-    instagram_white,
-    // reddit
-    reddit_lockup,
-    reddit_mark,
-    // ides
+
+    // dev_tools
     vscode_alt,
     vscode,
     intellij_idea,
     pycharm,
     webstorm,
+    // github
+    github,
+    github_white,
+
+    // socials
+    steam,
+    // discord
+    discord_full_blurple,
+    clyde_icon_blurple,
+    // instagram
+    instagram_gradient,
+    // reddit
+    reddit_lockup,
+    reddit_mark,
     // youtube
     youtube,
     youtube_icon,
