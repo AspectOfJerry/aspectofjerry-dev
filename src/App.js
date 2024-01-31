@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
+// Global
 import {Navbar} from "./pages/components/index.js";
 import OpeningAnimation from "./pages/components/OpeningAnimation"
 
@@ -26,6 +27,7 @@ import "./App.scss";
 
 // pages/Countdown
 import {Countdown} from "./pages/Countdown/index.js";
+
 import {Unix} from "./pages/Unix";
 
 
@@ -146,11 +148,8 @@ const App = () => {
                                             {name: "Socials", link: "#socials"},
                                             {name: "Projects", link: "#projects"}]}
                                         extLinks={[
-                                            {name: "Countdown 🎉", link: "/countdown"},
-                                            {name: "Periodic Table (WIP)", link: "/elements"},
-                                            {name: "DataBoard (soon)", link: "/databoard"},
-                                            // {name: "Skyblock mod", link: "https://bap.jerrydev.net"}
-                                            // {name: "Status page", link: "https://status.jerrydev.net"}
+                                            // {name: "Countdown 🎉", link: "/countdown"},
+                                            {name: "Periodic Table (WIP)", link: "/elements"}
                                         ]}
                                         lockShrink={false}
                                 />

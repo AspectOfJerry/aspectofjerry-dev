@@ -4,7 +4,7 @@ import Confetti from "react-confetti";
 
 const ChristmasCountdown = () => {
     const [countdown, setCountdown] = useState("Loading...");
-    const [year, setYear] = useState("2️⃣0️⃣2️⃣3️⃣");
+    const [year, setYear] = useState("2️⃣0️⃣2️⃣4️⃣");
     const [celebrate, setCelebrate] = useState(false);
 
     useEffect(() => {
