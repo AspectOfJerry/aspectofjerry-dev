@@ -24,7 +24,7 @@ const socials = [
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
     {title: "Public Email", description: "📧 jerry@jerrydev.net", imageUrl: ""},
-    {title: "", description: "👋 Most of the time, you'll find me on Instagram and Discord.", imageUrl: ""},
+    {title: "", description: "💭 Most of the time, you'll find me on Instagram and Discord.", imageUrl: ""},
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
 

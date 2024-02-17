@@ -51,8 +51,8 @@ const Skills = ({theme}) => {
 
             <h3 className="subtitle-text" style={{marginTop: "1.5rem"}}>Tech stack</h3>
             <div className="app__skills-container">
-                <p className="text">
-                    🚧 work in progress 🚧
+                <p className="text" style={{width: "13%"}}>
+                    Hello, World!
                 </p>
                 <motion.div className="app__skills-list">
                     {tech_stack.map((skill) => {

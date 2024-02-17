@@ -38,9 +38,10 @@
 }
 
 .app__header-text-big {
-    font-family: "Nunito", "serif";
-    font-size: 10rem;
+    //font-family: "Nunito", "serif";
+    font-family: "Aleo", serif;
     font-weight: 300;
+    font-size: 10rem;
     margin-right: 5px;
     color: var(--darkest-color);
 
@@ -56,8 +57,9 @@
 }
 
 .app__header-small {
-    font-size: 2.1rem;
+    font-family: "Aleo", serif;
     font-weight: 400;
+    font-size: 2.1rem;
     position: relative;
     color: var(--darkest-color);
 

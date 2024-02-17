@@ -38,11 +38,18 @@ const projectsData = [
         imageUrl: media.bap_dolphin
     },
     {
-        name: "JerryBot",
+        name: "JerryBot (decommissioned)",
         category: "JavaScript",
-        description: "JerryBot#9090 is a Discord bot built on discord.js v13.",
+        description: "JerryBot#9090 was a Discord bot built on discord.js v13.",
         homepage: "https://bot.jerrydev.net/",
         imageUrl: media.jerrybot
+    },
+    {
+        name: "EfficientDet with EfficientNet V2 backbone",
+        category: "Python",
+        description: "Swapping the backbone of EfficientDet from EfficientNet B0 to EfficientNet V2 B0.",
+        homepage: "",
+        imageUrl: ""
     }
 ];
 

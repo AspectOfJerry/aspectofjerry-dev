@@ -39,43 +39,9 @@ const About = () => {
                 🔍 But I don't stop at just coding; I'm captivated by machine learning, AI, computer vision, networking, game engines, and the art of ethical
                 hacking.
                 <br /><br />
-                🎮 When I'm not diving into lines of code, you might find me exploring the blocky landscapes of Minecraft or engaging in tactical battles in
-                Valorant.
+                🎮 When I'm not diving into lines of code, you might find delving into the dungeons of Lethal Company, engaging in tactical battles in Valorant, or exploring the
+                blocky landscapes of Minecraft.
             </motion.p>
-
-            {/*<div className="app__profiles">
-                {abouts.map((about, index) => {
-                    return (
-                        <motion.div
-                            whileInView={{opacity: 1}}
-                            whileHover={{scale: 1.1}}
-                            transition={{ease: "easeInOut", duration: 0.1}}
-                            className="app__profile-item"
-                            key={about.title + index}
-                        >
-                            <a href={about.url} target="_blank" rel="noreferrer">
-                                <img src={about.iconUrl} alt={about.title}></img>
-                            </a>
-                            <motion.h2
-                                className="bold-text"
-                                style={{marginTop: 20}}
-                                whileInView={text_fade_in.whileInView}
-                                transition={text_fade_in.transition}
-                            >
-                                {about.title}
-                            </motion.h2>
-                            <motion.p
-                                className="desc-text"
-                                style={{marginTop: 10}}
-                                whileInView={text_fade_in.whileInView}
-                                transition={text_fade_in.transition}
-                            >
-                                {about.description}
-                            </motion.p>
-                        </motion.div>
-                    )
-                })}
-            </div>*/}
         </>
     );
 };
