@@ -1,0 +1,22 @@
+.urls__url-shortener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .urls__title-text {
+        color: var(--darker-color);
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .urls__input-field {
+        border: 1px solid var(--dark-color);
+        background: var(--lightest-color);
+        padding: 10px;
+        width: 65%;
+
+        box-shadow: 5px 5px 10px var(--shadow-color);
+    }
+}

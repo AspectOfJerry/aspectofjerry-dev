@@ -14,8 +14,9 @@ html {
     --lightest-color: rgba(254, 254, 254, 1);
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
-    --dark-color: rgba(150, 150, 150, 1);
-    --darker-color: rgba(110, 110, 110, 1);
+    --gray-color: rgba(150, 150, 150, 1);
+    --dark-color: rgba(120, 120, 120, 1);
+    --darker-color: rgba(80, 80, 80, 1);
     --darkest-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(170, 212, 228, 0.30); // 78%
@@ -40,7 +41,8 @@ html.app_deep-space {
     --lightest-color: rgb(8, 10, 12);
     --lighter-color: rgb(64, 64, 64);
     --light-color: rgb(120, 120, 120);
-    --dark-color: rgb(150, 150, 150);
+    --gray-color: rgba(150, 150, 150, 1);
+    --dark-color: rgb(180, 180, 180);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
@@ -66,8 +68,9 @@ html.app_cloudy {
     --lightest-color: rgb(253, 254, 255);
     --lighter-color: rgb(242, 242, 242);
     --light-color: rgb(232, 232, 232);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgb(110, 110, 110);
+    --gray-color: rgba(150, 150, 150, 1);
+    --dark-color: rgb(120, 120, 120);
+    --darker-color: rgb(80, 80, 80);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(186, 208, 247, 0.30);
@@ -92,8 +95,9 @@ html.app_pink {
     --lightest-color: rgba(255, 248, 248, 1);
     --lighter-color: rgba(255, 235, 235, 1);
     --light-color: rgba(255, 224, 224, 1);
-    --dark-color: rgb(150, 150, 150);
-    --darker-color: rgba(110, 110, 110, 1);
+    --gray-color: rgba(150, 150, 150, 1);
+    --dark-color: rgb(120, 120, 120);
+    --darker-color: rgba(80, 80, 80, 1);
     --darkest-color: rgb(32, 32, 32);
 
     --navbar-color: rgba(255, 204, 214, 0.30);
@@ -120,7 +124,8 @@ html.app_burgundy {
     --lightest-color: rgb(32, 8, 8);
     --lighter-color: rgb(64, 16, 16);
     --light-color: rgb(120, 120, 120);
-    --dark-color: rgb(150, 150, 150);
+    --gray-color: rgba(150, 150, 150, 1);
+    --dark-color: rgb(180, 180, 180);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
@@ -235,7 +240,6 @@ html.app_burgundy {
 .title-text {
     font-size: 2.75rem;
     font-weight: 600;
-    margin-left: 3%;
     color: var(--darkest-color);
 
     span {

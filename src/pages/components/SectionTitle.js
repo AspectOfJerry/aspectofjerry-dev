@@ -10,6 +10,7 @@ const SectionTitle = ({raw, children}) => {
                 whileInView={{opacity: 1}} // Fade in the title text
                 transition={{duration: 0.75, ease: "easeInOut"}}
                 exit={{opacity: 1}}
+                style={{marginLeft: "3%"}}
             >
                 {children}
             </motion.h2>

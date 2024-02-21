@@ -15,7 +15,9 @@ const experience = [
     {
         year: "2017-2019",
         experiences: [
-            {}
+            {
+                iconUrl: media.google_developer_guide
+            }
         ]
     },
     {
@@ -96,8 +98,10 @@ const Experience = () => {
                                             <a href={experience.url} target="_blank" rel="noopener noreferrer">
                                                 <img src={experience.iconUrl} alt={experience.title} />
                                             </a>
-                                            <h3 className="">{experience.title}</h3>
-                                            <p className="p-text">{experience.description}</p>
+                                            <div>
+                                                <h3>{experience.title}</h3>
+                                                <p className="p-text">{experience.description}</p>
+                                            </div>
                                         </motion.div>
                                     )
                                 })}

@@ -54,6 +54,9 @@ import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
 
 import freight_frenzy_vert from "../assets/first/ftc/freight_frenzy/freight_frenzy_vert.jpg";
 
+// google
+import google_developer_guide from "../assets/google/google-developer_guide.svg";
+
 // socials
 import steam from "../assets/socials/steam_icon.svg";
 // instagram
@@ -131,7 +134,8 @@ export default {
     ftc_icon_horz,
     ftc_icon_vert,
     freight_frenzy_vert,
-
+    //google
+    google_developer_guide,
     // dev_tools
     vscode_alt,
     vscode,
@@ -141,7 +145,6 @@ export default {
     // github
     github,
     github_white,
-
     // socials
     steam,
     // discord

@@ -30,6 +30,8 @@ import {Countdown} from "./pages/Countdown/index.js";
 
 import {Unix} from "./pages/Unix";
 
+import {UrlShortener} from "./pages/UrlShortener/index.js";
+
 
 const themes = [
     {
@@ -218,6 +220,21 @@ const App = () => {
                         <Elements themeType={theme.theme} />
                     </>
                 } />
+
+                <Route path="/urls" element={
+                    <>
+                        <Navbar
+                            toggleTheme={toggleTheme}
+                            themes={themes}
+                            theme={theme}
+                            links={[]}
+                            extLinks={[]}
+                            lockShrink={true}
+                        />
+                        <UrlShortener />
+                    </>
+                }
+                />
 
                 <Route path="/ping" element={<p>pong</p>} />
 
