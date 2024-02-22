@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import "./Header.scss";
 
 const texts = [
-    "🎁 Happy holidays! 🎄",
+    // "🎁 Happy holidays! 🎄",
     "🌟 Crafting code and chasing dreams.",
     "💡 Ctrl + Alt + Defeat is not in my vocabulary.",
     "✨ Let's build something magic together!",

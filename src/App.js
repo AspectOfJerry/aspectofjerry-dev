@@ -151,6 +151,7 @@ const App = () => {
                                             {name: "Projects", link: "#projects"}]}
                                         extLinks={[
                                             // {name: "Countdown 🎉", link: "/countdown"},
+                                            {name: "URL Shortener", link: "/urls"},
                                             {name: "Periodic Table (WIP)", link: "/elements"}
                                         ]}
                                         lockShrink={false}
