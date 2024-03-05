@@ -55,21 +55,23 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
     return (
         <motion.nav
             className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}
-            initial={{opacity: 1, y: -96}}
-            animate={{opacity: [0, 1], y: [-96, 0]}}
-            transition={{delay: 0.25}}
+            initial={{y: -96}}
+            animate={{y: [-96, 0]}}
+            transition={{delay: 0.10, type: "spring", stiffness: 100, damping: 30}}
         >
             <div className="app__navbar-icon">
                 <a href="/">
                     <img src={media.favicon} alt="jerrydev icon" />
                 </a>
             </div>
+
             <motion.ul
                 className="app__navbar-nav-links"
                 initial={{opacity: 1, y: 0}}
                 animate={{opacity: [0, 1], y: [-25, 0]}}
-                transition={{delay: 0.50}}
+                transition={{delay: 0.80, type: "spring", stiffness: 100, damping: 25}}
             >
+                {/* List of links */}
                 {links.map((dest, index) => (
                     <li className="app__flex text" key={index}>
                         <a className="text-underline" href={dest.link}>{dest.name}</a>
@@ -80,7 +82,8 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
                 className="app__navbar-ext-links"
                 initial={{opacity: 1, y: 0}}
                 animate={{opacity: [0, 1], y: [-25, 0]}}
-                transition={{delay: 0.50}}>
+                transition={{delay: 0.95, type: "spring", stiffness: 100, damping: 25}}
+            >
                 {extLinks.map((dest, index) => (
                     <li className="app__flex text" key={index}>
                         <a className="text-underline" href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
@@ -96,13 +99,14 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
                     </div>
                 </button>
             </div>
-
+            {/* MOBILE */}
             <div ref={menuRef} className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
                 <HiMenuAlt4 onClick={() => setShowMenu(true)} />
 
                 <div>
                     <HiX onClick={() => setShowMenu(false)} />
                     <ul>
+                        {/* List of links */}
                         {links.map((dest, index) => (
                             <li className="app__flex text" key={index}>
                                 <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link}>

@@ -16,6 +16,7 @@ import git from "../assets/tech_stack/git.svg";
 import html from "../assets/tech_stack/html.png";
 import java from "../assets/tech_stack/java.svg";
 import javascript from "../assets/tech_stack/javascript.png";
+import hackqc_2024 from "../assets/hackqc_2024.png";
 import jerrybot from "../assets/jerrybot.png";
 import kotlin from "../assets/tech_stack/kotlin.svg";
 import minecraft from "../assets/socials/minecraft_icon.jpg";
@@ -62,6 +63,7 @@ import steam from "../assets/socials/steam_icon.svg";
 // instagram
 import instagram_gradient from "../assets/socials/instagram_gradient.png";
 // import instagram_gradient from "../assets/socials/instagram_gradient.svg"; // the svg file breaks the code. Use png for now
+
 // discord
 import discord_full_blurple from "../assets/socials/discord_full_blurple.svg";
 import clyde_icon_blurple from "../assets/socials/clyde_icon_blurple.svg";
@@ -102,6 +104,7 @@ export default {
     html,
     java,
     javascript,
+    hackqc_2024,
     jerrybot,
     kotlin,
     minecraft,

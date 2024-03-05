@@ -36,8 +36,8 @@ const Header = ({theme}) => {
     }, []);
 
     const [headerText, setHeaderText] = useState("");
-    // const [textIndex, setTextIndex] = useState(Math.floor(Math.random() * texts.length));
-    const [textIndex, setTextIndex] = useState(0);
+    const [textIndex, setTextIndex] = useState(Math.floor(Math.random() * texts.length));
+    // const [textIndex, setTextIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [isBlinking, setIsBlinking] = useState(false);
@@ -85,7 +85,7 @@ const Header = ({theme}) => {
                     <motion.h1
                         className="app__header-text-big"
                         animate={{
-                            y: [95, 0], // up
+                            y: [75, 0], // up
                             opacity: [0, 100],
                         }}
                         transition={{
@@ -99,13 +99,13 @@ const Header = ({theme}) => {
                     <motion.h1
                         className="app__header-small"
                         animate={{
-                            y: [35, 0], // up
+                            y: [30, 0], // up
                             opacity: [0, 100],
                         }}
                         transition={{
                             ease: "easeOut",
                             duration: 0.90,
-                            delay: 1,
+                            delay: 1.10,
                         }}
                     >
                         I'm Jerry
@@ -117,7 +117,18 @@ const Header = ({theme}) => {
                         transition={{duration: 1}}>
                     </motion.div>
                 </div>
-                <motion.p className="app__typing-texts text">
+                <motion.p
+                    className="app__typing-texts text"
+                    animate={{
+                        y: [-35, 0], // down
+                        opacity: [25, 100],
+                    }}
+                    transition={{
+                        ease: "easeOut",
+                        duration: 1.65,
+                        delay: 0.10,
+                    }}
+                >
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </motion.p>
             </div>

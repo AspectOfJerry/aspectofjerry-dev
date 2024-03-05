@@ -75,7 +75,7 @@ html.app_cloudy {
 
     --navbar-color: rgba(186, 208, 247, 0.30);
     --navbar-s-color: rgba(186, 208, 247, 0.45);
-    --head-background-color: rgb(201, 218, 248);
+    --head-background-color: var(--primary-color);
     --divier-color: var(--lighter-color);
     --shadow-color: rgba(16, 16, 16, 0.15);
     --shadow-glow-color: rgba(201, 218, 248, 0.25);

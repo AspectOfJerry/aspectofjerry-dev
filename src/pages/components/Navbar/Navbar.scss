@@ -1,17 +1,13 @@
-.app__navbar {
+.app__navbar,
+.app__navbar-shrunk {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem 2rem;
     background-color: var(--navbar-color);
-
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid var(--shadow-glow-color);
     position: fixed;
     z-index: 2;
 
@@ -20,19 +16,46 @@
     background-color 0.65s,
     backdrop-filter 0.65s,
     border-radius 0.65s,
-    scale 0.85s,
-    margin-top 0.95s;
+    scale 1s,
+    margin-top 0.65s;
+
+    ul {
+        li {
+            transition: all 0.65s;
+
+            a {
+                transition: all 0.65s;
+            }
+        }
+    }
+}
+
+.app__navbar {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--shadow-glow-color);
+
+    ul {
+        li {
+            margin: 0 3%;
+
+            a {
+                width: fit-content;
+                padding: 0.25rem 0.75rem;
+                border-radius: 10px;
+                background-color: var(--head-background-color);
+            }
+        }
+    }
 }
 
 .app__navbar-shrunk {
     padding: 0.90rem 1.80rem;
-    margin-top: 5px;
-    box-shadow: 0 4px 16px var(--shadow-color);
+    margin-top: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
     background-color: var(--navbar-s-color);
     border: none;
 
-
-    scale: 85%;
+    scale: 90%;
     border-radius: 20px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -45,6 +68,19 @@
         img {
             width: 32px;
             height: 32px;
+        }
+    }
+
+    ul {
+        li {
+            margin: 0 4%;
+
+            a {
+                width: revert;
+                padding: revert;
+                border-radius: revert;
+                background-color: revert;
+            }
         }
     }
 }
@@ -78,7 +114,7 @@
     li {
         position: relative;
         display: block;
-        margin: 0 4%;
+        // margin is in .app__navbar.ul.li and .app__navbar-shrunk.ul.li
         cursor: pointer;
         flex-direction: column;
 

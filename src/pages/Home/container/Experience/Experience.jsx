@@ -67,6 +67,14 @@ const experience = [
                 description: "CRESCENDO presented by Haas | FRC 2023-2024",
                 iconUrl: media.crescendo_horz
             },
+            {
+                title: "HackQC 2024",
+                description: "HackQC is a pan-Quebec programming competition aimed at valorizing open data from the Quebec Data Portal and addressing real concerns within communities. " +
+                    "Teams of 4 to 6 people design applications using nearly 1,400 open datasets available on the Données Québec portal. " +
+                    "The goal is to develop innovative solutions related to challenges offered by participating municipalities. " +
+                    "HackQC encourages cooperation and innovation, mobilizing organizations, showcasing expertise, promoting open data, and fostering entrepreneurship.",
+                iconUrl: media.hackqc_2024
+            }
         ]
     }
 ];
