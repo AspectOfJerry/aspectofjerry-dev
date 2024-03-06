@@ -5,7 +5,8 @@ import {media} from "../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {motion} from "framer-motion";
 
-const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
+const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink, icon}) => {
+    icon = icon || media.favicon;
     const [showMenu, setShowMenu] = useState(false);
     const [isShrunk, setShrunk] = useState(!!lockShrink);
     const scrollThreshold = 32;
@@ -61,7 +62,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink}) => {
         >
             <div className="app__navbar-icon">
                 <a href="/">
-                    <img src={media.favicon} alt="jerrydev icon" />
+                    <img src={icon} alt="jerrydev icon" />
                 </a>
             </div>
 

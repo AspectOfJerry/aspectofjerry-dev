@@ -86,6 +86,12 @@ import github from "../assets/dev_tools/github.svg";
 import github_white from "../assets/dev_tools/github_white.svg";
 
 
+/*
+    Jenna
+ */
+import jenna_pfp from "../assets/Jenna/jenna-pfp.jpg";
+import jenna_stable_diffusion from "../assets/Jenna/jenna-stable-diffusion.png";
+
 export default {
     arrow_up,
     aseprite,
@@ -161,5 +167,11 @@ export default {
     // youtube
     youtube,
     youtube_icon,
-    youtube_reverse
+    youtube_reverse,
+
+    /* Jenna */
+    Jenna: {
+        jenna_pfp,
+        jenna_stable_diffusion
+    }
 };
