@@ -119,15 +119,15 @@ const Header = ({theme}) => {
                 </div>
                 <motion.p
                     className="app__typing-texts text"
-                    animate={{
-                        y: [-35, 0], // down
-                        opacity: [25, 100],
-                    }}
-                    transition={{
-                        ease: "easeOut",
-                        duration: 1.65,
-                        delay: 0.10,
-                    }}
+                    // animate={{
+                    //     y: [-35, 0], // down
+                    //     opacity: [25, 100],
+                    // }}
+                    // transition={{
+                    //     ease: "easeOut",
+                    //     duration: 1.65,
+                    //     delay: 0.10,
+                    // }}
                 >
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </motion.p>

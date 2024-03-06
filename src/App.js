@@ -76,7 +76,7 @@ const J_themes = [
     }
 ]
 
-const getInitialColorMode = (location) => {
+const getInitialColorMode = (themes) => {
     const persisted_theme = window.localStorage.getItem("color-mode");
     const has_persisted_theme = typeof persisted_theme === "string";
 
