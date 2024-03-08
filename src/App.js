@@ -32,52 +32,57 @@ import {Unix} from "./pages/Unix";
 
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {media} from "./constants";
-import useFavicon from "./hooks/useFavicon";
 
 
-const themes = [
-    {
-        name: "Default",
-        className: "app_light",
-        theme: "light"
-    },
-    {
-        name: "Deep Space",
-        className: "app_dark",
-        theme: "dark"
-    },
-    {
-        name: "Cloudy",
-        className: "app_cloudy",
-        theme: "light"
-    },
-    {
-        name: "Pink",
-        className: "app_pink",
-        theme: "light"
-    },
-    {
-        name: "Burgundy",
-        className: "app_burgundy",
-        theme: "dark"
-    },
-];
+const theme_group = {
+    localStorageKey: "color-mode",
+    themes: [
+        {
+            name: "Default",
+            className: "app_default",
+            theme: "light"
+        },
+        {
+            name: "Deep Space",
+            className: "app_deep-space",
+            theme: "dark"
+        },
+        {
+            name: "Cloudy",
+            className: "app_cloudy",
+            theme: "light"
+        },
+        {
+            name: "Pink",
+            className: "app_pink",
+            theme: "light"
+        },
+        {
+            name: "Burgundy",
+            className: "app_burgundy",
+            theme: "dark"
+        }
+    ]
+};
 
-const J_themes = [
-    {
-        name: "Pink",
-        className: "app_pink",
-        theme: "light"
-    },
-    {
-        name: "Cloudy",
-        className: "app_cloudy",
-        theme: "light"
-    }
-]
+const J_theme_group = {
+    localStorageKey: "jenna-color-mode",
+    themes: [
+        {
+            name: "Pink",
+            className: "jenna_default",
+            theme: "light"
+        },
+        {
+            name: "Dark",
+            className: "jenna_dark",
+            theme: "dark"
+        }
+    ]
+};
 
-const getInitialColorMode = (themes) => {
-    const persisted_theme = window.localStorage.getItem("color-mode");
+const getInitialColorMode = (themeGroup) => {
+    const persisted_theme = window.localStorage.getItem(themeGroup.localStorageKey);
     const has_persisted_theme = typeof persisted_theme === "string";
 
     // Check if the device is a mobile device based on the screen width
@@ -87,11 +92,11 @@ const getInitialColorMode = (themes) => {
 
     // automatically set light/dark theme based on system
     const system_theme = is_dark_mode
-        ? themes.find((theme) => theme.className === "app_dark")
-        : themes.find((theme) => theme.className === "app_light");
+        ? themeGroup.themes.find((theme) => theme.className === themeGroup.themes[1]) // index 1 is dark mode
+        : themeGroup.themes.find((theme) => theme.className === themeGroup.themes[0]); // index 0 is default (light) mode
 
     if (has_persisted_theme) {
-        const persistedTheme = themes.find(
+        const persistedTheme = themeGroup.themes.find(
             (theme) => theme.className === persisted_theme
         );
         if (persistedTheme) {
@@ -103,12 +108,12 @@ const getInitialColorMode = (themes) => {
     if (isMobile) {
         return system_theme;
     } else {
-        return themes.find((theme) => theme.className === "app_light");
+        return themeGroup.themes.find((theme) => theme.className === themeGroup.themes[0]); // index 0 is default (light) mode
     }
 };
 
 const App = () => {
-    const [theme, setTheme] = useState(() => getInitialColorMode());
+    const [theme, setTheme] = useState(() => getInitialColorMode(theme_group));
     const [showAnimation, setShowAnimation] = useState(false); // temporarily disabled
 
     useEffect(() => {
@@ -119,14 +124,14 @@ const App = () => {
         return () => clearTimeout(timeout);
     }, []);
 
-    const toggleTheme = () => {
-        const currentIndex = themes.findIndex(
+    const toggleTheme = (themeGroup) => {
+        const currentIndex = themeGroup.themes.findIndex(
             (item) => item.className === theme.className
         );
-        const nextIndex = (currentIndex + 1) % themes.length;
-        const nextTheme = themes[nextIndex];
+        const nextIndex = (currentIndex + 1) % themeGroup.themes.length;
+        const nextTheme = themeGroup.themes[nextIndex];
 
-        window.localStorage.setItem("color-mode", nextTheme.className);
+        window.localStorage.setItem(themeGroup.localStorageKey, nextTheme.className);
 
         setTheme(nextTheme);
         document.documentElement.className = nextTheme.className;
@@ -141,11 +146,25 @@ const App = () => {
         const has_persisted_theme = typeof persisted_theme === "string";
 
         if (!has_persisted_theme) {
-            window.localStorage.setItem("color-mode", "app_light");
+            window.localStorage.setItem("color-mode", "app_default");
         }
     }, []);
 
-    useFavicon(media.favicon);
+    /* JENNA */
+    const [jennaTheme, setJennaTheme] = useState(() => getInitialColorMode(J_theme_group));
+
+    useEffect(() => {
+        document.documentElement.className = jennaTheme.className;
+    }, [jennaTheme]);
+
+    useEffect(() => {
+        const persisted_theme = window.localStorage.getItem("jenna-color-mode");
+        const has_persisted_theme = typeof persisted_theme === "string";
+
+        if (!has_persisted_theme) {
+            window.localStorage.setItem("jenna-color-mode", "jenna_default");
+        }
+    }, []);
 
     return (
         <BrowserRouter> <Routes>
@@ -156,7 +175,7 @@ const App = () => {
                         <OpeningAnimation onAnimationEnd={() => setShowAnimation(false)} /> : <>
                             <title>jerrydev • Jerry</title>
 
-                            <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
+                            <Navbar toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
                                     links={[
                                         {name: "About", link: "#about"},
                                         {name: "Skills", link: "#skills"},
@@ -185,8 +204,8 @@ const App = () => {
             <Route path="/countdown" element={
                 <>
                     <Navbar
-                        toggleTheme={toggleTheme}
-                        themes={themes}
+                        toggleTheme={() => toggleTheme(theme_group)}
+                        themes={theme_group.themes}
                         theme={theme}
                         links={[]}
                         extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
@@ -199,8 +218,8 @@ const App = () => {
             <Route path="/unix" element={
                 <>
                     <Navbar
-                        toggleTheme={toggleTheme}
-                        themes={themes}
+                        toggleTheme={() => toggleTheme(theme_group)}
+                        themes={theme_group.themes}
                         theme={theme}
                         links={[]}
                         extLinks={[
@@ -219,8 +238,8 @@ const App = () => {
             <Route path="/elements" element={
                 <>
                     <Navbar
-                        toggleTheme={toggleTheme}
-                        themes={themes}
+                        toggleTheme={() => toggleTheme(theme_group)}
+                        themes={theme_group.themes}
                         theme={theme}
                         links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
                         extLinks={[
@@ -238,8 +257,8 @@ const App = () => {
             <Route path="/urls" element={
                 <>
                     <Navbar
-                        toggleTheme={toggleTheme}
-                        themes={themes}
+                        toggleTheme={() => toggleTheme(theme_group)}
+                        themes={theme_group.themes}
                         theme={theme}
                         links={[]}
                         extLinks={[]}
@@ -257,14 +276,14 @@ const App = () => {
                 element={
                     <>
                         <Navbar
-                            toggleTheme={toggleTheme}
-                            themes={themes}
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
                             theme={theme}
                             links={[{name: "Take me home", link: "/"}]}
                             extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
                             lockShrink={false}
                         />
-                        <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
+                        <NotFound />
                     </>
                 }
             />
@@ -274,15 +293,14 @@ const App = () => {
             <Route path="/jenna" element={
                 <>
                     <Navbar
-                        toggleTheme={toggleTheme}
-                        themes={J_themes}
-                        theme={theme}
+                        toggleTheme={() => toggleTheme(J_theme_group)}
+                        themes={J_theme_group.themes}
+                        theme={jennaTheme}
                         links={[{name: "Take me home", link: "/"}]}
                         extLinks={[]}
                         lockShrink={false}
                         icon={media.Jenna.jenna_pfp}
                     />
-                    {useFavicon(media.Jenna.jenna_pfp)}
                 </>
             } />
         </Routes> </BrowserRouter>
