@@ -19,12 +19,11 @@ html {
     --darker-color: rgba(80, 80, 80, 1);
     --darkest-color: rgba(32, 32, 32, 1);
 
-    --navbar-color: rgba(170, 212, 228, 0.30); // 78%
-    --navbar-s-color: rgba(170, 212, 228, 0.45); // 78%
-    --head-background-color: rgba(176, 215, 230, 0.90); // #b0d7e6
-    --divier-color: var(--lighter-color);
-    --shadow-color: rgba(16, 16, 16, 0.15);
-    --shadow-glow-color: rgba(146, 200, 221, 0.25); // 72%
+    --navbar-color: rgba(170, 212, 228, 0.35); // 78% HS L --primary-color
+    --navbar-s-color: rgba(170, 212, 228, 0.40); // 78% HS L --primary-color
+    --head-background-color: rgba(189, 221, 234); // 83% HS L --primary-color
+    --shadow-color: rgba(16, 16, 16, 0.12);
+    --shadow-glow-color: rgba(189, 221, 234, 0.25); // 83% HS L --primary-color
     --glow-color: rgba(228, 244, 251, 0.40);
     --footer-color: rgba(246, 247, 248, 1);
 
@@ -49,7 +48,6 @@ html.app_deep-space {
     --navbar-color: rgba(32, 32, 64, 0.40);
     --navbar-s-color: rgba(16, 16, 64, 0.20);
     --head-background-color: rgb(4, 8, 24);
-    --divier-color: var(--head-background-color);
     --shadow-color: rgba(160, 160, 160, 0.30);
     --shadow-glow-color: rgba(200, 200, 235, 0.30);
     --glow-color: rgba(200, 200, 235, 0.40);
@@ -76,7 +74,6 @@ html.app_cloudy {
     --navbar-color: rgba(186, 208, 247, 0.30);
     --navbar-s-color: rgba(186, 208, 247, 0.45);
     --head-background-color: var(--primary-color);
-    --divier-color: var(--lighter-color);
     --shadow-color: rgba(16, 16, 16, 0.15);
     --shadow-glow-color: rgba(201, 218, 248, 0.25);
     --glow-color: rgba(228, 244, 251, 0.40);
@@ -105,7 +102,6 @@ html.app_pink {
     // 92%
     --head-background-color: rgb(255, 214, 222);
 
-    --divier-color: var(--lighter-color);
     --shadow-color: rgba(16, 16, 16, 0.15);
     --shadow-glow-color: rgba(255, 192, 203, 0.25);
     --glow-color: rgba(255, 240, 243, 0.40);
@@ -132,7 +128,6 @@ html.app_burgundy {
     --navbar-color: rgba(160, 0, 40, 0.10);
     --navbar-s-color: rgba(160, 0, 40, 0.15);
     --head-background-color: rgb(64, 0, 16);
-    --divier-color: var(--light-color);
     --shadow-color: rgba(160, 160, 160, 0.30);
     --shadow-glow-color: rgba(233, 124, 124, 0.25);
     --glow-color: rgba(235, 135, 135, 0.40);

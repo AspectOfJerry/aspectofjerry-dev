@@ -33,93 +33,93 @@ import {Unix} from "./pages/Unix";
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 
 
-const themes = [
-    {
-        name: "Default",
-        className: "app_default",
-        theme: "light"
-    },
-    {
-        name: "Deep Space",
-        className: "app_deep-space",
-        theme: "dark"
-    },
-    {
-        name: "Cloudy",
-        className: "app_cloudy",
-        theme: "light"
-    },
-    {
-        name: "Pink",
-        className: "app_pink",
-        theme: "light"
-    },
-    {
-        name: "Burgundy",
-        className: "app_burgundy",
-        theme: "dark"
-    },
-];
-
-const getInitialColorMode = () => {
-    const persisted_theme = window.localStorage.getItem("color-mode");
-    const has_persisted_theme = typeof persisted_theme === "string";
-
-    // Check if the device is a mobile device based on the screen width
-    const isMobile = window.innerWidth <= 768;
-
-    const is_dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    // automatically set light/dark theme based on system
-    const system_theme = is_dark_mode
-        ? themes.find((theme) => theme.className === "app_deep-space")
-        : themes.find((theme) => theme.className === "app_default");
-
-    if (has_persisted_theme) {
-        const persistedTheme = themes.find(
-            (theme) => theme.className === persisted_theme
-        );
-        if (persistedTheme) {
-            return persistedTheme;
+const theme_group = {
+    localStorageKey: "color-mode",
+    themes: [
+        {
+            name: "Default",
+            className: "app_default",
+            mode: "light"
+        },
+        {
+            name: "Deep Space",
+            className: "app_deep-space",
+            mode: "dark"
+        },
+        {
+            name: "Cloudy",
+            className: "app_cloudy",
+            mode: "light"
+        },
+        {
+            name: "Pink",
+            className: "app_pink",
+            mode: "light"
+        },
+        {
+            name: "Burgundy",
+            className: "app_burgundy",
+            mode: "dark"
         }
-    }
-
-    // Only automatically set the dark mode for mobile devices
-    if (isMobile) {
-        return system_theme;
-    } else {
-        return themes.find((theme) => theme.className === "app_default");
-    }
+    ]
 };
 
 const App = () => {
-    const [theme, setTheme] = useState(() => getInitialColorMode());
-    const [showAnimation, setShowAnimation] = useState(false); // temporarily disabled
+    const [isReady, setIsReady] = useState(false);
+    const getInitialColorMode = (themeGroup) => {
+        const persisted_theme = window.localStorage.getItem(themeGroup.localStorageKey);
+        const has_persisted_theme = typeof persisted_theme === "string";
+
+        // Check if the device is a mobile device based on the screen width
+        const isMobile = window.innerWidth <= 768;
+
+        const is_dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        // automatically set light/dark theme based on system
+        const system_theme = is_dark_mode
+            ? themeGroup.themes[1] // index 1 is dark mode
+            : themeGroup.themes[0]; // index 0 is default (light) mode
+
+        if (has_persisted_theme) {
+            const persistedTheme = themeGroup.themes.find((theme) => theme.className === persisted_theme);
+            if (persistedTheme) {
+                setIsReady(true);
+                return persistedTheme;
+            }
+        }
+
+        // Only automatically set the dark mode for mobile devices
+        if (isMobile) {
+            setIsReady(true);
+            return system_theme;
+        } else {
+            setIsReady(true);
+            return themeGroup.themes[0]; // index 0 is default (light) mode
+        }
+    };
+
+    const [theme, setTheme] = useState(() => getInitialColorMode(theme_group));
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            setShowAnimation(false);
+            setIsReady(true);
         }, 5000); // Show the animation for 5 seconds
 
         return () => clearTimeout(timeout);
     }, []);
 
-    const toggleTheme = () => {
-        const currentIndex = themes.findIndex(
+    const toggleTheme = (themeGroup) => {
+        const currentIndex = themeGroup.themes.findIndex(
             (item) => item.className === theme.className
         );
-        const nextIndex = (currentIndex + 1) % themes.length;
-        const nextTheme = themes[nextIndex];
+        const nextIndex = (currentIndex + 1) % themeGroup.themes.length;
+        const nextTheme = themeGroup.themes[nextIndex];
 
-        window.localStorage.setItem("color-mode", nextTheme.className);
+        window.localStorage.setItem(themeGroup.localStorageKey, nextTheme.className);
 
         setTheme(nextTheme);
-        document.documentElement.className = nextTheme.className;
+        document.documentElement.className = nextTheme.className; // update theme
     };
-
-    useEffect(() => {
-        document.documentElement.className = theme.className;
-    }, [theme]);
 
     useEffect(() => {
         const persisted_theme = window.localStorage.getItem("color-mode");
@@ -131,52 +131,49 @@ const App = () => {
     }, []);
 
     return (
-        <BrowserRouter>
-            <Routes>
+        isReady ? (
+            <BrowserRouter> <Routes>
                 <Route
                     path="/"
                     element={
-                        showAnimation ?
-                            <OpeningAnimation onAnimationEnd={() => setShowAnimation(false)} /> :
-                            <div className={theme.className}>
-                                <title>jerrydev • Jerry</title>
+                        <>
+                            <title>jerrydev • Jerry</title>
 
-                                <Navbar toggleTheme={toggleTheme} themes={themes} theme={theme}
-                                        links={[
-                                            // {name: "Header", link: "#home"},
-                                            {name: "About", link: "#about"},
-                                            {name: "Skills", link: "#skills"},
-                                            {name: "Experience", link: "#experience"},
-                                            {name: "Socials", link: "#socials"},
-                                            {name: "Projects", link: "#projects"}]}
-                                        extLinks={[
-                                            // {name: "Countdown 🎉", link: "/countdown"},
-                                            {name: "URL Shortener", link: "/urls"},
-                                            {name: "Periodic Table (WIP)", link: "/elements"}
-                                        ]}
-                                        lockShrink={false}
-                                />
-                                <AppReturnToTop />
-                                <AppHome theme={theme} />
-                                <AppAbout />
-                                <AppSkills theme={theme} />
-                                <AppExperience />
-                                <AppSocials theme={theme} />
-                                <AppProjects />
-                                <AppFooter />
-                            </div>
+                            <Navbar toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
+                                    links={[
+                                        {name: "About", link: "#about"},
+                                        {name: "Skills", link: "#skills"},
+                                        {name: "Experience", link: "#experience"},
+                                        {name: "Socials", link: "#socials"},
+                                        {name: "Projects", link: "#projects"}
+                                    ]}
+                                    extLinks={[
+                                        // {name: "Countdown 🎉", link: "/countdown"},
+                                        {name: "URL Shortener (WIP)", link: "/urls"},
+                                        {name: "Periodic Table (WIP)", link: "/elements"}
+                                    ]}
+                                    forceShrink={false}
+                            />
+                            <AppReturnToTop />
+                            <AppHome />
+                            <AppAbout />
+                            <AppSkills theme={theme.mode} />
+                            <AppExperience />
+                            <AppSocials theme={theme.mode} />
+                            <AppProjects />
+                            <AppFooter /> </>
                     }
                 />
 
                 <Route path="/countdown" element={
                     <>
                         <Navbar
-                            toggleTheme={toggleTheme}
-                            themes={themes}
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
                             theme={theme}
                             links={[]}
                             extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
-                            lockShrink={true}
+                            forceShrink={true}
                         />
                         <Countdown themeType={theme.theme} />
                     </>
@@ -185,9 +182,8 @@ const App = () => {
                 <Route path="/unix" element={
                     <>
                         <Navbar
-                            toggleTheme={toggleTheme}
-                            themes={themes}
-
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
                             theme={theme}
                             links={[]}
                             extLinks={[
@@ -196,7 +192,7 @@ const App = () => {
                                 {name: "🔗 Unix shell", link: "https://en.wikipedia.org/wiki/Unix_shell"},
                                 {name: "🔗 Unix filesystem", link: "https://en.wikipedia.org/wiki/Unix_filesystem"},
                             ]}
-                            lockShrink={true}
+                            forceShrink={true}
                         />
                         <Unix />
                     </>
@@ -206,8 +202,8 @@ const App = () => {
                 <Route path="/elements" element={
                     <>
                         <Navbar
-                            toggleTheme={toggleTheme}
-                            themes={themes}
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
                             theme={theme}
                             links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
                             extLinks={[
@@ -216,21 +212,21 @@ const App = () => {
                                 {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
                                 {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
                             ]}
-                            lockShrink={true}
+                            forceShrink={true}
                         />
-                        <Elements themeType={theme.theme} />
+                        <Elements themeType={theme.mode} />
                     </>
                 } />
 
                 <Route path="/urls" element={
                     <>
                         <Navbar
-                            toggleTheme={toggleTheme}
-                            themes={themes}
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
                             theme={theme}
                             links={[]}
                             extLinks={[]}
-                            lockShrink={true}
+                            forceShrink={true}
                         />
                         <UrlShortener />
                     </>
@@ -244,22 +240,19 @@ const App = () => {
                     element={
                         <>
                             <Navbar
-                                toggleTheme={toggleTheme}
-                                themes={themes}
+                                toggleTheme={() => toggleTheme(theme_group)}
+                                themes={theme_group.themes}
                                 theme={theme}
                                 links={[{name: "Take me home", link: "/"}]}
                                 extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
-                                lockShrink={false}
+                                forceShrink={false}
                             />
-                            <div className={theme.className}>
-                                <title>jerrydev • 404</title>
-                                <NotFound toggleTheme={toggleTheme} themes={themes} theme={theme} />
-                            </div>
+                            <NotFound />
                         </>
                     }
                 />
-            </Routes>
-        </BrowserRouter>
+            </Routes> </BrowserRouter>
+        ) : (<OpeningAnimation onAnimationEnd={() => setIsReady(true)} />)
     );
 };
 
