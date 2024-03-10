@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 // Global
 import {Navbar} from "./pages/components/index.js";
@@ -31,7 +31,6 @@ import {Countdown} from "./pages/Countdown/index.js";
 import {Unix} from "./pages/Unix";
 
 import {UrlShortener} from "./pages/UrlShortener/index.js";
-import {media} from "./constants";
 
 
 const theme_group = {
@@ -40,85 +39,70 @@ const theme_group = {
         {
             name: "Default",
             className: "app_default",
-            theme: "light"
+            mode: "light"
         },
         {
             name: "Deep Space",
             className: "app_deep-space",
-            theme: "dark"
+            mode: "dark"
         },
         {
             name: "Cloudy",
             className: "app_cloudy",
-            theme: "light"
+            mode: "light"
         },
         {
             name: "Pink",
             className: "app_pink",
-            theme: "light"
+            mode: "light"
         },
         {
             name: "Burgundy",
             className: "app_burgundy",
-            theme: "dark"
+            mode: "dark"
         }
     ]
-};
-
-const J_theme_group = {
-    localStorageKey: "jenna-color-mode",
-    themes: [
-        {
-            name: "Pink",
-            className: "jenna_default",
-            theme: "light"
-        },
-        {
-            name: "Dark",
-            className: "jenna_dark",
-            theme: "dark"
-        }
-    ]
-};
-
-const getInitialColorMode = (themeGroup) => {
-    const persisted_theme = window.localStorage.getItem(themeGroup.localStorageKey);
-    const has_persisted_theme = typeof persisted_theme === "string";
-
-    // Check if the device is a mobile device based on the screen width
-    const isMobile = window.innerWidth <= 768;
-
-    const is_dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    // automatically set light/dark theme based on system
-    const system_theme = is_dark_mode
-        ? themeGroup.themes.find((theme) => theme.className === themeGroup.themes[1]) // index 1 is dark mode
-        : themeGroup.themes.find((theme) => theme.className === themeGroup.themes[0]); // index 0 is default (light) mode
-
-    if (has_persisted_theme) {
-        const persistedTheme = themeGroup.themes.find(
-            (theme) => theme.className === persisted_theme
-        );
-        if (persistedTheme) {
-            return persistedTheme;
-        }
-    }
-
-    // Only automatically set the dark mode for mobile devices
-    if (isMobile) {
-        return system_theme;
-    } else {
-        return themeGroup.themes.find((theme) => theme.className === themeGroup.themes[0]); // index 0 is default (light) mode
-    }
 };
 
 const App = () => {
+    const [isReady, setIsReady] = useState(false);
+    const getInitialColorMode = (themeGroup) => {
+        const persisted_theme = window.localStorage.getItem(themeGroup.localStorageKey);
+        const has_persisted_theme = typeof persisted_theme === "string";
+
+        // Check if the device is a mobile device based on the screen width
+        const isMobile = window.innerWidth <= 768;
+
+        const is_dark_mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        // automatically set light/dark theme based on system
+        const system_theme = is_dark_mode
+            ? themeGroup.themes[1] // index 1 is dark mode
+            : themeGroup.themes[0]; // index 0 is default (light) mode
+
+        if (has_persisted_theme) {
+            const persistedTheme = themeGroup.themes.find((theme) => theme.className === persisted_theme);
+            if (persistedTheme) {
+                setIsReady(true);
+                return persistedTheme;
+            }
+        }
+
+        // Only automatically set the dark mode for mobile devices
+        if (isMobile) {
+            setIsReady(true);
+            return system_theme;
+        } else {
+            setIsReady(true);
+            return themeGroup.themes[0]; // index 0 is default (light) mode
+        }
+    };
+
     const [theme, setTheme] = useState(() => getInitialColorMode(theme_group));
-    const [showAnimation, setShowAnimation] = useState(false); // temporarily disabled
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            setShowAnimation(false);
+            setIsReady(true);
         }, 5000); // Show the animation for 5 seconds
 
         return () => clearTimeout(timeout);
@@ -134,12 +118,8 @@ const App = () => {
         window.localStorage.setItem(themeGroup.localStorageKey, nextTheme.className);
 
         setTheme(nextTheme);
-        document.documentElement.className = nextTheme.className;
+        document.documentElement.className = nextTheme.className; // update theme
     };
-
-    useEffect(() => {
-        document.documentElement.className = theme.className;
-    }, [theme]);
 
     useEffect(() => {
         const persisted_theme = window.localStorage.getItem("color-mode");
@@ -150,29 +130,13 @@ const App = () => {
         }
     }, []);
 
-    /* JENNA */
-    const [jennaTheme, setJennaTheme] = useState(() => getInitialColorMode(J_theme_group));
-
-    useEffect(() => {
-        document.documentElement.className = jennaTheme.className;
-    }, [jennaTheme]);
-
-    useEffect(() => {
-        const persisted_theme = window.localStorage.getItem("jenna-color-mode");
-        const has_persisted_theme = typeof persisted_theme === "string";
-
-        if (!has_persisted_theme) {
-            window.localStorage.setItem("jenna-color-mode", "jenna_default");
-        }
-    }, []);
-
     return (
-        <BrowserRouter> <Routes>
-            <Route
-                path="/"
-                element={
-                    showAnimation ?
-                        <OpeningAnimation onAnimationEnd={() => setShowAnimation(false)} /> : <>
+        isReady ? (
+            <BrowserRouter> <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
                             <title>jerrydev • Jerry</title>
 
                             <Navbar toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
@@ -188,122 +152,107 @@ const App = () => {
                                         {name: "URL Shortener (WIP)", link: "/urls"},
                                         {name: "Periodic Table (WIP)", link: "/elements"}
                                     ]}
-                                    lockShrink={false}
+                                    forceShrink={false}
                             />
                             <AppReturnToTop />
-                            <AppHome theme={theme} />
+                            <AppHome />
                             <AppAbout />
-                            <AppSkills theme={theme} />
+                            <AppSkills theme={theme.mode} />
                             <AppExperience />
-                            <AppSocials theme={theme} />
+                            <AppSocials theme={theme.mode} />
                             <AppProjects />
                             <AppFooter /> </>
-                }
-            />
+                    }
+                />
 
-            <Route path="/countdown" element={
-                <>
-                    <Navbar
-                        toggleTheme={() => toggleTheme(theme_group)}
-                        themes={theme_group.themes}
-                        theme={theme}
-                        links={[]}
-                        extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
-                        lockShrink={true}
-                    />
-                    <Countdown themeType={theme.theme} />
-                </>
-            } />
-
-            <Route path="/unix" element={
-                <>
-                    <Navbar
-                        toggleTheme={() => toggleTheme(theme_group)}
-                        themes={theme_group.themes}
-                        theme={theme}
-                        links={[]}
-                        extLinks={[
-                            {name: "🔗 Unix", link: "https://en.wikipedia.org/wiki/Unix"},
-                            {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"},
-                            {name: "🔗 Unix shell", link: "https://en.wikipedia.org/wiki/Unix_shell"},
-                            {name: "🔗 Unix filesystem", link: "https://en.wikipedia.org/wiki/Unix_filesystem"},
-                        ]}
-                        lockShrink={true}
-                    />
-                    <Unix />
-                </>
-            } />
-
-
-            <Route path="/elements" element={
-                <>
-                    <Navbar
-                        toggleTheme={() => toggleTheme(theme_group)}
-                        themes={theme_group.themes}
-                        theme={theme}
-                        links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
-                        extLinks={[
-                            {name: "🔗 Periodic table", link: "https://en.wikipedia.org/wiki/Periodic_table"},
-                            {name: "🔗 Periods", link: "https://en.wikipedia.org/wiki/Period_(periodic_table)"},
-                            {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
-                            {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
-                        ]}
-                        lockShrink={true}
-                    />
-                    <Elements themeType={theme.theme} />
-                </>
-            } />
-
-            <Route path="/urls" element={
-                <>
-                    <Navbar
-                        toggleTheme={() => toggleTheme(theme_group)}
-                        themes={theme_group.themes}
-                        theme={theme}
-                        links={[]}
-                        extLinks={[]}
-                        lockShrink={true}
-                    />
-                    <UrlShortener />
-                </>
-            }
-            />
-
-            <Route path="/ping" element={<p>pong</p>} />
-
-            <Route
-                path="*"
-                element={
+                <Route path="/countdown" element={
                     <>
                         <Navbar
                             toggleTheme={() => toggleTheme(theme_group)}
                             themes={theme_group.themes}
                             theme={theme}
-                            links={[{name: "Take me home", link: "/"}]}
-                            extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
-                            lockShrink={false}
+                            links={[]}
+                            extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
+                            forceShrink={true}
                         />
-                        <NotFound />
+                        <Countdown themeType={theme.theme} />
+                    </>
+                } />
+
+                <Route path="/unix" element={
+                    <>
+                        <Navbar
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
+                            theme={theme}
+                            links={[]}
+                            extLinks={[
+                                {name: "🔗 Unix", link: "https://en.wikipedia.org/wiki/Unix"},
+                                {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"},
+                                {name: "🔗 Unix shell", link: "https://en.wikipedia.org/wiki/Unix_shell"},
+                                {name: "🔗 Unix filesystem", link: "https://en.wikipedia.org/wiki/Unix_filesystem"},
+                            ]}
+                            forceShrink={true}
+                        />
+                        <Unix />
+                    </>
+                } />
+
+
+                <Route path="/elements" element={
+                    <>
+                        <Navbar
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
+                            theme={theme}
+                            links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
+                            extLinks={[
+                                {name: "🔗 Periodic table", link: "https://en.wikipedia.org/wiki/Periodic_table"},
+                                {name: "🔗 Periods", link: "https://en.wikipedia.org/wiki/Period_(periodic_table)"},
+                                {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
+                                {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
+                            ]}
+                            forceShrink={true}
+                        />
+                        <Elements themeType={theme.mode} />
+                    </>
+                } />
+
+                <Route path="/urls" element={
+                    <>
+                        <Navbar
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
+                            theme={theme}
+                            links={[]}
+                            extLinks={[]}
+                            forceShrink={true}
+                        />
+                        <UrlShortener />
                     </>
                 }
-            />
+                />
 
+                <Route path="/ping" element={<p>pong</p>} />
 
-            {/*JENNA*/}
-            <Route path="/jenna" element={
-                <>
-                    <Navbar
-                        toggleTheme={() => toggleTheme(J_theme_group)}
-                        themes={J_theme_group.themes}
-                        theme={jennaTheme}
-                        links={[{name: "Take me home", link: "/"}]}
-                        extLinks={[]}
-                        lockShrink={false}
-                        icon={media.Jenna.jenna_pfp}
-                    />
-                </>
-            } />
-        </Routes> </BrowserRouter>
+                <Route
+                    path="*"
+                    element={
+                        <>
+                            <Navbar
+                                toggleTheme={() => toggleTheme(theme_group)}
+                                themes={theme_group.themes}
+                                theme={theme}
+                                links={[{name: "Take me home", link: "/"}]}
+                                extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
+                                forceShrink={false}
+                            />
+                            <NotFound />
+                        </>
+                    }
+                />
+            </Routes> </BrowserRouter>
+        ) : (<OpeningAnimation onAnimationEnd={() => setIsReady(true)} />)
     );
 };
 

@@ -28,8 +28,8 @@ const texts = [
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
 
-const Socials = ({theme}) => {
-    socials.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
+const Socials = (themeMode) => {
+    socials.find(e => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
 
     return (
         <>

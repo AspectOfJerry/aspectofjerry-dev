@@ -5,16 +5,16 @@ import {media} from "../../../constants/index.js";
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {motion} from "framer-motion";
 
-const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink, icon}) => {
+const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}) => {
     icon = icon || media.favicon;
     const [showMenu, setShowMenu] = useState(false);
-    const [isShrunk, setShrunk] = useState(!!lockShrink);
+    const [isShrunk, setShrunk] = useState(!!forceShrink);
     const scrollThreshold = 32;
 
     const menuRef = useRef(null);
 
     useEffect(() => {
-        if (lockShrink) return;
+        if (forceShrink) return;
         let isScrolling = false;
 
         const handleScroll = () => {
@@ -36,7 +36,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink, icon})
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [lockShrink]);
+    }, [forceShrink]);
 
     // Add this useEffect hook
     useEffect(() => {
@@ -57,7 +57,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, lockShrink, icon})
         <motion.nav
             className={`app__navbar${isShrunk ? " app__navbar-shrunk" : ""}`}
             initial={{y: -96}}
-            animate={{y: [-96, 0]}}
+            animate={{y: [-96, 0], filter: ["brightness(1.25)", "brightness(1)"]}}
             transition={{delay: 0.10, type: "spring", stiffness: 100, damping: 30}}
         >
             <div className="app__navbar-icon">

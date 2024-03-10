@@ -29,7 +29,7 @@ const texts = [
     "👋 Hello, World!",
 ];
 
-const Header = ({theme}) => {
+const Header = () => {
     useEffect(() => {
         // change title when component mounts
         document.title = "jerrydev • Jerry";
@@ -110,25 +110,15 @@ const Header = ({theme}) => {
                     >
                         I'm Jerry
                     </motion.h1>
+
                     <motion.div
                         className="app__text-container-line"
-                        initial={{width: 0}}
-                        animate={{width: ["0%", "150%"]}}
-                        transition={{duration: 1}}>
-                    </motion.div>
+                        initial={{width: 0, opacity: 0}}
+                        animate={{width: ["0%", "150%"], opacity: [0, 1]}}
+                        transition={{duration: 1}}
+                    />
                 </div>
-                <motion.p
-                    className="app__typing-texts text"
-                    // animate={{
-                    //     y: [-35, 0], // down
-                    //     opacity: [25, 100],
-                    // }}
-                    // transition={{
-                    //     ease: "easeOut",
-                    //     duration: 1.65,
-                    //     delay: 0.10,
-                    // }}
-                >
+                <motion.p className="app__typing-texts text">
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </motion.p>
             </div>

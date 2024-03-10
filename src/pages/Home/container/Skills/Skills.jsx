@@ -40,8 +40,8 @@ const dev_tools = [
 ];
 
 
-const Skills = ({theme}) => {
-    dev_tools.find(e => e.name === "GitHub").iconUrl = theme.theme === "dark" ? media.github_white : media.github;
+const Skills = (themeMode) => {
+    dev_tools.find(e => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
 
     return (
         <>

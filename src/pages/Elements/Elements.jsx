@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {motion} from "framer-motion";
 import "./Elements.scss";
 
-const Elements = (themeType) => {
+const Elements = (themeMode) => {
     useEffect(() => {
         document.title = "• Periodic Table";
     }, []);
@@ -46,7 +46,7 @@ const Elements = (themeType) => {
                     <div className="e__row" key={rowIndex}>
                         {period.map((element, colIndex) => (
                             <motion.button
-                                className={"e__type-" + (element !== null ? ((themeType.themeType === "light" ? "" : "dark-") + element.type.replaceAll(" ", "-") + " e__element") : "empty")}
+                                className={"e__type-" + (element !== null ? ((themeMode.themeType === "light" ? "" : "dark-") + element.type.replaceAll(" ", "-") + " e__element") : "empty")}
                                 key={colIndex}
                                 onClick={() => element && setCurrentElement(element)}
                             >
@@ -68,7 +68,7 @@ const Elements = (themeType) => {
                             <div>
                                 <p className="ctext"><span>Atomic Number:</span> {currentElement.number}</p>
                                 <p className="ctext"><span>Mass:</span> {currentElement.mass}&thinsp;u</p>
-                                <span className={"e__type-" + (themeType.themeType === "light" ? "" : "dark-") + currentElement.type.replaceAll(" ", "-")}>
+                                <span className={"e__type-" + (themeMode.themeType === "light" ? "" : "dark-") + currentElement.type.replaceAll(" ", "-")}>
                                     <p className="ctext" style={{textTransform: "capitalize"}}><span>Type:</span> {currentElement.type}</p>
                                 </span>
                             </div>
