@@ -80,7 +80,7 @@ const Header = () => {
 
     return (
         <>
-            <div id="header" className="app__header app__container">
+            <div id="header" className="app__header">
                 <div className="app__text-container">
                     <motion.h1
                         className="app__header-text-big"
@@ -113,8 +113,8 @@ const Header = () => {
 
                     <motion.div
                         className="app__text-container-line"
-                        initial={{width: 0, opacity: 0}}
-                        animate={{width: ["0%", "150%"], opacity: [0, 1]}}
+                        initial={{width: 0, opacity: 0.05}}
+                        animate={{width: ["0%", "150%"], opacity: ["5%", "100%"]}}
                         transition={{duration: 1}}
                     />
                 </div>

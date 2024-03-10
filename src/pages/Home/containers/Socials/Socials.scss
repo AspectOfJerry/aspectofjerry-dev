@@ -5,11 +5,12 @@
 }
 
 .app__socials-container {
-    width: 90%;
-    margin: 4rem 3% 0;
-
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    width: 90%;
+    margin: 4rem 3% 0;
 
     @media screen and (max-width: 900px) {
         width: 100%;
@@ -17,8 +18,8 @@
     }
 }
 
-.app__socials-list {
-    //flex: 1;
+.app__socials-grid {
+    flex: 1.3;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -70,7 +71,7 @@
 }
 
 .app__socials-texts {
-    //flex: 0.6;
+    flex: 0.7;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -86,8 +87,16 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: flex-end;
+        text-align: right;
         margin-bottom: 3rem;
+        width: 100%;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 2rem;
+            align-items: revert;
+            text-align: revert;
+        }
 
         p {
             margin-top: 5px

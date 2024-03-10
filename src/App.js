@@ -8,14 +8,14 @@ import OpeningAnimation from "./pages/components/OpeningAnimation"
 // pages/Header (main)
 import {AppReturnToTop} from "./pages/Home/components/index.js";
 import {
-    AppHome,
+    AppHeader,
     AppAbout,
     AppSkills,
     AppExperience,
     AppSocials,
     AppProjects,
     AppFooter,
-} from "./pages/Home/container/index.js";
+} from "./pages/Home/containers/index.js";
 
 // pages/NotFound (404)
 import {NotFound} from "./pages/NotFound/index.js";
@@ -155,7 +155,7 @@ const App = () => {
                                     forceShrink={false}
                             />
                             <AppReturnToTop />
-                            <AppHome />
+                            <AppHeader />
                             <AppAbout />
                             <AppSkills theme={theme.mode} />
                             <AppExperience />

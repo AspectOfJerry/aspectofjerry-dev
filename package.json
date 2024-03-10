@@ -3,30 +3,30 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
-        "framer-motion": "^9.0.2",
+        "framer-motion": "^11.0.8",
         "react": "^18.2.0",
         "react-confetti": "^6.1.0",
         "react-dom": "^18.2.0",
-        "react-icons": "^4.7.1",
-        "react-router-dom": "^6.9.0",
+        "react-icons": "^5.0.1",
+        "react-router-dom": "^6.22.3",
         "react-scripts": "5.0.1",
-        "sass": "^1.60.0",
+        "sass": "^1.71.1",
         "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "start": "set PORT=3000 && react-scripts start",
+        "build": "react-scripts build"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/AspectOfJerry/jerrydev.git"
+        "url": "git+https://github.com/AspectOfJerry/jerrydev.git"
     },
     "bugs": {
         "url": "https://github.com/AspectOfJerry/jerrydev/issues",
         "email": "jerry@jerrydev.net"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build"
     },
     "eslintConfig": {
         "extends": [

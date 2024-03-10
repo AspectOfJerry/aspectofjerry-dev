@@ -23,7 +23,7 @@ const socials = [
 
 const texts = [
     {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
-    {title: "Public Email", description: "📧 jerry@jerrydev.net", imageUrl: ""},
+    {title: "Public Email", description: <>📧 <a href="mailto:jerry@jerrydev.net">jerry@jerrydev.net</a></>, imageUrl: ""},
     {title: "", description: "💭 Most of the time, you'll find me on Instagram and Discord.", imageUrl: ""},
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
@@ -38,7 +38,7 @@ const Socials = (themeMode) => {
             </SectionTitle>
 
             <div className="app__socials-container">
-                <motion.div className="app__socials-list">
+                <motion.div className="app__socials-grid">
                     {socials.map((social) => {
                         return (
                             <motion.div
