@@ -80,10 +80,10 @@ const Header = () => {
 
     return (
         <>
-            <div id="header" className="app__header">
-                <div className="app__text-container">
+            <div id="header" className="header">
+                <div className="header__text-container">
                     <motion.h1
-                        className="app__header-text-big"
+                        className="header__text-big"
                         animate={{
                             y: [75, 0], // up
                             opacity: [0, 100],
@@ -97,7 +97,7 @@ const Header = () => {
                         Hello
                     </motion.h1>
                     <motion.h1
-                        className="app__header-small"
+                        className="header__text-small"
                         animate={{
                             y: [30, 0], // up
                             opacity: [0, 100],
@@ -112,13 +112,13 @@ const Header = () => {
                     </motion.h1>
 
                     <motion.div
-                        className="app__text-container-line"
+                        className="header__text-line"
                         initial={{width: 0, opacity: 0.05}}
                         animate={{width: ["0%", "150%"], opacity: ["5%", "100%"]}}
                         transition={{duration: 1}}
                     />
                 </div>
-                <motion.p className="app__typing-texts text">
+                <motion.p className="header__typing-text text">
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </motion.p>
             </div>

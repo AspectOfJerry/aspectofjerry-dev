@@ -24,13 +24,13 @@
 
 .nf__fade-overlay-text {
     font-size: 1.75rem;
-
-    // transition: color 0.50s;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
+
+    transition: color 0.50s;
 }
 
 .nf__redirect-text {
@@ -38,7 +38,6 @@
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
-    color: var(--darkest-color);
     line-height: 1.75;
     transition: transform 1s ease-out, color 0.50s;
 

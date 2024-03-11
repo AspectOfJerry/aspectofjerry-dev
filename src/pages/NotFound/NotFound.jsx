@@ -51,22 +51,24 @@ const NotFound = () => {
                     {fadeOut && (
                         <motion.div
                             initial={{opacity: 0}}
-                            animate={{opacity: 1}}
+                            animate={{opacity: [0, 98]}}
                             exit={{opacity: 0}}
                             transition={{duration: 0.50, ease: "easeInOut"}}
                             className="nf__fade-overlay"
                         >
-                            <p className="nf__fade-overlay-text">You feel a strange shift in reality as the world around you transforms...</p>
+                            <p className="nf__fade-overlay-text ctext" style={{color: "var(--lightest-color)"}}>
+                                You feel a strange shift in reality as the world around you transforms...
+                            </p>
                         </motion.div>
                     )}
                 </AnimatePresence>
-                <h1 className="nf__nf-text ctext">
-                    oh no... Error 404 <br /> <br />
-                    Whoops! It seems you've stumbled into the digital wilderness. <br />
-                    The only way out is to press the mystical button below that says "Take me home". <br />
-                    Rumor has it, it's the secret passage to a realm of bug-free adventures and endless wonders. <br />
-                    Good luck, brave explorer!
+                <h1 className="subtitle-text" style={{scale: "150%", marginTop: "4rem"}}>
+                    Oops! 404 Error
                 </h1>
+                <p className="nf__nf-text ctext">
+                    It appears you've taken a wrong turn in cyberspace!
+                    <br /> The page you're looking for isn't on our map.
+                </p>
                 <p
                     className="nf__redirect-text"
                     onClick={handleRedirect}

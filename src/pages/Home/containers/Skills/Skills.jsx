@@ -13,12 +13,10 @@ const tech_stack = [
     // {name: "C++", color: "", iconUrl: media.cpp, url: "https://isocpp.org/"},
     {name: "CSS", color: "#a6c1ff", iconUrl: media.css, url: "https://www.w3.org/TR/CSS/#css"},
     {name: "DiscordJS", color: "#a6adff", iconUrl: media.djs, url: "https://discord.js.org/#/"},
-    // {name: "Git", color: "#ffaca6", iconUrl: media.git, url: "https://git-scm.com/"},
     {name: "HTML", color: "#ffc1a6", iconUrl: media.html, url: "https://html.spec.whatwg.org/"},
     {name: "Java", color: "#a6eaff", iconUrl: media.java, url: "https://www.java.com/en/"},
     {name: "JavaScript", color: "#fff5a6", iconUrl: media.javascript, url: "https://developer.oracle.com/languages/javascript.html"},
     {name: "Kotlin", color: "#e6a6ff", iconUrl: media.kotlin, url: "https://kotlinlang.org/"},
-    // {name: "MongoDB", color: "", iconUrl: media.mongodb_leaf, url: "https://www.mongodb.com/"},
     {name: "NodeJS", color: "#b8ffa6", iconUrl: media.nodejs_js, url: "https://nodejs.org/en"},
     {name: "Python", color: "#ffeda6", iconUrl: media.python, url: "https://www.python.org/"},
     {name: "PyTorch", color: "#ffb5a6", iconUrl: media.pytorch_flame, url: "https://pytorch.org/"},
@@ -29,9 +27,9 @@ const tech_stack = [
 ];
 
 const dev_tools = [
-    // {name: "Azure", color: "#a6d8ff", iconUrl: media.azure, url: "https://azure.microsoft.com/en-ca/"},
-    // {name: "Cloudflare", color: "#ffcea6", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
-    // {name: "DigitalOcean", color: "#a6d2ff", iconUrl: media.digitalocean, url: "https://www.digitalocean.com/"},
+    {name: "Cloudflare", color: "#ffcea6", iconUrl: media.cf_logo, url: "https://www.cloudflare.com/"},
+    {name: "DigitalOcean", color: "#a6d2ff", iconUrl: media.digitalocean, url: "https://www.digitalocean.com/"},
+    {name: "Git", color: "#ffaca6", iconUrl: media.git, url: "https://git-scm.com/"},
     {name: "GitHub", color: "#a6d2ff", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "IntelliJ IDEA", color: "#ffa6b9", iconUrl: media.intellij_idea, url: "https://www.jetbrains.com/idea/"},
     {name: "PyCharm", color: "#a6ffdb", iconUrl: media.pycharm, url: "https://www.jetbrains.com/pycharm/"},
@@ -54,7 +52,7 @@ const Skills = (themeMode) => {
                 <p className="text app__skills-side-text">
                     Hello, World!
                 </p>
-                <motion.div className="app__skills-list">
+                <motion.div className="app__skills-grid">
                     {tech_stack.map((skill) => {
                         return (
                             <motion.div
@@ -83,7 +81,7 @@ const Skills = (themeMode) => {
                          src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
                          alt="Github languages card" />
                 </div>
-                <div className="app__skills-list">
+                <div className="app__skills-grid">
                     {dev_tools.map((tool) => {
                         return (
                             <motion.div

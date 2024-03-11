@@ -13,9 +13,13 @@
 
     margin: 3rem 0 1rem;
 
+    @media screen and (max-width: 480px) {
+        margin: 1.5rem 0 1rem;
+    }
+
     .app__projects-filter-cat {
         padding: 0.4rem 0.80rem;
-        border-radius: 0.5rem;
+        border-radius: 9px;
         background-color: var(--lighter-color);
 
         cursor: pointer;
@@ -37,17 +41,21 @@
 .app__projects-portfolio {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
 
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+    }
+
     .app__projects-item {
-        flex-direction: row;
-
-        max-width: 40%;
-
         margin: 2rem;
         padding: 1rem;
-        border-radius: 1.5rem;
+        flex-direction: row;
+        max-width: 40%;
+
+        border-radius: 1.25rem;
         background-color: var(--lightest-color);
 
         cursor: pointer;
@@ -58,8 +66,9 @@
         }
 
         @media screen and (max-width: 480px) {
-            width: 100%;
-            margin: 1rem;
+            max-width: 100vw;
+            margin: 0.5rem 0 0;
+            padding: 0.5rem;
         }
     }
 }
@@ -67,28 +76,51 @@
 .app__projects-img {
     height: 192px;
     width: 192px;
-    border-radius: 0.5rem;
+    border-radius: 10px;
     object-fit: cover;
+
+    @media screen and (max-width: 480px) {
+        height: 96px;
+        width: 96px;
+    }
 }
 
 .app__projects-content {
     margin-left: 1rem;
-    padding: 0.5rem;
     width: 100%;
     flex-direction: column;
 
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        margin-left: 0.75rem;
+        width: 100%;
+    }
+
     h4 {
         margin-top: 1rem;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 0.5rem;
+        }
     }
 
     p {
         margin-top: 0.5rem;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 0.25rem;
+        }
     }
+
 
     .app__projects-category {
         width: fit-content;
         padding: 0.5rem 1rem;
         border-radius: 10px;
         background-color: var(--lighter-color);
+
+        @media screen and (max-width: 480px) {
+            margin-top: 0;
+        }
     }
 }
