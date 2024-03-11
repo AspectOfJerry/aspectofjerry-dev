@@ -19,7 +19,7 @@ const text_fade_in = {
 const About = () => {
     return (
         <>
-            {/*<p className="p-text app__about_note">
+            {/*<p className="p-text about__note">
                 📌 Hello, World! 🚧
             </p>*/}
             <div style={{marginTop: "2rem"}} />
@@ -28,19 +28,18 @@ const About = () => {
             </SectionTitle>
 
             <motion.p
-                className="p-text app__about-text"
+                className="p-text about__text"
                 whileInView={text_fade_in.whileInView}
                 transition={text_fade_in.transition}
             >
-                👋 Hey there, I'm Jerry - a coding enthusiast residing in the great white north, 🍁Canada!
+                👋 Hello there, I'm Jerry - a coding enthusiast residing in 🍁Canada!
                 <br /><br />
-                💡 Coding is more than just a hobby for me; it's a daily adventure. I'm always looking for new ways to challenge myself and expand my knowledge.
+                💡 Coding is more than just a hobby for me; it's a passion I pursue daily. I enjoy finding new challenges and learning as much as I can.
                 <br /><br />
-                🔍 But I don't stop at just coding; I'm captivated by machine learning, AI, computer vision, networking, game engines, and the art of ethical
-                hacking.
+                🔍 Besides coding, I'm interested in areas like AI, machine learning, computer vision, networking, game engines.
                 <br /><br />
-                🎮 When I'm not diving into lines of code, you might find delving into the dungeons of Lethal Company, engaging in tactical battles in Valorant, or exploring the
-                blocky landscapes of Minecraft.
+                🎮 When I'm not immersed in coding, you might find exploring the dungeons of Lethal Company, competing in Valorant, or exploring the
+                blocky world of Minecraft.
             </motion.p>
         </>
     );

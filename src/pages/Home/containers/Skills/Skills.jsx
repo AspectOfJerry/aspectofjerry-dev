@@ -79,9 +79,10 @@ const Skills = (themeMode) => {
                 <div>
                     <h4 className="bold-text">GitHub languages</h4>
                     <p className="p-text"></p>
-                    <img className="app__dev-tools-langs-card"
-                         src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
-                         alt="Github languages card" />
+                    <img
+                        className="app__dev-tools-langs-card"
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=aspectofjerry&layout=compact&langs_count=10&hide_title=true&hide_border=true&bg_color=00000000&title_color=87ceeb"
+                        alt="Github languages card" />
                 </div>
                 <div className="app__skills-grid">
                     {dev_tools.map((tool) => {

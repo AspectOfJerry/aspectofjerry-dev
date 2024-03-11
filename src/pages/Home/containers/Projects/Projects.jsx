@@ -84,7 +84,7 @@ const Projects = () => {
                     <div
                         key={category.name}
                         onClick={() => handleFilter(category)}
-                        className={`app__projects-filter-cat app__flex p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
+                        className={`app__projects-filter-cat p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
                     >
                         {category.name}
                     </div>
@@ -100,12 +100,12 @@ const Projects = () => {
             >
                 {filterProjects.map((project, index) => (
                     <motion.div
-                        className="app__projects-item app__flex"
+                        className="app__projects-item"
                         key={index}
                         whileHover={{scale: [1, 1.05]}}
                     >
                         <img className="app__projects-img" src={project.imageUrl} alt={`${project.name} img`} />
-                        <div className="app__projects-content app__flex">
+                        <div className="app__projects-content">
                             <p className="app__projects-category p-text">{project.category}</p>
                             <h4 className="bold-text">{project.name}</h4>
                             <p className="p-text">{project.description}</p>
