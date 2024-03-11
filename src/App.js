@@ -38,27 +38,27 @@ const theme_group = {
     themes: [
         {
             name: "Default",
-            className: "app_default",
+            className: "theme_default",
             mode: "light"
         },
         {
             name: "Deep Space",
-            className: "app_deep-space",
+            className: "theme_deep-space",
             mode: "dark"
         },
         {
             name: "Cloudy",
-            className: "app_cloudy",
+            className: "theme_cloudy",
             mode: "light"
         },
         {
             name: "Pink",
-            className: "app_pink",
+            className: "theme_pink",
             mode: "light"
         },
         {
             name: "Burgundy",
-            className: "app_burgundy",
+            className: "theme_burgundy",
             mode: "dark"
         }
     ]
@@ -101,6 +101,11 @@ const App = () => {
     const [theme, setTheme] = useState(() => getInitialColorMode(theme_group));
 
     useEffect(() => {
+        document.documentElement.className = theme.className;
+    }, [theme]);
+
+    // opening animation timer
+    useEffect(() => {
         const timeout = setTimeout(() => {
             setIsReady(true);
         }, 5000); // Show the animation for 5 seconds
@@ -122,11 +127,11 @@ const App = () => {
     };
 
     useEffect(() => {
-        const persisted_theme = window.localStorage.getItem("color-mode");
+        const persisted_theme = window.localStorage.getItem(theme_group.localStorageKey);
         const has_persisted_theme = typeof persisted_theme === "string";
 
         if (!has_persisted_theme) {
-            window.localStorage.setItem("color-mode", "app_default");
+            window.localStorage.setItem(theme_group.localStorageKey, "theme_default");
         }
     }, []);
 

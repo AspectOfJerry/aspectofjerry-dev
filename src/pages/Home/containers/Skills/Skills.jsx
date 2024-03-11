@@ -39,7 +39,7 @@ const dev_tools = [
 
 
 const Skills = (themeMode) => {
-    dev_tools.find(e => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
+    dev_tools.find((e) => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
 
     return (
         <>
@@ -59,10 +59,12 @@ const Skills = (themeMode) => {
                                 className="app__skills-item app__flex"
                                 key={skill.name}
                             >
-                                <motion.a href={skill.url}
-                                          target="_blank"
-                                          rel="noreferrer"
-                                          whileHover={{boxShadow: `0 0 20px ${skill.color}`}}>
+                                <motion.a
+                                    href={skill.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    whileHover={{boxShadow: `0 0 20px ${skill.color}`}}
+                                >
                                     <img src={skill.iconUrl} alt={`${skill.name} img`} />
                                 </motion.a>
                                 <p className="p-text app__skills-item-name">{skill.name}</p>
@@ -88,10 +90,12 @@ const Skills = (themeMode) => {
                                 className="app__skills-item app__flex"
                                 key={tool.name}
                             >
-                                <motion.a href={tool.url}
-                                          target="_blank"
-                                          rel="noreferrer"
-                                          whileHover={{boxShadow: `0 0 20px ${tool.color}`}}>
+                                <motion.a
+                                    href={tool.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    whileHover={{boxShadow: `0 0 20px ${tool.color}`}}
+                                >
                                     <img src={tool.iconUrl} alt={`${tool.name} img`} />
                                 </motion.a>
                                 <p className="p-text app__skills-item-name">{tool.name}</p>

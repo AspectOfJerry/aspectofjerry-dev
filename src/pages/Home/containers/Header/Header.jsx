@@ -123,7 +123,7 @@ const Header = () => {
                 </motion.p>
             </div>
 
-            <div className="app__header_shadow"></div>
+            <div className="header__shadow"></div>
         </>
     );
 };
