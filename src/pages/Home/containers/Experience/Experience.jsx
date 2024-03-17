@@ -16,7 +16,7 @@ const experience = [
         year: "2017-2019",
         experiences: [
             {
-                iconUrl: media.google_developer_guide
+                description: "...",
             }
         ]
     },
@@ -103,7 +103,7 @@ const Experience = () => {
                                     return (
                                         <motion.div key={index} className="app__exp-experience">
                                             <a href={experience.url} target="_blank" rel="noopener noreferrer">
-                                                <img src={experience.iconUrl} alt={experience.title} />
+                                                {experience.iconUrl ? <img src={experience.iconUrl} alt={experience.title} /> : null}
                                             </a>
                                             <div>
                                                 <h3>{experience.title}</h3>

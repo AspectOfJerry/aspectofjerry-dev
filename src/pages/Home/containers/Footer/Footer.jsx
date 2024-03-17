@@ -10,10 +10,6 @@ const sites = [
     {title: "404", url: "/404"}
 ];
 
-const texts = [
-    {title: "", url: ""}
-];
-
 const Footer = () => {
     return (
         <>
@@ -30,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright" style={{backgroundColor: "var(--footer-color)", paddingTop: "0"}}>
-                <p>Copyright © 2022 Jerry</p>
+                <p>Copyright © 2022-{new Date().getFullYear()} Jerry</p>
             </div>
         </>
     );
