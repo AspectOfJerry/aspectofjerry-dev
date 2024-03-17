@@ -1,5 +1,5 @@
-.app__navbar,
-.app__navbar-shrunk {
+.navbar,
+.navbar__shrunk {
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -11,12 +11,12 @@
     position: fixed;
     z-index: 2;
 
+    filter: brightness(1);
     transition: padding 0.65s,
     box-shadow 0.65s,
     background-color 0.65s,
     backdrop-filter 0.65s,
     border-radius 0.65s,
-    scale 0.65s,
     margin-top 0.75s;
 
     ul {
@@ -26,7 +26,7 @@
     }
 }
 
-.app__navbar {
+.navbar {
     padding: 1rem 2rem;
     border-bottom: 1px solid var(--shadow-glow-color);
 
@@ -37,14 +37,13 @@
     }
 }
 
-.app__navbar-shrunk {
+.navbar__shrunk {
     padding: 0.90rem 1.80rem;
     margin-top: 10px;
+
     box-shadow: 0 4px 8px var(--shadow-color);
     background-color: var(--navbar-s-color);
     border: none;
-
-    scale: 90%;
     border-radius: 20px;
 
     .app__navbar-icon {

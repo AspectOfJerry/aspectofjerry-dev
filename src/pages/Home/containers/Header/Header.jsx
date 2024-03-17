@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {motion} from "framer-motion";
+import {gsap} from "gsap";
+import {useGSAP} from "@gsap/react";
 
 import "./Header.scss";
 
@@ -78,49 +80,44 @@ const Header = () => {
         }
     }, [textIndex, charIndex, isDeleting]);
 
+
+    useGSAP(() => {
+        gsap.from([".header__hero-text", ".header__text-small"], {
+            yPercent: 100,
+            ease: "sine.out",
+            duration: 1.1,
+            stagger: 0.25,
+            delay: 0.25
+        });
+    });
+
     return (
         <>
-            <div id="header" className="header">
-                <div className="header__text-container">
-                    <motion.h1
-                        className="header__hero-text"
-                        animate={{
-                            y: [75, 0], // up
-                            opacity: [0, 100],
-                        }}
-                        transition={{
-                            ease: "easeOut",
-                            duration: 1.1,
-                            delay: 0.60,
-                        }}
-                    >
-                        Hello
-                    </motion.h1>
-                    <motion.h1
-                        className="header__text-small"
-                        animate={{
-                            y: [30, 0], // up
-                            opacity: [0, 100],
-                        }}
-                        transition={{
-                            ease: "easeOut",
-                            duration: 0.90,
-                            delay: 1.10,
-                        }}
-                    >
-                        I'm Jerry
-                    </motion.h1>
-
+            <div className="header">
+                <div className="header__container">
+                    <div className="header__text-container">
+                        <h1
+                            className="header__hero-text"
+                        >
+                            Hello
+                        </h1>
+                        <h1
+                            className="header__text-small"
+                        >
+                            I'm Jerry
+                        </h1>
+                    </div>
                     <motion.div
                         className="header__text-line"
-                        initial={{width: 0, opacity: 0.05}}
-                        animate={{width: ["0%", "150%"], opacity: ["5%", "100%"]}}
+                        initial={{width: 0, opacity: 0}}
+                        animate={{width: ["0%", "150%"], opacity: ["0%", "100%"]}}
                         transition={{duration: 1}}
                     />
                 </div>
-                <motion.p className="header__typing-text text">
+
+                <p className="header__typing-text p-text">
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
-                </motion.p>
+                </p>
             </div>
 
             <div className="header__shadow"></div>

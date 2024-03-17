@@ -20,7 +20,7 @@ html {
     --darkest-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(170, 212, 228, 0.35); // 78% HS L --primary-color
-    --navbar-s-color: rgba(170, 212, 228, 0.40); // 78% HS L --primary-color
+    --navbar-s-color: rgba(170, 212, 228, 0.45); // 78% HS L --primary-color
     --head-background-color: rgba(189, 221, 234); // 83% HS L --primary-color
     --shadow-color: rgba(16, 16, 16, 0.12);
     --shadow-glow-color: rgba(189, 221, 234, 0.25); // 83% HS L --primary-color
@@ -45,8 +45,8 @@ html.theme_deep-space {
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
-    --navbar-color: rgba(32, 32, 64, 0.40);
-    --navbar-s-color: rgba(16, 16, 64, 0.20);
+    --navbar-color: rgba(32, 32, 64, 0.35);
+    --navbar-s-color: rgba(16, 16, 64, 0.25);
     --head-background-color: rgb(4, 8, 24);
     --shadow-color: rgba(160, 160, 160, 0.30);
     --shadow-glow-color: rgba(200, 200, 235, 0.30);
@@ -71,7 +71,7 @@ html.theme_cloudy {
     --darker-color: rgb(80, 80, 80);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(186, 208, 247, 0.30);
+    --navbar-color: rgba(186, 208, 247, 0.35);
     --navbar-s-color: rgba(186, 208, 247, 0.45);
     --head-background-color: var(--primary-color);
     --shadow-color: rgba(16, 16, 16, 0.15);
@@ -97,7 +97,7 @@ html.theme_pink {
     --darker-color: rgba(80, 80, 80, 1);
     --darkest-color: rgb(32, 32, 32);
 
-    --navbar-color: rgba(255, 204, 214, 0.30);
+    --navbar-color: rgba(255, 204, 214, 0.35);
     --navbar-s-color: rgba(255, 204, 214, 0.45);
     // 92%
     --head-background-color: rgb(255, 214, 222);
@@ -125,8 +125,8 @@ html.theme_burgundy {
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
 
-    --navbar-color: rgba(160, 0, 40, 0.10);
-    --navbar-s-color: rgba(160, 0, 40, 0.15);
+    --navbar-color: rgba(160, 0, 40, 0.35);
+    --navbar-s-color: rgba(160, 0, 40, 0.25);
     --head-background-color: rgb(64, 0, 16);
     --shadow-color: rgba(160, 160, 160, 0.30);
     --shadow-glow-color: rgba(233, 124, 124, 0.25);
