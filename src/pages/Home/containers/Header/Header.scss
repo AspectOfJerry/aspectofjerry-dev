@@ -1,39 +1,42 @@
-#header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header {
     background-color: var(--head-background-color);
-    align-items: center;
     justify-content: center;
     height: 100vh;
     transition: background-color 0.75s;
 }
 
+.header__container,
 .header__text-container {
-    font-family: "Aleo", serif;
-    //font-family: "Nunito", "serif";
-
     position: relative;
     display: flex;
     align-items: flex-end;
-    margin-top: 3rem;
-
-    color: var(--darkest-color);
 
     transition: color 0.50s;
-    z-index: 1;
+}
 
+.header__container {
     @media screen and (max-width: 480px) {
         margin-top: 2rem;
     }
 }
 
+.header__text-container {
+    font-family: "Nunito", "serif";
+    //font-family: "Aleo", serif;
+    margin-top: 2rem;
+    overflow: hidden;
+
+    color: var(--darkest-color);
+
+    z-index: 1;
+}
+
 .header__hero-text {
     font-weight: 300;
-    font-size: 9rem;
+    font-size: 8rem;
     //margin-right: 5px;
 
     @media screen and (max-width: 1024px) {
@@ -60,7 +63,7 @@
 
 .header__text-line {
     position: absolute;
-    bottom: -28px;
+    bottom: -16px;
     left: 50%;
     transform: translateX(-50%);
     width: 150%;
@@ -79,6 +82,6 @@
 .header__typing-text {
     text-align: center;
     width: 100%;
-    padding: 64px 2% 0;
+    padding: 48px 2% 0;
     min-height: 8rem;
 }
