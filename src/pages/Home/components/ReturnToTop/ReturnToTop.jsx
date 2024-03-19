@@ -1,22 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import {media} from "../../../../constants/index.js";
-import {motion} from "framer-motion";
+import {gsap} from "gsap";
+import {useGSAP} from "@gsap/react";
 
 import "./ReturnToTop.scss";
 
+function topFunction() {
+    document.body.scrollIntoView(); // Safari
+    document.documentElement.scrollIntoView(); // Chrome, Firefox, IE, Opera
+}
+
 const ReturnToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
-
-    function topFunction() {
-        document.body.scrollIntoView(); // Safari
-        document.documentElement.scrollIntoView(); // Chrome, Firefox, IE, Opera
-    }
+    const buttonRef = useRef(null);
 
     useEffect(() => {
         window.onscroll = function () {
             scrollFunction()
         };
-
 
         function scrollFunction() {
             if (document.body.scrollTop > 3 || document.documentElement.scrollTop > 3) {
@@ -27,20 +28,32 @@ const ReturnToTop = () => {
         }
     }, []);
 
+    useGSAP(() => {
+        if (isVisible) {
+            gsap.to(buttonRef.current, {
+                yPercent: 0,
+                opacity: 0.40, // opacity in ReturnToTop.scss
+                duration: 0.35,
+            });
+        } else {
+            gsap.to(buttonRef.current, {
+                yPercent: 200,
+                opacity: 0,
+                duration: 0.35,
+            });
+        }
+    }, [isVisible]);
+
     return (
-        isVisible && (
-            <motion.button
-                className="return-to-top"
-                onClick={topFunction}
-                title="Return to top"
-                whileInView={{y: [50, 0]}}
-                initial={{y: 50}}
-                whileHover={{scale: 1.1}}
-                whileTap={{scale: [1, 0.95], borderRadius: "100%"}}
-            >
-                <img src={media.arrow_up} alt="Arrow up" />
-            </motion.button>
-        )
+        <button
+            ref={buttonRef}
+            className="return-to-top"
+            onClick={topFunction}
+            title="Return to top"
+            style={{opacity: 0, y: 50}}
+        >
+            <img src={media.arrow_up} alt="Arrow up" />
+        </button>
     )
 };
 

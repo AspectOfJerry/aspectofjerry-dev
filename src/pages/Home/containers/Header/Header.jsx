@@ -84,8 +84,8 @@ const Header = () => {
     useGSAP(() => {
         gsap.from([".header__hero-text", ".header__text-small"], {
             yPercent: 100,
-            ease: "sine.out",
-            duration: 1.1,
+            ease: "power1.out",
+            duration: 1.25,
             stagger: 0.25,
             delay: 0.25
         });

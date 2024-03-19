@@ -60,8 +60,8 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
             gsap.from([".navbar", ".navbar__shrunk"], {
                 yPercent: -100,
                 filter: "brightness(1.25)",
+                duration: 1,
                 ease: "power2.out",
-                duration: 0.90,
                 delay: 0.20,
                 onComplete: () => setHasAnimated(false)
             })
@@ -70,7 +70,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 yPercent: -200,
                 duration: 0.90,
                 ease: "power1.out",
-                delay: 0.40 + 0.20,
+                delay: 0.45 + 0.20,
                 stagger: 0.10,
             });
         }
@@ -81,15 +81,15 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
     useEffect(() => {
         if (isShrunk) {
             gsap.to(navbarRef.current, {
-                duration: 0.50,
+                duration: 0.60,
                 scale: 0.9, // scale down to 90% of its original size
-                ease: "sine.out"
+                ease: "power1.out"
             });
         } else {
             gsap.to(navbarRef.current, {
-                duration: 0.50,
+                duration: 0.60,
                 scale: 1, // back to original size
-                ease: "sine.out"
+                ease: "power1.out"
             });
         }
     }, [isShrunk]);
