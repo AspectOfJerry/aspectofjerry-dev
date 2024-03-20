@@ -10,7 +10,8 @@ import SectionTitle from "../../../components/SectionTitle";
 const About = () => {
     useGSAP(() => {
         gsap.from(".about__text", {
-            yPercent: 250,
+            scrollTrigger: ".about__text",
+            yPercent: 200,
             ease: "power1.out",
             duration: 0.80,
             stagger: 0.10
@@ -18,7 +19,7 @@ const About = () => {
     }, []);
 
     return (
-        <>
+        <div className="about">
             {/*<p className="p-text about__note">
                 📌 Hello, World! 🚧
             </p>*/}
@@ -30,7 +31,7 @@ const About = () => {
             <div
                 className="p-text about__text-container"
             >
-                <div className="abou__-text-line"><p className="about__text">
+                <div className="about__text-line"><p className="about__text">
                     👋 Hey there, I'm Jerry - a coding enthusiast residing in 🍁Canada!
                 </p></div>
                 <br />
@@ -46,7 +47,7 @@ const About = () => {
                     🎮 When I'm not immersed in coding, you might find exploring the dungeons of Lethal Company, competing in Valorant, or exploring the blocky world of Minecraft.
                 </p></div>
             </div>
-        </>
+        </div>
     );
 };
 

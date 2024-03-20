@@ -91,19 +91,26 @@ const Header = () => {
         });
     });
 
+    // <ParallaxTrails trigger=".skills" left="18%" top="87%" width="28px" />
+    // <ParallaxTrails trigger=".skills" left="22%" top="28%" width="26px" />
+    // <ParallaxTrails trigger=".skills" left="23%" top="64%" width="20px" />
+    // <ParallaxTrails trigger=".skills" left="26%" top="18%" width="24px" />
+    // <ParallaxTrails trigger=".skills" left="27%" top="77%" width="20px" />
+    // <ParallaxTrails trigger=".skills" left="29%" top="88%" width="20px" />
+    // <ParallaxTrails trigger=".skills" left="73%" top="65%" width="22px" />
+    // <ParallaxTrails trigger=".skills" left="82%" top="90%" width="16px" />
+    // <ParallaxTrails trigger=".skills" left="86%" top="30%" width="20px" />
+    // <ParallaxTrails trigger=".skills" left="86%" top="38%" width="20px" />
+
     return (
         <>
             <div className="header">
                 <div className="header__container">
                     <div className="header__text-container">
-                        <h1
-                            className="header__hero-text"
-                        >
+                        <h1 className="header__hero-text">
                             Hello
                         </h1>
-                        <h1
-                            className="header__text-small"
-                        >
+                        <h1 className="header__text-small">
                             I'm Jerry
                         </h1>
                     </div>

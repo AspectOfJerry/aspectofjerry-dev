@@ -1,0 +1,9 @@
+.trail {
+    position: absolute;
+    height: 24px; // dynamically set
+    width: 24px; // dynamically set
+
+    border-radius: 12px; // dynamically set
+    background: radial-gradient(174.86% 134.88% at 129.03% 15.73%, #00bae2 0, #ffa9fa 11.29%, #fec5fb 46.35%, #00bae2 95.73%);
+    opacity: 0.75;
+}
