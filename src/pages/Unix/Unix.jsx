@@ -2,11 +2,11 @@ import React, {useState, useEffect} from "react";
 import "./Unix.scss";
 
 const Unix = () => {
-    const [timestamp, setTimestamp] = useState(Math.floor(Date.now() / 1000));
-
     useEffect(() => {
-        document.title = "• Unix " + timestamp;
-    }, [timestamp]);
+        document.title = timestamp + "ts • jerrydev";
+    });
+
+    const [timestamp, setTimestamp] = useState(Math.floor(Date.now() / 1000));
 
     useEffect(() => {
         const timer = setInterval(() => {

@@ -4,7 +4,7 @@ import "./Elements.scss";
 
 const Elements = (themeMode) => {
     useEffect(() => {
-        document.title = "• Periodic Table";
+        document.title = "⚛️ • jerrydev";
     }, []);
 
     const [periodicTableData, setPeriodicTableData] = useState([]);

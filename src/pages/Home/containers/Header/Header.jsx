@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {motion} from "framer-motion";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 
@@ -10,24 +9,20 @@ const texts = [
     "🌟 Crafting code and chasing dreams.",
     "💡 Ctrl + Alt + Defeat is not in my vocabulary.",
     "✨ Let's build something magic together!",
-    "🐞 Debugger of life's quirks and quantum glitches.",
     "🖋 Committed to pixels and a passionate relationship with my IDE.",
     "🌈 Transforming errors into applause-worthy features.",
     "🔮 Embracing a world of brackets, semicolons, and creative chaos.",
     "🦄 Breaking bugs, stereotypes, and coding norms.",
     "🚀 Building bridges between ideas and the realm of possibilities.",
     "☕ I don't sweat, I debug in style.",
-    "🔁 Living in loops, logic, and infinite curiosity.",
     "🌙 Debugger by day, dreamer by night. What's your superpower?",
     "🛠️ Breaking things to uncover better ways of building them.",
     "🎯 Making the complex simple, one line at a time.",
     "🔥 Writing code that sets keyboards on fire.",
     "🔓 Hacking the boundaries of reality with lines of code.",
-    "🌀 The loop is where the magic happens—join me on this coding journey.",
     "🚀 Code is my canvas; elegance is my masterpiece.",
     "🚀 Launching into the universe of code, propelled by creativity.",
     "🌟 Navigating the digital matrix with a keyboard as my compass.",
-    "💭 If you think programming is boring, it's because you're not doing it right!",
     "👋 Hello, World!",
 ];
 
@@ -57,10 +52,10 @@ const Header = () => {
         };
 
         if (!isDeleting && charIndex < texts[textIndex].length) {
-            const timeout = setTimeout(typeText, 48); // typing delay
+            const timeout = setTimeout(typeText, 40); // typing delay
             return () => clearTimeout(timeout);
         } else if (isDeleting && charIndex > 0) {
-            const timeout = setTimeout(typeText, 18); // untyping delay
+            const timeout = setTimeout(typeText, 16); // untyping delay
             return () => clearTimeout(timeout);
         } else {
             setIsBlinking(true);
@@ -69,67 +64,92 @@ const Header = () => {
                     setTextIndex(Math.floor(Math.random() * texts.length)); // generate a random index
                     setIsDeleting(!isDeleting);
                     setCharIndex(0);
-                }, 200); // delay between texts after untyping
+                }, 150); // delay between texts after untyping
                 return () => clearTimeout(timeout);
             } else {
                 const timeout = setTimeout(() => {
                     setIsDeleting(!isDeleting);
-                }, 2800); // delay between texts after typing
+                }, 2500); // delay between texts after typing
                 return () => clearTimeout(timeout);
             }
         }
     }, [textIndex, charIndex, isDeleting]);
 
 
+    const tl = gsap.timeline({
+        // repeat: -1,
+        // yoyo: true,
+    });
+
     useGSAP(() => {
-        gsap.from([".header__hero-text", ".header__text-small"], {
-            yPercent: 100,
+        tl.to(".header__text-line", {
+            width: "125%",
+            opacity: 1,
             ease: "power1.out",
-            duration: 1.25,
-            stagger: 0.25,
-            delay: 0.25
+            duration: 1.20
         });
     });
 
-    // <ParallaxTrails trigger=".skills" left="18%" top="87%" width="28px" />
-    // <ParallaxTrails trigger=".skills" left="22%" top="28%" width="26px" />
-    // <ParallaxTrails trigger=".skills" left="23%" top="64%" width="20px" />
-    // <ParallaxTrails trigger=".skills" left="26%" top="18%" width="24px" />
-    // <ParallaxTrails trigger=".skills" left="27%" top="77%" width="20px" />
-    // <ParallaxTrails trigger=".skills" left="29%" top="88%" width="20px" />
-    // <ParallaxTrails trigger=".skills" left="73%" top="65%" width="22px" />
-    // <ParallaxTrails trigger=".skills" left="82%" top="90%" width="16px" />
-    // <ParallaxTrails trigger=".skills" left="86%" top="30%" width="20px" />
-    // <ParallaxTrails trigger=".skills" left="86%" top="38%" width="20px" />
+    useGSAP(() => {
+        tl.from([".header__hero-text"], {
+            yPercent: 100,
+            ease: "power1.out",
+            duration: 1.10
+        }, 0.40);
+    });
+
+    useGSAP(() => {
+        tl.from([".header__text-small"], {
+            yPercent: -100,
+            ease: "power1.out",
+            duration: 0.9
+        }, 0.80);
+    });
+
+    useGSAP(() => {
+        tl.from(".header__text", {
+            yPercent: 100,
+            y: 50,
+            ease: "power2.out",
+            duration: 1,
+            stagger: 0.15
+        }, 1.20);
+    });
+
 
     return (
         <>
             <div className="header">
                 <div className="header__container">
-                    <div className="header__text-container">
-                        <h1 className="header__hero-text">
-                            Hello
-                        </h1>
-                        <h1 className="header__text-small">
-                            I'm Jerry
-                        </h1>
+                    <div className="text-line">
+                        <h1 className="header__hero-text"> Hello</h1>
                     </div>
-                    <motion.div
-                        className="header__text-line"
-                        initial={{width: 0, opacity: 0}}
-                        animate={{width: ["0%", "150%"], opacity: ["0%", "100%"]}}
-                        transition={{duration: 1}}
-                    />
+
+                    <div className="header__text-line" />
+
+                    <div className="text-line">
+                        <h2 className="header__text-small">I'm Jerry 👋</h2>
+                    </div>
+                </div>
+                <div
+                    className="p-text header__text-container"
+                >
+                    <div className="text-line"><p className="header__text">
+                        Hey there, I'm Jerry - a coding enthusiast residing in 🍁Canada🦫!
+                    </p></div>
+                    <div className="text-line"><p className="header__text">
+                        Buckle up, because you're about to uncover more about me! 🚀
+                    </p></div>
                 </div>
 
-                <p className="header__typing-text p-text">
+                <p className="header__typing-text ctext">
                     {headerText}&thinsp;<span id="caret" className={isBlinking ? "blink" : ""}>|</span>
                 </p>
             </div>
-
             <div className="header__shadow"></div>
         </>
     );
 };
+
 
 export default Header;

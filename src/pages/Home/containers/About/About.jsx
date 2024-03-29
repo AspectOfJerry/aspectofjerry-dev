@@ -29,11 +29,8 @@ const About = () => {
             </SectionTitle>
 
             <div
-                className="p-text about__text-container"
+                className="text about__text-container"
             >
-                <div className="about__text-line"><p className="about__text">
-                    👋 Hey there, I'm Jerry - a coding enthusiast residing in 🍁Canada!
-                </p></div>
                 <br />
                 <div className="about__text-line"><p className="about__text">
                     💡 Coding is more than just a hobby for me; it's a passion I pursue daily. I enjoy finding new challenges and learning as much as I can.

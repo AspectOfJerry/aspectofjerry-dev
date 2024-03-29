@@ -31,6 +31,7 @@ import {Countdown} from "./pages/Countdown/index.js";
 import {Unix} from "./pages/Unix";
 
 import {UrlShortener} from "./pages/UrlShortener/index.js";
+import {Bday} from "./pages/Bday";
 
 
 const theme_group = {
@@ -142,7 +143,7 @@ const App = () => {
                     path="/"
                     element={
                         <>
-                            <title>jerrydev • Jerry</title>
+                            <title>Jerry • jerrydev</title>
 
                             <Navbar toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
                                     links={[
@@ -192,10 +193,7 @@ const App = () => {
                             theme={theme}
                             links={[]}
                             extLinks={[
-                                {name: "🔗 Unix", link: "https://en.wikipedia.org/wiki/Unix"},
-                                {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"},
-                                {name: "🔗 Unix shell", link: "https://en.wikipedia.org/wiki/Unix_shell"},
-                                {name: "🔗 Unix filesystem", link: "https://en.wikipedia.org/wiki/Unix_filesystem"},
+                                {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"}
                             ]}
                             forceShrink={true}
                         />
@@ -238,7 +236,21 @@ const App = () => {
                 }
                 />
 
-                <Route path="/ping" element={<p>pong</p>} />
+                <Route path="/bday" element={
+                    <>
+                        <Navbar
+                            toggleTheme={() => toggleTheme(theme_group)}
+                            themes={theme_group.themes}
+                            theme={theme}
+                            links={[]}
+                            extLinks={[]}
+                            forceShrink={true}
+                        />
+                        <Bday themeType={theme.theme} />
+                    </>
+                } />
+
+                <Route path="/ping" element={"pong"} />
 
                 <Route
                     path="*"

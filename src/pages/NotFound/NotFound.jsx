@@ -3,12 +3,12 @@ import {motion, AnimatePresence} from "framer-motion";
 import "./NotFound.scss";
 
 const NotFound = () => {
+    useEffect(() => {
+        document.title = "404 • jerrydev";
+    }, []);
+
     const [fadeOut, setFadeOut] = useState(false);
     const [buttonPos, setButtonPos] = useState({x: 0, y: 0});
-
-    useEffect(() => {
-        document.title = "jerrydev • 404";
-    }, []);
 
     const handleRedirect = () => {
         setFadeOut(true);
