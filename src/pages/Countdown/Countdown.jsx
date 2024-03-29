@@ -3,13 +3,13 @@ import "./Countdown.scss";
 import Confetti from "react-confetti";
 
 const ChristmasCountdown = () => {
+    useEffect(() => {
+        document.title = "🧨 " + countdown + " • jerrydev";
+    });
+
     const [countdown, setCountdown] = useState("Loading...");
     const [year, setYear] = useState("2️⃣0️⃣2️⃣4️⃣");
     const [celebrate, setCelebrate] = useState(false);
-
-    useEffect(() => {
-        document.title = "• " + countdown;
-    }, [countdown]);
 
     useEffect(() => {
         const timer = setInterval(() => {

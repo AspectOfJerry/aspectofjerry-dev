@@ -6,7 +6,8 @@ import "./Footer.scss";
 const sites = [
     {title: "Hypixel Skyblock mod (forge-1.8.9)", url: "https://bap.jerrydev.net"},
     {title: "Discord bot (decommissioned)", url: "https://bot.jerrydev.net"},
-    {title: "Countdown", url: "/countdown"},
+    {title: "Bday 🎂", url: "/bday"},
+    {title: "Countdown 🎆", url: "/countdown"},
     {title: "404", url: "/404"}
 ];
 

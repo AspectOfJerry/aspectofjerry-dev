@@ -1,16 +1,10 @@
-.about {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-}
-
 .about__note {
     margin-top: 1rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.about__text {
+.about__text-container {
     margin: 3rem 5% 0;
 
     a {
@@ -20,4 +14,8 @@
     @media screen and (max-width: 480px) {
         margin: 2rem 2% 0;
     }
+}
+
+.about__text-line {
+    overflow: hidden;
 }

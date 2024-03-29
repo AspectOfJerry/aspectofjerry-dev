@@ -17,7 +17,8 @@ html {
     --gray-color: rgba(150, 150, 150, 1);
     --dark-color: rgba(120, 120, 120, 1);
     --darker-color: rgba(80, 80, 80, 1);
-    --darkest-color: rgba(32, 32, 32, 1);
+    --darkest-color: rgba(56, 56, 56, 1);
+    --back-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(170, 212, 228, 0.35); // 78% HS L --primary-color
     --navbar-s-color: rgba(170, 212, 228, 0.45); // 78% HS L --primary-color
@@ -44,6 +45,7 @@ html.theme_deep-space {
     --dark-color: rgb(180, 180, 180);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
+    --black-color: rgba(245, 245, 245, 1);
 
     --navbar-color: rgba(32, 32, 64, 0.35);
     --navbar-s-color: rgba(16, 16, 64, 0.25);
@@ -69,7 +71,8 @@ html.theme_cloudy {
     --gray-color: rgba(150, 150, 150, 1);
     --dark-color: rgb(120, 120, 120);
     --darker-color: rgb(80, 80, 80);
-    --darkest-color: rgb(32, 32, 32);
+    --darkest-color: rgb(56, 56, 56);
+    --black-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(186, 208, 247, 0.35);
     --navbar-s-color: rgba(186, 208, 247, 0.45);
@@ -95,7 +98,8 @@ html.theme_pink {
     --gray-color: rgba(150, 150, 150, 1);
     --dark-color: rgb(120, 120, 120);
     --darker-color: rgba(80, 80, 80, 1);
-    --darkest-color: rgb(32, 32, 32);
+    --darkest-color: rgb(56, 56, 56);
+    --black-color: rgba(32, 32, 32, 1);
 
     --navbar-color: rgba(255, 204, 214, 0.35);
     --navbar-s-color: rgba(255, 204, 214, 0.45);
@@ -124,6 +128,7 @@ html.theme_burgundy {
     --dark-color: rgb(180, 180, 180);
     --darker-color: rgb(220, 220, 220);
     --darkest-color: rgb(235, 235, 235);
+    --black-color: rgba(245, 245, 245, 1);
 
     --navbar-color: rgba(160, 0, 40, 0.35);
     --navbar-s-color: rgba(160, 0, 40, 0.25);
@@ -198,10 +203,14 @@ html.theme_burgundy {
     animation: blink 1s infinite;
 }
 
+.text-line {
+    overflow: hidden;
+}
+
 .title-text {
     font-size: 2.75rem;
     font-weight: 600;
-    color: var(--darkest-color);
+    color: var(--black-color);
 
     span {
         color: var(--primary-color);
@@ -221,7 +230,7 @@ html.theme_burgundy {
     font-size: 1.80rem;
     font-weight: 500;
     text-align: center;
-    color: var(--darkest-color);
+    color: var(--black-color);
 
     transition: color 0.35s;
 
@@ -260,8 +269,7 @@ html.theme_burgundy {
 }
 
 .ctext {
-    color: var(--darkest-color);
-    line-height: 1.75;
+    line-height: 1.80;
     font-weight: 400;
 
     transition: color 0.50s;

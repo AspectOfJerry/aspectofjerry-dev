@@ -38,13 +38,6 @@ const projectsData = [
         imageUrl: media.bap_dolphin
     },
     {
-        name: "BapUtils",
-        category: "Java",
-        description: "BapUtils is a Hypixel Skyblock mod featuring a variety of random utility features for Minecraft Forge 1.8.9.",
-        homepage: "https://bap.jerrydev.net/",
-        imageUrl: media.bap_dolphin
-    },
-    {
         name: "JerryBot (decommissioned)",
         category: "JavaScript",
         description: "JerryBot#9090 was a Discord bot built on discord.js v13.",
