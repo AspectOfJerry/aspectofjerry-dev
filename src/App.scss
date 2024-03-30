@@ -273,10 +273,6 @@ html.theme_burgundy {
     font-weight: 400;
 
     transition: color 0.50s;
-
-    @media screen and (max-width: 480px) {
-        font-size: 1.10rem;
-    }
 }
 
 .bold-text {
