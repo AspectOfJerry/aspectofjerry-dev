@@ -145,20 +145,21 @@ const App = () => {
                         <>
                             <title>Jerry • jerrydev</title>
 
-                            <Navbar toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
-                                    links={[
-                                        {name: "About", link: "#about"},
-                                        {name: "Skills", link: "#skills"},
-                                        {name: "Experience", link: "#experience"},
-                                        {name: "Socials", link: "#socials"},
-                                        {name: "Projects", link: "#projects"}
-                                    ]}
-                                    extLinks={[
-                                        // {name: "Countdown 🎉", link: "/countdown"},
-                                        {name: "URL Shortener (WIP)", link: "/urls"},
-                                        {name: "Periodic Table (WIP)", link: "/elements"}
-                                    ]}
-                                    forceShrink={false}
+                            <Navbar
+                                toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
+                                links={[
+                                    {name: "About", link: "#about"},
+                                    {name: "Skills", link: "#skills"},
+                                    {name: "Experience", link: "#experience"},
+                                    {name: "Socials", link: "#socials"},
+                                    {name: "Projects", link: "#projects"}
+                                ]}
+                                extLinks={[
+                                    // {name: "Countdown 🎉", link: "/countdown"},
+                                    {name: "URLShort (WIP)", link: "/urls"},
+                                    {name: "PeriodicTable (WIP)", link: "/elements"}
+                                ]}
+                                forceShrink={false}
                             />
                             <AppReturnToTop />
                             <AppHeader />

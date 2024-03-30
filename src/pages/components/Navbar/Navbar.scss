@@ -1,70 +1,25 @@
-.navbar,
-.navbar__shrunk {
+.navbar {
+    // gsap
+    scale: 1;
+    padding: 1rem 2rem;
+    background-color: var(--navbar-color);
+    border-bottom: 1px solid var(--shadow-glow-color);
+
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--navbar-color);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     position: fixed;
     z-index: 2;
 
     filter: brightness(1);
-    transition: padding 0.65s,
-    box-shadow 0.65s,
-    background-color 0.65s,
-    backdrop-filter 0.65s,
-    border-radius 0.65s,
-    margin-top 0.75s;
-
-    ul {
-        li {
-            transition: all 0.65s;
-        }
-    }
+    transition: background-color 0.70s;
 }
 
-.navbar {
-    padding: 1rem 2rem;
-    border-bottom: 1px solid var(--shadow-glow-color);
-
-    ul {
-        li {
-            margin: 0 4%;
-        }
-    }
-}
-
-.navbar__shrunk {
-    padding: 0.90rem 1.80rem;
-    margin-top: 10px;
-
-    box-shadow: 0 4px 8px var(--shadow-color);
-    background-color: var(--navbar-s-color);
-    border: none;
-    border-radius: 20px;
-
-    .app__navbar-icon {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        img {
-            width: 32px;
-            height: 32px;
-        }
-    }
-
-    ul {
-        li {
-            margin: 0 4.5%;
-        }
-    }
-}
-
-.app__navbar-icon {
+.navbar__icon {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -75,28 +30,18 @@
         border-radius: 25%;
 
         transition: all 0.50s;
-
-        // @media screen and (min-width: 2000px) {
-        //     width: 96;
-        //     height: auto;
-        // }
     }
 }
 
-// .app__navbar-message {
-//     margin-left: 5rem;
-//     margin-right: 5rem;
-// }
-
-.app__navbar-nav-links,
-.app__navbar-ext-links {
+.navbar__nav-links,
+.navbar__ext-links {
     li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
 
-        // margin is in .app__navbar.ul.li and .app__navbar-shrunk.ul.li
+        margin: 0 3%;
         cursor: pointer;
 
         a {
@@ -110,9 +55,11 @@
             }
         }
     }
+
+    // do not merge @media queries from navbar__nav-links and navbar__ext-links
 }
 
-.app__navbar-nav-links {
+.navbar__nav-links {
     flex: auto;
     display: flex;
     justify-content: flex-start;
@@ -126,7 +73,7 @@
     }
 }
 
-.app__navbar-ext-links {
+.navbar__ext-links {
     flex: auto;
     display: flex;
     justify-content: flex-end;
@@ -140,7 +87,7 @@
     }
 }
 
-.app__navbar-theme-toggle {
+.navbar__theme-toggle {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -150,34 +97,34 @@
 
     button {
         background: none;
-        color: inherit;
+        color: var(--darkest-color);
         border: none;
         padding: 0;
         font: inherit;
         cursor: pointer;
-        outline: inherit;
+        outline: none;
 
-        .theme-container {
+        .navbar__theme-container {
             display: flex;
             align-items: center;
         }
     }
 }
 
-.theme-circle {
+.navbar__theme-circle {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    border: 1px solid var(--darkest-color);
+    border: 2px solid var(--alt-color);
     background-color: var(--primary-color);
 }
 
-.theme-name {
-    margin-left: 12px;
+.navbar__theme-name {
+    margin-left: 10px;
 }
 
-.app__navbar-menu,
-.app__navbar-menu-hidden {
+.navbar__menu,
+.navbar__menu-hidden {
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -260,7 +207,7 @@
     }
 }
 
-.app__navbar-menu {
+.navbar__menu {
     div {
         svg {
             transition: all 0.70s;
@@ -274,7 +221,7 @@
     }
 }
 
-.app__navbar-menu-hidden {
+.navbar__menu-hidden {
     div {
         width: 0;
         opacity: 0;

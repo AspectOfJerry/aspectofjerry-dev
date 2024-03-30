@@ -66,7 +66,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 onComplete: () => setHasAnimated(false)
             })
 
-            gsap.from([".app__navbar-nav-links", ".app__navbar-ext-links"], {
+            gsap.from([".navbar__nav-links", ".navbar__ext-links"], {
                 yPercent: -200,
                 duration: 0.90,
                 ease: "power1.out",
@@ -78,18 +78,30 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
 
     const navbarRef = useRef(null);
 
-    useEffect(() => {
+    useGSAP(() => {
         if (isShrunk) {
             gsap.to(navbarRef.current, {
-                duration: 0.60,
-                scale: 0.9, // scale down to 90% of its original size
-                ease: "power1.out"
+                backgroundColor: "var(--navbar-s-color)",
+                borderBottom: "none",
+                borderRadius: "20px",
+                boxShadow: "0 4px 8px var(--shadow-color)",
+                padding: "0.9rem 1.80rem",
+                scale: 0.9,
+                y: 8,
+                duration: 0.65,
+                ease: "sine.out"
             });
         } else {
             gsap.to(navbarRef.current, {
-                duration: 0.60,
-                scale: 1, // back to original size
-                ease: "power1.out"
+                backgroundColor: "var(--navbar-color)",
+                borderBottom: "1px solid var(--shadow-glow-color)",
+                borderRadius: 0,
+                boxShadow: "none",
+                padding: "1rem 2rem",
+                scale: 1,
+                y: 0,
+                duration: 0.65,
+                ease: "sine.out"
             });
         }
     }, [isShrunk]);
@@ -97,16 +109,16 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
     return (
         <nav
             ref={navbarRef}
-            className={isShrunk ? " navbar__shrunk" : "navbar"}
+            className="navbar"
         >
-            <div className="app__navbar-icon">
+            <div className="navbar__icon">
                 <a href="/">
-                    <img src={icon} alt="jerrydev icon" />
+                    <img src={icon} alt="jenna favicon" />
                 </a>
             </div>
 
             <ul
-                className="app__navbar-nav-links"
+                className="navbar__nav-links"
             >
                 {links.map((dest, index) => (
                     <li className="text" key={index}>
@@ -115,7 +127,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 ))}
             </ul>
             <ul
-                className="app__navbar-ext-links"
+                className="navbar__ext-links"
             >
                 {extLinks.map((dest, index) => (
                     <li className="text" key={index}>
@@ -124,21 +136,21 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 ))}
             </ul>
 
-            <div className="app__navbar-theme-toggle">
+            <div className="navbar__theme-toggle">
                 <button onClick={() => toggleTheme(Object.values(themes))}>
-                    <div className="theme-container">
-                        <div className={`theme-circle ${theme.className}`} />
-                        <div className="text theme-name">{theme.name}</div>
+                    <div className="navbar__theme-container">
+                        <div className="navbar__theme-circle" />
+                        <p className="text navbar__theme-name">{theme.name}</p>
                     </div>
                 </button>
             </div>
             {/* MOBILE */}
-            <div ref={menuRef} className={`${showMenu ? "app__navbar-menu" : "app__navbar-menu-hidden"}`}>
+            <div ref={menuRef} className={`${showMenu ? "navbar__menu" : "navbar__menu-hidden"}`}>
                 <HiMenuAlt4 onClick={() => setShowMenu(true)} />
 
                 <div>
                     <HiX onClick={() => setShowMenu(false)} />
-                    <ul className="app__navbar-nav-links">
+                    <ul className="navbar__nav-links">
                         {links.map((dest, index) => (
                             <li className="text" key={index}>
                                 <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link}>
@@ -147,7 +159,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                             </li>
                         ))}
                     </ul>
-                    <ul className="app__navbar-ext-links">
+                    <ul className="anavbar__ext-links">
                         {extLinks.map((dest, index) => (
                             <li className="text" key={index}>
                                 <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link} target="_blank" rel="noreferrer">
