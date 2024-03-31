@@ -52,7 +52,7 @@ const ReturnToTop = () => {
             title="Return to top"
             style={{opacity: 0, y: 50}}
         >
-            <img src={media.arrow_up} alt="Arrow up" />
+            <img src={media.arrow} alt="arrow" />
         </button>
     )
 };

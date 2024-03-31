@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import arrow_up from "../assets/arrow_up.svg";
+import arrow from "../assets/arrow.svg";
 import aspectofjerry_head from "../assets/aspectofjerry_head.png";
 import background_shapes from "../assets/background_shapes.png";
 import bap_dolphin from "../assets/bap_dolphin.jpg";
@@ -80,7 +80,7 @@ import wpilib from "../assets/tech_stack/wpilib.png";
 
 
 export default {
-    arrow_up,
+    arrow,
     aspectofjerry_head,
     background_shapes,
     bap_dolphin,

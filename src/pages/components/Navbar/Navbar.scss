@@ -20,9 +20,12 @@
 }
 
 .navbar__icon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     img {
         width: 46px;

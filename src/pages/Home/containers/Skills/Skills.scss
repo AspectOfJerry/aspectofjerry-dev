@@ -1,17 +1,17 @@
-.app__skills-container {
-    margin: 0 8rem 2rem 5rem;
+.skills__container {
+    margin: 0 5rem 1rem 5rem;
 
     display: flex;
     flex-direction: row;
 
     @media screen and (max-width: 900px) {
         width: 100%;
-        margin: 0 0 3rem;
+        margin: 0 0 1rem;
         flex-direction: column;
     }
 }
 
-.app__skills-side-text {
+.skills__side-text {
     display: flex;
     flex: 0.4;
 
@@ -19,68 +19,91 @@
         width: auto;
         max-width: none;
         text-align: center;
-        margin: 2rem 0 1rem;
+        margin: 1rem 0.25rem;
     }
 }
 
-.app__skills-grid {
+.skills__grid {
     display: flex;
     flex: 1.6;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 480px) {
+        justify-content: space-evenly;
+    }
 }
 
-.app__skills-item-name {
-    margin: auto;
+.skills__item-name-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 0.75rem;
+}
+
+.skills__arrow-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-left: 0.25rem;
+
+    height: 1.5rem;
+    width: 1.5rem;
+
+    @media screen and (max-width: 480px) {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
 }
 
-.app__skills-item {
+
+.skills__item {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 1.10rem 1.25rem;
     transition: all 0.30s ease-in-out;
+
+    border-radius: 20px;
 
     a {
         width: 80px;
         height: 80px;
-        margin-bottom: 0.50rem;
-        border-radius: 30%;
+        border-radius: 20px;
         display: flex;
-        justify-content: center; // center horizontally
-        align-items: center; // Center vertically
+        justify-content: center;
+        align-items: center;
 
         img {
             object-fit: contain;
-            max-width: 68%;
-            max-height: 68%;
+            max-width: 66%;
+            max-height: 66%;
         }
 
         @media screen and (max-width: 480px) {
-            width: 72px;
-            height: 72px;
+            width: 64px;
+            height: 64px;
 
-            box-shadow: 0 2px 4px var(--shadow-color);
+            border-radius: 15px;
         }
-    }
-
-
-    p {
-        margin-top: 0.35rem;
     }
 
     @media screen and (max-width: 480px) {
-        margin: 1rem;
+        margin: 0.30rem 0.55rem;
+        scale: 90%;
 
-        p {
-            margin-top: 0;
-        }
+        border-radius: 15px;
+        box-shadow: 0 2px 4px var(--shadow-color);
     }
 }
 
-.app__dev-tools-langs-card {
+.skills__langs-card {
     margin-right: 2rem;
 }

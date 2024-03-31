@@ -85,7 +85,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 borderBottom: "none",
                 borderRadius: "20px",
                 boxShadow: "0 4px 8px var(--shadow-color)",
-                padding: "0.9rem 1.80rem",
+                padding: "0.8rem 1.80rem",
                 scale: 0.9,
                 y: 8,
                 duration: 0.65,
@@ -113,7 +113,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
         >
             <div className="navbar__icon">
                 <a href="/">
-                    <img src={icon} alt="jenna favicon" />
+                    <img src={icon} alt="jerry favicon" />
                 </a>
             </div>
 
