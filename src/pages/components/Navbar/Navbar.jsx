@@ -117,18 +117,14 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                 </a>
             </div>
 
-            <ul
-                className="navbar__nav-links"
-            >
+            <ul className="navbar__nav-links">
                 {links.map((dest, index) => (
                     <li className="text" key={index}>
                         <a className="text-underline" href={dest.link}>{dest.name}</a>
                     </li>
                 ))}
             </ul>
-            <ul
-                className="navbar__ext-links"
-            >
+            <ul className="navbar__ext-links">
                 {extLinks.map((dest, index) => (
                     <li className="text" key={index}>
                         <a className="text-underline" href={dest.link} target="_blank" rel="noreferrer">{dest.name}</a>
@@ -150,7 +146,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
 
                 <div>
                     <HiX onClick={() => setShowMenu(false)} />
-                    <ul className="navbar__nav-links">
+                    <ul className="navbar__ext-links-mobile">
                         {links.map((dest, index) => (
                             <li className="text" key={index}>
                                 <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link}>
@@ -159,7 +155,7 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
                             </li>
                         ))}
                     </ul>
-                    <ul className="anavbar__ext-links">
+                    <ul className="navbar__ext-links-mobile">
                         {extLinks.map((dest, index) => (
                             <li className="text" key={index}>
                                 <a className="text-underline" onClick={() => setShowMenu(false)} href={dest.link} target="_blank" rel="noreferrer">

@@ -31,16 +31,13 @@ const About = () => {
             <div
                 className="text about__text-container"
             >
-                <br />
-                <div className="about__text-line"><p className="about__text">
+                <div className="text-line"><p className="about__text">
                     💡 Coding is more than just a hobby for me; it's a passion I pursue daily. I enjoy finding new challenges and learning as much as I can.
                 </p></div>
-                <br />
-                <div className="about__text-line"><p className="about__text">
+                <div className="text-line"><p className="about__text">
                     🔍 Besides coding, I'm interested in areas like AI, machine learning, computer vision, networking, game engines.
                 </p></div>
-                <br />
-                <div className="about__text-line"><p className="about__text">
+                <div className="text-line"><p className="about__text">
                     🎮 When I'm not immersed in coding, you might find exploring the dungeons of Lethal Company, competing in Valorant, or exploring the blocky world of Minecraft.
                 </p></div>
             </div>

@@ -41,19 +41,17 @@ const Socials = (themeMode) => {
                 <motion.div className="socials__grid">
                     {socials.map((social) => {
                         return (
-                            <motion.div
-                                className="socials__item"
-                                key={social.name}
-                            >
-                                <motion.a href={social.url}
-                                          rel="noreferrer"
-                                          whileHover={{boxShadow: `0 0 30px ${social.color}`}}
+                            <div className="socials__item" key={social.name}>
+                                <motion.a
+                                    href={social.url}
+                                    rel="noreferrer"
+                                    whileHover={{boxShadow: `0 0 30px ${social.color}`}}
                                 >
                                     <img src={social.iconUrl} alt={`${social.name} img`} />
                                 </motion.a>
                                 <p className="bold-text">{social.name}</p>
                                 <p className="p-text">{social.description}</p>
-                            </motion.div>
+                            </div>
                         )
                     })}
                 </motion.div>

@@ -28,7 +28,7 @@
     flex: 1.6;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     @media screen and (max-width: 480px) {
@@ -50,7 +50,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 0.25rem;
+    margin-left: 0.30rem;
 
     height: 1.5rem;
     width: 1.5rem;
@@ -68,7 +68,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 1.10rem 1.25rem;
+    margin: 0.40rem 1.25rem;
     transition: all 0.30s ease-in-out;
 
     border-radius: 20px;
@@ -96,8 +96,7 @@
     }
 
     @media screen and (max-width: 480px) {
-        margin: 0.30rem 0.55rem;
-        scale: 90%;
+        margin: 0.40rem 0.60rem;
 
         border-radius: 15px;
         box-shadow: 0 2px 4px var(--shadow-color);

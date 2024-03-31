@@ -37,14 +37,16 @@
 }
 
 .navbar__nav-links,
-.navbar__ext-links {
+.navbar__ext-links,
+.navbar__nav-links-mobile,
+.navbar__ext-links-mobile {
     li {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
 
-        margin: 0 3%;
+        margin: 0 3.5%;
         cursor: pointer;
 
         a {
@@ -62,13 +64,14 @@
     // do not merge @media queries from navbar__nav-links and navbar__ext-links
 }
 
-.navbar__nav-links {
+.navbar__nav-links,
+.navbar__nav-links-mobile {
     flex: auto;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-
     margin-left: 2%;
+
     list-style: none;
 
     @media screen and (max-width: 1024px) {
@@ -76,13 +79,14 @@
     }
 }
 
-.navbar__ext-links {
+.navbar__ext-links,
+.navbar__ext-links-mobile {
     flex: auto;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-
     margin-right: 1%;
+
     list-style: none;
 
     @media screen and (max-width: 1024px) {
@@ -96,6 +100,7 @@
     justify-content: flex-end;
     height: 32px;
     gap: 8px;
+
     overflow: hidden;
 
     button {
@@ -117,6 +122,7 @@
 .navbar__theme-circle {
     width: 32px;
     height: 32px;
+
     border-radius: 50%;
     border: 2px solid var(--alt-color);
     background-color: var(--primary-color);
@@ -128,66 +134,61 @@
 
 .navbar__menu,
 .navbar__menu-hidden {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    position: relative;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 35px;
+    height: 35px;
+    position: relative;
+
+    border-radius: 50%;
     background-color: var(--primary-color);
 
     svg {
         width: 70%;
         height: 70%;
-        color: var(--secondary-color);
+        color: var(--lighter-color);
     }
 
     div {
-        position: fixed;
-        top: 8px;
-        // bottom: 0;
-        right: 5px;
-        z-index: 5;
-
-        width: 48%;
-        height: 55vh;
-        border-radius: 25px;
-
-        transition: all 0.70s;
-
         display: flex;
+        flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        flex-direction: column;
+        position: fixed;
+        top: 8px;
+        right: 5px;
+        // bottom: 0;
 
+        width: 48%;
+        border-radius: 20px;
         background-color: var(--secondary-color);
-        background-size: cover;
-        background-repeat: repeat;
-
         box-shadow: 0 0 25px var(--shadow-color);
 
+        transition: all 0.70s;
+        z-index: 5;
+
         svg {
+            flex: fit-content;
             position: relative;
             top: 3px;
             right: 9px;
-            width: 35px;
-            height: 35px;
+            width: 24px;
+            height: 24px;
             color: var(--primary-color);
         }
 
         ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
             flex-direction: column;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
 
             li {
                 margin: 0.5rem;
@@ -216,7 +217,7 @@
             transition: all 0.70s;
         }
 
-        padding: 0.75rem;
+        padding: 0.5rem;
 
         @media screen and (min-width: 1024px) {
             display: none;
@@ -230,10 +231,13 @@
         opacity: 0;
         transition: all 0.60s;
 
+        ul {
+            scale: 0;
+            transition: all 0.60s;
+        }
+
         svg {
-            // display: none;
-            width: 0;
-            height: 0;
+            scale: 0;
             transition: all 0.60s;
         }
 
