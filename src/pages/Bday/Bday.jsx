@@ -13,11 +13,11 @@ const Bday = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             let now = new Date();
-            let bday = new Date(now.getFullYear(), 3, 4);
+            let bday = new Date(now.getFullYear(), 3, 3); // April 3rd
 
             // If the current date is after the birthday, set bday to next year's birthday
             if (now > bday) {
-                bday = new Date(now.getFullYear() + 1, 3, 4);
+                bday = new Date(now.getFullYear() + 1, 3, 3);
             }
 
             const distance = bday - now;
