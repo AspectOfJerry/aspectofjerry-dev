@@ -32,6 +32,7 @@ import {Unix} from "./pages/Unix";
 
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {Bday} from "./pages/Bday";
+import Confetti from "react-confetti";
 
 
 const theme_group = {
@@ -136,6 +137,31 @@ const App = () => {
         }
     }, []);
 
+    const [celebrate, setCelebrate] = useState(false);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            let now = new Date();
+            let bday = new Date(now.getFullYear(), 3, 3); // April 3rd
+            let endCelebration = new Date(bday.getTime() + 24 * 60 * 60 * 1000); // 1 day after the birthday
+
+            // If the current date is after the birthday, set bday to next year's birthday
+            if (now > endCelebration) {
+                bday = new Date(now.getFullYear() + 1, 3, 3);
+            }
+
+            const distance = bday - now;
+
+            if (distance <= 0 && now < endCelebration) {
+                setCelebrate(true);
+            } else {
+                setCelebrate(false);
+            }
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         isReady ? (
             <BrowserRouter> <Routes>
@@ -144,7 +170,7 @@ const App = () => {
                     element={
                         <>
                             <title>Jerry • jerrydev</title>
-
+                            {celebrate && <Confetti numberOfPieces={250} wind={0.01} />}
                             <Navbar
                                 toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
                                 links={[
@@ -157,7 +183,8 @@ const App = () => {
                                 extLinks={[
                                     // {name: "Countdown 🎉", link: "/countdown"},
                                     {name: "URLShort (WIP)", link: "/urls"},
-                                    {name: "PeriodicTable (WIP)", link: "/elements"}
+                                    {name: "PeriodicTable (WIP)", link: "/elements"},
+                                    ...(celebrate ? [{name: "Birthday 🥳", link: "/bday"}] : [])
                                 ]}
                                 forceShrink={false}
                             />

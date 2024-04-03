@@ -44,7 +44,7 @@ const Bday = () => {
         <div className="c__container">
             <h2 className="ctext">🎂 Birthday countdown ⌛</h2>
             <p className="ctext">{countdown}</p>
-            {celebrate && <Confetti numberOfPieces={300} wind={0.01} />}
+            {celebrate && <Confetti numberOfPieces={350} wind={0.01} />}
         </div>
     );
 };
