@@ -14,18 +14,18 @@ const Bday = () => {
         const timer = setInterval(() => {
             let now = new Date();
             let bday = new Date(now.getFullYear(), 3, 3); // April 3rd
+            let endCelebration = new Date(bday.getTime() + 24 * 60 * 60 * 1000); // 1 day after the birthday
 
             // If the current date is after the birthday, set bday to next year's birthday
-            if (now > bday) {
+            if (now > endCelebration) {
                 bday = new Date(now.getFullYear() + 1, 3, 3);
             }
 
             const distance = bday - now;
 
-            if (distance <= 0) {
+            if (distance <= 0 && now < endCelebration) {
                 setCelebrate(true);
                 setCountdown("🥳 Happy birthday! 🎉");
-                clearInterval(timer);
             } else {
                 setCelebrate(false);
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
