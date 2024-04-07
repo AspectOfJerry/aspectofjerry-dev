@@ -155,8 +155,7 @@ const texts = {
 
 const Header = () => {
     useEffect(() => {
-        // change title when component mounts
-        document.title = "jerrydev • Jerry";
+        document.title = "Jerry • jerrydev";
     }, []);
 
     const currentMonth = new Date().getMonth() + 1; // get the current month (1-12)
@@ -259,7 +258,7 @@ const Header = () => {
             <div className="header">
                 <div className="header__container">
                     <div className="text-line">
-                        <h1 className="header__hero-text"> Hello</h1>
+                        <h1 className="header__hero-text">Hello</h1>
                     </div>
 
                     <div className="header__line" />

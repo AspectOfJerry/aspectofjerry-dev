@@ -57,22 +57,22 @@ const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}
 
     useGSAP(() => {
         if (hasAnimated) {
-            gsap.from([".navbar", ".navbar__shrunk"], {
-                yPercent: -100,
-                filter: "brightness(1.25)",
-                duration: 1,
-                ease: "power2.out",
-                delay: 0.20,
-                onComplete: () => setHasAnimated(false)
-            })
+            const tl = gsap.timeline();
 
-            gsap.from([".navbar__nav-links", ".navbar__ext-links"], {
-                yPercent: -200,
-                duration: 0.90,
+            tl.from([".navbar", ".navbar__shrunk"], {
+                yPercent: -150,
+                filter: "brightness(1.25)",
+                duration: 1.1,
+                ease: "power2.out",
+                onComplete: () => setHasAnimated(false)
+            }, 0.20);
+
+            tl.from([".navbar__nav-links", ".navbar__ext-links"], {
+                yPercent: -150,
+                duration: 1,
                 ease: "power1.out",
-                delay: 0.45 + 0.20,
-                stagger: 0.10,
-            });
+                stagger: 0.15,
+            }, 1.1 / 2);
         }
     }, []);
 

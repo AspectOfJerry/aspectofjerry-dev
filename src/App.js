@@ -33,6 +33,7 @@ import {Unix} from "./pages/Unix";
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {Bday} from "./pages/Bday";
 import Confetti from "react-confetti";
+import {CurriculumVitae} from "./pages/CurriculumVitae";
 
 
 const theme_group = {
@@ -169,7 +170,6 @@ const App = () => {
                     path="/"
                     element={
                         <>
-                            <title>Jerry • jerrydev</title>
                             {celebrate && <Confetti numberOfPieces={250} wind={0.01} />}
                             <Navbar
                                 toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
@@ -276,6 +276,10 @@ const App = () => {
                         />
                         <Bday themeType={theme.theme} />
                     </>
+                } />
+
+                <Route path="/cv" element={
+                    <CurriculumVitae />
                 } />
 
                 <Route path="/ping" element={"pong"} />
