@@ -25,7 +25,6 @@ const texts = {
         "✨ Let's build something magic together!",
         "🚀 Launching into the universe of code, propelled by creativity.",
         "🌟 Navigating the digital matrix with a keyboard as my compass.",
-        "🌟 Welcome to my digital playground!",
         "🌟 Welcome to my digital domain!",
         "🌟 Welcome to my digital realm!",
         "🌟 Welcome to my digital world!",

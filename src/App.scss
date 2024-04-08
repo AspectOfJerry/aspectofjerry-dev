@@ -8,7 +8,7 @@ html {
     font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
 
-    --primary-color: rgba(176, 215, 230, 1); // #b0d7e6
+    --primary-color: rgba(184, 226, 242, 1); // #b8e2f2
     --secondary-color: rgb(250, 253, 254, 1); // 99%
     --alt-color: rgba(116, 214, 162, 1); // 84%
     --lightest-color: rgba(253, 253, 254, 1); // 99+%
@@ -20,11 +20,11 @@ html {
     --darkest-color: rgba(56, 56, 56, 1);
     --back-color: rgba(32, 32, 32, 1);
 
-    --navbar-color: rgba(170, 212, 228, 0.35); // 78% HS L --primary-color
-    --navbar-s-color: rgba(170, 212, 228, 0.45); // 78% HS L --primary-color
-    --head-background-color: rgba(189, 221, 234); // 83% HS L --primary-color
+    --navbar-color: rgba(190, 228, 243, 0.35); // 85% HS(L) --primary-color
+    --navbar-s-color: rgba(190, 228, 243, 0.45); // 85% HS(L) --primary-color
+    --head-background-color: rgba(212, 237, 247); // 90% HS(L) --primary-color
     --shadow-color: rgba(16, 16, 16, 0.12);
-    --shadow-glow-color: rgba(189, 221, 234, 0.25); // 83% HS L --primary-color
+    --shadow-glow-color: rgba(194, 230, 244, 0.25); // 86% HS(L) --primary-color
     --glow-color: rgba(228, 244, 251, 0.40);
     --footer-color: rgba(246, 247, 248, 1);
 
@@ -58,33 +58,6 @@ html.theme_deep-space {
     transition: background-color 0.65s;
 }
 
-html.theme_cloudy {
-    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
-    background-color: var(--secondary-color);
-
-    --primary-color: rgb(201, 218, 248);
-    --secondary-color: rgb(250, 252, 255);
-    --alt-color: rgba(240, 225, 204, 1);
-    --lightest-color: rgb(253, 254, 255);
-    --lighter-color: rgb(242, 242, 242);
-    --light-color: rgb(232, 232, 232);
-    --gray-color: rgba(150, 150, 150, 1);
-    --dark-color: rgb(120, 120, 120);
-    --darker-color: rgb(80, 80, 80);
-    --darkest-color: rgb(56, 56, 56);
-    --black-color: rgba(32, 32, 32, 1);
-
-    --navbar-color: rgba(186, 208, 247, 0.35);
-    --navbar-s-color: rgba(186, 208, 247, 0.45);
-    --head-background-color: var(--primary-color);
-    --shadow-color: rgba(16, 16, 16, 0.15);
-    --shadow-glow-color: rgba(201, 218, 248, 0.25);
-    --glow-color: rgba(228, 244, 251, 0.40);
-    --footer-color: rgb(222, 234, 252);
-
-    transition: background-color 0.65s;
-}
-
 html.theme_pink {
     font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
     background-color: var(--secondary-color);
@@ -103,8 +76,7 @@ html.theme_pink {
 
     --navbar-color: rgba(255, 204, 214, 0.35);
     --navbar-s-color: rgba(255, 204, 214, 0.45);
-    // 92%
-    --head-background-color: rgb(255, 214, 222);
+    --head-background-color: rgb(254, 205, 214); // 96% H(S)L --primary-color
 
     --shadow-color: rgba(16, 16, 16, 0.15);
     --shadow-glow-color: rgba(255, 192, 203, 0.25);

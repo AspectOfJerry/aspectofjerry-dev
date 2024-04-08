@@ -1,10 +1,10 @@
-.app__works {
+.projects {
     flex: 1;
     width: 100%;
     flex-direction: column;
 }
 
-.app__projects-filter {
+.projects__filter {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -17,7 +17,7 @@
         margin: 1.5rem 0 1rem;
     }
 
-    .app__projects-filter-cat {
+    .projects__filter-cat {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -42,7 +42,7 @@
     }
 }
 
-.app__projects-portfolio {
+.projects__portfolio {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -53,13 +53,12 @@
         flex-direction: column;
     }
 
-    .app__projects-item {
+    .projects__item {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        margin: 1rem;
+        margin: 0.5rem;
         padding: 1rem;
-        max-width: 30%;
+        max-width: 32%;
 
         border-radius: 1.25rem;
         background-color: var(--lightest-color);
@@ -68,7 +67,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-            box-shadow: 0 0 25px var(--shadow-color);
+            box-shadow: 0 0 16px var(--shadow-color);
         }
 
         @media screen and (max-width: 480px) {
@@ -77,21 +76,38 @@
             padding: 0.5rem;
         }
     }
+
 }
 
-.app__projects-img {
-    height: 160px;
-    width: 160px;
-    border-radius: 10px;
-    object-fit: cover;
+.projects__inner_media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-    @media screen and (max-width: 480px) {
-        height: 96px;
-        width: 96px;
+    .projects__category {
+        place-self: flex-end;
+        width: fit-content;
+        padding: 0.25rem 0.75rem;
+        border-radius: 10px;
+        background-color: var(--lighter-color);
+
+        margin-top: 0.5rem;
+    }
+
+    .projects__img {
+        height: 128px;
+        width: 128px;
+        border-radius: 10px;
+        object-fit: contain;
+
+        @media screen and (max-width: 480px) {
+            height: 80px;
+            width: 80px;
+        }
     }
 }
 
-.app__projects-content {
+.projects__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,29 +121,11 @@
         width: 100%;
     }
 
-    h4 {
-        margin-top: 0.5rem;
-
-        @media screen and (max-width: 480px) {
-            margin-top: 0.5rem;
-        }
-    }
-
     p {
         margin-top: 0.25rem;
 
         @media screen and (max-width: 480px) {
             margin-top: 0.25rem;
         }
-    }
-
-
-    .app__projects-category {
-        width: fit-content;
-        padding: 0.25rem 0.75rem;
-        border-radius: 10px;
-        background-color: var(--lighter-color);
-
-        margin-top: 0;
     }
 }

@@ -42,18 +42,20 @@ const projectsData = [
         category: "JavaScript",
         description: "JerryBot#9090 was a Discord bot built on discord.js v13.",
         homepage: "https://bot.jerrydev.net/",
-        imageUrl: media.jerrybot
-        // },
-        // {
-        //     name: "EfficientDet with EfficientNet V2 backbone",
-        //     category: "Python",
-        //     description: "Swapping the backbone of EfficientDet from EfficientNet B0 to EfficientNet V2 B0.",
-        //     homepage: "",
-        //     imageUrl: ""
+        imageUrl: media.discord_mark_blurple
+    },
+    {
+        name: "MotionLens FRC assisted scouting",
+        category: "Python",
+        description: "MotionsLens uses the Zebra MotionWorks tracker data to assist in scouting.",
+        homepage: "",
+        imageUrl: ""
     }
 ];
 
-const Projects = () => {
+const Projects = ({themeMode}) => {
+    projectsData.find(e => e.name === "JerryBot (decommissioned)").imageUrl = themeMode === "dark" ? media.discord_mark_white : media.discord_mark_black;
+
     const [activeFilter, setActiveFilter] = useState("All");
     const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
     const [filterProjects, setFilterProjects] = useState(projectsData);
@@ -79,12 +81,12 @@ const Projects = () => {
                 <span>Pro</span>jects
             </SectionTitle>
 
-            <div className="app__projects-filter">
+            <div className="projects__filter">
                 {categories.map((category) => (
                     <div
                         key={category.name}
                         onClick={() => handleFilter(category)}
-                        className={`app__projects-filter-cat p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
+                        className={`projects__filter-cat p-text ${activeFilter?.name?.toLowerCase() === category.name.toLowerCase() ? "item-active" : ""}`}
                     >
                         {category.name}
                     </div>
@@ -96,17 +98,19 @@ const Projects = () => {
             <motion.div
                 animate={animateCard}
                 transition={{duration: 0.5, delayChildren: 0.5}}
-                className="app__projects-portfolio"
+                className="projects__portfolio"
             >
                 {filterProjects.map((project, index) => (
                     <motion.div
-                        className="app__projects-item"
+                        className="projects__item"
                         key={index}
-                        whileHover={{scale: [1, 1.05]}}
+                        whileHover={{scale: [1, 1.025]}}
                     >
-                        <img className="app__projects-img" src={project.imageUrl} alt={`${project.name} img`} />
-                        <div className="app__projects-content">
-                            <p className="app__projects-category p-text">{project.category}</p>
+                        <div className="projects__inner_media">
+                            <img className="projects__img" src={project.imageUrl} alt={project.name} />
+                            <p className="projects__category p-text">{project.category}</p>
+                        </div>
+                        <div className="projects__content">
                             <h4 className="bold-text">{project.name}</h4>
                             <p className="p-text">{project.description}</p>
                         </div>

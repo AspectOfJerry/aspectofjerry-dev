@@ -191,10 +191,10 @@ const App = () => {
                             <AppReturnToTop />
                             <AppHeader />
                             <AppAbout />
-                            <AppSkills theme={theme.mode} />
+                            <AppSkills themeMode={theme.mode} />
                             <AppExperience />
-                            <AppSocials theme={theme.mode} />
-                            <AppProjects />
+                            <AppSocials themeMode={theme.mode} />
+                            <AppProjects themeMode={theme.mode} />
                             <AppFooter /> </>
                     }
                 />

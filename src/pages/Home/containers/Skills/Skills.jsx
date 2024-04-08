@@ -45,7 +45,7 @@ const dev_tools = [
 ];
 
 
-const Skills = (themeMode) => {
+const Skills = ({themeMode}) => {
     dev_tools.find((e) => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
 
     useGSAP(() => {

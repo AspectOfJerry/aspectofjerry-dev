@@ -42,9 +42,10 @@ import freight_frenzy_vert from "../assets/first/ftc/freight_frenzy_vert.jpg";
 import ftc_icon_horz from "../assets/first/ftc/ftc_icon_horz.png";
 import ftc_icon_vert from "../assets/first/ftc/ftc_icon_vert.png";
 
-
 // socials
-import clyde_icon_blurple from "../assets/socials/clyde_icon_blurple.svg";
+import discord_mark_blurple from "../assets/socials/discord_mark_blurple.svg";
+import discord_mark_black from "../assets/socials/discord_mark_black.svg";
+import discord_mark_white from "../assets/socials/discord_mark_white.svg";
 import discord_full_blurple from "../assets/socials/discord_full_blurple.svg";
 import instagram_gradient from "../assets/socials/instagram_gradient.png";
 // import instagram_gradient from "../assets/socials/instagram_gradient.svg"; // the svg file breaks the code. Use png for now
@@ -121,7 +122,9 @@ export default {
     webstorm,
 
     // socials
-    clyde_icon_blurple,
+    discord_mark_blurple,
+    discord_mark_black,
+    discord_mark_white,
     discord_full_blurple,
     instagram_gradient,
     minecraft,

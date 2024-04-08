@@ -10,7 +10,7 @@ import SectionTitle from "../../../components/SectionTitle";
 // color: H, S:35%, V: 100%
 const socials = [
     {name: "⭐ Instagram", color: "#ffa6c3", description: "aspectofjerry", iconUrl: media.instagram_gradient, url: "https://www.instagram.com/aspectofjerry/"},
-    {name: "Discord", color: "#a6adff", description: "jerrydev", iconUrl: media.clyde_icon_blurple},
+    {name: "Discord", color: "#a6adff", description: "jerrydev", iconUrl: media.discord_mark_blurple},
     {name: "GitHub", color: "#a6d2ff", description: "AspectOfJerry", iconUrl: media.github, url: "https://github.com/AspectOfJerry"},
     {name: "Minecraft", color: "#beffa6", description: "AspectOfJerry", iconUrl: media.minecraft, url: "https://www.minecraft.net/"},
     // {name: "Reddit", color: "#ffc3a6", description: "AspectOfJerry", iconUrl: media.reddit_mark, url: "https://www.reddit.com/user/AspectOfJerry"},
@@ -28,7 +28,7 @@ const texts = [
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
 ];
 
-const Socials = (themeMode) => {
+const Socials = ({themeMode}) => {
     socials.find(e => e.name === "GitHub").iconUrl = themeMode === "dark" ? media.github_white : media.github;
 
     return (
