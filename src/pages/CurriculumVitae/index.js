@@ -1,1 +1,0 @@
-export {default as CurriculumVitae} from "./CurriculumVitae.jsx";
