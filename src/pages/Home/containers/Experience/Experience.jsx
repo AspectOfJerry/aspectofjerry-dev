@@ -36,26 +36,15 @@ const experience = [
         year: "2023",
         experiences: [
             {
-                title: "Team 3990",
-                description: "Joined Team 3990, \"Tech for Kids\", competing in the FIRST Robotics Competition.",
-                iconUrl: media.t4k_logo_reduced,
-                url: "https://www.team3990.com/en/"
-            },
-            {
                 title: "FIRST® Robotics Competition",
-                description: "FIRST inspires future tech leaders, founded by Dean Kamen in 1989.",
-                iconUrl: media.frc_icon_vert,
+                description: "Joined Team 3990, \"Tech for Kids\", competing in the FIRST Robotics Competition",
+                iconUrl: media.t4k_logo_reduced,
                 url: "https://www.firstinspires.org/robotics/frc"
             },
             {
                 title: "Charged Up",
-                description: "CHARGED UP presented by Haas | FRC 2022-2023",
+                description: "CHARGED UP presented by Haas & qualified for the championship at Houston | FRC 2022-2023",
                 iconUrl: media.charged_up_horz
-            },
-            {
-                title: "2023 FIRST® Championship",
-                description: "FIRST ENERGIZE season championship at Houston, Texas, April 19-22 | FRC 2023.",
-                iconUrl: media.first_cmp_2023
             }
         ]
     },
@@ -64,7 +53,7 @@ const experience = [
         experiences: [
             {
                 title: "Crescendo",
-                description: "CRESCENDO presented by Haas | FRC 2023-2024",
+                description: "CRESCENDO presented by Haas & qualified for the championship at Houston | FRC 2023-2024",
                 iconUrl: media.crescendo_horz
             },
             {

@@ -33,6 +33,7 @@ import {Unix} from "./pages/Unix";
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {Bday} from "./pages/Bday";
 import Confetti from "react-confetti";
+import {Flowers} from "./pages/Flowers";
 
 
 const theme_group = {
@@ -47,11 +48,6 @@ const theme_group = {
             name: "Deep Space",
             className: "theme_deep-space",
             mode: "dark"
-        },
-        {
-            name: "Cloudy",
-            className: "theme_cloudy",
-            mode: "light"
         },
         {
             name: "Pink",
@@ -276,6 +272,8 @@ const App = () => {
                         <Bday themeType={theme.theme} />
                     </>
                 } />
+
+                <Route path="/flowers" element={<Flowers />} />
 
                 <Route path="/ping" element={"pong"} />
 

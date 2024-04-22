@@ -64,7 +64,7 @@ const texts = {
         "🎈 Fool me once, shame on you!",
         "🌸 April showers bring May flowers!",
         "🌷 Spring has sprung!",
-        "🌼 Bloom where you are planted!",
+        "🌼 Flowers where you are planted!",
         "🌸 April showers bring code flowers!",
         "🌷 Spring has sprung, and so have I!",
         "🌼 Coding and blooming!"
