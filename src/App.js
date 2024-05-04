@@ -33,7 +33,6 @@ import {Unix} from "./pages/Unix";
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {Bday} from "./pages/Bday";
 import Confetti from "react-confetti";
-import {Flowers} from "./pages/Flowers";
 
 
 const theme_group = {
@@ -52,6 +51,11 @@ const theme_group = {
         {
             name: "Pink",
             className: "theme_pink",
+            mode: "light"
+        },
+        {
+            name: "Lavender",
+            className: "theme_lavender",
             mode: "light"
         },
         {
@@ -273,8 +277,6 @@ const App = () => {
                     </>
                 } />
 
-                <Route path="/flowers" element={<Flowers />} />
-
                 <Route path="/ping" element={"pong"} />
 
                 <Route
@@ -286,7 +288,7 @@ const App = () => {
                                 themes={theme_group.themes}
                                 theme={theme}
                                 links={[{name: "Take me home", link: "/"}]}
-                                extLinks={[{name: "Status page", link: "https://status.jerrydev.net"}]}
+                                extLinks={[]}
                                 forceShrink={false}
                             />
                             <NotFound />

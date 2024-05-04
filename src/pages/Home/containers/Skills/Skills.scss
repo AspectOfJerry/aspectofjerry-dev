@@ -38,65 +38,65 @@
 
 .skills__item-name-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 0.75rem;
-}
-
-.skills__arrow-container {
-    display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    margin-left: 0.30rem;
-
-    height: 1.5rem;
-    width: 1.5rem;
-
-    @media screen and (max-width: 480px) {
-        height: 1.25rem;
-        width: 1.25rem;
-    }
 }
 
+.skills__score-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3px;
+    width: 4.5rem;
+    background-color: var(--lighter-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skills__score-bar {
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(to right, var(--alt-color) 55%, var(--primary-color) 90%, var(--lighter-color) 100%);
+}
 
 .skills__item {
     display: flex;
     flex-direction: row;
-    text-align: center;
     align-items: center;
     justify-content: center;
+
     margin: 0.40rem 1.25rem;
+    padding: 6px 12px;
+
+    border-radius: 18px;
     transition: all 0.30s ease-in-out;
 
-    border-radius: 20px;
-
     a {
-        width: 80px;
-        height: 80px;
-        border-radius: 20px;
+        width: 50px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        margin: 4px 8px 4px 0;
+
         img {
             object-fit: contain;
-            max-width: 66%;
-            max-height: 66%;
+            width: 100%;
+            height: 100%;
         }
 
         @media screen and (max-width: 480px) {
-            width: 64px;
-            height: 64px;
-
-            border-radius: 15px;
+            width: 42px;
+            height: 42px;
         }
     }
 
     @media screen and (max-width: 480px) {
         margin: 0.40rem 0.60rem;
+        padding: 5px 10px;
 
         border-radius: 15px;
         box-shadow: 0 2px 4px var(--shadow-color);

@@ -10,7 +10,7 @@ html {
 
     --primary-color: rgba(184, 226, 242, 1); // #b8e2f2
     --secondary-color: rgb(250, 253, 254, 1); // 99%
-    --alt-color: rgba(116, 214, 162, 1); // 84%
+    --alt-color: rgba(216, 192, 240, 1);
     --lightest-color: rgba(253, 253, 254, 1); // 99+%
     --lighter-color: rgba(242, 242, 242, 1);
     --light-color: rgba(232, 232, 232, 1);
@@ -37,7 +37,7 @@ html.theme_deep-space {
 
     --primary-color: rgb(16, 64, 128);
     --secondary-color: rgb(4, 8, 16);
-    --alt-color: rgba(168, 107, 188, 1);
+    --alt-color: rgba(218, 112, 214, 1); // orchid (web)
     --lightest-color: rgb(8, 10, 12);
     --lighter-color: rgb(64, 64, 64);
     --light-color: rgb(120, 120, 120);
@@ -63,11 +63,11 @@ html.theme_pink {
     background-color: var(--secondary-color);
 
     --primary-color: rgb(255, 204, 213); // 90%
-    --secondary-color: rgb(255, 244, 243); // 98%
-    --alt-color: rgb(230, 213, 188);
+    --secondary-color: rgb(255, 240, 245); // lavender blush
+    --alt-color: rgb(225, 204, 173);
     --lightest-color: rgba(255, 248, 248, 1);
-    --lighter-color: rgba(255, 235, 235, 1);
-    --light-color: rgba(255, 224, 224, 1);
+    --lighter-color: rgba(245, 235, 235, 1);
+    --light-color: rgba(235, 224, 224, 1);
     --gray-color: rgba(150, 150, 150, 1);
     --dark-color: rgb(120, 120, 120);
     --darker-color: rgba(80, 80, 80, 1);
@@ -76,12 +76,39 @@ html.theme_pink {
 
     --navbar-color: rgba(255, 204, 214, 0.35);
     --navbar-s-color: rgba(255, 204, 214, 0.45);
-    --head-background-color: rgb(254, 205, 214); // 96% H(S)L --primary-color
+    --head-background-color: rgb(255, 214, 222); // 92% H(S)L --primary-color
 
     --shadow-color: rgba(16, 16, 16, 0.15);
     --shadow-glow-color: rgba(255, 192, 203, 0.25);
     --glow-color: rgba(255, 240, 243, 0.40);
     --footer-color: rgb(246, 247, 248);
+
+    transition: background-color 0.65s;
+}
+
+html.theme_lavender {
+    font-family: "Mulish", "Nunito Sans", "Nunito", sans-serif;
+    background-color: var(--secondary-color);
+
+    --primary-color: rgba(220, 208, 255, 1); // pale lavender
+    --secondary-color: rgb(248, 248, 255, 1);
+    --alt-color: rgba(219, 178, 209, 1); // pink lavender
+    --lightest-color: rgba(245, 245, 250, 1); // 99+%
+    --lighter-color: rgba(240, 240, 242, 1);
+    --light-color: rgba(231, 231, 232, 1);
+    --gray-color: rgba(160, 160, 160, 1);
+    --dark-color: rgba(120, 120, 120, 1);
+    --darker-color: rgba(80, 80, 80, 1);
+    --darkest-color: rgba(56, 56, 56, 1);
+    --back-color: rgba(32, 32, 32, 1);
+
+    --navbar-color: rgba(209, 194, 255, 0.35); // 88% HS(L) --primary-color
+    --navbar-s-color: rgba(209, 194, 255, 0.45); // 88% HS(L) --primary-color
+    --head-background-color: rgba(228, 219, 255, 1); // 93% HS(L) --primary-color
+    --shadow-color: rgba(16, 16, 16, 0.12);
+    --shadow-glow-color: rgba(194, 230, 244, 0.25); // 86% HS(L) --primary-color
+    --glow-color: rgba(228, 244, 251, 0.40);
+    --footer-color: rgba(246, 247, 248, 1);
 
     transition: background-color 0.65s;
 }
