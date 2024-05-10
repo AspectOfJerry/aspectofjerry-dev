@@ -39,9 +39,7 @@ const Elements = (themeMode) => {
 
     return (
         <>
-            <motion.div
-                className="e__table-container"
-            >
+            <motion.div className="e__table-container">
                 {periodicTableData.map((period, rowIndex) => (
                     <div className="e__row" key={rowIndex}>
                         {period.map((element, colIndex) => (
@@ -50,11 +48,7 @@ const Elements = (themeMode) => {
                                 key={colIndex}
                                 onClick={() => element && setCurrentElement(element)}
                             >
-                                <p
-                                    className="ctext"
-                                >
-                                    {element ? element.symbol : "n/a"}
-                                </p>
+                                <p className="ctext">{element ? element.symbol : "n/a"}</p>
                             </motion.button>
                         ))}
                     </div>

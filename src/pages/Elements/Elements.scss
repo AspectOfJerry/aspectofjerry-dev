@@ -1,8 +1,12 @@
 .e__desc-container {
     z-index: 5;
     position: absolute;
-    top: 22%;
-    left: 12%;
+    top: 21%;
+    left: 9%;
+    padding: 1.25rem;
+
+    box-shadow: 0 0 8px 2px var(--shadow-color);
+    border-radius: 1rem;
 
     h2 {
         font-size: 2rem;
