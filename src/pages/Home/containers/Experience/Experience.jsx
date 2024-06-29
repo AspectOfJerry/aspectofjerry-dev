@@ -4,7 +4,7 @@ import {media} from "../../../../constants";
 
 import {AppWrap} from "../../../components/index.js";
 import "./Experience.scss";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 
 // https://www.firstinspires.org/sites/default/files/uploads/resource_library/brand/first-brand-guidelines-2020.pdf
@@ -70,7 +70,7 @@ const experience = [
 const Experience = () => {
     return (
         <>
-            <SectionTitle raw="Experience">
+            <SectionTitle text="Experience">
                 <span>Exp</span>erience
             </SectionTitle>
 

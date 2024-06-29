@@ -4,7 +4,7 @@ import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Projects.scss";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const categories = [
     {
@@ -77,7 +77,7 @@ const Projects = ({themeMode}) => {
 
     return (
         <>
-            <SectionTitle raw="Projects">
+            <SectionTitle text="Projects">
                 <span>Pro</span>jects
             </SectionTitle>
 

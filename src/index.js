@@ -9,7 +9,7 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 root.render(
     <React.StrictMode>

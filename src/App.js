@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Confetti from "react-confetti";
 
-// Global
 import {Navbar} from "./pages/components/index.js";
 import OpeningAnimation from "./pages/components/OpeningAnimation"
+import {AppReturnToTop} from "./pages/Home/components/index.js";
 
 // pages/Header (main)
-import {AppReturnToTop} from "./pages/Home/components/index.js";
 import {
     AppHeader,
     AppAbout,
@@ -29,11 +29,17 @@ import "./App.scss";
 import {Countdown} from "./pages/Countdown/index.js";
 
 import {Unix} from "./pages/Unix";
-
 import {UrlShortener} from "./pages/UrlShortener/index.js";
 import {Bday} from "./pages/Bday";
-import Confetti from "react-confetti";
 
+/*
+    Dear programmer,
+    When I wrote this code, only God and I knew how it worked.
+    Now, only God knows it!
+    Therefore, if you are trying to optimize this code, and it fails (most surely),
+    please increase this counter as a warning for the next person:
+    total_hours_wasted_here = 14
+ */
 
 const theme_group = {
     localStorageKey: "color-mode",
@@ -162,142 +168,133 @@ const App = () => {
         return () => clearInterval(timer);
     }, []);
 
-    return (
-        isReady ? (
-            <BrowserRouter> <Routes>
-                <Route
-                    path="/"
-                    element={
-                        <>
-                            {celebrate && <Confetti numberOfPieces={250} wind={0.01} />}
-                            <Navbar
-                                toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
-                                links={[
-                                    {name: "About", link: "#about"},
-                                    {name: "Skills", link: "#skills"},
-                                    {name: "Experience", link: "#experience"},
-                                    {name: "Socials", link: "#socials"},
-                                    {name: "Projects", link: "#projects"}
-                                ]}
-                                extLinks={[
-                                    // {name: "Countdown 🎉", link: "/countdown"},
-                                    {name: "URLShort (WIP)", link: "/urls"},
-                                    {name: "PeriodicTable (WIP)", link: "/elements"},
-                                    ...(celebrate ? [{name: "Birthday 🥳", link: "/bday"}] : [])
-                                ]}
-                                forceShrink={false}
-                            />
-                            <AppReturnToTop />
-                            <AppHeader />
-                            <AppAbout />
-                            <AppSkills themeMode={theme.mode} />
-                            <AppExperience />
-                            <AppSocials themeMode={theme.mode} />
-                            <AppProjects themeMode={theme.mode} />
-                            <AppFooter /> </>
-                    }
-                />
-
-                <Route path="/countdown" element={
-                    <>
-                        <Navbar
-                            toggleTheme={() => toggleTheme(theme_group)}
-                            themes={theme_group.themes}
-                            theme={theme}
-                            links={[]}
-                            extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
-                            forceShrink={true}
-                        />
-                        <Countdown themeType={theme.theme} />
-                    </>
-                } />
-
-                <Route path="/unix" element={
-                    <>
-                        <Navbar
-                            toggleTheme={() => toggleTheme(theme_group)}
-                            themes={theme_group.themes}
-                            theme={theme}
-                            links={[]}
-                            extLinks={[
-                                {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"}
-                            ]}
-                            forceShrink={true}
-                        />
-                        <Unix />
-                    </>
-                } />
-
-
-                <Route path="/elements" element={
-                    <>
-                        <Navbar
-                            toggleTheme={() => toggleTheme(theme_group)}
-                            themes={theme_group.themes}
-                            theme={theme}
-                            links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
-                            extLinks={[
-                                {name: "🔗 Periodic table", link: "https://en.wikipedia.org/wiki/Periodic_table"},
-                                {name: "🔗 Periods", link: "https://en.wikipedia.org/wiki/Period_(periodic_table)"},
-                                {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
-                                {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
-                            ]}
-                            forceShrink={true}
-                        />
-                        <Elements themeType={theme.mode} />
-                    </>
-                } />
-
-                <Route path="/urls" element={
-                    <>
-                        <Navbar
-                            toggleTheme={() => toggleTheme(theme_group)}
-                            themes={theme_group.themes}
-                            theme={theme}
-                            links={[]}
-                            extLinks={[]}
-                            forceShrink={true}
-                        />
-                        <UrlShortener />
-                    </>
+    return (isReady ? (
+        <BrowserRouter> <Routes>
+            <Route
+                path="/"
+                element={<>
+                    {celebrate && <Confetti numberOfPieces={250} wind={0.01} />}
+                    <Navbar
+                        toggleTheme={() => toggleTheme(theme_group)} themes={theme_group.themes} theme={theme}
+                        links={[
+                            {name: "About", link: "#about"},
+                            {name: "Skills", link: "#skills"},
+                            {name: "Experience", link: "#experience"},
+                            {name: "Socials", link: "#socials"},
+                            {name: "Projects", link: "#projects"}
+                        ]}
+                        extLinks={[
+                            // {name: "Countdown 🎉", link: "/countdown"},
+                            {name: "URLShort (WIP)", link: "/urls"},
+                            {name: "PeriodicTable (WIP)", link: "/elements"},
+                            ...(celebrate ? [{name: "Birthday 🥳", link: "/bday"}] : [])
+                        ]}
+                        forceShrink={false}
+                    />
+                    <AppReturnToTop />
+                    <AppHeader />
+                    {/*<AppAbout />*/}
+                    <AppSkills themeMode={theme.mode} />
+                    <AppExperience />
+                    <AppSocials themeMode={theme.mode} />
+                    <AppProjects themeMode={theme.mode} />
+                    <AppFooter />
+                </>
                 }
+            />
+
+            <Route path="/countdown" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[]}
+                    extLinks={[{name: "Countdown ⏰", link: "https://jerrydev.net/countdown"}]}
+                    forceShrink={true}
                 />
+                <Countdown themeType={theme.theme} />
+            </>
+            } />
 
-                <Route path="/bday" element={
-                    <>
-                        <Navbar
-                            toggleTheme={() => toggleTheme(theme_group)}
-                            themes={theme_group.themes}
-                            theme={theme}
-                            links={[]}
-                            extLinks={[]}
-                            forceShrink={true}
-                        />
-                        <Bday themeType={theme.theme} />
-                    </>
-                } />
-
-                <Route path="/ping" element={"pong"} />
-
-                <Route
-                    path="*"
-                    element={
-                        <>
-                            <Navbar
-                                toggleTheme={() => toggleTheme(theme_group)}
-                                themes={theme_group.themes}
-                                theme={theme}
-                                links={[{name: "Take me home", link: "/"}]}
-                                extLinks={[]}
-                                forceShrink={false}
-                            />
-                            <NotFound />
-                        </>
-                    }
+            <Route path="/unix" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[]}
+                    extLinks={[
+                        {name: "🔗 Unix time", link: "https://en.wikipedia.org/wiki/Unix_time"}
+                    ]}
+                    forceShrink={true}
                 />
-            </Routes> </BrowserRouter>
-        ) : (<OpeningAnimation onAnimationEnd={() => setIsReady(true)} />)
-    );
+                <Unix />
+            </>
+            } />
+
+
+            <Route path="/elements" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[{name: "🔗 Elements API", link: "https://api.jerrydev.net/elements"}]}
+                    extLinks={[
+                        {name: "🔗 Periodic table", link: "https://en.wikipedia.org/wiki/Periodic_table"},
+                        {name: "🔗 Periods", link: "https://en.wikipedia.org/wiki/Period_(periodic_table)"},
+                        {name: "🔗 Groups", link: "https://en.wikipedia.org/wiki/Group_(periodic_table)"},
+                        {name: "🔗 Blocks", link: "https://en.wikipedia.org/wiki/Block_(periodic_table)"},
+                    ]}
+                    forceShrink={true}
+                />
+                <Elements themeType={theme.mode} />
+            </>
+            } />
+
+            <Route path="/urls" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[]}
+                    extLinks={[]}
+                    forceShrink={true}
+                />
+                <UrlShortener />
+            </>
+            }
+            />
+
+            <Route path="/bday" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[]}
+                    extLinks={[]}
+                    forceShrink={true}
+                />
+                <Bday themeType={theme.theme} />
+            </>
+            } />
+
+            <Route path="/ping" element={"pong"} />
+
+            <Route path="*" element={<>
+                <Navbar
+                    toggleTheme={() => toggleTheme(theme_group)}
+                    themes={theme_group.themes}
+                    theme={theme}
+                    links={[{name: "Take me home", link: "/"}]}
+                    extLinks={[]}
+                    forceShrink={false}
+                />
+                <NotFound />
+            </>
+            } />
+        </Routes> </BrowserRouter>
+    ) : (
+        <OpeningAnimation onAnimationEnd={() => setIsReady(true)} />
+    ));
 };
 
 export default App;

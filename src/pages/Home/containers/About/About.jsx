@@ -4,7 +4,7 @@ import {useGSAP} from "@gsap/react";
 
 import {AppWrap} from "../../../components/index.js";
 import "./About.scss";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 
 const About = () => {
@@ -20,17 +20,12 @@ const About = () => {
 
     return (
         <div className="about">
-            {/*<p className="p-text about__note">
-                📌 Hello, World! 🚧
-            </p>*/}
             <div style={{marginTop: "2rem"}} />
-            <SectionTitle raw="About Me">
+            <SectionTitle text="About Me">
                 About <span>Me</span>
             </SectionTitle>
 
-            <div
-                className="text about__text-container"
-            >
+            <div className="text about__text-container">
                 <div className="text-line"><p className="about__text">
                     💡 Coding is more than just a hobby for me; it's a passion I pursue daily. I enjoy finding new challenges and learning as much as I can.
                 </p></div>

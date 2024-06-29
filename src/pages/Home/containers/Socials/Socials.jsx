@@ -5,7 +5,7 @@ import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Socials.scss";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 // color: H, S:35%, V: 100%
 const socials = [
@@ -22,7 +22,6 @@ const socials = [
 ];
 
 const texts = [
-    {title: "Contact info", description: "📡 You can find my contact information and social media links here.", imageUrl: ""},
     {title: "Public Email", description: <>📧 <a href="mailto:jerry@jerrydev.net">jerry@jerrydev.net</a></>, imageUrl: ""},
     {title: "", description: "💭 Most of the time, you'll find me on Instagram and Discord.", imageUrl: ""},
     {title: "", description: "✨ Let's build something magic together!", imageUrl: ""},
@@ -33,7 +32,7 @@ const Socials = ({themeMode}) => {
 
     return (
         <>
-            <SectionTitle raw="Socials">
+            <SectionTitle text="Socials">
                 <span>So</span>cials
             </SectionTitle>
 

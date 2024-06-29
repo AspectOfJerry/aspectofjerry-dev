@@ -273,7 +273,8 @@ const Header = () => {
                         Hey there, I'm Jerry - a coding enthusiast residing in 🍁Canada🦫!
                     </p></div>
                     <div className="text-line"><p className="header__about">
-                        Buckle up, because you're about to uncover more about me! 🚀
+                        ---website under rework---
+                        AI, machine learning, computer vision, networking, game engines.
                     </p></div>
                 </div>
 
