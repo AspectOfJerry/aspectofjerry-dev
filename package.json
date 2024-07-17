@@ -22,14 +22,6 @@
         "start": "react-scripts start",
         "build": "react-scripts build"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AspectOfJerry/jerrydev.git"
-    },
-    "bugs": {
-        "url": "https://github.com/AspectOfJerry/jerrydev/issues",
-        "email": "jerry@jerrydev.net"
-    },
     "eslintConfig": {
         "extends": [
             "react-app",

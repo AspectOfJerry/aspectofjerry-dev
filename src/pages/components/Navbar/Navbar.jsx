@@ -6,6 +6,14 @@ import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 
+/*
+    Dear programmer,
+    When I wrote this code, only God and I knew how it worked.
+    Now, only God knows it!
+    Therefore, if you are trying to optimize this code, and it fails (most surely),
+    please increase this counter as a warning for the next person:
+    total_hours_wasted_here = 7
+ */
 const Navbar = ({toggleTheme, themes, theme, links, extLinks, forceShrink, icon}) => {
     icon = icon || media.favicon;
     const [showMenu, setShowMenu] = useState(false);
