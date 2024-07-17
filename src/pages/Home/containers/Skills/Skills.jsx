@@ -66,10 +66,10 @@ const Skills = ({themeMode}) => {
             </SectionTitle>
 
             <h3 className="subtitle-text" style={{marginTop: "1.5rem"}}>Tech stack</h3>
-            <p className="p-text">
-                💭 Here are some of the technologies I've worked with. I'm always looking to learn new things and improve my skills.
-            </p>
             <div className="skills__container">
+                <p className="p-text skills__side-text">
+                    💭 Here are some of the technologies I've worked with. I'm always looking to learn new things and improve my skills.
+                </p>
                 <div className="skills__grid">
                     {tech_stack.map((skill) => {
                         return (

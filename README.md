@@ -1,11 +1,10 @@
-# jerrydev
+# jerrydev-reactjs
 
 <https://jerrydev.net> (was <https://aspectofjerry.dev>) is my personal website.
 
-Notice:
-Dear programmer,
-When I wrote this code, only God and I understood what I was doing.
-Now, only God knows.
+# Archive notice
+
+This repository is no longer maintained. The new website will be written in React TypeScript.
 
 ## Notes
 
@@ -13,13 +12,6 @@ Sass media queries dimensions
 
 - tablet: max-width `1024px`
 - mobile: max-width `480px`
-
-CSS color brightness values
-
-- very, very light: 98%
-- very light 96%
-- lighter 90%
-- light 85%
 
 To ensure the proper functioning of the React Router, make sure to have the following code in `public/web.config`
 
@@ -90,7 +82,8 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from
 your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project, so you have full control
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project, so you have full
+control
 over them. All the commands except `eject` will still work, but they will point to the copied scripts, so you can tweak them. At this point you're on your
 own.
 

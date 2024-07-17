@@ -266,14 +266,11 @@ const Header = () => {
                         <h2 className="header__text-small">I'm Jerry 👋</h2>
                     </div>
                 </div>
-                <div
-                    className="p-text header__about-container"
-                >
+                <div className="p-text header__about-container">
                     <div className="text-line"><p className="header__about">
                         Hey there, I'm Jerry - a coding enthusiast residing in 🍁Canada🦫!
                     </p></div>
                     <div className="text-line"><p className="header__about">
-                        ---website under rework---
                         AI, machine learning, computer vision, networking, game engines.
                     </p></div>
                 </div>
@@ -286,6 +283,5 @@ const Header = () => {
         </>
     );
 };
-
 
 export default Header;

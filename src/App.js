@@ -36,9 +36,6 @@ import {Bday} from "./pages/Bday";
     Dear programmer,
     When I wrote this code, only God and I knew how it worked.
     Now, only God knows it!
-    Therefore, if you are trying to optimize this code, and it fails (most surely),
-    please increase this counter as a warning for the next person:
-    total_hours_wasted_here = 14
  */
 
 const theme_group = {

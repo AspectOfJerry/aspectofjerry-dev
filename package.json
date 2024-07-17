@@ -9,7 +9,6 @@
         "@testing-library/user-event": "^13.5.0",
         "framer-motion": "^11.0.8",
         "gsap": "^3.12.5",
-        "locomotive-scroll": "^4.1.4",
         "react": "^18.2.0",
         "react-confetti": "^6.1.0",
         "react-dom": "^18.2.0",
@@ -17,20 +16,11 @@
         "react-router-dom": "^6.22.3",
         "react-scripts": "5.0.1",
         "sass": "^1.71.1",
-        "smooth-scrollbar": "^8.8.4",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AspectOfJerry/jerrydev.git"
-    },
-    "bugs": {
-        "url": "https://github.com/AspectOfJerry/jerrydev/issues",
-        "email": "jerry@jerrydev.net"
     },
     "eslintConfig": {
         "extends": [
