@@ -2,6 +2,11 @@
 
 <https://jerrydev.net> (was <https://aspectofjerry.dev>) is my personal website.
 
+Notice:
+Dear programmer,
+When I wrote this code, only God and I understood what I was doing.
+Now, only God knows.
+
 ## Notes
 
 Sass media queries dimensions

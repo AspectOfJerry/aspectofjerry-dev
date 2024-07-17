@@ -5,7 +5,7 @@ import {media} from "../../../../constants";
 import {AppWrap} from "../../../components/index.js";
 
 import "./Skills.scss";
-import SectionTitle from "../../../components/SectionTitle";
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import {useGSAP} from "@gsap/react";
 import {gsap} from "gsap";
 
@@ -13,7 +13,7 @@ import {gsap} from "gsap";
 const tech_stack = [
     // {name: "C++", color: "", iconUrl: media.cpp, score: 0, url: "https://isocpp.org/"},
     // {name: "CSS", color: "#a6c1ff", iconUrl: media.css, score: 0, url: "https://www.w3.org/TR/CSS/#css"},
-    {name: "DiscordJS", color: "#a6adff", iconUrl: media.djs, score: 3, url: "https://discord.js.org/#/"},
+    {name: "DiscordJS", color: "#a6adff", iconUrl: media.djs, score: 4, url: "https://discord.js.org/#/"},
     {name: "HTML", color: "#ffc1a6", iconUrl: media.html, score: 4, url: "https://html.spec.whatwg.org/"},
     {name: "Java", color: "#a6eaff", iconUrl: media.java, score: 5, url: "https://www.java.com/en/"},
     {name: "JavaScript", color: "#fff5a6", iconUrl: media.javascript, score: 5, url: "https://developer.oracle.com/languages/javascript.html"},
@@ -23,7 +23,7 @@ const tech_stack = [
     {name: "PyTorch", color: "#ffb5a6", iconUrl: media.pytorch_flame, score: 3, url: "https://pytorch.org/"},
     {name: "ReactJS", color: "#a6edff", iconUrl: media.reactjs, score: 4, url: "https://react.dev/"},
     {name: "Sass/CSS", color: "#ffa6d2", iconUrl: media.sass, score: 3, url: "https://sass-lang.com/"},
-    {name: "TensorFlow", color: "#ffe1a6", iconUrl: media.tensorflow_logo, score: 2, url: "https://www.tensorflow.org/"},
+    {name: "TensorFlow", color: "#ffe1a6", iconUrl: media.tensorflow_logo, score: 1, url: "https://www.tensorflow.org/"},
     {name: "WPILib", color: "#ffa6af", iconUrl: media.wpilib, score: 3, url: "https://docs.wpilib.org/en/stable/"},
 ];
 
@@ -60,15 +60,16 @@ const Skills = ({themeMode}) => {
 
     return (
         <>
-            <SectionTitle raw="Skills & Tools">
+            <div style={{marginTop: "2rem"}} />
+            <SectionTitle text="Skills & Tools">
                 Skills <span>&</span> Tools
             </SectionTitle>
 
             <h3 className="subtitle-text" style={{marginTop: "1.5rem"}}>Tech stack</h3>
+            <p className="p-text">
+                💭 Here are some of the technologies I've worked with. I'm always looking to learn new things and improve my skills.
+            </p>
             <div className="skills__container">
-                <p className="p-text skills__side-text">
-                    💭 Here are some of the technologies I've worked with. I'm always looking to learn new things and improve my skills.
-                </p>
                 <div className="skills__grid">
                     {tech_stack.map((skill) => {
                         return (
@@ -90,8 +91,8 @@ const Skills = ({themeMode}) => {
                         )
                     })}
                 </div>
-
             </div>
+
             <h3 className="subtitle-text" style={{marginTop: "1rem"}}>Development tools</h3>
             <div className="skills__container">
                 <div>
